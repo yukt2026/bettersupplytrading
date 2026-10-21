@@ -300,14 +300,14 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
          ========================================================================= -->
     <header id="site-header" class="sticky top-0 z-40 bg-branddark/95 backdrop-blur-md border-b border-slate-800 transition-all w-full">
         <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="header-inner flex items-center justify-between h-16 sm:h-20 w-full transition-all">
+            <div class="header-inner flex items-center justify-between h-[68px] sm:h-20 w-full transition-all">
                 
-                <!-- Logo & Brand Lockup (Clamped on mobile & intermediate viewports, full on large desktop) -->
+                <!-- Logo & Brand Lockup (Optimized & prominent on mobile & desktop) -->
                 <a href="<?= route_url('') ?>" class="flex items-center shrink-0 me-2 sm:me-3 xl:me-6 focus:outline-none focus:ring-2 focus:ring-brandgreen rounded group py-1" aria-label="<?= t('company_name') ?>">
                     <?php if ($lang === 'ar'): ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 sm:h-9 md:h-10 xl:h-11 w-auto max-w-[145px] sm:max-w-[185px] lg:max-w-[210px] xl:max-w-none object-contain transition-transform group-hover:scale-[1.02] filter drop-shadow-sm">
+                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 sm:h-11 md:h-11 xl:h-12 w-auto max-w-[200px] sm:max-w-[240px] xl:max-w-none object-contain transition-transform group-hover:scale-[1.02] filter drop-shadow-sm">
                     <?php else: ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 sm:h-9 md:h-10 xl:h-11 w-auto max-w-[145px] sm:max-w-[185px] lg:max-w-[210px] xl:max-w-none object-contain transition-transform group-hover:scale-[1.02] filter drop-shadow-sm">
+                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 sm:h-11 md:h-11 xl:h-12 w-auto max-w-[200px] sm:max-w-[240px] xl:max-w-none object-contain transition-transform group-hover:scale-[1.02] filter drop-shadow-sm">
                     <?php endif; ?>
                 </a>
 
@@ -424,12 +424,12 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
     <div id="mobile-drawer" class="fixed inset-0 z-[100] text-white hidden flex-col w-full h-[100dvh] transition-all duration-300 overflow-hidden" style="background-color: #0F172A !important;" aria-hidden="true">
             
             <!-- Drawer Top Header -->
-            <div class="flex items-center justify-between px-5 h-16 border-b border-slate-800 shrink-0" style="background-color: #090D16 !important;">
+            <div class="flex items-center justify-between px-5 h-[68px] border-b border-slate-800 shrink-0" style="background-color: #090D16 !important;">
                 <a href="<?= route_url('') ?>" class="flex items-center gap-2">
                     <?php if ($lang === 'ar'): ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 w-auto max-w-[160px] object-contain drop-shadow-md">
+                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto max-w-[200px] object-contain drop-shadow-md">
                     <?php else: ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 w-auto max-w-[160px] object-contain drop-shadow-md">
+                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto max-w-[200px] object-contain drop-shadow-md">
                     <?php endif; ?>
                 </a>
                 <div class="flex items-center gap-2">
