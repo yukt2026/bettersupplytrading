@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Products & Services Overview View (views/products.php)
+ * Better Supply Trading Establishment - Products & Services Overview View (views/products.php)
  * Implements PDF Page 03 / Section 02.
  */
 

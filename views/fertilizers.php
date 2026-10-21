@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Fertilizers View (views/fertilizers.php)
+ * Better Supply Trading Establishment - Fertilizers View (views/fertilizers.php)
  * Implements PDF Page 07 / Section 02.
  */
 

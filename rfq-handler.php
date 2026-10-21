@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - RFQ Lead Processing Handler
+ * Better Supply Trading Establishment - RFQ Lead Processing Handler
  * Validates specifications, secures file attachments, archives inquiry to JSON,
  * and notifies company procurement email.
  */

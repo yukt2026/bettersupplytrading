@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Homepage View (views/home.php)
+ * Better Supply Trading Establishment - Homepage View (views/home.php)
  * Redesigned Hero Banner (Left-aligned desktop, directional gradient,
  * visible port cranes/sky, clamp H1, shortened copy, slim trust strip),
  * preserving all 8 Homepage Modules strictly as specified in PDF Section 04.

@@ -1,4 +1,4 @@
-# Better Supply Corporation - Apache Web Server Configuration
+# Better Supply Trading Establishment - Apache Web Server Configuration
 # Domain: bettersupplytrading.com
 
 <IfModule mod_rewrite.c>

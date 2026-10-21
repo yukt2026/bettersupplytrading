@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Global Footer Template
+ * Better Supply Trading Establishment - Global Footer Template
  * Full Bilingual Footnotes, CR Activities Notice, Category Links,
  * Compliance Disclaimers, and Client-Side Interactive Scripts.
  */
@@ -124,7 +124,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                     <strong><?= ($lang === 'ar') ? 'تنويه الإفصاح والامتثال:' : 'Compliance & Sourcing Disclosure:' ?></strong>
                     <?= ($lang === 'ar') 
                         ? 'تعمل مؤسسة أفضل توريد التجارية كوسيط تجاري ومورد بالجملة ومكتب مشتريات للمواد والمنتجات المحددة. المؤسسة ليست مصنعاً كيميائياً، ولا تمثل وكيلاً حصرياً أو معتمداً لأي من شركات النفط والغاز الكبرى (مثل أرامكو السعودية أو شلمبرجير). كافة المعروضات تخضع لمطابقة المواصفات الفنية وتأكيد المصنعين وشروط التعاقد الرسمية.'
-                        : 'Better Supply Corporation operates as an independent commercial trading, procurement, and sourcing business. The company is not a chemical manufacturer, nor does it assert authorized distributorship or vendor approvals from third-party energy operators (such as Saudi Aramco or SLB) unless documented. All product listings represent commercial sourcing categories subject to specification matching and supplier availability.' ?>
+                        : 'Better Supply Trading Establishment operates as an independent commercial trading, procurement, and sourcing business. The company is not a chemical manufacturer, nor does it assert authorized distributorship or vendor approvals from third-party energy operators (such as Saudi Aramco or SLB) unless documented. All product listings represent commercial sourcing categories subject to specification matching and supplier availability.' ?>
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-between pt-4 border-t border-slate-800/80 gap-4">
                     <p>&copy; <?= date('Y') ?> <?= t('company_name') ?> (bettersupplytrading.com). <?= t('labels.all_rights_reserved') ?></p>
@@ -153,7 +153,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
             <span class="hidden md:inline-block bg-slate-900/95 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-emerald-500/30 backdrop-blur-sm">
                 <?= ($lang === 'ar') ? 'تواصل مع مكتب المشتريات' : 'Direct Commercial Desk' ?>
             </span>
-            <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $site_config['contacts']['phone']) ?>?text=<?= urlencode(($lang === 'ar') ? 'مرحباً مؤسسة أفضل توريد التجارية، أود الاستفسار عن عروض الأسعار.' : 'Hello Better Supply Corporation, I would like to inquire about industrial sourcing and quotations.') ?>" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Procurement Desk" class="relative bg-emerald-600 hover:bg-emerald-500 text-white w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border border-white/20">
+            <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $site_config['contacts']['phone']) ?>?text=<?= urlencode(($lang === 'ar') ? 'مرحباً مؤسسة أفضل توريد التجارية، أود الاستفسار عن عروض الأسعار.' : 'Hello Better Supply Trading Establishment, I would like to inquire about industrial sourcing and quotations.') ?>" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Procurement Desk" class="relative bg-emerald-600 hover:bg-emerald-500 text-white w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border border-white/20">
                 <span class="absolute -inset-1 rounded-full bg-emerald-500 opacity-25 animate-ping pointer-events-none"></span>
                 <svg class="w-5 h-5 sm:w-6 sm:h-6 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.053-.99-.071-.341-.119-.844-.288-1.464-.567-1.428-.642-2.355-2.096-2.427-2.19-.071-.096-.576-.767-.576-1.463 0-.696.365-1.037.495-1.18.13-.143.284-.179.379-.179.096 0 .191.002.274.006.09.004.21.032.327.283.12.257.411 1.002.447 1.074.036.072.06.156.012.251-.048.096-.072.156-.144.239-.072.084-.15.187-.215.251-.072.072-.148.15-.064.294.084.144.373.616.801.998.552.492 1.017.644 1.161.716.144.072.228.06.312-.036.084-.096.361-.42.457-.564.096-.144.192-.12.324-.072.132.048.837.395.981.467.144.072.24.108.276.168.036.06.036.348-.108.753z"/></svg>
             </a>

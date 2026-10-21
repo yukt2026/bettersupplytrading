@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Packaging & Disposables View (views/packaging-disposables.php)
+ * Better Supply Trading Establishment - Packaging & Disposables View (views/packaging-disposables.php)
  * Implements PDF Page 09 / Section 02.
  */
 

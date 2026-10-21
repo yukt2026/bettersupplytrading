@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Industrial Salts View (views/industrial-salts.php)
+ * Better Supply Trading Establishment - Industrial Salts View (views/industrial-salts.php)
  * Implements PDF Page 04 / Section 02.
  */
 

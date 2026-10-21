@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Redesigned Global Header Template
+ * Better Supply Trading Establishment - Redesigned Global Header Template
  * Single-row nav (>=1100px), 15px nowrap, 28-32px gaps, sticky shrink on scroll,
  * simplified top bar, accordion mobile drawer, and active-page underline indicator.
  */

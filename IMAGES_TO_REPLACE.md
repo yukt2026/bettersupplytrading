@@ -1,5 +1,5 @@
 # Images Catalog & Production Replacement Guide
-**Domain:** bettersupplytrading.com | **Brand:** Better Supply Corporation (مؤسسة أفضل توريد التجارية)  
+**Domain:** bettersupplytrading.com | **Brand:** Better Supply Trading Establishment (مؤسسة أفضل توريد التجارية)  
 **Location:** Dammam, Kingdom of Saudi Arabia
 
 All images currently deployed on the website were generated for prototyping, architectural validation, and compliance with the Developer Handover Document (Version 2.0). 

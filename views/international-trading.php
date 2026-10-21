@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - International Trading View (views/international-trading.php)
+ * Better Supply Trading Establishment - International Trading View (views/international-trading.php)
  * Implements PDF Page 12 / Section 02.
  */
 

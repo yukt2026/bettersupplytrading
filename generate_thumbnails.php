@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Product Thumbnail Generator
+ * Better Supply Trading Establishment - Product Thumbnail Generator
  * Generates 600x400 optimized JPG and WebP thumbnails from high-res banners and tailored graphic patterns.
  */
 

@@ -1,8 +1,8 @@
 <?php
 /**
- * Better Supply Corporation - Asset Generation Script (Updated)
+ * Better Supply Trading Establishment - Asset Generation Script (Updated)
  * Creates clean geometric monogram logos (EN/AR, dark/light) without placeholder badges,
- * Favicons, and a 1200x630 OpenGraph card using GD.
+ * tight viewBoxes to prevent mobile header overflow.
  */
 
 $img_dir = __DIR__ . '/public/images';
@@ -30,26 +30,18 @@ $monogram_white_svg = <<<SVG
 SVG;
 file_put_contents($img_dir . '/logo-monogram-white.svg', $monogram_white_svg);
 
-// Dev mode badge helper
-$is_dev = (getenv('NODE_ENV') === 'development' || getenv('APP_ENV') === 'development');
-$dev_badge_en = $is_dev ? '<rect x="360" y="24" width="140" height="20" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/><text x="430" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="#475569">PLACEHOLDER LOGO</text>' : '';
-$dev_badge_en_white = $is_dev ? '<rect x="360" y="24" width="140" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1"/><text x="430" y="38" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="#94A3B8">PLACEHOLDER LOGO</text>' : '';
-$dev_badge_ar = $is_dev ? '<rect x="20" y="24" width="130" height="20" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/><text x="85" y="38" text-anchor="middle" font-family="Cairo, sans-serif" font-size="10" font-weight="700" fill="#475569">شعار تجريبي</text>' : '';
-$dev_badge_ar_white = $is_dev ? '<rect x="20" y="24" width="130" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1"/><text x="85" y="38" text-anchor="middle" font-family="Cairo, sans-serif" font-size="10" font-weight="700" fill="#94A3B8">شعار تجريبي</text>' : '';
-
-// 3. Horizontal English Lockup (SVG) - Clean corporate, badge rendered only in dev
+// 3. Horizontal English Lockup (SVG) - Tight ViewBox (265x70)
 $logo_horizontal_en = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 70" width="380" height="70" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265 70" width="265" height="70" fill="none">
     <!-- Monogram Mark -->
-    <g transform="translate(6, 6) scale(0.48)">
+    <g transform="translate(4, 6) scale(0.48)">
         <rect width="120" height="120" rx="18" fill="#0F172A"/>
         <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#FFFFFF"/>
         <circle cx="98" cy="24" r="8" fill="#047857"/>
     </g>
     <!-- Corporate Typography -->
-    <text x="76" y="34" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="21" font-weight="800" letter-spacing="1.2" fill="#0F172A">BETTER SUPPLY</text>
-    <text x="76" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="3.5" fill="#64748B">CORPORATION</text>
-    {$dev_badge_en}
+    <text x="70" y="34" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="18.5" font-weight="800" letter-spacing="0.8" fill="#0F172A">BETTER SUPPLY</text>
+    <text x="70" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="8.8" font-weight="700" letter-spacing="1.2" fill="#64748B">TRADING ESTABLISHMENT</text>
 </svg>
 SVG;
 file_put_contents($img_dir . '/logo-horizontal-en.svg', $logo_horizontal_en);
@@ -57,52 +49,49 @@ file_put_contents($img_dir . '/logo.svg', $logo_horizontal_en);
 
 // 4. Horizontal English White Lockup (for dark background)
 $logo_horizontal_en_white = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 70" width="380" height="70" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265 70" width="265" height="70" fill="none">
     <!-- Monogram Mark -->
-    <g transform="translate(6, 6) scale(0.48)">
+    <g transform="translate(4, 6) scale(0.48)">
         <rect width="120" height="120" rx="18" fill="#FFFFFF"/>
         <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#0F172A"/>
         <circle cx="98" cy="24" r="8" fill="#10B981"/>
     </g>
     <!-- Corporate Typography -->
-    <text x="76" y="34" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="21" font-weight="800" letter-spacing="1.2" fill="#FFFFFF">BETTER SUPPLY</text>
-    <text x="76" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="11" font-weight="600" letter-spacing="3.5" fill="#94A3B8">CORPORATION</text>
-    {$dev_badge_en_white}
+    <text x="70" y="34" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="18.5" font-weight="800" letter-spacing="0.8" fill="#FFFFFF">BETTER SUPPLY</text>
+    <text x="70" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="8.8" font-weight="700" letter-spacing="1.2" fill="#94A3B8">TRADING ESTABLISHMENT</text>
 </svg>
 SVG;
 file_put_contents($img_dir . '/logo-horizontal-en-white.svg', $logo_horizontal_en_white);
 file_put_contents($img_dir . '/logo-white.svg', $logo_horizontal_en_white);
 
-// 5. Horizontal Arabic Lockup (SVG) - RTL optimized
+// 5. Horizontal Arabic Lockup (SVG) - RTL optimized (320x70)
 $logo_horizontal_ar = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 70" width="420" height="70" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70" fill="none">
     <!-- Corporate Typography in Arabic -->
-    <text x="340" y="34" text-anchor="end" font-family="'Cairo', 'IBM Plex Sans Arabic', sans-serif" font-size="20" font-weight="800" fill="#0F172A">مؤسسة أفضل توريد التجارية</text>
-    <text x="340" y="52" text-anchor="end" font-family="'Inter', 'Cairo', sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" fill="#64748B">BETTER SUPPLY CORPORATION</text>
+    <text x="246" y="34" text-anchor="end" font-family="'Cairo', 'IBM Plex Sans Arabic', sans-serif" font-size="18" font-weight="800" fill="#0F172A">مؤسسة أفضل توريد التجارية</text>
+    <text x="246" y="52" text-anchor="end" font-family="'Inter', 'Cairo', sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.2" fill="#64748B">BETTER SUPPLY TRADING ESTABLISHMENT</text>
     <!-- Monogram Mark on the right for RTL balance -->
-    <g transform="translate(352, 6) scale(0.48)">
+    <g transform="translate(256, 6) scale(0.48)">
         <rect width="120" height="120" rx="18" fill="#0F172A"/>
         <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#FFFFFF"/>
         <circle cx="98" cy="24" r="8" fill="#047857"/>
     </g>
-    {$dev_badge_ar}
 </svg>
 SVG;
 file_put_contents($img_dir . '/logo-horizontal-ar.svg', $logo_horizontal_ar);
 
 // 6. Horizontal Arabic White Lockup
 $logo_horizontal_ar_white = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 70" width="420" height="70" fill="none">
-    <text x="340" y="34" text-anchor="end" font-family="'Cairo', 'IBM Plex Sans Arabic', sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">مؤسسة أفضل توريد التجارية</text>
-    <text x="340" y="52" text-anchor="end" font-family="'Inter', 'Cairo', sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" fill="#94A3B8">BETTER SUPPLY CORPORATION</text>
-    <g transform="translate(352, 6) scale(0.48)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70" fill="none">
+    <text x="246" y="34" text-anchor="end" font-family="'Cairo', 'IBM Plex Sans Arabic', sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">مؤسسة أفضل توريد التجارية</text>
+    <text x="246" y="52" text-anchor="end" font-family="'Inter', 'Cairo', sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.2" fill="#94A3B8">BETTER SUPPLY TRADING ESTABLISHMENT</text>
+    <g transform="translate(256, 6) scale(0.48)">
         <rect width="120" height="120" rx="18" fill="#FFFFFF"/>
         <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#0F172A"/>
         <circle cx="98" cy="24" r="8" fill="#10B981"/>
     </g>
-    {$dev_badge_ar_white}
 </svg>
 SVG;
 file_put_contents($img_dir . '/logo-horizontal-ar-white.svg', $logo_horizontal_ar_white);
 
-echo "Logos regenerated without placeholder badges.\n";
+echo "Logos regenerated with tight viewBoxes.\n";

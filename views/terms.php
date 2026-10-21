@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Terms and Conditions View (views/terms.php)
+ * Better Supply Trading Establishment - Terms and Conditions View (views/terms.php)
  * DRAFT - LEGAL REVIEW REQUIRED
  */
 

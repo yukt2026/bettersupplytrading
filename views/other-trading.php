@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Other Trading Activities View (views/other-trading.php)
+ * Better Supply Trading Establishment - Other Trading Activities View (views/other-trading.php)
  * Implements PDF Page 10 / Section 02.
  */
 

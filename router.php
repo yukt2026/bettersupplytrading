@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Central Router & Front Controller
+ * Better Supply Trading Establishment - Central Router & Front Controller
  * Handles /en/* and /ar/* requests, sets HTTP headers, validates route parameters,
  * and renders corresponding views with full bilingual context.
  */

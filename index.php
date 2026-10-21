@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Root Dispatcher
+ * Better Supply Trading Establishment - Root Dispatcher
  * Redirects root visits to the appropriate language prefix (/en/ or /ar/).
  */
 

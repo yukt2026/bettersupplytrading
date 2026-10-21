@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Industries We Serve View (views/industries.php)
+ * Better Supply Trading Establishment - Industries We Serve View (views/industries.php)
  * Implements PDF Page 11 / Section 02.
  */
 

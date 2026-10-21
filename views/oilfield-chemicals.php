@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Oilfield Chemicals View (views/oilfield-chemicals.php)
+ * Better Supply Trading Establishment - Oilfield Chemicals View (views/oilfield-chemicals.php)
  * Implements PDF Page 05 / Section 02.
  */
 

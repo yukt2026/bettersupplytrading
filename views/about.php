@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - About Us View (views/about.php)
+ * Better Supply Trading Establishment - About Us View (views/about.php)
  * Faithful implementation of PDF Page 02 / Section 02.
  */
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - English Language Dictionary (en)
+ * Better Supply Trading Establishment - English Language Dictionary (en)
  * Sourced directly from Developer Handover Document (Version 2.0)
  */
 
@@ -10,8 +10,8 @@ return [
     'lang_name' => 'English',
     'switch_lang_code' => 'ar',
     'switch_lang_label' => 'العربية',
-    'company_name' => 'Better Supply Corporation',
-    'company_name_legal' => 'Better Supply Corporation',
+    'company_name' => 'Better Supply Trading Establishment',
+    'company_name_legal' => 'Better Supply Trading Establishment',
     'company_tagline' => 'Connecting Markets. Supplying Industries.',
     'headquarters' => 'Dammam, Kingdom of Saudi Arabia',
 
@@ -78,11 +78,11 @@ return [
     'seo' => [
         'home' => [
             'title' => 'Industrial & Chemical Supply Saudi Arabia | Better Supply',
-            'meta_desc' => 'Better Supply Corporation supports industrial salts, oilfield materials, water-treatment chemicals and international sourcing for Saudi and GCC buyers.',
+            'meta_desc' => 'Better Supply Trading Establishment supports industrial salts, oilfield materials, water-treatment chemicals and international sourcing for Saudi and GCC buyers.',
         ],
         'about' => [
             'title' => 'About Better Supply | Industrial Trading in Dammam',
-            'meta_desc' => 'Learn about Better Supply Corporation, a Dammam-based B2B procurement and trading business connecting international manufacturers with Saudi & GCC markets.',
+            'meta_desc' => 'Learn about Better Supply Trading Establishment, a Dammam-based B2B procurement and trading business connecting international manufacturers with Saudi & GCC markets.',
         ],
         'products' => [
             'title' => 'Industrial, Agricultural & Trading Products | Better Supply',
@@ -117,7 +117,7 @@ return [
             'meta_desc' => 'Wholesale and retail trading of specialized passenger vehicles (ambulances, minibuses) and wholesale office machinery under authorized CR activities.',
         ],
         'industries' => [
-            'title' => 'Industries We Serve | Better Supply Corporation',
+            'title' => 'Industries We Serve | Better Supply Trading Establishment',
             'meta_desc' => 'B2B procurement solutions for oil and gas contractors, petrochemicals, water desalination, commercial agriculture, logistics and corporate entities.',
         ],
         'international_trading' => [
@@ -129,16 +129,16 @@ return [
             'meta_desc' => 'Better Supply welcomes commercial introductions from chemical producers, salt miners, packaging manufacturers and international distributors.',
         ],
         'contact' => [
-            'title' => 'Request a Supply Quotation | Better Supply Corporation',
+            'title' => 'Request a Supply Quotation | Better Supply Trading Establishment',
             'meta_desc' => 'Submit your RFQ for industrial salts, oilfield chemicals, water treatment, fertilizers, or packaging. Fast technical and commercial review from Dammam.',
         ],
         'privacy' => [
-            'title' => 'Privacy Policy | Better Supply Corporation',
-            'meta_desc' => 'Privacy Policy and data processing terms for Better Supply Corporation website and RFQ procurement portal.',
+            'title' => 'Privacy Policy | Better Supply Trading Establishment',
+            'meta_desc' => 'Privacy Policy and data processing terms for Better Supply Trading Establishment website and RFQ procurement portal.',
         ],
         'terms' => [
             'title' => 'Terms & Conditions of Supply Inquiries | Better Supply',
-            'meta_desc' => 'Terms governing commercial inquiries, specification verifications, and website usage for Better Supply Corporation.',
+            'meta_desc' => 'Terms governing commercial inquiries, specification verifications, and website usage for Better Supply Trading Establishment.',
         ],
     ],
 
@@ -191,7 +191,7 @@ return [
         'delivery_date_placeholder' => 'e.g. Q1 2027 or immediate spot requirement',
         'attachment' => 'Technical Documents / BOQ / TDS (Optional)',
         'attachment_hint' => 'Accepted files: PDF, DOC, DOCX, XLS, XLSX, JPG, PNG (Max 10 MB)',
-        'privacy_consent' => 'I agree that Better Supply Corporation may process these specifications and contact details solely to evaluate sourcing options and provide commercial quotations.',
+        'privacy_consent' => 'I agree that Better Supply Trading Establishment may process these specifications and contact details solely to evaluate sourcing options and provide commercial quotations.',
         'submit' => 'Submit RFQ Inquiry',
         'submitting' => 'Processing Sourcing Request...',
         'success_title' => 'Quotation Request Received',
@@ -207,8 +207,8 @@ return [
         'home' => [
             'hero_badge' => 'Dammam, Saudi Arabia • Global B2B Trading',
             'hero_title' => 'Industrial & Chemical Supply. Global Trading Solutions.',
-            'hero_lead' => 'Better Supply Corporation connects international manufacturers with industrial and commercial buyers across Saudi Arabia and the GCC, specializing in chemical, mineral, and industrial procurement.',
-            'hero_subtitle' => 'Better Supply Corporation connects international manufacturers and suppliers with industrial and commercial buyers across Saudi Arabia and the GCC. Based in Dammam, we support the sourcing and wholesale trading of industrial salts, oilfield materials, water-treatment chemicals, agricultural inputs and commercial products.',
+            'hero_lead' => 'Better Supply Trading Establishment connects international manufacturers with industrial and commercial buyers across Saudi Arabia and the GCC, specializing in chemical, mineral, and industrial procurement.',
+            'hero_subtitle' => 'Better Supply Trading Establishment connects international manufacturers and suppliers with industrial and commercial buyers across Saudi Arabia and the GCC. Based in Dammam, we support the sourcing and wholesale trading of industrial salts, oilfield materials, water-treatment chemicals, agricultural inputs and commercial products.',
             'hero_scope' => 'Our services focus on product-specific procurement, technical specification coordination, competitive commercial quotations and practical import-export arrangements.',
             'trust_strip' => [
                 'dammam' => 'Based in Dammam, KSA',
@@ -234,7 +234,7 @@ return [
         // About Page
         'about' => [
             'heading' => 'International Sourcing. Industrial Supply. Commercial Partnerships.',
-            'lead' => 'Better Supply Corporation is a Saudi-based trading and procurement business serving industrial, agricultural and commercial supply requirements. From Dammam, our company works to connect global manufacturing and wholesale markets with buyers across Saudi Arabia and the GCC.',
+            'lead' => 'Better Supply Trading Establishment is a Saudi-based trading and procurement business serving industrial, agricultural and commercial supply requirements. From Dammam, our company works to connect global manufacturing and wholesale markets with buyers across Saudi Arabia and the GCC.',
             'scope' => 'Our business activities cover chemical materials, industrial salts, oilfield-related sourcing, water-treatment products, fertilizers, agricultural growing media and other commercial categories. We focus on accurate specification matching, professional communication and commercially practical supply arrangements.',
             'mission_title' => 'Our Mission',
             'mission_desc' => 'To connect manufacturers, distributors and commercial buyers through efficient sourcing, transparent communication and dependable procurement coordination.',
@@ -261,7 +261,7 @@ return [
         // Industrial Salts Page
         'industrial_salts' => [
             'heading' => 'Bulk Industrial Salts and Specialty Salt Sourcing',
-            'intro' => 'Better Supply Corporation welcomes procurement inquiries for industrial salts used in manufacturing, chemical processing, industrial water softening and selected petroleum-sector applications. Each product is sourced to the required grade, purity, physical form and intended use.',
+            'intro' => 'Better Supply Trading Establishment welcomes procurement inquiries for industrial salts used in manufacturing, chemical processing, industrial water softening and selected petroleum-sector applications. Each product is sourced to the required grade, purity, physical form and intended use.',
             'salt_distinction_notice' => 'Technical Suitability Notice: Different salts serve distinct industrial functions. Industrial salt cannot replace specialized RO water treatment chemicals or high-density completion fluids. Technical compatibility must be confirmed for each project process.',
             'sodium_chloride_title' => 'Industrial Sodium Chloride Products',
             'specialty_salts_title' => 'Selected Specialty Inorganic Salts',
@@ -331,8 +331,8 @@ return [
         // Oilfield Chemicals Page
         'oilfield_chemicals' => [
             'heading' => 'Drilling Materials and Completion-Brine Chemical Sourcing',
-            'intro' => 'Better Supply Corporation is developing product-specific sourcing solutions for oil and gas contractors, drilling-fluid service companies, project procurement teams and industrial chemical distributors. We welcome inquiries requiring defined chemical grades, technical documentation and project delivery conditions.',
-            'compliance_note' => 'Compliance Notice: Better Supply Corporation operates as an independent sourcing and trading business. We do not claim approval from Saudi Aramco or SLB, and we do not represent proprietary third-party formulations. Material acceptance and vendor qualification remain subject to the relevant buyer’s procurement procedures.',
+            'intro' => 'Better Supply Trading Establishment is developing product-specific sourcing solutions for oil and gas contractors, drilling-fluid service companies, project procurement teams and industrial chemical distributors. We welcome inquiries requiring defined chemical grades, technical documentation and project delivery conditions.',
+            'compliance_note' => 'Compliance Notice: Better Supply Trading Establishment operates as an independent sourcing and trading business. We do not claim approval from Saudi Aramco or SLB, and we do not represent proprietary third-party formulations. Material acceptance and vendor qualification remain subject to the relevant buyer’s procurement procedures.',
             'drilling_salts_title' => 'Drilling-Fluid Salts',
             'completion_brines_title' => 'Completion & Clear-Brine Materials — Specialist Inquiries',
             'drilling_minerals_title' => 'Selected Drilling Minerals & Treatment Materials',
@@ -467,7 +467,7 @@ return [
         // Fertilizers Page
         'fertilizers' => [
             'heading' => 'Agricultural Fertilizer and Crop-Nutrition Sourcing',
-            'intro' => 'Better Supply Corporation is building commercial sourcing opportunities for agricultural fertilizers, plant-nutrition materials and related authorized agricultural inputs. We welcome inquiries from fertilizer wholesalers, agricultural distributors, commercial growers and greenhouse operators.',
+            'intro' => 'Better Supply Trading Establishment is building commercial sourcing opportunities for agricultural fertilizers, plant-nutrition materials and related authorized agricultural inputs. We welcome inquiries from fertilizer wholesalers, agricultural distributors, commercial growers and greenhouse operators.',
             'compliance_disclaimer' => 'Commercial Sourcing Notice: Sourcing inquiries welcome. Product marketing and import/export activities are subject to applicable agricultural approvals and country-specific regulatory requirements. Better Supply does not supply restricted crop-protection pesticides without specific statutory licensing.',
             'categories_title' => 'Fertilizer Categories',
             'related_inputs_title' => 'Related Agricultural Inputs',
@@ -519,7 +519,7 @@ return [
         // Coco Peat Page
         'coco_peat' => [
             'heading' => 'India-Origin Coco Peat and Coconut Growing Media',
-            'intro' => 'Better Supply Corporation is developing sourcing relationships for coco peat (coir pith) and coconut-based growing media manufactured or processed in India. The initiative is aimed at buyers in Saudi Arabia and the GCC, with selected opportunities being explored in Europe and the United States.',
+            'intro' => 'Better Supply Trading Establishment is developing sourcing relationships for coco peat (coir pith) and coconut-based growing media manufactured or processed in India. The initiative is aimed at buyers in Saudi Arabia and the GCC, with selected opportunities being explored in Europe and the United States.',
             'compliance_note' => 'Market Scope Notice: Europe and the United States represent developing target markets currently under commercial exploration, not an assertion of established supply networks. Specific attributes such as low-EC or washed status require formal batch testing and laboratory certification.',
             'products_title' => 'Proposed Product Categories',
             'applications_title' => 'Potential Commercial Applications',
@@ -559,7 +559,7 @@ return [
         // Packaging & Disposables Page
         'packaging_disposables' => [
             'heading' => 'Bulk Packaging Materials and Commercial Consumables',
-            'intro' => 'Better Supply Corporation welcomes sourcing inquiries for packaging and disposable product categories used by manufacturers, distributors, logistics companies, foodservice businesses and commercial establishments.',
+            'intro' => 'Better Supply Trading Establishment welcomes sourcing inquiries for packaging and disposable product categories used by manufacturers, distributors, logistics companies, foodservice businesses and commercial establishments.',
             'compliance_note' => 'Specifications Notice: All quotations are based on requested material composition, board grade, flute dimensions, print specifications, and delivery destination. Food-contact items require compliant material certification.',
             'cartons_title' => 'Carton Boxes and Packaging Materials',
             'disposables_title' => 'Disposable and Commercial Consumables',
@@ -611,7 +611,7 @@ return [
         // Other Trading (Vehicles & Office Machinery)
         'other_trading' => [
             'heading' => 'Specialized Vehicles and Office Machinery Trading',
-            'intro' => 'In addition to industrial and agricultural sourcing, Better Supply Corporation’s wider trading portfolio includes selected specialized passenger vehicles and office machinery aligned with our registered commercial activities.',
+            'intro' => 'In addition to industrial and agricultural sourcing, Better Supply Trading Establishment’s wider trading portfolio includes selected specialized passenger vehicles and office machinery aligned with our registered commercial activities.',
             'compliance_note' => 'Statutory Alignment Notice: All activities are conducted in accordance with registered Saudi Commercial Registration classifications. Better Supply operates as a commercial trading intermediary and does not represent vehicle manufacturers or hold official automotive dealerships.',
             'vehicles_title' => 'Specialized Passenger Vehicles (CR 451011 & 451012)',
             'office_machinery_title' => 'Wholesale Office Machinery & Equipment (CR 465910)',
@@ -690,7 +690,7 @@ return [
         // International Trading Page
         'international_trading' => [
             'heading' => 'Global Product Sourcing and GCC Trading',
-            'intro' => 'Better Supply Corporation develops trading and sourcing connections between international manufacturers and commercial buyers. India and other South Asian markets form part of our sourcing focus, while Saudi Arabia and other GCC countries remain our principal target trading markets.',
+            'intro' => 'Better Supply Trading Establishment develops trading and sourcing connections between international manufacturers and commercial buyers. India and other South Asian markets form part of our sourcing focus, while Saudi Arabia and other GCC countries remain our principal target trading markets.',
             'gcc_title' => 'Saudi Arabia and GCC Markets',
             'gcc_text' => 'Our commercial coverage focuses on buyers and distribution opportunities in Saudi Arabia, the United Arab Emirates, Qatar, Kuwait, Bahrain and Oman. Product-specific export and delivery options are confirmed against the destination and applicable trade requirements.',
             'south_asia_title' => 'India and South Asia Sourcing Corridors',
@@ -711,7 +711,7 @@ return [
         // Partnerships Page
         'partners' => [
             'heading' => 'Manufacturers, Distributors and International Supply Partners',
-            'intro' => 'Better Supply Corporation welcomes commercial introductions from chemical manufacturers, industrial salt producers, oilfield materials suppliers, agricultural product processors, packaging manufacturers and international wholesale distributors.',
+            'intro' => 'Better Supply Trading Establishment welcomes commercial introductions from chemical manufacturers, industrial salt producers, oilfield materials suppliers, agricultural product processors, packaging manufacturers and international wholesale distributors.',
             'objective' => 'We aim to develop sourcing relationships that connect technically suitable products with commercial buyers in Saudi Arabia, the GCC and selected global markets. Discussions may include product range, origin, documentation, production capabilities, market coverage and order terms.',
             'criteria_title' => 'What We Look for in Supply Partners',
             'criteria' => [
@@ -725,7 +725,7 @@ return [
         // Contact Page
         'contact' => [
             'heading' => 'Tell Us What You Need to Source',
-            'intro' => 'Submit an industrial or commercial product inquiry to Better Supply Corporation. Our team will review the requirement and advise on appropriate sourcing and quotation next steps.',
+            'intro' => 'Submit an industrial or commercial product inquiry to Better Supply Trading Establishment. Our team will review the requirement and advise on appropriate sourcing and quotation next steps.',
             'checklist_title' => 'For faster quotation review, please include:',
             'checklist' => [
                 'Product name and intended application',
@@ -736,7 +736,18 @@ return [
             ],
             'corporate_office_title' => 'Corporate Sourcing Desk',
             'dammam_hub' => 'Commercial Trading Hub • Dammam, KSA',
-            'placeholder_disclaimer' => 'Note: Contact channels and operational details will be updated upon final commercial registry publication.',
+            'placeholder_disclaimer' => 'Official Commercial Address: King Abdulaziz Road, Al Badi Dist. P.O. Box 5513, Dammam 32415, Kingdom of Saudi Arabia.',
+            'team_section_title' => 'Contact Our Team',
+            'team_section_subtitle' => 'Connect directly with our dedicated commercial sales and operations executives for immediate quotation assistance and logistics coordination.',
+            'sales_title' => 'Sales & Commercial Enquiries',
+            'sales_exec' => 'Sales Executive',
+            'operations_title' => 'Operations & Management Enquiries',
+            'operations_director' => 'Operations Director',
+            'direct_call' => 'Call Direct',
+            'chat_whatsapp' => 'WhatsApp Chat',
+            'send_email' => 'Send Email',
+            'mobile_whatsapp' => 'Mobile / WhatsApp:',
+            'email_label' => 'Email:',
         ],
 
         // Privacy Policy (Draft)
@@ -744,7 +755,7 @@ return [
             'heading' => 'Privacy Policy',
             'subheading' => 'Data Processing & Procurement Inquiry Handling',
             'disclaimer' => 'DRAFT - LEGAL REVIEW REQUIRED',
-            'content' => 'Better Supply Corporation ("Better Supply", "we", "our") respects the confidentiality of commercial inquiries and business information submitted through bettersupplytrading.com. This policy outlines how information provided via our Request for Quotation (RFQ) portal and commercial contact forms is processed.\n\n1. Information We Collect: We collect business contact details including your full name, company name, corporate email address, telephone/WhatsApp number, delivery destinations, and commercial material specifications.\n\n2. How We Use Information: Data submitted is used exclusively to evaluate sourcing viability, correspond with verified manufacturers, prepare commercial proposals, and coordinate freight logistics.\n\n3. Data Storage & Security: All submitted specifications and attachments are securely stored on restricted internal databases. We do not sell, rent, or distribute commercial inquiry details to unrelated third parties.\n\n4. Regulatory Compliance: Our data practices are designed to comply with applicable data protection regulations in the Kingdom of Saudi Arabia.\n\nFor questions regarding data handling, please contact our administrative desk at [ENTER VERIFIED CORPORATE EMAIL].',
+            'content' => 'Better Supply Trading Establishment ("Better Supply", "we", "our") respects the confidentiality of commercial inquiries and business information submitted through bettersupplytrading.com. This policy outlines how information provided via our Request for Quotation (RFQ) portal and commercial contact forms is processed.\n\n1. Information We Collect: We collect business contact details including your full name, company name, corporate email address, telephone/WhatsApp number, delivery destinations, and commercial material specifications.\n\n2. How We Use Information: Data submitted is used exclusively to evaluate sourcing viability, correspond with verified manufacturers, prepare commercial proposals, and coordinate freight logistics.\n\n3. Data Storage & Security: All submitted specifications and attachments are securely stored on restricted internal databases. We do not sell, rent, or distribute commercial inquiry details to unrelated third parties.\n\n4. Regulatory Compliance: Our data practices are designed to comply with applicable data protection regulations in the Kingdom of Saudi Arabia.\n\nFor questions regarding data handling, please contact our administrative desk at [ENTER VERIFIED CORPORATE EMAIL].',
         ],
 
         // Terms of Service (Draft)
@@ -752,7 +763,7 @@ return [
             'heading' => 'Terms & Conditions of Commercial Inquiries',
             'subheading' => 'Website Usage and Supply Quotation Terms',
             'disclaimer' => 'DRAFT - LEGAL REVIEW REQUIRED',
-            'content' => '1. Scope of Operations: Better Supply Corporation operates as an independent commercial trading and procurement intermediary based in Dammam, Saudi Arabia. Better Supply is not a chemical manufacturer, and website listings do not constitute an offer to sell or a guarantee of current warehouse stock.\n\n2. Sourcing on Inquiry: All product descriptions represent commercial sourcing capabilities subject to specification matching, supplier verification, and written agreement. Material properties, availability, and lead times are confirmed on a per-order basis.\n\n3. Compliance & Approvals: Better Supply makes no claims of endorsement or authorization by any third-party energy operators (including Saudi Aramco or SLB) unless explicitly evidenced by valid formal documentation. Buyers remain solely responsible for confirming technical suitability for their specific applications.\n\n4. Intellectual Property: Website content, structural layouts, and trademarks are protected by commercial copyright laws. Unauthorized reproduction is prohibited.\n\n5. Governing Law: These terms shall be governed and interpreted in accordance with the commercial regulations of the Kingdom of Saudi Arabia.',
+            'content' => '1. Scope of Operations: Better Supply Trading Establishment operates as an independent commercial trading and procurement intermediary based in Dammam, Saudi Arabia. Better Supply is not a chemical manufacturer, and website listings do not constitute an offer to sell or a guarantee of current warehouse stock.\n\n2. Sourcing on Inquiry: All product descriptions represent commercial sourcing capabilities subject to specification matching, supplier verification, and written agreement. Material properties, availability, and lead times are confirmed on a per-order basis.\n\n3. Compliance & Approvals: Better Supply makes no claims of endorsement or authorization by any third-party energy operators (including Saudi Aramco or SLB) unless explicitly evidenced by valid formal documentation. Buyers remain solely responsible for confirming technical suitability for their specific applications.\n\n4. Intellectual Property: Website content, structural layouts, and trademarks are protected by commercial copyright laws. Unauthorized reproduction is prohibited.\n\n5. Governing Law: These terms shall be governed and interpreted in accordance with the commercial regulations of the Kingdom of Saudi Arabia.',
         ],
     ],
 ];

@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Coco Peat View (views/coco-peat.php)
+ * Better Supply Trading Establishment - Coco Peat View (views/coco-peat.php)
  * Implements PDF Page 08 / Section 02.
  */
 

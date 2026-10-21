@@ -1,5 +1,5 @@
 # Deployment & DNS Guide: bettersupplytrading.com
-**Target Domain:** `bettersupplytrading.com` | **Company:** Better Supply Corporation (مؤسسة أفضل توريد التجارية)  
+**Target Domain:** `bettersupplytrading.com` | **Company:** Better Supply Trading Establishment (مؤسسة أفضل توريد التجارية)  
 **Location:** Dammam, Kingdom of Saudi Arabia
 
 ---

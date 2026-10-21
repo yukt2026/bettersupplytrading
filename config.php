@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation (مؤسسة أفضل توريد التجارية)
+ * Better Supply Trading Establishment (مؤسسة أفضل توريد التجارية)
  * Core Application Configuration & Feature Flags
  * Domain: bettersupplytrading.com
  * Location: Dammam, Kingdom of Saudi Arabia
@@ -37,7 +37,7 @@ if (!empty($dir_name)) {
 }
 
 $site_config = [
-    'app_name_en' => 'Better Supply Corporation',
+    'app_name_en' => 'Better Supply Trading Establishment',
     'app_name_ar' => 'مؤسسة أفضل توريد التجارية',
     'tagline_en' => 'Connecting Markets. Supplying Industries.',
     'tagline_ar' => 'ربط الأسواق. توريد الصناعات.',
@@ -45,15 +45,34 @@ $site_config = [
     'base_path' => $base_path, // e.g. "/bettersupplytrading" or ""
     'base_url' => rtrim($protocol . $host . $base_path, '/'),
 
-    // Contact details from Environment / PDF compliance guidelines
-    // Strictly placeholder values until verified corporate credentials provided
+    // Verified Corporate & Direct Team Contact Details
     'contacts' => [
-        'email' => env('RFQ_TO_EMAIL', '[ENTER VERIFIED CORPORATE EMAIL]'),
-        'phone' => env('CORPORATE_PHONE', '[ENTER VERIFIED NUMBER]'),
-        'whatsapp' => env('CORPORATE_WHATSAPP', '[ENTER VERIFIED NUMBER]'),
-        'address_en' => env('CORPORATE_ADDRESS_EN', 'Dammam, Eastern Province, Kingdom of Saudi Arabia'),
-        'address_ar' => env('CORPORATE_ADDRESS_AR', 'الدمام، المنطقة الشرقية، المملكة العربية السعودية'),
+        'email' => env('RFQ_TO_EMAIL', 'info@bettersupplytrading.com'),
+        'phone' => env('CORPORATE_PHONE', '+966599510213'),
+        'whatsapp' => env('CORPORATE_WHATSAPP', '+966599510213'),
+        'address_en' => 'King Abdulaziz Road, Al Badi Dist. P.O. Box 5513, Dammam 32415, Saudi Arabia',
+        'address_ar' => 'طريق الملك عبدالعزيز، حي البديع، ص.ب 5513، الدمام 32415، المملكة العربية السعودية',
         'cr_number' => env('SAUDI_CR_NUMBER', '[ENTER VERIFIED CR NUMBER]'),
+        'team' => [
+            'sales' => [
+                'name' => 'Meharsha O.N',
+                'title_en' => 'Sales Executive',
+                'title_ar' => 'مسؤول المبيعات التجارية',
+                'dept_en' => 'Sales & Commercial Enquiries',
+                'dept_ar' => 'المبيعات والاستفسارات التجارية',
+                'phone' => '+966599510213',
+                'email' => 'sales@bettersupplytrading.com',
+            ],
+            'operations' => [
+                'name' => 'Sayed Alavi',
+                'title_en' => 'Operations Director',
+                'title_ar' => 'مدير العمليات التشغيلية',
+                'dept_en' => 'Operations & Management Enquiries',
+                'dept_ar' => 'إدارة العمليات واللوجستيات',
+                'phone' => '0502851077',
+                'email' => 'operations@bettersupplytrading.com',
+            ]
+        ]
     ],
 
     // Product Category Feature Flags (set to false to gracefully hide without code removal)

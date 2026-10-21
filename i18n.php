@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Internationalization (i18n) Engine
+ * Better Supply Trading Establishment - Internationalization (i18n) Engine
  * Supports Arabic (RTL) & English (LTR) with strict locale routing,
  * reciprocal hreflang generation, and translation lookups.
  */

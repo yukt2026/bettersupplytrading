@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Automated Test Suite
+ * Better Supply Trading Establishment - Automated Test Suite
  * Tests all pages in EN and AR, RFQ validation, honeypot, file uploads, and compliance rules.
  */
 
@@ -49,7 +49,7 @@ foreach ($languages as $l) {
 
         $expected_dir = ($l === 'ar') ? 'dir="rtl"' : 'dir="ltr"';
         $has_dir = strpos($html, $expected_dir) !== false;
-        $has_brand = ($l === 'ar') ? (strpos($html, 'مؤسسة أفضل توريد التجارية') !== false) : (strpos($html, 'Better Supply Corporation') !== false);
+        $has_brand = ($l === 'ar') ? (strpos($html, 'مؤسسة أفضل توريد التجارية') !== false) : (strpos($html, 'Better Supply Trading Establishment') !== false);
         $has_editor_note = (stripos($html, 'EDITOR / DEVELOPER NOTE') !== false);
 
         if ($code === 200 && $has_dir && $has_brand && !$has_editor_note) {

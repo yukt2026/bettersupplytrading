@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Arabic Language Dictionary (ar)
+ * Better Supply Trading Establishment - Arabic Language Dictionary (ar)
  * مؤسسة أفضل توريد التجارية - قاموس اللغة العربية
  *
  * NEEDS HUMAN REVIEW: Professional business Arabic based on Better Supply handover specification.
@@ -739,7 +739,18 @@ return [
             ],
             'corporate_office_title' => 'مكتب المشتريات والتوريد التجاري',
             'dammam_hub' => 'مركز التجارة والتوريد • الدمام، المملكة العربية السعودية',
-            'placeholder_disclaimer' => 'ملاحظة: سيتم تفعيل وسائل الاتصال التشغيلية بعد استكمال التحقق من السجل التجاري المعتمد.',
+            'placeholder_disclaimer' => 'العنوان التجاري المعتمد: طريق الملك عبدالعزيز، حي البديع، ص.ب 5513، الدمام 32415، المملكة العربية السعودية.',
+            'team_section_title' => 'تواصل مع فريقنا',
+            'team_section_subtitle' => 'تواصل مباشرة مع مسؤولي المبيعات التجارية وإدارة العمليات للحصول على عروض الأسعار والتنسيق اللوجستي السريع.',
+            'sales_title' => 'المبيعات والاستفسارات التجارية',
+            'sales_exec' => 'مسؤول المبيعات التنفيذي',
+            'operations_title' => 'إدارة العمليات واللوجستيات',
+            'operations_director' => 'مدير العمليات التشغيلية',
+            'direct_call' => 'اتصال مباشر',
+            'chat_whatsapp' => 'محادثة واتساب',
+            'send_email' => 'إرسال بريد إلكتروني',
+            'mobile_whatsapp' => 'الهاتف / واتساب:',
+            'email_label' => 'البريد الإلكتروني:',
         ],
 
         // Privacy Policy (Draft)

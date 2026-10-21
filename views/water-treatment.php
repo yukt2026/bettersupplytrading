@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Water Treatment View (views/water-treatment.php)
+ * Better Supply Trading Establishment - Water Treatment View (views/water-treatment.php)
  * Implements PDF Page 06 / Section 02.
  */
 

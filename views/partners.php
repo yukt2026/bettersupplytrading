@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Partnerships View (views/partners.php)
+ * Better Supply Trading Establishment - Partnerships View (views/partners.php)
  * Implements PDF Page 13 / Section 02.
  */
 

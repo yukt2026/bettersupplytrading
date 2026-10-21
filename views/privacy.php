@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Privacy Policy View (views/privacy.php)
+ * Better Supply Trading Establishment - Privacy Policy View (views/privacy.php)
  * DRAFT - LEGAL REVIEW REQUIRED
  */
 

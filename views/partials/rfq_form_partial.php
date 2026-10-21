@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Reusable RFQ Form Partial
+ * Better Supply Trading Establishment - Reusable RFQ Form Partial
  * Conforms 100% to Handover PDF Section 04 RFQ Specifications.
  */
 $preset_category = $preset_category ?? '';

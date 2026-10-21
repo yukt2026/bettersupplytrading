@@ -1,6 +1,6 @@
 <?php
 /**
- * Better Supply Corporation - Physical Directory Endpoints Generator
+ * Better Supply Trading Establishment - Physical Directory Endpoints Generator
  * Generates lightweight index.php wrappers in /en/ and /ar/ directories.
  */
 

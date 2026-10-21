@@ -1,5 +1,5 @@
 # Final Sign-Off & Verification Checklist (FINAL_TODO.md)
-**Client / Business Owner:** Better Supply Corporation (مؤسسة أفضل توريد التجارية)  
+**Client / Business Owner:** Better Supply Trading Establishment (مؤسسة أفضل توريد التجارية)  
 **Handover Version:** 2.0 | **Prepared By:** Senior Full-Stack Development Team  
 **Date:** October 21, 2026
 
@@ -9,7 +9,7 @@ The website code, design architecture, asset generation, and bilingual routing a
 
 ## 1. Official Corporate Logo Files
 - [ ] **Current State:** Monogram vector assets (`logo-monogram-black.svg`, `logo-monogram-white.svg`, `logo-horizontal-en.svg`, `logo-horizontal-ar.svg`) are deployed with subtle "PLACEHOLDER LOGO" marks.
-- [ ] **Action Required:** Supply final high-resolution vector artwork (`.ai` / `.svg` / `.eps`) for the approved Better Supply Corporation identity (both English and Arabic lockups).
+- [ ] **Action Required:** Supply final high-resolution vector artwork (`.ai` / `.svg` / `.eps`) for the approved Better Supply Trading Establishment identity (both English and Arabic lockups).
 - [ ] **Drop-in Location:** Replace files in `public/images/`.
 
 ---

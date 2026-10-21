@@ -1,11 +1,11 @@
-# Better Supply Corporation (مؤسسة أفضل توريد التجارية)
+# Better Supply Trading Establishment (مؤسسة أفضل توريد التجارية)
 **Official B2B Website & Sourcing Portal**  
 **Domain:** `bettersupplytrading.com` | **Commercial Hub:** Dammam, Kingdom of Saudi Arabia
 
 ---
 
 ## 1. Project Overview
-This repository contains the complete, production-ready bilingual B2B corporate website and Request for Quotation (RFQ) portal for **Better Supply Corporation** (`مؤسسة أفضل توريد التجارية`), based on the *Developer Handover Document Version 2.0 (October 2026)*.
+This repository contains the complete, production-ready bilingual B2B corporate website and Request for Quotation (RFQ) portal for **Better Supply Trading Establishment** (`مؤسسة أفضل توريد التجارية`), based on the *Developer Handover Document Version 2.0 (October 2026)*.
 
 ### Key Features
 - **14 Dedicated Bilingual Pages:** English (`/en/*`) and Professional Modern Standard Arabic (`/ar/*`) with full RTL glyph shaping, fluid typography, and mobile-first responsiveness.
