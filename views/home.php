@@ -16,11 +16,11 @@ $trust_strip = t('pages.home.trust_strip');
      ========================================================================= -->
 <section class="relative bg-slate-950 text-white min-h-[70vh] nav:min-h-[80vh] flex flex-col justify-between overflow-hidden border-b border-slate-800">
     
-    <!-- Background Photographic Image (Cranes, Containers & Twilight Sky clearly visible) -->
-    <div class="absolute inset-0 z-0 pointer-events-none">
+    <!-- Background Photographic Image (Parallax + Dusk Port Cranes & Sky) -->
+    <div class="absolute inset-0 z-0 pointer-events-none parallax-container overflow-hidden">
         <picture>
             <source srcset="<?= img_url('hero_port_dusk.webp') ?>" type="image/webp">
-            <img src="<?= img_url('hero_port_dusk.jpg') ?>" alt="Industrial deep-water port terminal at dusk" class="w-full h-full object-cover object-center opacity-85 filter contrast-110">
+            <img src="<?= img_url('hero_port_dusk.jpg') ?>" alt="Industrial deep-water port terminal at dusk" class="w-full h-full object-cover object-center opacity-85 filter contrast-110 parallax-img" data-speed="0.25">
         </picture>
         
         <!-- Directional Gradient Overlay:
@@ -39,26 +39,26 @@ $trust_strip = t('pages.home.trust_strip');
     <!-- Main Hero Content: Left-aligned on Desktop (RTL: Right-aligned), Centered on Mobile -->
     <div class="relative z-10 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 nav:pt-24 nav:pb-16 flex-1 flex flex-col justify-center">
         
-        <div class="hero-fade-in max-w-[640px] text-center nav:text-left rtl:nav:text-right flex flex-col items-center nav:items-start rtl:nav:items-end">
+        <div class="hero-fade-in max-w-[640px] text-center nav:text-left rtl:nav:text-right flex flex-col items-center nav:items-start rtl:nav:items-end" data-aos="fade-up" data-aos-duration="800">
             
             <!-- Eyebrow Pill -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/90 border border-slate-700/80 text-emerald-400 uppercase tracking-wider mb-5 shadow-sm">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/90 border border-slate-700/80 text-emerald-400 uppercase tracking-wider mb-5 shadow-sm max-w-full text-wrap text-center" data-aos="fade-down" data-aos-delay="100">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 <span><?= t('pages.home.hero_badge') ?></span>
             </div>
 
             <!-- Single Industrial Positioning Statement with Fluid Clamp H1 -->
-            <h1 class="text-white font-extrabold tracking-tight mb-4 text-balance" style="font-size: clamp(2.25rem, 4.5vw, 3.75rem); line-height: 1.1;">
+            <h1 class="text-white font-extrabold tracking-tight mb-4 text-balance break-words max-w-full" style="font-size: clamp(2.1rem, 4.2vw, 3.75rem); line-height: 1.12;" data-aos="fade-up" data-aos-delay="150">
                 <?= t('pages.home.hero_title') ?>
             </h1>
 
             <!-- ONE Short Punchy Paragraph (max 2 lines on desktop, ~25-30 words) -->
-            <p class="text-slate-200 text-sm sm:text-base nav:text-lg mb-8 font-normal leading-snug max-w-xl text-balance">
+            <p class="text-slate-200 text-sm sm:text-base nav:text-lg mb-8 font-normal leading-snug max-w-xl text-balance" data-aos="fade-up" data-aos-delay="200">
                 <?= t('pages.home.hero_lead') ?>
             </p>
 
             <!-- Two High-Contrast CTAs -->
-            <div class="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">
+            <div class="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto" data-aos="fade-up" data-aos-delay="250">
                 <a href="<?= route_url('contact') ?>#rfq-form" class="w-full sm:w-auto h-[46px] px-7 inline-flex items-center justify-center bg-brandgreen hover:bg-emerald-600 text-white font-bold text-sm rounded-lg shadow-lg hover:shadow-emerald-950/50 transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brandgreen whitespace-nowrap">
                     <?= t('buttons.request_quote') ?>
                 </a>
@@ -72,7 +72,7 @@ $trust_strip = t('pages.home.trust_strip');
     </div>
 
     <!-- Slim Trust Strip Docked along Bottom of Hero (4 Factual Items) -->
-    <div class="relative z-10 border-t border-slate-800/80 bg-slate-950/70 backdrop-blur-md py-3.5">
+    <div class="relative z-10 border-t border-slate-800/80 bg-slate-950/70 backdrop-blur-md py-3.5" data-aos="fade-up" data-aos-delay="300">
         <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-medium text-slate-300">
                 <div class="flex items-center justify-center nav:justify-start gap-2">
@@ -102,7 +102,7 @@ $trust_strip = t('pages.home.trust_strip');
      ========================================================================= -->
 <section class="py-20 bg-slate-900 text-white border-b border-slate-800">
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
             <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">
                 <?= ($lang === 'ar') ? 'التوريد المتخصص' : 'Core Divisions' ?>
             </span>
@@ -118,12 +118,12 @@ $trust_strip = t('pages.home.trust_strip');
             
             <!-- Card 1: Industrial Salts -->
             <?php if (is_category_active('industrial_salts')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-600 transition-all group flex flex-col justify-between">
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 hover-lift transition-all group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="h-48 overflow-hidden relative">
                         <img src="<?= img_url('banner_industrial_salts.jpg') ?>" alt="Industrial salt crystals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-900/90 text-[11px] font-mono text-emerald-300 border border-slate-700">
+                        <span class="absolute top-3 <?= ($lang === 'ar') ? 'left-3' : 'right-3' ?> px-2.5 py-1 rounded bg-slate-900/90 text-[11px] font-mono text-emerald-300 border border-slate-700">
                             NaCl • KCl • CaCl₂
                         </span>
                     </div>
@@ -149,12 +149,12 @@ $trust_strip = t('pages.home.trust_strip');
 
             <!-- Card 2: Oilfield Chemicals & Drilling Materials -->
             <?php if (is_category_active('oilfield_chemicals')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-600 transition-all group flex flex-col justify-between">
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 hover-lift transition-all group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="h-48 overflow-hidden relative">
                         <img src="<?= img_url('banner_oilfield.jpg') ?>" alt="Oilfield drilling rig silhouette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-900/90 text-[11px] font-mono text-emerald-300 border border-slate-700">
+                        <span class="absolute top-3 <?= ($lang === 'ar') ? 'left-3' : 'right-3' ?> px-2.5 py-1 rounded bg-slate-900/90 text-[11px] font-mono text-emerald-300 border border-slate-700">
                             CaBr₂ • NaBr • BaSO₄
                         </span>
                     </div>
@@ -180,12 +180,12 @@ $trust_strip = t('pages.home.trust_strip');
 
             <!-- Card 3: Water Treatment & Desalination -->
             <?php if (is_category_active('water_treatment')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-600 transition-all group flex flex-col justify-between">
+            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 hover-lift transition-all group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <div class="h-48 overflow-hidden relative">
                         <img src="<?= img_url('banner_water_treatment.jpg') ?>" alt="Water treatment and desalination RO plant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-slate-900/90 text-[11px] font-mono text-emerald-300 border border-slate-700">
+                        <span class="absolute top-3 <?= ($lang === 'ar') ? 'left-3' : 'right-3' ?> px-2.5 py-1 rounded bg-slate-900/90 text-[11px] font-mono text-emerald-300 border border-slate-700">
                             RO Antiscalants • PAC
                         </span>
                     </div>
@@ -218,7 +218,7 @@ $trust_strip = t('pages.home.trust_strip');
      ========================================================================= -->
 <section class="py-20 bg-slate-950 text-white border-b border-slate-800">
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mb-14">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
             <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">
                 <?= ($lang === 'ar') ? 'تغطية القطاعات' : 'Target Sectors' ?>
             </span>
@@ -231,8 +231,13 @@ $trust_strip = t('pages.home.trust_strip');
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <?php foreach (t('pages.industries.sectors') as $sector): ?>
-            <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-slate-700 transition-all">
+            <?php 
+            $sec_idx = 0;
+            foreach (t('pages.industries.sectors') as $sector): 
+                $sec_delay = ($sec_idx % 3) * 100 + 100;
+                $sec_idx++;
+            ?>
+            <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-emerald-500/40 hover-lift transition-all" data-aos="fade-up" data-aos-delay="<?= $sec_delay ?>">
                 <div class="w-10 h-10 rounded-lg bg-emerald-950/70 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                 </div>
@@ -251,7 +256,7 @@ $trust_strip = t('pages.home.trust_strip');
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            <div class="lg:col-span-6 space-y-6">
+            <div class="lg:col-span-6 space-y-6" data-aos="fade-up">
                 <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block">
                     <?= ($lang === 'ar') ? 'المنهجية والموقع الجغرافي' : 'Commercial Methodology' ?>
                 </span>
@@ -277,13 +282,18 @@ $trust_strip = t('pages.home.trust_strip');
                 </div>
             </div>
 
-            <div class="lg:col-span-6 space-y-4">
+            <div class="lg:col-span-6 space-y-4" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">
                     <?= t('pages.about.workflow_title') ?>
                 </h3>
                 <div class="space-y-3">
-                    <?php foreach (t('pages.about.steps') as $step): ?>
-                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800">
+                    <?php 
+                    $st_idx = 0;
+                    foreach (t('pages.about.steps') as $step): 
+                        $st_delay = $st_idx * 100 + 100;
+                        $st_idx++;
+                    ?>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-emerald-500/30 transition-colors" data-aos="fade-up" data-aos-delay="<?= $st_delay ?>">
                         <span class="text-xs font-bold font-mono px-2 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-500/30">
                             <?= $step['num'] ?>
                         </span>
@@ -303,7 +313,7 @@ $trust_strip = t('pages.home.trust_strip');
 <!-- =========================================================================
      MODULE 05: Saudi Vision 2030 Section with Factual, Non-Affiliation Wording
      ========================================================================= -->
-<section class="py-16 bg-slate-950 text-white border-b border-slate-800">
+<section class="py-16 bg-slate-950 text-white border-b border-slate-800" data-aos="fade-up">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/90 text-emerald-300 border border-emerald-500/30 uppercase tracking-widest mb-4">
             <?= t('pages.home.vision2030_badge') ?>
@@ -327,7 +337,7 @@ $trust_strip = t('pages.home.trust_strip');
      ========================================================================= -->
 <section class="py-20 bg-slate-900 text-white border-b border-slate-800">
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mb-14">
+        <div class="max-w-3xl mb-14" data-aos="fade-up">
             <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">
                 <?= ($lang === 'ar') ? 'قطاعات التوريد الموسعة' : 'Commercial Portfolio' ?>
             </span>
@@ -343,7 +353,7 @@ $trust_strip = t('pages.home.trust_strip');
             
             <!-- Category: Fertilizers -->
             <?php if (is_category_active('fertilizers')): ?>
-            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-slate-700 transition-all flex flex-col justify-between">
+            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-emerald-500/50 hover-lift transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
                 <div>
                     <div class="h-32 mb-4 overflow-hidden rounded-lg">
                         <img src="<?= img_url('banner_fertilizers.jpg') ?>" alt="Agricultural fertilizers" class="w-full h-full object-cover">
@@ -362,7 +372,7 @@ $trust_strip = t('pages.home.trust_strip');
 
             <!-- Category: Coco Peat -->
             <?php if (is_category_active('coco_peat')): ?>
-            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-slate-700 transition-all flex flex-col justify-between">
+            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-emerald-500/50 hover-lift transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                 <div>
                     <div class="h-32 mb-4 overflow-hidden rounded-lg">
                         <img src="<?= img_url('banner_coco_peat.jpg') ?>" alt="Coco peat blocks" class="w-full h-full object-cover">
@@ -381,7 +391,7 @@ $trust_strip = t('pages.home.trust_strip');
 
             <!-- Category: Packaging & Disposables -->
             <?php if (is_category_active('packaging_disposables')): ?>
-            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-slate-700 transition-all flex flex-col justify-between">
+            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-emerald-500/50 hover-lift transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
                 <div>
                     <div class="h-32 mb-4 overflow-hidden rounded-lg">
                         <img src="<?= img_url('banner_packaging.jpg') ?>" alt="Corrugated carton packaging" class="w-full h-full object-cover">
@@ -400,7 +410,7 @@ $trust_strip = t('pages.home.trust_strip');
 
             <!-- Category: Other Trading (Vehicles & Office Machinery) -->
             <?php if (is_category_active('other_trading')): ?>
-            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-slate-700 transition-all flex flex-col justify-between">
+            <div class="p-6 bg-slate-950 border border-slate-800 rounded-xl hover:border-emerald-500/50 hover-lift transition-all flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
                 <div>
                     <div class="h-32 mb-4 overflow-hidden rounded-lg">
                         <img src="<?= img_url('banner_vehicles.jpg') ?>" alt="Specialized passenger vehicles" class="w-full h-full object-cover">
@@ -429,7 +439,7 @@ $trust_strip = t('pages.home.trust_strip');
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             <!-- Col 1: Principal Focus (Saudi & GCC) -->
-            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 hover-lift transition-all space-y-4" data-aos="fade-up" data-aos-delay="100">
                 <span class="px-2.5 py-1 rounded bg-emerald-950 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
                     <?= ($lang === 'ar') ? 'نطاق تشغيلي نشط' : 'Active Operational Scope' ?>
                 </span>
@@ -440,7 +450,7 @@ $trust_strip = t('pages.home.trust_strip');
             </div>
 
             <!-- Col 2: Sourcing Focus (India & South Asia) -->
-            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 hover-lift transition-all space-y-4" data-aos="fade-up" data-aos-delay="200">
                 <span class="px-2.5 py-1 rounded bg-emerald-950 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/30">
                     <?= ($lang === 'ar') ? 'قنوات التوريد المباشرة' : 'Direct Sourcing Corridors' ?>
                 </span>
@@ -451,7 +461,7 @@ $trust_strip = t('pages.home.trust_strip');
             </div>
 
             <!-- Col 3: Exploratory Scope (Europe & USA) -->
-            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+            <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-amber-500/40 hover-lift transition-all space-y-4" data-aos="fade-up" data-aos-delay="300">
                 <span class="px-2.5 py-1 rounded bg-slate-800 text-amber-300 text-xs font-bold uppercase tracking-wider border border-slate-700">
                     <?= ($lang === 'ar') ? 'نطاق استكشافي وتطويري' : 'Planned / Exploratory Scope' ?>
                 </span>
@@ -468,7 +478,7 @@ $trust_strip = t('pages.home.trust_strip');
 <!-- =========================================================================
      MODULE 08: Contact / RFQ Section with Essential Technical Inputs
      ========================================================================= -->
-<section class="py-20 bg-slate-950 text-white">
+<section class="py-20 bg-slate-950 text-white" data-aos="fade-up">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <?php 
         $current_page_name = 'home';

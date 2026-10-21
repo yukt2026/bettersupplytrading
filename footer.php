@@ -111,7 +111,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                     <div class="pt-2">
                         <a href="<?= route_url('contact') ?>#rfq-form" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded transition-colors">
                             <span><?= t('buttons.request_quote') ?></span>
-                            <span>&rarr;</span>
+                            <span class="rtl:rotate-180">&rarr;</span>
                         </a>
                     </div>
                 </div>
@@ -139,29 +139,95 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
         </div>
     </footer>
 
-    <!-- Interactive Scripts: Mobile Nav & RFQ Form Async Submission -->
+    <!-- Unified Floating Action Stack (Request RFQ + WhatsApp Commercial Desk) -->
+    <div id="floating-actions-stack" class="fixed bottom-5 sm:bottom-6 <?= ($lang === 'ar') ? 'left-4 sm:left-6' : 'right-4 sm:right-6' ?> z-40 flex flex-col items-end rtl:items-start gap-2.5 sm:gap-3 pointer-events-none">
+        
+        <!-- 1. Floating "Request RFQ" Pill Button -->
+        <a href="<?= route_url('contact') ?>#rfq-form" class="pointer-events-auto inline-flex items-center gap-2 bg-brandgreen hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-emerald-400/50 border border-emerald-400/30" aria-label="<?= t('nav.request_rfq') ?>">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span class="whitespace-nowrap"><?= t('nav.request_rfq') ?></span>
+        </a>
+
+        <!-- 2. Floating WhatsApp / Commercial Desk Button -->
+        <div class="pointer-events-auto flex items-center gap-2.5 group">
+            <span class="hidden md:inline-block bg-slate-900/95 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-emerald-500/30 backdrop-blur-sm">
+                <?= ($lang === 'ar') ? 'تواصل مع مكتب المشتريات' : 'Direct Commercial Desk' ?>
+            </span>
+            <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $site_config['contacts']['phone']) ?>?text=<?= urlencode(($lang === 'ar') ? 'مرحباً مؤسسة أفضل توريد التجارية، أود الاستفسار عن عروض الأسعار.' : 'Hello Better Supply Corporation, I would like to inquire about industrial sourcing and quotations.') ?>" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Procurement Desk" class="relative bg-emerald-600 hover:bg-emerald-500 text-white w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border border-white/20">
+                <span class="absolute -inset-1 rounded-full bg-emerald-500 opacity-25 animate-ping pointer-events-none"></span>
+                <svg class="w-5 h-5 sm:w-6 sm:h-6 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.053-.99-.071-.341-.119-.844-.288-1.464-.567-1.428-.642-2.355-2.096-2.427-2.19-.071-.096-.576-.767-.576-1.463 0-.696.365-1.037.495-1.18.13-.143.284-.179.379-.179.096 0 .191.002.274.006.09.004.21.032.327.283.12.257.411 1.002.447 1.074.036.072.06.156.012.251-.048.096-.072.156-.144.239-.072.084-.15.187-.215.251-.072.072-.148.15-.064.294.084.144.373.616.801.998.552.492 1.017.644 1.161.716.144.072.228.06.312-.036.084-.096.361-.42.457-.564.096-.144.192-.12.324-.072.132.048.837.395.981.467.144.072.24.108.276.168.036.06.036.348-.108.753z"/></svg>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- AOS Script CDN & VanillaTilt Interactive 3D Depth -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <!-- Interactive Scripts: Parallax, AOS, VanillaTilt & RFQ Handler -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Menu Drawer Controls
-            const menuBtn = document.getElementById('mobile-menu-btn');
-            const closeBtn = document.getElementById('mobile-close-btn');
-            const drawer = document.getElementById('mobile-drawer');
+            // High-Performance Parallax Scroll Event (Desert Iron Pattern)
+            const parallaxImages = document.getElementsByClassName('parallax-img');
+            let ticking = false;
 
-            if (menuBtn && drawer) {
-                menuBtn.addEventListener('click', function() {
-                    drawer.classList.remove('hidden');
+            window.addEventListener('scroll', () => {
+                if (!parallaxImages.length) return;
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        for (let i = 0; i < parallaxImages.length; i++) {
+                            const img = parallaxImages[i];
+                            const speed = parseFloat(img.getAttribute('data-speed')) || 0.25;
+                            if (scrollY < window.innerHeight * 1.5) {
+                                img.style.transform = `scale(1.12) translateY(${scrollY * speed}px)`;
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Dynamic AOS scanner: ensures every section and card gets animated
+            const headings = document.querySelectorAll('section h2, section h3');
+            headings.forEach(el => {
+                if (!el.hasAttribute('data-aos')) el.setAttribute('data-aos', 'fade-up');
+            });
+
+            const isMobile = window.innerWidth < 768;
+            const anims = isMobile 
+                ? ['fade-up', 'zoom-in', 'zoom-in-up'] 
+                : ['fade-up', 'fade-left', 'fade-right', 'zoom-in'];
+            let aIdx = 0;
+
+            document.querySelectorAll('.grid > div, .grid > a').forEach(el => {
+                if (!el.hasAttribute('data-aos')) {
+                    el.setAttribute('data-aos', anims[aIdx % anims.length]);
+                    el.setAttribute('data-aos-duration', '800');
+                    aIdx++;
+                }
+            });
+
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 40,
+                    easing: 'ease-out-cubic'
                 });
             }
-            if (closeBtn && drawer) {
-                closeBtn.addEventListener('click', function() {
-                    drawer.classList.add('hidden');
-                });
-            }
-            if (drawer) {
-                drawer.addEventListener('click', function(e) {
-                    if (e.target === drawer) {
-                        drawer.classList.add('hidden');
-                    }
+
+            // Interactive 3D Tilt on Desktop Cards (>=1024px)
+            if (typeof VanillaTilt !== 'undefined' && window.innerWidth >= 1024) {
+                VanillaTilt.init(document.querySelectorAll(".grid > div.bg-slate-950, .hover-tilt"), {
+                    max: 4,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.12,
+                    scale: 1.02
                 });
             }
 
@@ -249,5 +315,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
             });
         });
     </script>
+</body>
+</html>
 </body>
 </html>

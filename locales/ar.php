@@ -31,11 +31,11 @@ return [
         'coco_peat' => 'تربة الكوكوبيت الهندية ووسائط الزراعة',
         'packaging_disposables' => 'الكرتون المضلع ومواد التعبئة والمستهلكات',
         'other_trading' => 'المركبات المتخصصة والآلات المكتبية',
-        'industries' => 'القطاعات المستفيدة',
-        'international_trading' => 'التجارة الدولية والاستيراد',
-        'partners' => 'الشراكات التجارية',
-        'contact' => 'طلب عرض أسعار / تواصل معنا',
-        'request_rfq' => 'طلب عرض أسعار',
+        'industries' => 'القطاعات المستهدفة',
+        'international_trading' => 'التجارة الدولية',
+        'partners' => 'الشراكات',
+        'contact' => 'تواصل معنا',
+        'request_rfq' => 'طلب تسعير RFQ',
     ],
 
     // Common Buttons & Microcopy

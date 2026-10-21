@@ -7,9 +7,9 @@ $preset_category = $preset_category ?? '';
 $preset_product = $preset_product ?? '';
 $current_page_name = $page ?? 'general';
 ?>
-<div id="rfq-form" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
-    <!-- Subtle background accent -->
-    <div class="absolute -right-20 -top-20 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+<div id="rfq-form" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-10 text-white shadow-2xl relative overflow-hidden w-full max-w-full">
+    <!-- Subtle background accent (clamped inside container) -->
+    <div class="absolute right-0 top-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-3xl mb-8 relative z-10">
         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 uppercase tracking-wider mb-3">

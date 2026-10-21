@@ -33,6 +33,9 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- AOS Library for Scroll Reveal (matching Desert Iron standard) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -40,7 +43,7 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
             theme: {
                 extend: {
                     screens: {
-                        'nav': '1100px',
+                        'nav': '1200px',
                     },
                     colors: {
                         branddark: '#0F172A',
@@ -62,8 +65,14 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
     </script>
     
     <style>
-        html { scroll-behavior: smooth; }
-        body { -webkit-font-smoothing: antialiased; }
+        /* Strict Viewport Clamping & Fluid Scroll (Desert Iron Architecture) */
+        html { scroll-behavior: smooth; overflow-x: hidden; overflow-x: clip; }
+        body, main { overflow-x: hidden; overflow-x: clip; width: 100%; max-width: 100vw; -webkit-font-smoothing: antialiased; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Prevent iOS automatic zoom on form focus */
+        input, select, textarea { font-size: 16px !important; }
         
         /* Nav Links Strict Single-Row Styling */
         .nav-item-link {
@@ -73,7 +82,22 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
             position: relative;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
-            transition: color 0.2s ease;
+            transition: color 0.25s ease;
+        }
+
+        /* Nav Link Hover Animated Underline (Desert Iron Pattern) */
+        nav .nav-item-link:not(.is-active)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #10B981;
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav .nav-item-link:not(.is-active):hover::after {
+            width: 100%;
         }
 
         /* Active Page Underline Indicator */
@@ -100,20 +124,101 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
         }
         #site-header.is-scrolled {
             background-color: #0F172A !important;
-            border-bottom: 1px solid rgba(51, 65, 85, 0.8) !important;
-            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.9) !important;
+            box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.5);
         }
         #site-header .header-inner {
             transition: height 0.25s ease;
         }
         #site-header.is-scrolled .header-inner {
-            height: 66px !important;
+            height: 64px !important;
         }
 
         /* Focus-visible accessibility styles */
         a:focus-visible, button:focus-visible {
             outline: 2px solid #10B981;
             outline-offset: 2px;
+        }
+
+        /* Parallax & Smooth Entrance Effects (Desert Iron Core) */
+        .parallax-container { overflow: hidden; position: relative; }
+        .parallax-img { will-change: transform; transform: scale(1.12); transform-origin: top center; }
+
+        /* Interactive Card & Link Hover Effects */
+        .hover-lift, .grid > div.bg-slate-950, .grid > div.bg-slate-900 {
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+        }
+        .hover-lift:hover, .grid > div.bg-slate-950:hover, .grid > div.bg-slate-900:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.45);
+            border-color: rgba(16, 185, 129, 0.45) !important;
+        }
+
+        /* Smooth Inner Image Zoom */
+        section img:not(.parallax-img) {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .group:hover img:not(.parallax-img) {
+            transform: scale(1.06) !important;
+        }
+
+        /* Button Cursor Hover Shine Effect (Desert Iron Signature) */
+        a.bg-brandgreen, button.bg-brandgreen, a.bg-emerald-600, button.bg-emerald-600 {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease;
+        }
+        a.bg-brandgreen:hover, button.bg-brandgreen:hover, a.bg-emerald-600:hover, button.bg-emerald-600:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 24px -4px rgba(4, 120, 87, 0.45);
+        }
+        a.bg-brandgreen:active, button.bg-brandgreen:active {
+            transform: translateY(0) scale(0.98);
+        }
+        a.bg-brandgreen::after, button.bg-brandgreen::after, a.bg-emerald-600::after, button.bg-emerald-600::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 50%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(25deg);
+            transition: all 0.65s ease;
+            pointer-events: none;
+        }
+        a.bg-brandgreen:hover::after, button.bg-brandgreen:hover::after, a.bg-emerald-600:hover::after, button.bg-emerald-600:hover::after {
+            left: 130%;
+        }
+
+        /* Hero Keyframe Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+        }
+
+        .animate-fade-down { animation: fadeInDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-fade-up { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .animate-pulse-glow { animation: pulseGlow 2.5s infinite; }
+
+        /* Image Load Animation */
+        .image-fade-in {
+            opacity: 0;
+            filter: blur(6px);
+            transition: opacity 0.6s ease-out, filter 0.6s ease-out;
+            will-change: opacity, filter;
+        }
+        .image-fade-in.loaded {
+            opacity: 1;
+            filter: blur(0);
         }
 
         /* Hero Fade-In Animation (respects reduced motion) */
@@ -130,6 +235,14 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                     opacity: 1;
                     transform: translateY(0);
                 }
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hover-lift, .grid > div.bg-slate-950, .grid > div.bg-slate-900, [data-aos] {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
             }
         }
     </style>
@@ -185,24 +298,21 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
          MAIN NAVIGATION HEADER
          Single-row nav, 15px nowrap, 28-32px gap, 44-48px logo, RFQ 44px fixed
          ========================================================================= -->
-    <header id="site-header" class="sticky top-0 z-40 bg-branddark/95 backdrop-blur-md border-b border-slate-800 transition-all">
-        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="header-inner flex items-center justify-between h-20 transition-all">
+    <header id="site-header" class="sticky top-0 z-40 bg-branddark/95 backdrop-blur-md border-b border-slate-800 transition-all w-full">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="header-inner flex items-center justify-between h-16 sm:h-20 w-full transition-all">
                 
-                <!-- Logo & Brand Lockup (Height ~44-48px desktop, no placeholder badge) -->
-                <a href="<?= route_url('') ?>" class="flex items-center shrink-0 me-6 xl:me-8 focus:outline-none focus:ring-2 focus:ring-brandgreen rounded group" aria-label="<?= t('company_name') ?>">
+                <!-- Logo & Brand Lockup (Clamped on mobile & intermediate viewports, full on large desktop) -->
+                <a href="<?= route_url('') ?>" class="flex items-center shrink-0 me-2 sm:me-3 xl:me-6 focus:outline-none focus:ring-2 focus:ring-brandgreen rounded group py-1" aria-label="<?= t('company_name') ?>">
                     <?php if ($lang === 'ar'): ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-11 md:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 sm:h-9 md:h-10 xl:h-11 w-auto max-w-[145px] sm:max-w-[185px] lg:max-w-[210px] xl:max-w-none object-contain transition-transform group-hover:scale-[1.02] filter drop-shadow-sm">
                     <?php else: ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-11 md:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]">
+                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 sm:h-9 md:h-10 xl:h-11 w-auto max-w-[145px] sm:max-w-[185px] lg:max-w-[210px] xl:max-w-none object-contain transition-transform group-hover:scale-[1.02] filter drop-shadow-sm">
                     <?php endif; ?>
                 </a>
 
-                <!-- Desktop Navigation Links (>=1100px: Single-Row, 15px, 28-32px gaps, vertical center) -->
-                <nav class="hidden nav:flex items-center gap-7 xl:gap-8 text-[15px] font-medium text-slate-200">
-                    
-                    <!-- Home -->
-                  
+                <!-- Desktop Navigation Links (>=1200px: Single-Row, responsive gaps & text, vertical center) -->
+                <nav class="hidden nav:flex items-center gap-2.5 xl:gap-5 2xl:gap-7 text-[13.5px] xl:text-[14.5px] 2xl:text-[15px] font-medium text-slate-200">
                     
                     <!-- About Us -->
                     <a href="<?= route_url('about') ?>" class="nav-item-link hover:text-white transition-colors <?= ($page === 'about') ? 'is-active text-brandgreenlight font-bold' : '' ?>">
@@ -281,26 +391,26 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                     </a>
                 </nav>
 
-                <!-- Actions: Language Switcher Pill + Request RFQ Button (>=1100px) -->
-                <div class="hidden nav:flex items-center gap-4 shrink-0 ms-6">
+                <!-- Actions: Language Switcher Pill + Request RFQ Button (>=1200px) -->
+                <div class="hidden nav:flex items-center gap-2.5 xl:gap-4 shrink-0 ms-2 xl:ms-5">
                     <!-- Single Language Switcher Pill inside Main Nav -->
-                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-emerald-400 hover:text-white transition-all shadow-sm" aria-label="Switch Language">
+                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-emerald-400 hover:text-white transition-all shadow-sm" aria-label="Switch Language">
                         <?= ($lang === 'ar') ? 'EN' : 'العربية' ?>
                     </a>
 
-                    <!-- Single-line Fixed Height 44px RFQ Button (padding 0 22px, nowrap) -->
-                    <a href="<?= route_url('contact') ?>#rfq-form" class="h-[44px] px-[22px] whitespace-nowrap inline-flex items-center justify-center font-bold text-sm rounded-lg text-white bg-brandgreen hover:bg-emerald-600 shadow-md transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brandgreen">
+                    <!-- Single-line Fixed Height RFQ Button (padding 0 16-20px, nowrap) -->
+                    <a href="<?= route_url('contact') ?>#rfq-form" class="h-[40px] xl:h-[44px] px-3.5 xl:px-5 whitespace-nowrap inline-flex items-center justify-center font-bold text-xs xl:text-sm rounded-lg text-white bg-brandgreen hover:bg-emerald-600 shadow-md transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brandgreen">
                         <?= t('nav.request_rfq') ?>
                     </a>
                 </div>
 
-                <!-- Hamburger Button (<1100px) -->
-                <div class="flex items-center gap-3 nav:hidden">
-                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="px-2.5 py-1 rounded-full border border-slate-700 bg-slate-800 text-emerald-400 text-xs font-bold">
+                <!-- Mobile Header Actions (<1100px: Clamped Touch Targets & Safe Width) -->
+                <div class="flex items-center gap-2 sm:gap-3 nav:hidden shrink-0">
+                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="text-xs font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 px-2.5 py-1.5 rounded-lg min-h-[38px] flex items-center justify-center shadow-xs hover:bg-emerald-900/50 transition-colors" aria-label="Switch Language">
                         <?= ($lang === 'ar') ? 'EN' : 'العربية' ?>
                     </a>
-                    <button type="button" id="mobile-menu-btn" class="p-2.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-brandgreen" aria-label="Open Navigation Menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <button type="button" id="mobile-menu-btn" class="w-10 h-10 flex items-center justify-center text-white hover:text-emerald-400 focus:outline-none rounded-lg border border-slate-700 bg-slate-900 shadow-md transition-colors" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-drawer">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
 
@@ -308,103 +418,160 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
         </div>
 
         <!-- =========================================================================
-             MOBILE SLIDE-IN DRAWER (<1100px)
-             Full-height slide-in with accordion for Products & Services,
-             language switcher, and RFQ button inside the drawer.
+             MOBILE FULL-SCREEN SLIDE-IN DRAWER (<1100px) - Desert Iron Architecture
              ========================================================================= -->
-        <div id="mobile-drawer" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden transition-opacity duration-300">
-            <div class="fixed inset-y-0 <?= ($lang === 'ar') ? 'left-0' : 'right-0' ?> w-full max-w-sm bg-slate-900 border-<?= ($lang === 'ar') ? 'r' : 'l' ?> border-slate-800 p-6 overflow-y-auto flex flex-col justify-between shadow-2xl">
-                
-                <div>
-                    <!-- Drawer Header -->
-                    <div class="flex items-center justify-between pb-6 border-b border-slate-800">
-                        <span class="text-white font-bold text-base tracking-tight"><?= t('company_name') ?></span>
-                        <button type="button" id="mobile-close-btn" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800" aria-label="Close Navigation">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                        </button>
-                    </div>
-                    
-                    <!-- Navigation Links -->
-                    <div class="py-6 space-y-2 text-base">
-                        <a href="<?= route_url('') ?>" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 font-medium <?= ($page === 'home') ? 'bg-slate-800 text-brandgreenlight font-bold' : '' ?>">
-                            <?= t('nav.home') ?>
-                        </a>
-                        
-                        <a href="<?= route_url('about') ?>" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 font-medium <?= ($page === 'about') ? 'bg-slate-800 text-brandgreenlight font-bold' : '' ?>">
-                            <?= t('nav.about') ?>
-                        </a>
-                        
-                        <!-- Accordion for Products & Services -->
-                        <div class="rounded-lg bg-slate-950/60 border border-slate-800/80 overflow-hidden">
-                            <button type="button" id="mobile-products-accordion-btn" class="w-full flex items-center justify-between py-3 px-3.5 text-slate-200 hover:text-white font-medium text-left rtl:text-right focus:outline-none">
-                                <span class="<?= in_array($page, ['products', 'industrial-salts', 'oilfield-chemicals', 'water-treatment', 'fertilizers', 'coco-peat', 'packaging-disposables', 'other-trading']) ? 'text-brandgreenlight font-bold' : '' ?>">
-                                    <?= t('nav.products') ?>
-                                </span>
-                                <svg id="accordion-arrow" class="w-4 h-4 text-slate-400 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </button>
-                            
-                            <div id="mobile-products-accordion-body" class="hidden pb-3 px-3 space-y-1.5 border-t border-slate-800/60 pt-2 text-sm">
-                                <a href="<?= route_url('products') ?>" class="block py-1.5 px-2 rounded font-semibold text-xs text-emerald-400 hover:bg-slate-800">
-                                    <?= t('nav.products_overview') ?> &rarr;
-                                </a>
-                                <a href="<?= route_url('industrial-salts') ?>" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-slate-800">
-                                    <?= t('nav.industrial_salts') ?>
-                                </a>
-                                <a href="<?= route_url('oilfield-chemicals') ?>" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-slate-800">
-                                    <?= t('nav.oilfield_chemicals') ?>
-                                </a>
-                                <a href="<?= route_url('water-treatment') ?>" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-slate-800">
-                                    <?= t('nav.water_treatment') ?>
-                                </a>
-                                <a href="<?= route_url('fertilizers') ?>" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-slate-800">
-                                    <?= t('nav.fertilizers') ?>
-                                </a>
-                                <a href="<?= route_url('coco-peat') ?>" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-slate-800">
-                                    <?= t('nav.coco_peat') ?>
-                                </a>
-                                <a href="<?= route_url('packaging-disposables') ?>" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-slate-800">
-                                    <?= t('nav.packaging_disposables') ?>
-                                </a>
-                                <a href="<?= route_url('other-trading') ?>" class="block py-1.5 px-2 rounded text-slate-300 hover:text-white hover:bg-slate-800">
-                                    <?= t('nav.other_trading') ?>
-                                </a>
-                            </div>
-                        </div>
-
-                        <a href="<?= route_url('industries') ?>" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 font-medium <?= ($page === 'industries') ? 'bg-slate-800 text-brandgreenlight font-bold' : '' ?>">
-                            <?= t('nav.industries') ?>
-                        </a>
-                        
-                        <a href="<?= route_url('international-trading') ?>" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 font-medium <?= ($page === 'international-trading') ? 'bg-slate-800 text-brandgreenlight font-bold' : '' ?>">
-                            <?= t('nav.international_trading') ?>
-                        </a>
-                        
-                        <a href="<?= route_url('partners') ?>" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 font-medium <?= ($page === 'partners') ? 'bg-slate-800 text-brandgreenlight font-bold' : '' ?>">
-                            <?= t('nav.partners') ?>
-                        </a>
-                        
-                        <a href="<?= route_url('contact') ?>" class="block py-2.5 px-3 rounded-lg text-slate-200 hover:text-white hover:bg-slate-800 font-medium <?= ($page === 'contact') ? 'bg-slate-800 text-brandgreenlight font-bold' : '' ?>">
-                            <?= t('nav.contact') ?>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Drawer Footer: Language Switcher and Request RFQ button -->
-                <div class="pt-6 border-t border-slate-800 space-y-3">
-                    <a href="<?= route_url('contact') ?>#rfq-form" class="block w-full h-[44px] flex items-center justify-center font-bold text-sm text-white bg-brandgreen hover:bg-emerald-600 rounded-lg shadow-md transition-all">
-                        <?= t('nav.request_rfq') ?>
+        <div id="mobile-drawer" class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl text-white hidden flex-col transition-all duration-300" aria-hidden="true">
+            
+            <!-- Drawer Top Header -->
+            <div class="flex items-center justify-between px-5 h-16 border-b border-slate-800/80 shrink-0 bg-slate-900/90">
+                <a href="<?= route_url('') ?>" class="flex items-center gap-2">
+                    <?php if ($lang === 'ar'): ?>
+                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 w-auto max-w-[160px] object-contain drop-shadow-md">
+                    <?php else: ?>
+                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 w-auto max-w-[160px] object-contain drop-shadow-md">
+                    <?php endif; ?>
+                </a>
+                <div class="flex items-center gap-2">
+                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="text-xs font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-3 py-1.5 rounded-md">
+                        <?= ($lang === 'ar') ? 'EN' : 'العربية' ?>
                     </a>
-                    
-                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="block w-full py-2.5 text-center text-xs font-bold text-slate-300 hover:text-white border border-slate-700 bg-slate-800/80 rounded-lg transition-colors">
-                        <?= ($lang === 'ar') ? 'Switch to English' : 'التحويل إلى العربية' ?>
-                    </a>
+                    <button type="button" id="mobile-close-btn" class="w-10 h-10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none rounded-full border border-slate-700 transition-colors" aria-label="Close Navigation Menu">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
                 </div>
-
             </div>
+
+            <!-- Scrollable Drawer Body with Rich Menu Cards -->
+            <div class="flex-1 overflow-y-auto px-5 py-5 space-y-2 text-sm font-medium">
+                
+                <!-- 01 Home -->
+                <a href="<?= route_url('') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'home') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">01</div>
+                        <span class="font-semibold"><?= t('nav.home') ?></span>
+                    </div>
+                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                </a>
+                
+                <!-- 02 About -->
+                <a href="<?= route_url('about') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'about') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">02</div>
+                        <span class="font-semibold"><?= t('nav.about') ?></span>
+                    </div>
+                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                </a>
+
+                <!-- 03 Products & Services Accordion -->
+                <div class="rounded-lg border border-slate-800 p-3 bg-slate-900/60">
+                    <button type="button" id="mobile-products-accordion-btn" class="w-full flex items-center justify-between text-start font-medium hover:text-emerald-400 focus:outline-none min-h-[36px]">
+                        <div class="flex items-center gap-3">
+                            <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">03</div>
+                            <span class="font-bold text-white"><?= t('nav.products') ?> (7)</span>
+                        </div>
+                        <svg id="accordion-arrow" class="w-4 h-4 text-emerald-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    
+                    <div id="mobile-products-accordion-body" class="hidden border-s-2 border-emerald-500/50 ms-3.5 ps-3 pt-3 pb-1 space-y-2 text-xs text-slate-300 mt-2">
+                        <a href="<?= route_url('products') ?>" class="block py-1.5 font-bold uppercase tracking-wider text-emerald-400 hover:text-emerald-300">
+                            <?= t('nav.products_overview') ?> &rarr;
+                        </a>
+                        <?php if (is_category_active('industrial_salts')): ?>
+                        <a href="<?= route_url('industrial-salts') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'industrial-salts') ? 'text-emerald-400 font-bold' : '' ?>">
+                            <?= t('nav.industrial_salts') ?>
+                        </a>
+                        <?php endif; ?>
+                        <?php if (is_category_active('oilfield_chemicals')): ?>
+                        <a href="<?= route_url('oilfield-chemicals') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'oilfield-chemicals') ? 'text-emerald-400 font-bold' : '' ?>">
+                            <?= t('nav.oilfield_chemicals') ?>
+                        </a>
+                        <?php endif; ?>
+                        <?php if (is_category_active('water_treatment')): ?>
+                        <a href="<?= route_url('water-treatment') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'water-treatment') ? 'text-emerald-400 font-bold' : '' ?>">
+                            <?= t('nav.water_treatment') ?>
+                        </a>
+                        <?php endif; ?>
+                        <?php if (is_category_active('fertilizers')): ?>
+                        <a href="<?= route_url('fertilizers') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'fertilizers') ? 'text-emerald-400 font-bold' : '' ?>">
+                            <?= t('nav.fertilizers') ?>
+                        </a>
+                        <?php endif; ?>
+                        <?php if (is_category_active('coco_peat')): ?>
+                        <a href="<?= route_url('coco-peat') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'coco-peat') ? 'text-emerald-400 font-bold' : '' ?>">
+                            <?= t('nav.coco_peat') ?>
+                        </a>
+                        <?php endif; ?>
+                        <?php if (is_category_active('packaging_disposables')): ?>
+                        <a href="<?= route_url('packaging-disposables') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'packaging-disposables') ? 'text-emerald-400 font-bold' : '' ?>">
+                            <?= t('nav.packaging_disposables') ?>
+                        </a>
+                        <?php endif; ?>
+                        <?php if (is_category_active('other_trading')): ?>
+                        <a href="<?= route_url('other-trading') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'other-trading') ? 'text-emerald-400 font-bold' : '' ?>">
+                            <?= t('nav.other_trading') ?>
+                        </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <!-- 04 Industries -->
+                <a href="<?= route_url('industries') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'industries') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">04</div>
+                        <span class="font-semibold"><?= t('nav.industries') ?></span>
+                    </div>
+                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                </a>
+                
+                <!-- 05 International Trading -->
+                <a href="<?= route_url('international-trading') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'international-trading') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">05</div>
+                        <span class="font-semibold"><?= t('nav.international_trading') ?></span>
+                    </div>
+                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                </a>
+                
+                <!-- 06 Partnerships -->
+                <a href="<?= route_url('partners') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'partners') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">06</div>
+                        <span class="font-semibold"><?= t('nav.partners') ?></span>
+                    </div>
+                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                </a>
+                
+                <!-- 07 Contact / RFQ -->
+                <a href="<?= route_url('contact') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'contact') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">07</div>
+                        <span class="font-semibold"><?= t('nav.contact') ?></span>
+                    </div>
+                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                </a>
+            </div>
+
+            <!-- Drawer Bottom Action Dock -->
+            <div class="p-5 border-t border-slate-800 bg-slate-900/90 shrink-0 space-y-3">
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <a href="tel:<?= htmlspecialchars($site_config['contacts']['phone']) ?>" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 border border-slate-700">
+                        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span><?= ($lang === 'ar') ? 'اتصال' : 'Call Desk' ?></span>
+                    </a>
+                    <a href="mailto:<?= htmlspecialchars($site_config['contacts']['email']) ?>" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 border border-slate-700">
+                        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span><?= ($lang === 'ar') ? 'البريد' : 'Email' ?></span>
+                    </a>
+                </div>
+                <a href="<?= route_url('contact') ?>#rfq-form" onclick="closeDrawer()" class="w-full h-[44px] flex items-center justify-center font-bold text-xs uppercase tracking-wider text-white bg-brandgreen hover:bg-emerald-600 rounded-lg shadow-lg transition-all">
+                    <?= t('nav.request_rfq') ?>
+                </a>
+            </div>
+
         </div>
     </header>
 
-    <!-- Sticky Header Compact on Scroll & Accordion Script -->
+    <!-- JavaScript for Sticky Header, Accordion & Mobile Drawer -->
     <script>
         (function() {
             // Header shrink on scroll
@@ -425,7 +592,8 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
             const accordionArrow = document.getElementById('accordion-arrow');
 
             if (accordionBtn && accordionBody) {
-                accordionBtn.addEventListener('click', function() {
+                accordionBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     const isHidden = accordionBody.classList.contains('hidden');
                     if (isHidden) {
                         accordionBody.classList.remove('hidden');
@@ -436,15 +604,45 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                     }
                 });
             }
+
+            // Mobile Navigation Drawer (Desert Iron Standard)
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('mobile-close-btn');
+            const drawer = document.getElementById('mobile-drawer');
+
+            window.openDrawer = function() {
+                if (!drawer) return;
+                drawer.classList.remove('hidden');
+                drawer.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
+                drawer.setAttribute('aria-hidden', 'false');
+            };
+
+            window.closeDrawer = function() {
+                if (!drawer) return;
+                drawer.classList.add('hidden');
+                drawer.classList.remove('flex');
+                document.body.style.overflow = '';
+                if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+                drawer.setAttribute('aria-hidden', 'true');
+            };
+
+            if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+            if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+
+            if (drawer) {
+                drawer.addEventListener('click', function(e) {
+                    if (e.target === drawer) closeDrawer();
+                });
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && drawer && !drawer.classList.contains('hidden')) {
+                    closeDrawer();
+                }
+            });
         })();
     </script>
-
-    <!-- Sticky Floating "Request RFQ" Button (Visible on Desktop & Mobile) -->
-    <aside class="fixed bottom-6 <?= ($lang === 'ar') ? 'left-6' : 'right-6' ?> z-30">
-        <a href="<?= route_url('contact') ?>#rfq-form" class="inline-flex items-center gap-2 bg-brandgreen hover:bg-emerald-600 text-white font-bold text-sm px-5 py-3 rounded-full shadow-2xl transition-all transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-emerald-400/50" aria-label="<?= t('nav.request_rfq') ?>">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-            <span><?= t('nav.request_rfq') ?></span>
-        </a>
-    </aside>
 
     <main class="min-h-screen">
