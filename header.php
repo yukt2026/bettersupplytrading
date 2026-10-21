@@ -416,14 +416,15 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
 
             </div>
         </div>
+    </header>
 
-        <!-- =========================================================================
-             MOBILE FULL-SCREEN SLIDE-IN DRAWER (<1100px) - Desert Iron Architecture
-             ========================================================================= -->
-        <div id="mobile-drawer" class="fixed inset-0 z-[100] bg-slate-950/95 backdrop-blur-xl text-white hidden flex-col transition-all duration-300" aria-hidden="true">
+    <!-- =========================================================================
+         MOBILE FULL-SCREEN SLIDE-IN DRAWER (<1200px) - Desert Iron Architecture
+         ========================================================================= -->
+    <div id="mobile-drawer" class="fixed inset-0 z-[100] text-white hidden flex-col w-full h-[100dvh] transition-all duration-300 overflow-hidden" style="background-color: #0F172A !important;" aria-hidden="true">
             
             <!-- Drawer Top Header -->
-            <div class="flex items-center justify-between px-5 h-16 border-b border-slate-800/80 shrink-0 bg-slate-900/90">
+            <div class="flex items-center justify-between px-5 h-16 border-b border-slate-800 shrink-0" style="background-color: #090D16 !important;">
                 <a href="<?= route_url('') ?>" class="flex items-center gap-2">
                     <?php if ($lang === 'ar'): ?>
                         <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-8 w-auto max-w-[160px] object-contain drop-shadow-md">
@@ -432,7 +433,7 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                     <?php endif; ?>
                 </a>
                 <div class="flex items-center gap-2">
-                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="text-xs font-bold text-emerald-400 bg-emerald-950/80 border border-emerald-500/40 px-3 py-1.5 rounded-md">
+                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="text-xs font-bold text-emerald-400 bg-emerald-950 border border-emerald-500/50 px-3 py-1.5 rounded-md">
                         <?= ($lang === 'ar') ? 'EN' : 'العربية' ?>
                     </a>
                     <button type="button" id="mobile-close-btn" class="w-10 h-10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none rounded-full border border-slate-700 transition-colors" aria-label="Close Navigation Menu">
@@ -442,72 +443,72 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
             </div>
 
             <!-- Scrollable Drawer Body with Rich Menu Cards -->
-            <div class="flex-1 overflow-y-auto px-5 py-5 space-y-2 text-sm font-medium">
+            <div class="flex-1 overflow-y-auto px-5 py-5 space-y-2.5 text-sm font-medium" style="background-color: #0F172A !important;">
                 
                 <!-- 01 Home -->
-                <a href="<?= route_url('') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'home') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                <a href="<?= route_url('') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-700/80 hover:border-emerald-500 transition-all <?= ($page === 'home') ? 'border-emerald-500 text-emerald-300' : 'text-slate-200' ?>" style="background-color: #1E293B !important;">
                     <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">01</div>
+                        <div class="w-7 h-7 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">01</div>
                         <span class="font-semibold"><?= t('nav.home') ?></span>
                     </div>
-                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                    <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
                 <!-- 02 About -->
-                <a href="<?= route_url('about') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'about') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                <a href="<?= route_url('about') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-700/80 hover:border-emerald-500 transition-all <?= ($page === 'about') ? 'border-emerald-500 text-emerald-300' : 'text-slate-200' ?>" style="background-color: #1E293B !important;">
                     <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">02</div>
+                        <div class="w-7 h-7 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">02</div>
                         <span class="font-semibold"><?= t('nav.about') ?></span>
                     </div>
-                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                    <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
 
                 <!-- 03 Products & Services Accordion -->
-                <div class="rounded-lg border border-slate-800 p-3 bg-slate-900/60">
+                <div class="rounded-xl border border-slate-700/80 p-3.5" style="background-color: #1E293B !important;">
                     <button type="button" id="mobile-products-accordion-btn" class="w-full flex items-center justify-between text-start font-medium hover:text-emerald-400 focus:outline-none min-h-[36px]">
                         <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">03</div>
+                            <div class="w-7 h-7 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">03</div>
                             <span class="font-bold text-white"><?= t('nav.products') ?> (7)</span>
                         </div>
                         <svg id="accordion-arrow" class="w-4 h-4 text-emerald-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     
-                    <div id="mobile-products-accordion-body" class="hidden border-s-2 border-emerald-500/50 ms-3.5 ps-3 pt-3 pb-1 space-y-2 text-xs text-slate-300 mt-2">
+                    <div id="mobile-products-accordion-body" class="hidden border-s-2 border-emerald-500/60 ms-3 ps-3 pt-3 pb-1 space-y-2 text-xs mt-2" style="background-color: #0F172A !important; border-radius: 8px; padding: 12px;">
                         <a href="<?= route_url('products') ?>" class="block py-1.5 font-bold uppercase tracking-wider text-emerald-400 hover:text-emerald-300">
                             <?= t('nav.products_overview') ?> &rarr;
                         </a>
                         <?php if (is_category_active('industrial_salts')): ?>
-                        <a href="<?= route_url('industrial-salts') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'industrial-salts') ? 'text-emerald-400 font-bold' : '' ?>">
+                        <a href="<?= route_url('industrial-salts') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'industrial-salts') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
                             <?= t('nav.industrial_salts') ?>
                         </a>
                         <?php endif; ?>
                         <?php if (is_category_active('oilfield_chemicals')): ?>
-                        <a href="<?= route_url('oilfield-chemicals') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'oilfield-chemicals') ? 'text-emerald-400 font-bold' : '' ?>">
+                        <a href="<?= route_url('oilfield-chemicals') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'oilfield-chemicals') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
                             <?= t('nav.oilfield_chemicals') ?>
                         </a>
                         <?php endif; ?>
                         <?php if (is_category_active('water_treatment')): ?>
-                        <a href="<?= route_url('water-treatment') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'water-treatment') ? 'text-emerald-400 font-bold' : '' ?>">
+                        <a href="<?= route_url('water-treatment') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'water-treatment') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
                             <?= t('nav.water_treatment') ?>
                         </a>
                         <?php endif; ?>
                         <?php if (is_category_active('fertilizers')): ?>
-                        <a href="<?= route_url('fertilizers') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'fertilizers') ? 'text-emerald-400 font-bold' : '' ?>">
+                        <a href="<?= route_url('fertilizers') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'fertilizers') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
                             <?= t('nav.fertilizers') ?>
                         </a>
                         <?php endif; ?>
                         <?php if (is_category_active('coco_peat')): ?>
-                        <a href="<?= route_url('coco-peat') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'coco-peat') ? 'text-emerald-400 font-bold' : '' ?>">
+                        <a href="<?= route_url('coco-peat') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'coco-peat') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
                             <?= t('nav.coco_peat') ?>
                         </a>
                         <?php endif; ?>
                         <?php if (is_category_active('packaging_disposables')): ?>
-                        <a href="<?= route_url('packaging-disposables') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'packaging-disposables') ? 'text-emerald-400 font-bold' : '' ?>">
+                        <a href="<?= route_url('packaging-disposables') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'packaging-disposables') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
                             <?= t('nav.packaging_disposables') ?>
                         </a>
                         <?php endif; ?>
                         <?php if (is_category_active('other_trading')): ?>
-                        <a href="<?= route_url('other-trading') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'other-trading') ? 'text-emerald-400 font-bold' : '' ?>">
+                        <a href="<?= route_url('other-trading') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'other-trading') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
                             <?= t('nav.other_trading') ?>
                         </a>
                         <?php endif; ?>
@@ -515,44 +516,44 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                 </div>
 
                 <!-- 04 Industries -->
-                <a href="<?= route_url('industries') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'industries') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                <a href="<?= route_url('industries') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-700/80 hover:border-emerald-500 transition-all <?= ($page === 'industries') ? 'border-emerald-500 text-emerald-300' : 'text-slate-200' ?>" style="background-color: #1E293B !important;">
                     <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">04</div>
+                        <div class="w-7 h-7 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">04</div>
                         <span class="font-semibold"><?= t('nav.industries') ?></span>
                     </div>
-                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                    <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
                 <!-- 05 International Trading -->
-                <a href="<?= route_url('international-trading') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'international-trading') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                <a href="<?= route_url('international-trading') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-700/80 hover:border-emerald-500 transition-all <?= ($page === 'international-trading') ? 'border-emerald-500 text-emerald-300' : 'text-slate-200' ?>" style="background-color: #1E293B !important;">
                     <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">05</div>
+                        <div class="w-7 h-7 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">05</div>
                         <span class="font-semibold"><?= t('nav.international_trading') ?></span>
                     </div>
-                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                    <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
                 <!-- 06 Partnerships -->
-                <a href="<?= route_url('partners') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'partners') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                <a href="<?= route_url('partners') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-700/80 hover:border-emerald-500 transition-all <?= ($page === 'partners') ? 'border-emerald-500 text-emerald-300' : 'text-slate-200' ?>" style="background-color: #1E293B !important;">
                     <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">06</div>
+                        <div class="w-7 h-7 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">06</div>
                         <span class="font-semibold"><?= t('nav.partners') ?></span>
                     </div>
-                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                    <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
                 <!-- 07 Contact / RFQ -->
-                <a href="<?= route_url('contact') ?>" class="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800/50 hover:border-emerald-500/50 transition-all <?= ($page === 'contact') ? 'bg-slate-800/80 border-emerald-500/80 text-emerald-300' : 'text-slate-200' ?>">
+                <a href="<?= route_url('contact') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-700/80 hover:border-emerald-500 transition-all <?= ($page === 'contact') ? 'border-emerald-500 text-emerald-300' : 'text-slate-200' ?>" style="background-color: #1E293B !important;">
                     <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">07</div>
+                        <div class="w-7 h-7 rounded bg-emerald-950 border border-emerald-500/40 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">07</div>
                         <span class="font-semibold"><?= t('nav.contact') ?></span>
                     </div>
-                    <span class="text-xs text-slate-500 rtl:rotate-180">&rarr;</span>
+                    <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
             </div>
 
             <!-- Drawer Bottom Action Dock -->
-            <div class="p-5 border-t border-slate-800 bg-slate-900/90 shrink-0 space-y-3">
+            <div class="p-5 border-t border-slate-800 shrink-0 space-y-3" style="background-color: #090D16 !important;">
                 <div class="grid grid-cols-2 gap-2 text-xs">
                     <a href="tel:<?= htmlspecialchars($site_config['contacts']['phone']) ?>" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 border border-slate-700">
                         <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -569,7 +570,6 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
             </div>
 
         </div>
-    </header>
 
     <!-- JavaScript for Sticky Header, Accordion & Mobile Drawer -->
     <script>
