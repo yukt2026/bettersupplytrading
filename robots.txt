@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /storage/
+Disallow: /scratch/
+Disallow: /pastactivity/
+Disallow: /temp-app/
+
+Sitemap: https://bettersupplytrading.com/sitemap.xml

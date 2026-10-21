@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Home Page -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://bettersupplytrading.com/en/"/>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://bettersupplytrading.com/en/"/>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About Us -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/about/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/about/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/about/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/about/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/about/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Products Overview -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/products/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/products/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/products/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/products/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/products/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/products/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Industrial Salts -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/industrial-salts/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/industrial-salts/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/industrial-salts/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/industrial-salts/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/industrial-salts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/industrial-salts/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Oilfield Chemicals -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/oilfield-chemicals/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/oilfield-chemicals/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/oilfield-chemicals/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/oilfield-chemicals/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/oilfield-chemicals/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/oilfield-chemicals/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Water Treatment -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/water-treatment/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/water-treatment/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/water-treatment/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/water-treatment/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/water-treatment/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/water-treatment/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Fertilizers -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/fertilizers/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/fertilizers/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/fertilizers/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/fertilizers/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/fertilizers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/fertilizers/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Coco Peat -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/coco-peat/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/coco-peat/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/coco-peat/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/coco-peat/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/coco-peat/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/coco-peat/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Packaging & Disposables -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/packaging-disposables/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/packaging-disposables/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/packaging-disposables/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/packaging-disposables/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/packaging-disposables/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/packaging-disposables/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Other Trading -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/other-trading/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/other-trading/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/other-trading/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/other-trading/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/other-trading/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/other-trading/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Industries We Serve -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/industries/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/industries/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/industries/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/industries/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/industries/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/industries/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- International Trading -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/international-trading/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/international-trading/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/international-trading/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/international-trading/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/international-trading/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/international-trading/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Partnerships -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/partners/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/partners/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/partners/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/partners/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/partners/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/partners/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Contact / RFQ -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/contact/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/contact/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/contact/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/contact/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/contact/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/contact/"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>

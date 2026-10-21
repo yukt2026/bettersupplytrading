@@ -1,0 +1,3 @@
+<?php $page_title = 'Privacy Policy | Desert Iron'; require_once 'header.php'; require_once 'components.php'; ?>
+<section class='pt-32 pb-20 bg-white'><div class='container mx-auto px-4 max-w-4xl'><h1 class='text-4xl font-bold mb-8 text-charcoal <?= $headingFontClass ?>'><?= $lang==='ar'?'الشروط والأحكام / الخصوصية':'Privacy Policy' ?></h1><p class='text-steel leading-relaxed mb-4'>Last updated: October 2026</p><p class='text-steel leading-relaxed mb-4'>This is a placeholder for the official Privacy Policy. Replace this content with legally binding text.</p></div></section>
+<?php require_once 'footer.php'; ?>

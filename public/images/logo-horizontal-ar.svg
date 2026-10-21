@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 70" width="420" height="70" fill="none">
+    <!-- Corporate Typography in Arabic -->
+    <text x="340" y="34" text-anchor="end" font-family="'Cairo', 'IBM Plex Sans Arabic', sans-serif" font-size="20" font-weight="800" fill="#0F172A">مؤسسة أفضل توريد التجارية</text>
+    <text x="340" y="52" text-anchor="end" font-family="'Inter', 'Cairo', sans-serif" font-size="11" font-weight="600" letter-spacing="1.5" fill="#64748B">BETTER SUPPLY CORPORATION</text>
+    <!-- Monogram Mark on the right for RTL balance -->
+    <g transform="translate(352, 6) scale(0.48)">
+        <rect width="120" height="120" rx="18" fill="#0F172A"/>
+        <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#FFFFFF"/>
+        <circle cx="98" cy="24" r="8" fill="#047857"/>
+    </g>
+    
+</svg>

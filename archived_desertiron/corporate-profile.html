@@ -1,0 +1,2328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Iron — Corporate Capability Profile & Sales Brochure</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================================================
+           RESET & CORE VARIABLES
+           ========================================================================== */
+        :root {
+            --color-charcoal: #121A18;
+            --color-charcoal-card: #1A2522;
+            --color-charcoal-light: #24332F;
+            --color-saudi-green: #006B3F;
+            --color-saudi-green-light: #0A8B54;
+            --color-emerald-accent: #10B981;
+            --color-gold: #C5A880;
+            --color-gold-light: #E8D9C0;
+            --color-steel: #64748B;
+            --color-steel-light: #94A3B8;
+            --color-steel-dark: #334155;
+            --color-offwhite: #F8FAFC;
+            --color-offwhite-alt: #F1F5F9;
+            --color-border: #E2E8F0;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: #1E293B;
+            background-color: #0B1110;
+            line-height: 1.45;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ==========================================================================
+           PRINT & SCREEN PAGE CALIBRATION (EXACT A4 PORTRAIT: 210mm x 297mm)
+           ========================================================================== */
+        @page {
+            size: 210mm 297mm;
+            margin: 0;
+        }
+
+        .document-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            min-height: 297mm;
+            max-height: 297mm;
+            position: relative;
+            overflow: hidden;
+            background: #FFFFFF;
+            page-break-after: always;
+            break-after: page;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @media screen {
+            body {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+            .page {
+                margin: 0 auto 30px auto;
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+
+        /* ==========================================================================
+           WEB PREVIEW FLOATING CONTROL BAR
+           ========================================================================== */
+        .preview-toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 52px;
+            background: rgba(18, 26, 24, 0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            z-index: 9999;
+            color: #FFFFFF;
+            font-family: var(--font-heading);
+            font-size: 13px;
+        }
+
+        .toolbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .toolbar-brand span {
+            color: var(--color-emerald-accent);
+        }
+
+        .toolbar-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-toolbar {
+            background: var(--color-saudi-green);
+            color: #FFFFFF;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-toolbar:hover {
+            background: var(--color-saudi-green-light);
+            transform: translateY(-1px);
+        }
+
+        .btn-toolbar-ghost {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-toolbar-ghost:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* ==========================================================================
+           REUSABLE CORPORATE HEADER & FOOTER SYSTEM
+           ========================================================================== */
+        .page-header {
+            padding: 22px 30px 14px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--color-border);
+            position: relative;
+            background: #FFFFFF;
+            z-index: 10;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 30px;
+            width: 70px;
+            height: 3px;
+            background: var(--color-saudi-green);
+        }
+
+        .header-logo {
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .header-meta {
+            text-align: right;
+            font-family: var(--font-heading);
+        }
+
+        .header-section-tag {
+            font-size: 8.5px;
+            font-weight: 700;
+            color: var(--color-saudi-green);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: block;
+        }
+
+        .header-doc-title {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--color-steel);
+            letter-spacing: 0.5px;
+        }
+
+        .page-footer {
+            padding: 12px 30px 16px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--color-border);
+            font-size: 8.5px;
+            color: var(--color-steel);
+            background: #FFFFFF;
+            font-family: var(--font-heading);
+            letter-spacing: 0.4px;
+            z-index: 10;
+        }
+
+        .footer-left {
+            font-weight: 700;
+            color: var(--color-charcoal);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-left span {
+            color: var(--color-saudi-green);
+        }
+
+        .footer-center {
+            color: var(--color-steel);
+            text-transform: uppercase;
+            font-size: 8px;
+            letter-spacing: 1px;
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+        }
+
+        .page-number-badge {
+            background: var(--color-charcoal);
+            color: #FFFFFF;
+            padding: 2px 7px;
+            border-radius: 2px;
+            font-size: 9px;
+            font-weight: 800;
+        }
+
+        .page-content {
+            flex: 1;
+            padding: 24px 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ==========================================================================
+           TYPOGRAPHY & UTILITIES
+           ========================================================================== */
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+            color: var(--color-charcoal);
+            line-height: 1.18;
+            font-weight: 800;
+        }
+
+        .section-eyebrow {
+            font-family: var(--font-heading);
+            font-size: 9px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--color-saudi-green);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .section-eyebrow::before {
+            content: '';
+            width: 14px;
+            height: 2px;
+            background: var(--color-saudi-green);
+            display: inline-block;
+        }
+
+        .section-title {
+            font-size: 24px;
+            letter-spacing: -0.3px;
+            color: var(--color-charcoal);
+            margin-bottom: 6px;
+        }
+
+        .section-subtitle {
+            font-size: 11px;
+            color: var(--color-steel);
+            line-height: 1.5;
+            margin-bottom: 18px;
+            max-width: 92%;
+        }
+
+        /* ==========================================================================
+           PAGE 1: COVER PAGE STYLING
+           ========================================================================== */
+        .cover-page {
+            background: var(--color-charcoal);
+            color: #FFFFFF;
+            position: relative;
+            padding: 0;
+            justify-content: space-between;
+        }
+
+        .cover-bg-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.28;
+            mix-blend-mode: luminosity;
+            filter: contrast(120%);
+        }
+
+        .cover-overlay-gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(18, 26, 24, 0.96) 0%, rgba(18, 26, 24, 0.85) 45%, rgba(0, 107, 63, 0.75) 100%);
+        }
+
+        .cover-accent-angle {
+            position: absolute;
+            right: -100px;
+            top: -50px;
+            width: 320px;
+            height: 600px;
+            background: linear-gradient(180deg, rgba(0, 107, 63, 0.3) 0%, rgba(197, 168, 128, 0.15) 100%);
+            transform: rotate(24deg);
+            pointer-events: none;
+            border-left: 2px solid rgba(197, 168, 128, 0.3);
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 5;
+            height: 100%;
+            padding: 42px 42px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cover-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .cover-logo-wrapper {
+            background: #FFFFFF;
+            padding: 12px 20px;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+
+        .cover-logo-img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+
+        .cover-badge-top {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 8px 14px;
+            border-radius: 4px;
+            text-align: right;
+            backdrop-filter: blur(8px);
+        }
+
+        .cover-badge-top .country {
+            font-size: 8.5px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: var(--color-gold);
+            text-transform: uppercase;
+        }
+
+        .cover-badge-top .city {
+            font-size: 11px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .cover-body {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .cover-category-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 107, 63, 0.35);
+            border: 1px solid var(--color-emerald-accent);
+            color: #A7F3D0;
+            font-family: var(--font-heading);
+            font-size: 9.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 14px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .cover-title {
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.8px;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .cover-title span {
+            color: var(--color-emerald-accent);
+            display: block;
+        }
+
+        .cover-subtitle {
+            font-size: 12px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            color: #E2E8F0;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            line-height: 1.4;
+            max-width: 90%;
+        }
+
+        .cover-rule {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-emerald-accent) 0%, var(--color-gold) 100%);
+            margin-bottom: 24px;
+            border-radius: 2px;
+        }
+
+        .cover-highlights-grid {
+            display: grid;
+            grid-cols: 3;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            max-width: 95%;
+        }
+
+        .cover-highlight-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 12px 14px;
+            border-radius: 4px;
+            backdrop-filter: blur(6px);
+        }
+
+        .cover-highlight-card .number {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--color-gold);
+            margin-bottom: 2px;
+        }
+
+        .cover-highlight-card .label {
+            font-size: 8.5px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #CBD5E1;
+            line-height: 1.25;
+        }
+
+        .cover-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .cover-footer-info {
+            font-size: 9.5px;
+            color: #CBD5E1;
+            line-height: 1.6;
+        }
+
+        .cover-footer-info strong {
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+
+        .cover-footer-tagline {
+            text-align: right;
+            font-family: var(--font-heading);
+        }
+
+        .cover-tagline-main {
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        .cover-tagline-sub {
+            font-size: 8.5px;
+            color: var(--color-emerald-accent);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ==========================================================================
+           PAGE 2: WHO WE ARE & COMPANY OVERVIEW
+           ========================================================================== */
+        .overview-hero-box {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-charcoal-light) 100%);
+            color: #FFFFFF;
+            padding: 18px 22px;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid var(--color-saudi-green);
+        }
+
+        .overview-hero-box h3 {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .overview-hero-box p {
+            font-size: 10px;
+            color: #E2E8F0;
+            line-height: 1.55;
+            font-weight: 300;
+        }
+
+        .two-col-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .narrative-card {
+            background: var(--color-offwhite);
+            border: 1px solid var(--color-border);
+            padding: 16px;
+            border-radius: 6px;
+        }
+
+        .narrative-card h4 {
+            font-size: 12px;
+            color: var(--color-charcoal);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .narrative-card p {
+            font-size: 9.5px;
+            color: #475569;
+            line-height: 1.55;
+        }
+
+        .image-banner-container {
+            width: 100%;
+            height: 135px;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 18px;
+            border: 1px solid var(--color-border);
+        }
+
+        .image-banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-banner-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 8px 14px;
+            background: linear-gradient(180deg, transparent 0%, rgba(18, 26, 24, 0.9) 100%);
+            color: #FFFFFF;
+            font-size: 8.5px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .stats-quad-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .stat-card-box {
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-top: 3px solid var(--color-saudi-green);
+            padding: 12px 10px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .stat-card-box .stat-label {
+            font-family: var(--font-heading);
+            font-size: 8px;
+            font-weight: 800;
+            color: var(--color-steel);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .stat-card-box .stat-val {
+            font-family: var(--font-heading);
+            font-size: 15px;
+            font-weight: 900;
+            color: var(--color-charcoal);
+            margin-bottom: 2px;
+        }
+
+        .stat-card-box .stat-sub {
+            font-size: 8px;
+            color: var(--color-steel);
+            line-height: 1.2;
+        }
+
+        /* ==========================================================================
+           PAGE 3: CAPABILITIES (WHAT WE DELIVER)
+           ========================================================================== */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            flex: 1;
+        }
+
+        .capability-card {
+            background: var(--color-offwhite);
+            border: 1px solid var(--color-border);
+            border-radius: 5px;
+            padding: 13px 15px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .capability-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--color-saudi-green);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .cap-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .cap-num {
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 900;
+            color: var(--color-saudi-green);
+            background: rgba(0, 107, 63, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .cap-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--color-charcoal);
+            flex: 1;
+            margin-left: 8px;
+        }
+
+        .cap-list {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        .cap-list li {
+            font-size: 9px;
+            color: #334155;
+            line-height: 1.45;
+            position: relative;
+            padding-left: 14px;
+            margin-bottom: 3px;
+        }
+
+        .cap-list li::before {
+            content: '▪';
+            position: absolute;
+            left: 2px;
+            color: var(--color-saudi-green);
+            font-size: 10px;
+        }
+
+        .cap-tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin-top: auto;
+            border-top: 1px dashed var(--color-border);
+            padding-top: 6px;
+        }
+
+        .cap-tag {
+            font-size: 7.5px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            background: #FFFFFF;
+            border: 1px solid #CBD5E1;
+            padding: 1px 5px;
+            border-radius: 2px;
+            color: var(--color-steel-dark);
+        }
+
+        /* ==========================================================================
+           PAGE 4: INDUSTRIAL SOLUTIONS & ENGINEERING
+           ========================================================================== */
+        .solutions-trio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .trio-card {
+            background: var(--color-charcoal);
+            color: #FFFFFF;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trio-card-header {
+            background: var(--color-saudi-green);
+            padding: 8px 12px;
+            font-family: var(--font-heading);
+            font-size: 10.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .trio-card-body {
+            padding: 12px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .trio-list {
+            list-style: none;
+        }
+
+        .trio-list li {
+            font-size: 9px;
+            color: #E2E8F0;
+            margin-bottom: 4px;
+            padding-left: 12px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .trio-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-emerald-accent);
+            font-weight: bold;
+            font-size: 8px;
+        }
+
+        .execution-box {
+            background: var(--color-offwhite);
+            border: 1px solid var(--color-border);
+            border-left: 4px solid var(--color-charcoal);
+            padding: 14px 18px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+        }
+
+        .execution-box h4 {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--color-charcoal);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .execution-box p {
+            font-size: 9.5px;
+            color: #475569;
+            line-height: 1.55;
+        }
+
+        .bim-engineering-feature {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 14px;
+            align-items: center;
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            padding: 14px;
+            border-radius: 5px;
+            margin-top: auto;
+        }
+
+        .bim-details h4 {
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        .bim-details p {
+            font-size: 9px;
+            color: #475569;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .bim-pills {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .bim-pill {
+            font-size: 8px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            background: var(--color-offwhite-alt);
+            padding: 3px 8px;
+            border-radius: 3px;
+            border: 1px solid var(--color-border);
+            color: var(--color-charcoal);
+        }
+
+        .bim-photo {
+            height: 105px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .bim-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ==========================================================================
+           PAGE 5: QUALITY ASSURANCE, HSE & STANDARDS
+           ========================================================================== */
+        .qa-protocol-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .qa-protocol-card {
+            background: var(--color-offwhite);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            padding: 12px 10px;
+            text-align: center;
+            border-top: 3px solid var(--color-saudi-green);
+        }
+
+        .qa-icon-circle {
+            width: 28px;
+            height: 28px;
+            background: rgba(0, 107, 63, 0.1);
+            color: var(--color-saudi-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 6px auto;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .qa-protocol-card h5 {
+            font-size: 10px;
+            margin-bottom: 4px;
+        }
+
+        .qa-protocol-card p {
+            font-size: 8px;
+            color: var(--color-steel);
+            line-height: 1.4;
+        }
+
+        .standards-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5px;
+            margin-bottom: 16px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .standards-table th {
+            background: var(--color-charcoal);
+            color: #FFFFFF;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-align: left;
+            padding: 7px 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .standards-table td {
+            padding: 6px 10px;
+            border-bottom: 1px solid var(--color-border);
+            color: #334155;
+        }
+
+        .standards-table tr:nth-child(even) td {
+            background: var(--color-offwhite);
+        }
+
+        .standards-table .code-pill {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            color: var(--color-saudi-green);
+        }
+
+        .safety-banner {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            color: #FFFFFF;
+            padding: 14px 18px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-left: 4px solid #EAB308;
+            margin-top: auto;
+        }
+
+        .safety-banner-text h4 {
+            color: #FFFFFF;
+            font-size: 12px;
+            margin-bottom: 3px;
+        }
+
+        .safety-banner-text p {
+            font-size: 8.5px;
+            color: #94A3B8;
+            line-height: 1.4;
+        }
+
+        .safety-badge {
+            background: rgba(234, 179, 8, 0.15);
+            border: 1px solid #EAB308;
+            color: #FDE047;
+            padding: 6px 12px;
+            border-radius: 3px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 9px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        /* ==========================================================================
+           PAGE 6: MARKETS & GROUP EXPERIENCE (QATAR & GCC)
+           ========================================================================== */
+        .markets-chips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .market-chip {
+            background: var(--color-offwhite);
+            border: 1px solid var(--color-border);
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-heading);
+            font-size: 9px;
+            font-weight: 700;
+            color: var(--color-charcoal);
+        }
+
+        .market-chip .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--color-saudi-green);
+        }
+
+        .group-heritage-box {
+            background: var(--color-charcoal);
+            color: #FFFFFF;
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--color-gold);
+        }
+
+        .group-heritage-box h4 {
+            color: var(--color-gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .group-heritage-box h3 {
+            color: #FFFFFF;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .group-heritage-box p {
+            font-size: 9.5px;
+            color: #CBD5E1;
+            line-height: 1.55;
+        }
+
+        .projects-photogrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .project-thumbnail-card {
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .project-thumb-img {
+            height: 80px;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-thumb-desc {
+            padding: 6px 8px;
+        }
+
+        .project-thumb-desc .tag {
+            font-size: 7px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            color: var(--color-saudi-green);
+            text-transform: uppercase;
+        }
+
+        .project-thumb-desc .title {
+            font-size: 8.5px;
+            font-weight: 700;
+            color: var(--color-charcoal);
+            line-height: 1.2;
+            margin-top: 1px;
+        }
+
+        /* ==========================================================================
+           PAGE 7: CUSTOMER VALUE & 5-STEP PROJECT APPROACH
+           ========================================================================== */
+        .value-pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .pillar-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            background: var(--color-offwhite);
+            border: 1px solid var(--color-border);
+            padding: 10px 12px;
+            border-radius: 4px;
+        }
+
+        .pillar-num {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--color-saudi-green);
+            color: #FFFFFF;
+            font-family: var(--font-heading);
+            font-size: 10px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .pillar-body h5 {
+            font-size: 10.5px;
+            margin-bottom: 2px;
+            color: var(--color-charcoal);
+        }
+
+        .pillar-body p {
+            font-size: 8.5px;
+            color: #475569;
+            line-height: 1.45;
+        }
+
+        .approach-ribbon-container {
+            background: #FFFFFF;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: auto;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+        }
+
+        .approach-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 8px;
+        }
+
+        .approach-header h4 {
+            font-size: 12px;
+            color: var(--color-charcoal);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .approach-steps-flex {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 8px;
+        }
+
+        .approach-steps-flex::before {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: var(--color-border);
+            z-index: 1;
+        }
+
+        .step-node {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 18%;
+        }
+
+        .step-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--color-charcoal);
+            color: #FFFFFF;
+            border: 3px solid #FFFFFF;
+            box-shadow: 0 0 0 1px var(--color-saudi-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 6px auto;
+            font-family: var(--font-heading);
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .step-node.active .step-circle {
+            background: var(--color-saudi-green);
+            box-shadow: 0 0 0 2px var(--color-emerald-accent);
+        }
+
+        .step-title {
+            font-family: var(--font-heading);
+            font-size: 8px;
+            font-weight: 800;
+            color: var(--color-charcoal);
+            text-transform: uppercase;
+            line-height: 1.25;
+            margin-bottom: 2px;
+        }
+
+        .step-desc {
+            font-size: 7.5px;
+            color: var(--color-steel);
+            line-height: 1.3;
+        }
+
+        /* ==========================================================================
+           PAGE 8: CORPORATE CONTACT & SALES BROCHURE BACK COVER
+           ========================================================================== */
+        .back-cover-page {
+            background: var(--color-charcoal);
+            color: #FFFFFF;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .back-cover-content {
+            padding: 36px 36px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 5;
+        }
+
+        .cta-header-box {
+            text-align: center;
+            max-width: 85%;
+            margin: 0 auto 20px auto;
+        }
+
+        .cta-header-box h2 {
+            font-size: 32px;
+            color: #FFFFFF;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .cta-header-box h2 span {
+            color: var(--color-emerald-accent);
+        }
+
+        .cta-header-box p {
+            font-size: 11px;
+            color: #CBD5E1;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-card-executive {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 6px;
+            padding: 22px 24px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+        }
+
+        .contact-row-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .contact-icon-box {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            background: rgba(0, 107, 63, 0.3);
+            border: 1px solid var(--color-emerald-accent);
+            color: #A7F3D0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-label {
+            font-size: 8px;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            color: var(--color-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .contact-detail-val {
+            font-size: 10.5px;
+            color: #FFFFFF;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .contact-detail-val a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .rfq-checklist-box {
+            background: rgba(0, 107, 63, 0.15);
+            border: 1px solid rgba(0, 107, 63, 0.4);
+            padding: 14px 18px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .rfq-checklist-title {
+            font-family: var(--font-heading);
+            font-size: 10px;
+            font-weight: 800;
+            color: #A7F3D0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rfq-checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            font-size: 8.5px;
+            color: #E2E8F0;
+        }
+
+        .rfq-check-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .rfq-check-item span {
+            color: var(--color-emerald-accent);
+            font-weight: bold;
+        }
+
+        .back-cover-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .back-logo-img {
+            height: 36px;
+            background: #FFFFFF;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        .back-motto {
+            text-align: right;
+            font-family: var(--font-heading);
+        }
+
+        .back-motto-main {
+            font-size: 12px;
+            font-weight: 900;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .back-motto-sub {
+            font-size: 8px;
+            color: var(--color-emerald-accent);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SCREEN-ONLY FLOATING TOOLBAR -->
+    <div class="preview-toolbar no-print">
+        <div class="toolbar-brand">
+            DESERT IRON <span>• CORPORATE CAPABILITY PROFILE</span>
+        </div>
+        <div class="toolbar-actions">
+            <span style="font-size: 11px; opacity: 0.8; margin-right: 12px;">8 Pages • Standard A4 Portrait</span>
+            <button class="btn-toolbar" onclick="window.print()">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                Print / Save as PDF
+            </button>
+            <a href="desertiron-corporate-profile.pdf" download class="btn-toolbar btn-toolbar-ghost">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Download Compiled PDF
+            </a>
+            <a href="index.php" class="btn-toolbar btn-toolbar-ghost">
+                Return to Site
+            </a>
+        </div>
+    </div>
+
+    <div class="document-container">
+
+        <!-- ===================================================================
+             PAGE 1: COVER PAGE
+             =================================================================== -->
+        <section class="page cover-page">
+            <img src="public/images/hero_riyadh_steel.jpg" alt="Desert Iron Structural Steel" class="cover-bg-image">
+            <div class="cover-overlay-gradient"></div>
+            <div class="cover-accent-angle"></div>
+
+            <div class="cover-content">
+                <!-- Top Header -->
+                <div class="cover-header">
+                    <div class="cover-logo-wrapper">
+                        <img src="public/images/logo.png" alt="Desert Iron Logo" class="cover-logo-img">
+                    </div>
+                    <div class="cover-badge-top">
+                        <div class="country">Kingdom of Saudi Arabia</div>
+                        <div class="city">Dammam Headquarters</div>
+                    </div>
+                </div>
+
+                <!-- Center Main Title -->
+                <div class="cover-body">
+                    <div class="cover-category-pill">
+                        ENGINEERING • FABRICATION • ERECTION • TURNKEY CONTRACTING
+                    </div>
+                    <h1 class="cover-title">
+                        CORPORATE <span>CAPABILITY PROFILE</span>
+                    </h1>
+                    <div class="cover-subtitle">
+                        STRUCTURAL STEEL • PRE-ENGINEERED BUILDINGS • INDUSTRIAL PIPING • CIVIL WORKS • BUILDING ENVELOPE
+                    </div>
+                    <div class="cover-rule"></div>
+
+                    <!-- 3 Highlights -->
+                    <div class="cover-highlights-grid">
+                        <div class="cover-highlight-card">
+                            <div class="number">25+ YRS</div>
+                            <div class="label">GCC Executive Industry Legacy</div>
+                        </div>
+                        <div class="cover-highlight-card">
+                            <div class="number">SBC 201/301</div>
+                            <div class="label">Rigorous Saudi Code Compliance</div>
+                        </div>
+                        <div class="cover-highlight-card">
+                            <div class="number">TURNKEY</div>
+                            <div class="label">Integrated Steel & Civil Execution</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Footer -->
+                <div class="cover-footer">
+                    <div class="cover-footer-info">
+                        <strong>DESERT IRON</strong> (صحراء الحديد)<br>
+                        Building 4996, King Faisal Road, Al Mazruiyah, Dammam 32414, KSA<br>
+                        Web: www.thedesertiron.com &nbsp;|&nbsp; Inquiries: sales@desertiron.com
+                    </div>
+                    <div class="cover-footer-tagline">
+                        <div class="cover-tagline-main">Building A Stronger Tomorrow</div>
+                        <div class="cover-tagline-sub">Practical Engineering • Responsive Execution</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================================
+             PAGE 2: WHO WE ARE & COMPANY OVERVIEW
+             =================================================================== -->
+        <section class="page">
+            <div class="page-header">
+                <img src="public/images/logo.png" alt="Desert Iron" class="header-logo">
+                <div class="header-meta">
+                    <span class="header-section-tag">Section 01</span>
+                    <span class="header-doc-title">Company Overview & Identity</span>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="section-eyebrow">Executive Summary</div>
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-subtitle">
+                    Saudi presence. GCC experience. Integrated industrial capability delivering coordinated structural steel and multi-discipline construction solutions across the Kingdom.
+                </p>
+
+                <!-- Hero Box -->
+                <div class="overview-hero-box">
+                    <h3>Engineering Excellence Across Saudi Arabia</h3>
+                    <p>
+                        Desert Iron is a Saudi Arabian engineering, structural steel, and construction company based in Dammam, serving industrial, commercial, and infrastructure requirements across the Kingdom. Our capabilities cover heavy structural steel fabrication and erection, pre-engineered buildings (PEB), industrial plant construction, pipeline and industrial piping networks, roofing and cladding systems, civil foundations, fit-out works, and associated metal fabrications.
+                    </p>
+                </div>
+
+                <!-- 2 Column Narrative -->
+                <div class="two-col-layout">
+                    <div class="narrative-card">
+                        <h4>
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            Practical Engineering & Coordination
+                        </h4>
+                        <p>
+                            Led by executive management with more than <strong>25 years of GCC industry experience</strong>, Desert Iron combines practical project knowledge, responsive coordination, and a deep understanding of regional construction standards. We bridge the gap between engineering drawings and site realities to eliminate interface risks.
+                        </p>
+                    </div>
+
+                    <div class="narrative-card">
+                        <h4>
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            Reliable • Technically Sound • Competitive
+                        </h4>
+                        <p>
+                            From initial enquiry, technical takeoff, and engineering coordination through to fabrication, surface treatment, site installation, and project handover, we focus on clear scope definition, practical engineering solutions, transparent communication, and dependable customer support.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image Banner -->
+                <div class="image-banner-container">
+                    <img src="public/images/about_us_team.jpg" alt="Desert Iron Engineering Team">
+                    <div class="image-banner-caption">
+                        <span>FIELD RIGGING & TECHNICAL COORDINATION</span>
+                        <span>DAMMAM • JUBAIL • RIYADH • KINGDOM-WIDE</span>
+                    </div>
+                </div>
+
+                <!-- Stats Quad Grid -->
+                <div class="stats-quad-grid">
+                    <div class="stat-card-box">
+                        <div class="stat-label">OPERATING BASE</div>
+                        <div class="stat-val">Dammam</div>
+                        <div class="stat-sub">Eastern Province, KSA</div>
+                    </div>
+                    <div class="stat-card-box">
+                        <div class="stat-label">MARKET COVERAGE</div>
+                        <div class="stat-val">Saudi Arabia</div>
+                        <div class="stat-sub">Kingdom-Wide Mobilization</div>
+                    </div>
+                    <div class="stat-card-box">
+                        <div class="stat-label">MANAGEMENT</div>
+                        <div class="stat-val">25+ Years</div>
+                        <div class="stat-sub">GCC Regional Exposure</div>
+                    </div>
+                    <div class="stat-card-box">
+                        <div class="stat-label">CORE FOCUS</div>
+                        <div class="stat-val">Industrial</div>
+                        <div class="stat-sub">Steel, PEB, Piping & Civil</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-left">DESERT IRON <span>|</span> CORPORATE CAPABILITY PROFILE</div>
+                <div class="footer-center">BUILDING A STRONGER TOMORROW</div>
+                <div class="footer-right">
+                    <span>PAGE</span>
+                    <span class="page-number-badge">02</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================================
+             PAGE 3: CAPABILITIES (WHAT WE DELIVER)
+             =================================================================== -->
+        <section class="page">
+            <div class="page-header">
+                <img src="public/images/logo.png" alt="Desert Iron" class="header-logo">
+                <div class="header-meta">
+                    <span class="header-section-tag">Section 02</span>
+                    <span class="header-doc-title">Core Capabilities & Deliverables</span>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="section-eyebrow">Comprehensive Portfolio</div>
+                <h2 class="section-title">What We Deliver</h2>
+                <p class="section-subtitle">
+                    A balanced, multi-disciplinary portfolio across structural steel, pre-engineered buildings, industrial piping, civil foundations, and building-envelope systems.
+                </p>
+
+                <!-- 6 Capability Cards Grid -->
+                <div class="capabilities-grid">
+                    <!-- 01 Structural Steel -->
+                    <div class="capability-card">
+                        <div class="cap-header">
+                            <span class="cap-num">01</span>
+                            <span class="cap-title">Structural Steel Fabrication & Erection</span>
+                        </div>
+                        <ul class="cap-list">
+                            <li>Heavy shop fabrication & precision on-site erection</li>
+                            <li>Columns, built-up rafters, portal frames & roof trusses</li>
+                            <li>Equipment platforms, mezzanines & pipe racks</li>
+                            <li>Modifications, retrofits & miscellaneous metal fabrications</li>
+                        </ul>
+                        <div class="cap-tags">
+                            <span class="cap-tag">AISC 360</span>
+                            <span class="cap-tag">AWS D1.1</span>
+                            <span class="cap-tag">SBC 201</span>
+                            <span class="cap-tag">Sa 2.5 Blasting</span>
+                        </div>
+                    </div>
+
+                    <!-- 02 PEB & Steel Buildings -->
+                    <div class="capability-card">
+                        <div class="cap-header">
+                            <span class="cap-num">02</span>
+                            <span class="cap-title">PEB & Pre-Engineered Steel Buildings</span>
+                        </div>
+                        <ul class="cap-list">
+                            <li>Industrial warehouses, workshops & logistics distribution centers</li>
+                            <li>Manufacturing plants & heavy utility structures</li>
+                            <li>Primary rigid frames, Z & C purlins, roof & wall girts</li>
+                            <li>Integrated crane runway beams & high-clearance mezzanine floors</li>
+                        </ul>
+                        <div class="cap-tags">
+                            <span class="cap-tag">MBMA Standards</span>
+                            <span class="cap-tag">Clear-Span Geometry</span>
+                            <span class="cap-tag">High-Tensile Steel</span>
+                        </div>
+                    </div>
+
+                    <!-- 03 Industrial Construction -->
+                    <div class="capability-card">
+                        <div class="cap-header">
+                            <span class="cap-num">03</span>
+                            <span class="cap-title">Industrial Construction & Turnkey Execution</span>
+                        </div>
+                        <ul class="cap-list">
+                            <li>Synchronized steel, civil, and architectural site execution</li>
+                            <li>Industrial site supervision & safety-compliant rigging crews</li>
+                            <li>Approved drawing, BOQ, and specification compliance</li>
+                            <li>Quality-focused project coordination & milestone scheduling</li>
+                        </ul>
+                        <div class="cap-tags">
+                            <span class="cap-tag">Turnkey Delivery</span>
+                            <span class="cap-tag">HSE Compliant</span>
+                            <span class="cap-tag">QA/QC Traceability</span>
+                        </div>
+                    </div>
+
+                    <!-- 04 Pipeline & Industrial Piping -->
+                    <div class="capability-card">
+                        <div class="cap-header">
+                            <span class="cap-num">04</span>
+                            <span class="cap-title">Pipeline & Industrial Process Piping</span>
+                        </div>
+                        <ul class="cap-list">
+                            <li>Carbon steel and stainless steel pipe spool fabrication</li>
+                            <li>Field routing, fit-up, certified welding & bolt-up installation</li>
+                            <li>Modular pipe racks, sleepers, guides, clamps & hangers</li>
+                            <li>Hydrostatic pressure testing, NDT coordination & tie-ins</li>
+                        </ul>
+                        <div class="cap-tags">
+                            <span class="cap-tag">ASME B31.3</span>
+                            <span class="cap-tag">API Specs</span>
+                            <span class="cap-tag">WPS/PQR Certified</span>
+                        </div>
+                    </div>
+
+                    <!-- 05 Roofing & Cladding -->
+                    <div class="capability-card">
+                        <div class="cap-header">
+                            <span class="cap-num">05</span>
+                            <span class="cap-title">Roofing, Cladding & Building Envelope</span>
+                        </div>
+                        <ul class="cap-list">
+                            <li>Polyurethane (PU/PIR) & Rockwool insulated sandwich panels</li>
+                            <li>Single-skin corrugated roof and wall cladding profiles</li>
+                            <li>Standing seam roofing systems for critical weather protection</li>
+                            <li>Architectural flashings, gutters, downspouts & skylights</li>
+                        </ul>
+                        <div class="cap-tags">
+                            <span class="cap-tag">50mm-200mm Panels</span>
+                            <span class="cap-tag">Thermal Efficiency</span>
+                            <span class="cap-tag">Weather-Tight</span>
+                        </div>
+                    </div>
+
+                    <!-- 06 Civil & Specialist Works -->
+                    <div class="capability-card">
+                        <div class="cap-header">
+                            <span class="cap-num">06</span>
+                            <span class="cap-title">Civil Foundations & Specialist Works</span>
+                        </div>
+                        <ul class="cap-list">
+                            <li>Reinforced concrete foundations, footings & equipment pedestals</li>
+                            <li>Heavy industrial flooring, grade slabs & containment basins</li>
+                            <li>Structural fireproofing (intumescent & cementitious systems)</li>
+                            <li>Architectural fit-out, stairs, handrails & custom metalwork</li>
+                        </ul>
+                        <div class="cap-tags">
+                            <span class="cap-tag">ACI 318</span>
+                            <span class="cap-tag">SBC 301</span>
+                            <span class="cap-tag">Fireproofing Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-left">DESERT IRON <span>|</span> CORPORATE CAPABILITY PROFILE</div>
+                <div class="footer-center">BUILDING A STRONGER TOMORROW</div>
+                <div class="footer-right">
+                    <span>PAGE</span>
+                    <span class="page-number-badge">03</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================================
+             PAGE 4: INDUSTRIAL SOLUTIONS & ENGINEERING
+             =================================================================== -->
+        <section class="page">
+            <div class="page-header">
+                <img src="public/images/logo.png" alt="Desert Iron" class="header-logo">
+                <div class="header-meta">
+                    <span class="header-section-tag">Section 03</span>
+                    <span class="header-doc-title">Industrial Solutions & Technical Interface</span>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="section-eyebrow">Integrated Industrial Solutions</div>
+                <h2 class="section-title">Steel + Piping + Building Envelope</h2>
+                <p class="section-subtitle">
+                    One coordinated commercial and technical interface for multi-discipline requirements, eliminating cross-contractor conflicts and project delays.
+                </p>
+
+                <!-- Trio Grid -->
+                <div class="solutions-trio-grid">
+                    <div class="trio-card">
+                        <div class="trio-card-header">
+                            <span>Structural Steel</span>
+                            <span>01</span>
+                        </div>
+                        <div class="trio-card-body">
+                            <ul class="trio-list">
+                                <li>Heavy shop fabrication</li>
+                                <li>Field rigging & crane erection</li>
+                                <li>Portal frames & roof trusses</li>
+                                <li>Platforms & access walkways</li>
+                                <li>Structural strengthening & retrofits</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="trio-card">
+                        <div class="trio-card-header">
+                            <span>Pipeline / Piping</span>
+                            <span>02</span>
+                        </div>
+                        <div class="trio-card-body">
+                            <ul class="trio-list">
+                                <li>Process & utility piping networks</li>
+                                <li>Spool fabrication to isometrics</li>
+                                <li>Engineered pipe supports</li>
+                                <li>On-site routing & testing</li>
+                                <li>Associated mechanical works</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="trio-card">
+                        <div class="trio-card-header">
+                            <span>Building Envelope</span>
+                            <span>03</span>
+                        </div>
+                        <div class="trio-card-body">
+                            <ul class="trio-list">
+                                <li>Insulated sandwich panels (PIR/PUR)</li>
+                                <li>Profiled roof & wall sheeting</li>
+                                <li>Standing seam roof systems</li>
+                                <li>Custom trims & flashings</li>
+                                <li>Skylights & ventilation accessories</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Execution Principle -->
+                <div class="execution-box">
+                    <h4>Execution Principle: Build to the Approved Requirement</h4>
+                    <p>
+                        Pipeline, piping, structural steel, and building envelope works are executed in strict accordance with approved project engineering drawings, client specifications, and applicable Saudi Building Code standards. Scope, weld procedures, materials, and field methodologies are systematically aligned with awarded project requirements prior to fabrication.
+                    </p>
+                </div>
+
+                <!-- BIM & Technical Detailing Feature -->
+                <div class="bim-engineering-feature">
+                    <div class="bim-details">
+                        <div class="section-eyebrow" style="margin-bottom: 2px;">Technical Foundation</div>
+                        <h4>3D Detailing & Engineering Coordination</h4>
+                        <p>
+                            We employ Tekla Structures and BIM modeling to generate precise shop fabrication drawings, connection design verifications, and CNC-ready files. Early 3D clash detection ensures accurate foundation anchor bolt placement and zero re-work during site erection.
+                        </p>
+                        <div class="bim-pills">
+                            <span class="bim-pill">Tekla 3D Detailing</span>
+                            <span class="bim-pill">BIM Clash Detection</span>
+                            <span class="bim-pill">SBC 201/301</span>
+                            <span class="bim-pill">WPS / PQR Records</span>
+                        </div>
+                    </div>
+                    <div class="bim-photo">
+                        <img src="public/images/structural_steel.jpg" alt="Structural Steel Detailing & Fabrication">
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-left">DESERT IRON <span>|</span> CORPORATE CAPABILITY PROFILE</div>
+                <div class="footer-center">BUILDING A STRONGER TOMORROW</div>
+                <div class="footer-right">
+                    <span>PAGE</span>
+                    <span class="page-number-badge">04</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================================
+             PAGE 5: QUALITY ASSURANCE, HSE & STANDARDS
+             =================================================================== -->
+        <section class="page">
+            <div class="page-header">
+                <img src="public/images/logo.png" alt="Desert Iron" class="header-logo">
+                <div class="header-meta">
+                    <span class="header-section-tag">Section 04</span>
+                    <span class="header-doc-title">Quality Assurance & Safety Standards</span>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="section-eyebrow">Zero-Compromise Standards</div>
+                <h2 class="section-title">Quality Assurance & HSE Excellence</h2>
+                <p class="section-subtitle">
+                    Meeting the rigorous QA/QC inspection expectations and safety protocols required by industrial operators, government entities, and Tier-1 EPC contractors in Saudi Arabia.
+                </p>
+
+                <!-- QA Protocols Grid -->
+                <div class="qa-protocol-grid">
+                    <div class="qa-protocol-card">
+                        <div class="qa-icon-circle">01</div>
+                        <h5>Raw Materials</h5>
+                        <p>100% Mill Test Certificates (MTC) verification for all steel plates, sections, and fasteners before cutting.</p>
+                    </div>
+                    <div class="qa-protocol-card">
+                        <div class="qa-icon-circle">02</div>
+                        <h5>Weld Inspection</h5>
+                        <p>Qualified welders (AWS D1.1 / ASME IX), fit-up checks, visual testing, and certified WPS/PQR procedures.</p>
+                    </div>
+                    <div class="qa-protocol-card">
+                        <div class="qa-icon-circle">03</div>
+                        <h5>NDT & Testing</h5>
+                        <p>Magnetic Particle (MPI), Ultrasonic (UT), Radiography (RT) coordination, and pressure testing for piping.</p>
+                    </div>
+                    <div class="qa-protocol-card">
+                        <div class="qa-icon-circle">04</div>
+                        <h5>Surface & Coating</h5>
+                        <p>Sa 2.5 abrasive blasting, environmental logs, Dry Film Thickness (DFT) testing, and fireproofing compliance.</p>
+                    </div>
+                </div>
+
+                <!-- Standards Compliance Matrix Table -->
+                <table class="standards-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Domain</th>
+                            <th style="width: 30%;">Governing Standard / Code</th>
+                            <th style="width: 45%;">Application & Scope</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Building Design</strong></td>
+                            <td><span class="code-pill">SBC 201 & SBC 301</span></td>
+                            <td>Saudi Building Code compliance for architectural & structural structural frames</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Steel Structures</strong></td>
+                            <td><span class="code-pill">AISC 360 / AISC 341</span></td>
+                            <td>Specification for structural steel buildings & seismic load framing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Welding Quality</strong></td>
+                            <td><span class="code-pill">AWS D1.1 / AWS D1.3</span></td>
+                            <td>Structural welding code for heavy steel framing & cold-formed sheet metal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Industrial Piping</strong></td>
+                            <td><span class="code-pill">ASME B31.3 / API 1104</span></td>
+                            <td>Process piping fabrication, routing, pressure boundaries & inspection</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Civil & Concrete</strong></td>
+                            <td><span class="code-pill">ACI 318 / ASTM Specs</span></td>
+                            <td>Reinforced concrete foundations, pedestals, and structural grade slabs</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Safety Banner -->
+                <div class="safety-banner">
+                    <div class="safety-banner-text">
+                        <h4>Zero-Harm HSE Culture & Field Rigging Safety</h4>
+                        <p>
+                            Safety is embedded into every erection sequence. All crane lifts, scaffolding, working-at-height operations, and welding procedures are guided by daily toolbox talks, certified rigging personnel, and proactive risk assessments.
+                        </p>
+                    </div>
+                    <div class="safety-badge">HSE ZERO HARM</div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-left">DESERT IRON <span>|</span> CORPORATE CAPABILITY PROFILE</div>
+                <div class="footer-center">BUILDING A STRONGER TOMORROW</div>
+                <div class="footer-right">
+                    <span>PAGE</span>
+                    <span class="page-number-badge">05</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================================
+             PAGE 6: MARKETS & GROUP EXPERIENCE (QATAR & GCC)
+             =================================================================== -->
+        <section class="page">
+            <div class="page-header">
+                <img src="public/images/logo.png" alt="Desert Iron" class="header-logo">
+                <div class="header-meta">
+                    <span class="header-section-tag">Section 05</span>
+                    <span class="header-doc-title">Markets & Regional Group Track Record</span>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="section-eyebrow">Strategic Market Positioning</div>
+                <h2 class="section-title">Industries We Serve</h2>
+                <p class="section-subtitle">
+                    Positioned in the Eastern Province to support industrial complexes, logistics corridors, and infrastructure developments across the Kingdom of Saudi Arabia.
+                </p>
+
+                <!-- 7 Market Chips -->
+                <div class="markets-chips-grid">
+                    <div class="market-chip"><span class="dot"></span> Oil, Gas & Petrochemical</div>
+                    <div class="market-chip"><span class="dot"></span> Industrial & Manufacturing</div>
+                    <div class="market-chip"><span class="dot"></span> Warehousing & Logistics</div>
+                    <div class="market-chip"><span class="dot"></span> Energy, Power & Utilities</div>
+                    <div class="market-chip"><span class="dot"></span> Commercial Developments</div>
+                    <div class="market-chip"><span class="dot"></span> Infrastructure & Mining</div>
+                    <div class="market-chip" style="grid-column: span 3;"><span class="dot"></span> Cold Storage & Specialized Temperature-Controlled Facilities</div>
+                </div>
+
+                <!-- Group Experience - Qatar Heritage Box -->
+                <div class="group-heritage-box">
+                    <h4>GROUP EXPERIENCE — QATAR & GCC TRACK RECORD</h4>
+                    <h3>Saudi Presence. GCC Project Perspective.</h3>
+                    <p>
+                        Desert Iron benefits from senior executive management with more than <strong>25 years of GCC industry experience</strong>. Our associated Qatar operation, <strong>Safeera Trading, Contracting & Services</strong>, established in 2012 under the same ownership, provides proven group depth across structural steel fabrication, design-build commercial buildings, pre-engineered warehouses, roofing, cladding, civil foundations, and industrial facility maintenance.
+                    </p>
+                </div>
+
+                <!-- Projects Photo Grid (Representative Illustrative Applications) -->
+                <div class="projects-photogrid">
+                    <div class="project-thumbnail-card">
+                        <img src="public/images/structural_steel.jpg" alt="Industrial Facility Steel" class="project-thumb-img">
+                        <div class="project-thumb-desc">
+                            <span class="tag">Structural Steel</span>
+                            <div class="title">Industrial Plant Framing</div>
+                        </div>
+                    </div>
+
+                    <div class="project-thumbnail-card">
+                        <img src="public/images/peb_warehouse.jpg" alt="PEB Logistics Center" class="project-thumb-img">
+                        <div class="project-thumb-desc">
+                            <span class="tag">PEB Systems</span>
+                            <div class="title">Logistics Warehouse Hub</div>
+                        </div>
+                    </div>
+
+                    <div class="project-thumbnail-card">
+                        <img src="public/images/roof_wall_panels.jpg" alt="Insulated Wall Cladding" class="project-thumb-img">
+                        <div class="project-thumb-desc">
+                            <span class="tag">Envelope</span>
+                            <div class="title">Insulated Panel Facades</div>
+                        </div>
+                    </div>
+
+                    <div class="project-thumbnail-card">
+                        <img src="public/images/civil_construction.jpg" alt="Heavy Civil Foundations" class="project-thumb-img">
+                        <div class="project-thumb-desc">
+                            <span class="tag">Civil Works</span>
+                            <div class="title">Equipment Foundations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-left">DESERT IRON <span>|</span> CORPORATE CAPABILITY PROFILE</div>
+                <div class="footer-center">BUILDING A STRONGER TOMORROW</div>
+                <div class="footer-right">
+                    <span>PAGE</span>
+                    <span class="page-number-badge">06</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================================
+             PAGE 7: CUSTOMER VALUE & 5-STEP PROJECT APPROACH
+             =================================================================== -->
+        <section class="page">
+            <div class="page-header">
+                <img src="public/images/logo.png" alt="Desert Iron" class="header-logo">
+                <div class="header-meta">
+                    <span class="header-section-tag">Section 06</span>
+                    <span class="header-doc-title">Customer Value & Execution Framework</span>
+                </div>
+            </div>
+
+            <div class="page-content">
+                <div class="section-eyebrow">Strategic Value Proposition</div>
+                <h2 class="section-title">Why Desert Iron</h2>
+                <p class="section-subtitle">
+                    Built around technical clarity, commercial responsiveness, and coordinated field execution to deliver maximum value to developers and main contractors.
+                </p>
+
+                <!-- 6 Value Pillars Grid -->
+                <div class="value-pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-num">1</div>
+                        <div class="pillar-body">
+                            <h5>Engineering-Focused</h5>
+                            <p>We analyze drawings, structural loads, and specifications thoroughly before proposing optimized technical solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-num">2</div>
+                        <div class="pillar-body">
+                            <h5>Integrated Capabilities</h5>
+                            <p>Single-source responsibility for structural steel, PEB, piping, cladding, and civil foundations under one contract.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-num">3</div>
+                        <div class="pillar-body">
+                            <h5>GCC Management Legacy</h5>
+                            <p>Executive leadership brings over 25 years of hands-on structural steel and contracting experience across the Arabian Gulf.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-num">4</div>
+                        <div class="pillar-body">
+                            <h5>Responsive Support</h5>
+                            <p>Fast quotation turnaround, prompt technical clarification, and transparent BOQ breakdown for commercial accuracy.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-num">5</div>
+                        <div class="pillar-body">
+                            <h5>Quality & Safety (QA/HSE)</h5>
+                            <p>Zero-compromise execution strictly aligned with approved submittals, Saudi Building Codes, and industrial HSE rules.</p>
+                        </div>
+                    </div>
+
+                    <div class="pillar-card">
+                        <div class="pillar-num">6</div>
+                        <div class="pillar-body">
+                            <h5>Strategic Dammam Base</h5>
+                            <p>Rapid mobilization to Dammam 2nd & 3rd Industrial Cities, Jubail, Ras Al Khair, Khobar, and across Saudi Arabia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-Step Project Approach Ribbon -->
+                <div class="approach-ribbon-container">
+                    <div class="approach-header">
+                        <h4>Our Project Approach — 5-Phase Lifecycle</h4>
+                        <span style="font-size: 8.5px; color: var(--color-saudi-green); font-family: var(--font-heading); font-weight: 700;">STRUCTURED • PREDICTABLE • ON TIME</span>
+                    </div>
+
+                    <div class="approach-steps-flex">
+                        <div class="step-node active">
+                            <div class="step-circle">1</div>
+                            <div class="step-title">RFQ / BOQ Review</div>
+                            <div class="step-desc">Scope audit, material takeoff & technical review</div>
+                        </div>
+
+                        <div class="step-node">
+                            <div class="step-circle">2</div>
+                            <div class="step-title">Technical Detailing</div>
+                            <div class="step-desc">Connection design, Tekla BIM & value engineering</div>
+                        </div>
+
+                        <div class="step-node">
+                            <div class="step-circle">3</div>
+                            <div class="step-title">Commercial Proposal</div>
+                            <div class="step-desc">Transparent pricing, schedule & milestone agreement</div>
+                        </div>
+
+                        <div class="step-node">
+                            <div class="step-circle">4</div>
+                            <div class="step-title">Shop & Site Execution</div>
+                            <div class="step-desc">Precision fabrication, coating & safe crane erection</div>
+                        </div>
+
+                        <div class="step-node">
+                            <div class="step-circle">5</div>
+                            <div class="step-title">QA/QC Handover</div>
+                            <div class="step-desc">NDT dossiers, as-built drawings & client sign-off</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <div class="footer-left">DESERT IRON <span>|</span> CORPORATE CAPABILITY PROFILE</div>
+                <div class="footer-center">BUILDING A STRONGER TOMORROW</div>
+                <div class="footer-right">
+                    <span>PAGE</span>
+                    <span class="page-number-badge">07</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================================
+             PAGE 8: CORPORATE CONTACT & SALES BROCHURE BACK COVER
+             =================================================================== -->
+        <section class="page back-cover-page">
+            <div class="cover-overlay-gradient"></div>
+            <div class="cover-accent-angle" style="transform: rotate(-24deg); right: auto; left: -100px;"></div>
+
+            <div class="back-cover-content">
+                <!-- CTA Header -->
+                <div class="cta-header-box">
+                    <div class="section-eyebrow" style="color: var(--color-emerald-accent); justify-content: center; margin-bottom: 8px;">
+                        Partner With Desert Iron
+                    </div>
+                    <h2>Let's Build <span>Together</span></h2>
+                    <p>Send Us Your RFQ / BOQ / Drawings for a Rapid Commercial & Technical Proposal</p>
+                </div>
+
+                <!-- RFQ Checklist Scope Box -->
+                <div class="rfq-checklist-box">
+                    <div class="rfq-checklist-title">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        We Invite Inquiries & Tenders For:
+                    </div>
+                    <div class="rfq-checklist-grid">
+                        <div class="rfq-check-item"><span>✓</span> Structural Steel Framing</div>
+                        <div class="rfq-check-item"><span>✓</span> Pre-Engineered Buildings (PEB)</div>
+                        <div class="rfq-check-item"><span>✓</span> Industrial Process Piping</div>
+                        <div class="rfq-check-item"><span>✓</span> Insulated Sandwich Panels</div>
+                        <div class="rfq-check-item"><span>✓</span> Turnkey Civil Foundations</div>
+                        <div class="rfq-check-item"><span>✓</span> Heavy Pipe Racks & Platforms</div>
+                    </div>
+                </div>
+
+                <!-- Executive Corporate Directory Card -->
+                <div class="contact-card-executive">
+                    <div class="contact-row-grid">
+                        <!-- Head Office -->
+                        <div class="contact-item">
+                            <div class="contact-icon-box">📍</div>
+                            <div>
+                                <div class="contact-detail-label">Registered Headquarters</div>
+                                <div class="contact-detail-val">
+                                    Building 4996, King Faisal Road,<br>
+                                    Al Mazruiyah, Dammam 32414,<br>
+                                    Kingdom of Saudi Arabia
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Web & Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon-box">🌐</div>
+                            <div>
+                                <div class="contact-detail-label">Online & RFQ Submissions</div>
+                                <div class="contact-detail-val">
+                                    <a href="https://www.thedesertiron.com">www.thedesertiron.com</a><br>
+                                    <a href="mailto:sales@desertiron.com" style="color: var(--color-emerald-accent);">sales@desertiron.com</a><br>
+                                    Sun - Thu | 8:00 AM - 5:00 PM AST
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sales & WhatsApp -->
+                        <div class="contact-item">
+                            <div class="contact-icon-box">📱</div>
+                            <div>
+                                <div class="contact-detail-label">Sales & RFQ Coordination (WhatsApp)</div>
+                                <div class="contact-detail-val">
+                                    <strong>Meharsha O.N</strong><br>
+                                    <a href="tel:+966599510213">+966 59 951 0213</a><br>
+                                    <span style="font-size: 8.5px; color: #94A3B8;">Direct Line & WhatsApp</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Executive Management -->
+                        <div class="contact-item">
+                            <div class="contact-icon-box">💼</div>
+                            <div>
+                                <div class="contact-detail-label">General Management</div>
+                                <div class="contact-detail-val">
+                                    <strong>Jaffar Hussain Shaik</strong><br>
+                                    <a href="tel:+966556930221">+966 55 693 0221</a><br>
+                                    <a href="mailto:jaffar@desertiron.com" style="font-size: 9px; color: #CBD5E1;">jaffar@desertiron.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back Cover Footer -->
+                <div class="back-cover-footer">
+                    <img src="public/images/logo.png" alt="Desert Iron Logo" class="back-logo-img">
+                    <div class="back-motto">
+                        <div class="back-motto-main">Building A Stronger Tomorrow</div>
+                        <div class="back-motto-sub">Engineering • Steel • Construction • Industrial Solutions</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

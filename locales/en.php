@@ -1,0 +1,758 @@
+<?php
+/**
+ * Better Supply Corporation - English Language Dictionary (en)
+ * Sourced directly from Developer Handover Document (Version 2.0)
+ */
+
+return [
+    'lang_code' => 'en',
+    'lang_dir' => 'ltr',
+    'lang_name' => 'English',
+    'switch_lang_code' => 'ar',
+    'switch_lang_label' => 'العربية',
+    'company_name' => 'Better Supply Corporation',
+    'company_name_legal' => 'Better Supply Corporation',
+    'company_tagline' => 'Connecting Markets. Supplying Industries.',
+    'headquarters' => 'Dammam, Kingdom of Saudi Arabia',
+
+    // Navigation
+    'nav' => [
+        'home' => 'Home',
+        'about' => 'About Us',
+        'products' => 'Products & Services',
+        'products_overview' => 'All Categories Overview',
+        'industrial_salts' => 'Industrial Salts & Specialty Chemicals',
+        'oilfield_chemicals' => 'Oilfield Chemicals & Drilling Materials',
+        'water_treatment' => 'Water Treatment & Desalination',
+        'fertilizers' => 'Agricultural Fertilizers & Crop Nutrition',
+        'coco_peat' => 'Coco Peat & Growing Media',
+        'packaging_disposables' => 'Packaging & Disposable Products',
+        'other_trading' => 'Specialized Vehicles & Office Machinery',
+        'industries' => 'Industries',
+        'international_trading' => 'International Trading',
+        'partners' => 'Partnerships',
+        'contact' => 'Contact / RFQ',
+        'request_rfq' => 'Request RFQ',
+    ],
+
+    // Common Buttons & Microcopy
+    'buttons' => [
+        'request_quote' => 'Request a Quotation',
+        'explore_products' => 'Explore Products',
+        'view_details' => 'View Details',
+        'learn_more' => 'Learn More',
+        'submit_rfq' => 'Submit Request for Quotation',
+        'discuss_partnership' => 'Discuss a Supply Partnership',
+        'enquire_now' => 'Send Inquiry',
+        'download_spec' => 'Request Technical Data',
+        'view_all_products' => 'View All Product Categories',
+        'back_to_home' => 'Back to Home',
+        'close' => 'Close',
+    ],
+
+    // Global Labels
+    'labels' => [
+        'formula' => 'Chemical Formula',
+        'cas_number' => 'CAS Number',
+        'grade' => 'Available Grades',
+        'form' => 'Physical Form',
+        'applications' => 'Key Applications',
+        'packaging_options' => 'Packaging Options',
+        'sourcing_status' => 'Sourcing Status',
+        'status_active' => 'Sourcing Available',
+        'status_inquiry' => 'Sourcing Inquiries Welcome',
+        'status_development' => 'In Development',
+        'faq_title' => 'Frequently Asked Questions',
+        'rfq_guide_title' => 'How to Request a Commercial Quotation',
+        'rfq_guide_subtitle' => 'Please provide the following parameters for an accurate quotation and supplier evaluation:',
+        'compliance_notice_title' => 'Procurement & Specification Note',
+        'quick_links' => 'Quick Links',
+        'product_divisions' => 'Product Divisions',
+        'contact_us' => 'Contact & Procurement Desk',
+        'working_hours' => 'Sunday – Thursday: 8:00 AM – 5:00 PM (AST)',
+        'all_rights_reserved' => 'All Rights Reserved.',
+        'legal_draft_notice' => 'DRAFT - LEGAL REVIEW REQUIRED',
+    ],
+
+    // SEO Titles and Meta Descriptions (Exact from Handover Section 03)
+    'seo' => [
+        'home' => [
+            'title' => 'Industrial & Chemical Supply Saudi Arabia | Better Supply',
+            'meta_desc' => 'Better Supply Corporation supports industrial salts, oilfield materials, water-treatment chemicals and international sourcing for Saudi and GCC buyers.',
+        ],
+        'about' => [
+            'title' => 'About Better Supply | Industrial Trading in Dammam',
+            'meta_desc' => 'Learn about Better Supply Corporation, a Dammam-based B2B procurement and trading business connecting international manufacturers with Saudi & GCC markets.',
+        ],
+        'products' => [
+            'title' => 'Industrial, Agricultural & Trading Products | Better Supply',
+            'meta_desc' => 'Explore commercial sourcing divisions: industrial salts, oilfield drilling materials, water treatment chemicals, fertilizers, coco peat and packaging.',
+        ],
+        'industrial_salts' => [
+            'title' => 'Bulk Industrial Salt & Chemical Salts | Better Supply',
+            'meta_desc' => 'Enquire about bulk industrial sodium chloride, vacuum salt, potassium chloride and calcium chloride sourcing for industrial applications across Saudi Arabia and the GCC.',
+        ],
+        'oilfield_chemicals' => [
+            'title' => 'Oilfield & Drilling Materials Supplier | Saudi Arabia',
+            'meta_desc' => 'Explore sourcing for drilling-fluid salts, completion-brine chemicals and selected oilfield materials. Technical specifications and project RFQs welcome.',
+        ],
+        'water_treatment' => [
+            'title' => 'Water Treatment Chemicals & RO Products | Better Supply',
+            'meta_desc' => 'Source RO antiscalants, SMBS, PAC and other suitable water-treatment chemicals for industrial and commercial applications across Saudi Arabia and the GCC.',
+        ],
+        'fertilizers' => [
+            'title' => 'Agricultural Fertilizers & Crop Nutrition | Better Supply',
+            'meta_desc' => 'Explore fertilizer, crop-nutrition and soil input commercial sourcing opportunities for agricultural distributors and commercial greenhouse operators.',
+        ],
+        'coco_peat' => [
+            'title' => 'India-Origin Coco Peat & Coir Growing Media | Better Supply',
+            'meta_desc' => 'India-origin coco peat blocks, coir briquettes and grow bags. Developing sourcing initiative for Saudi Arabia, GCC and exploratory overseas opportunities.',
+        ],
+        'packaging_disposables' => [
+            'title' => 'Corrugated Cartons & Disposable Products | Better Supply',
+            'meta_desc' => 'Bulk corrugated shipping cartons, kraft export packaging and commercial disposable products for logistics, manufacturing and foodservice operators.',
+        ],
+        'other_trading' => [
+            'title' => 'Specialized Vehicles & Office Machinery | Better Supply',
+            'meta_desc' => 'Wholesale and retail trading of specialized passenger vehicles (ambulances, minibuses) and wholesale office machinery under authorized CR activities.',
+        ],
+        'industries' => [
+            'title' => 'Industries We Serve | Better Supply Corporation',
+            'meta_desc' => 'B2B procurement solutions for oil and gas contractors, petrochemicals, water desalination, commercial agriculture, logistics and corporate entities.',
+        ],
+        'international_trading' => [
+            'title' => 'Import Export & International Sourcing | Better Supply',
+            'meta_desc' => 'Connect with Better Supply for industrial and commercial product sourcing, wholesale procurement and GCC import-export coordination.',
+        ],
+        'partners' => [
+            'title' => 'Manufacturers & Trading Partnerships | Better Supply',
+            'meta_desc' => 'Better Supply welcomes commercial introductions from chemical producers, salt miners, packaging manufacturers and international distributors.',
+        ],
+        'contact' => [
+            'title' => 'Request a Supply Quotation | Better Supply Corporation',
+            'meta_desc' => 'Submit your RFQ for industrial salts, oilfield chemicals, water treatment, fertilizers, or packaging. Fast technical and commercial review from Dammam.',
+        ],
+        'privacy' => [
+            'title' => 'Privacy Policy | Better Supply Corporation',
+            'meta_desc' => 'Privacy Policy and data processing terms for Better Supply Corporation website and RFQ procurement portal.',
+        ],
+        'terms' => [
+            'title' => 'Terms & Conditions of Supply Inquiries | Better Supply',
+            'meta_desc' => 'Terms governing commercial inquiries, specification verifications, and website usage for Better Supply Corporation.',
+        ],
+    ],
+
+    // RFQ Form Strings
+    'rfq_form' => [
+        'title' => 'Submit a Request for Quotation (RFQ)',
+        'subtitle' => 'Fill out your material specifications below. Our procurement team will review availability and prepare a commercial offer.',
+        'full_name' => 'Full Name',
+        'full_name_placeholder' => 'e.g. Abdullah Al-Mansoor',
+        'company_name' => 'Company / Organization',
+        'company_name_placeholder' => 'e.g. Eastern Industrial Services Ltd.',
+        'email' => 'Business Email',
+        'email_placeholder' => 'name@company.com',
+        'phone' => 'Phone / WhatsApp Number',
+        'phone_placeholder' => '+966 5X XXX XXXX',
+        'category' => 'Product Category',
+        'select_category' => '-- Select Sourcing Category --',
+        'categories' => [
+            'industrial_salts' => 'Industrial Salts & Specialty Inorganic Salts',
+            'oilfield_chemicals' => 'Oilfield Chemicals & Drilling Fluids',
+            'water_treatment' => 'Water Treatment & Desalination Chemicals',
+            'fertilizers' => 'Agricultural Fertilizers & Crop Nutrition',
+            'coco_peat' => 'India-Origin Coco Peat & Growing Media',
+            'packaging_disposables' => 'Packaging Materials & Commercial Disposables',
+            'specialized_vehicles' => 'Specialized Passenger Vehicles (Ambulances, Minibuses)',
+            'office_machinery' => 'Wholesale Office Machinery & Equipment',
+            'other' => 'Other Industrial Sourcing Inquiries',
+        ],
+        'product_spec' => 'Product Name & Detailed Specification',
+        'product_spec_placeholder' => 'Specify chemical name, formula, required grade, mesh/particle size, purity requirements or intended application...',
+        'quantity' => 'Required Quantity',
+        'quantity_placeholder' => 'e.g. 500',
+        'unit' => 'Unit of Measure',
+        'select_unit' => '-- Select Unit --',
+        'units' => [
+            'mt' => 'Metric Tons (MT)',
+            'kg' => 'Kilograms (kg)',
+            'bags' => 'Bags (25kg / 50kg)',
+            'jumbo_bags' => 'Jumbo / FIBC Bags (1000kg)',
+            'drums' => 'Drums (200L / 220kg)',
+            'pallets' => 'Pallets',
+            'units' => 'Pieces / Units',
+            'containers' => 'Full Container Loads (FCL)',
+        ],
+        'packaging_format' => 'Preferred Packaging Format',
+        'packaging_placeholder' => 'e.g., 25kg PP bags, 1 MT big bags, bulk sea container, palletized',
+        'destination_city' => 'Delivery Destination (City & Country)',
+        'destination_placeholder' => 'e.g. Dammam Port, Jubail Industrial City, Riyadh, KSA',
+        'delivery_date' => 'Target Delivery Schedule / Date',
+        'delivery_date_placeholder' => 'e.g. Q1 2027 or immediate spot requirement',
+        'attachment' => 'Technical Documents / BOQ / TDS (Optional)',
+        'attachment_hint' => 'Accepted files: PDF, DOC, DOCX, XLS, XLSX, JPG, PNG (Max 10 MB)',
+        'privacy_consent' => 'I agree that Better Supply Corporation may process these specifications and contact details solely to evaluate sourcing options and provide commercial quotations.',
+        'submit' => 'Submit RFQ Inquiry',
+        'submitting' => 'Processing Sourcing Request...',
+        'success_title' => 'Quotation Request Received',
+        'success_msg' => 'Thank you for your inquiry. Our commercial procurement team in Dammam has received your specification details and will review supplier feasibility promptly.',
+        'error_title' => 'Submission Error',
+        'error_msg' => 'Please check the required fields highlighted below and ensure all parameters are correctly entered.',
+        'file_error' => 'The uploaded file is either invalid or exceeds the 10 MB limit.',
+    ],
+
+    // Page Specific Content Dictionaries
+    'pages' => [
+        // Home Page
+        'home' => [
+            'hero_badge' => 'Dammam, Saudi Arabia • Global B2B Trading',
+            'hero_title' => 'Industrial & Chemical Supply. Global Trading Solutions.',
+            'hero_lead' => 'Better Supply Corporation connects international manufacturers with industrial and commercial buyers across Saudi Arabia and the GCC, specializing in chemical, mineral, and industrial procurement.',
+            'hero_subtitle' => 'Better Supply Corporation connects international manufacturers and suppliers with industrial and commercial buyers across Saudi Arabia and the GCC. Based in Dammam, we support the sourcing and wholesale trading of industrial salts, oilfield materials, water-treatment chemicals, agricultural inputs and commercial products.',
+            'hero_scope' => 'Our services focus on product-specific procurement, technical specification coordination, competitive commercial quotations and practical import-export arrangements.',
+            'trust_strip' => [
+                'dammam' => 'Based in Dammam, KSA',
+                'sourcing' => 'Industrial & Chemical Sourcing',
+                'gcc' => 'Saudi Arabia and GCC Focus',
+                'rfq' => 'RFQ-Based Quotations',
+            ],
+            'core_divisions_title' => 'Core Sourcing Divisions',
+            'core_divisions_subtitle' => 'Direct wholesale procurement channels tailored to technical specifications and regulatory standards.',
+            'wider_portfolio_title' => 'Our Wider Trading Portfolio',
+            'wider_portfolio_subtitle' => 'Supplying specialized commercial products, sustainable agricultural media, packaging, and commercial equipment.',
+            'sectors_title' => 'Sectors We Support',
+            'sectors_subtitle' => 'Delivering tailored procurement solutions for contractors, manufacturing plants, and utilities across Saudi Arabia.',
+            'approach_title' => 'A Practical Approach to Procurement',
+            'approach_desc' => 'Tell us what you need. Share the product grade, specification, quantity, packaging, delivery destination and desired schedule. We review the inquiry and identify viable commercial sourcing options.',
+            'vision2030_badge' => 'Supporting Industrial Growth',
+            'vision2030_title' => 'Supporting Saudi Arabia’s Industrial Future',
+            'vision2030_text' => 'Our business addresses sourcing needs in sectors relevant to Saudi Arabia’s Vision 2030, including industry, water infrastructure, agriculture, logistics and international trade. We aim to support commercial supply chains through responsible sourcing and reliable business relationships.',
+            'closing_cta_title' => 'Have an industrial material requirement?',
+            'closing_cta_text' => 'Submit your RFQ with your target grade and quantity. Our commercial team will evaluate supplier capability and provide an actionable commercial offer.',
+        ],
+
+        // About Page
+        'about' => [
+            'heading' => 'International Sourcing. Industrial Supply. Commercial Partnerships.',
+            'lead' => 'Better Supply Corporation is a Saudi-based trading and procurement business serving industrial, agricultural and commercial supply requirements. From Dammam, our company works to connect global manufacturing and wholesale markets with buyers across Saudi Arabia and the GCC.',
+            'scope' => 'Our business activities cover chemical materials, industrial salts, oilfield-related sourcing, water-treatment products, fertilizers, agricultural growing media and other commercial categories. We focus on accurate specification matching, professional communication and commercially practical supply arrangements.',
+            'mission_title' => 'Our Mission',
+            'mission_desc' => 'To connect manufacturers, distributors and commercial buyers through efficient sourcing, transparent communication and dependable procurement coordination.',
+            'vision_title' => 'Our Vision',
+            'vision_desc' => 'To develop a recognized international trading business serving Saudi Arabia, the GCC and selected global markets through diversified products and long-term commercial relationships.',
+            'workflow_title' => 'How We Work: The 4-Step Procurement Process',
+            'steps' => [
+                ['num' => '01', 'title' => 'Inquiry Review', 'desc' => 'Receive the RFQ and confirm product, specification and quantity.'],
+                ['num' => '02', 'title' => 'Source Qualification', 'desc' => 'Review potential sources and request manufacturer documentation where necessary.'],
+                ['num' => '03', 'title' => 'Commercial Proposal', 'desc' => 'Prepare a commercial offer based on agreed scope, availability and delivery terms.'],
+                ['num' => '04', 'title' => 'Logistics & Execution', 'desc' => 'Coordinate purchase, export/import documents and logistics when the order is approved.'],
+            ],
+            'vision_section_title' => 'Saudi Vision 2030 and Industrial Development',
+            'vision_section_text' => 'Saudi Arabia’s Vision 2030 places emphasis on industrial development, logistics, infrastructure and economic diversification. Better Supply seeks to serve businesses working in these evolving sectors through international sourcing and procurement of industrial and agricultural materials. Our role is commercial: connecting customer requirements with international sourcing opportunities and dependable business relationships.',
+        ],
+
+        // Products Overview Page
+        'products_overview' => [
+            'heading' => 'Industrial and Commercial Products for Multiple Sectors',
+            'subheading' => 'Explore our trading and sourcing categories. Products are considered according to customer specifications, manufacturer documentation, regulatory requirements and commercial availability.',
+            'notice' => 'Commercial supply inquiries are evaluated on a product-by-product basis against verified manufacturer technical documentation and shipping logistics.',
+        ],
+
+        // Industrial Salts Page
+        'industrial_salts' => [
+            'heading' => 'Bulk Industrial Salts and Specialty Salt Sourcing',
+            'intro' => 'Better Supply Corporation welcomes procurement inquiries for industrial salts used in manufacturing, chemical processing, industrial water softening and selected petroleum-sector applications. Each product is sourced to the required grade, purity, physical form and intended use.',
+            'salt_distinction_notice' => 'Technical Suitability Notice: Different salts serve distinct industrial functions. Industrial salt cannot replace specialized RO water treatment chemicals or high-density completion fluids. Technical compatibility must be confirmed for each project process.',
+            'sodium_chloride_title' => 'Industrial Sodium Chloride Products',
+            'specialty_salts_title' => 'Selected Specialty Inorganic Salts',
+            'products' => [
+                [
+                    'name' => 'Industrial-Grade Sodium Chloride',
+                    'formula' => 'NaCl',
+                    'summary' => 'High-volume mineral sodium chloride sourced for diverse industrial, de-icing, and base manufacturing operations.',
+                    'applications' => ['Chemical manufacturing', 'Chlor-alkali feedstock', 'Industrial utility processes'],
+                ],
+                [
+                    'name' => 'Chemical-Grade Sodium Chloride',
+                    'formula' => 'NaCl',
+                    'summary' => 'Refined sodium chloride meeting defined chemical thresholds for specialized industrial synthesis.',
+                    'applications' => ['Chemical synthesis', 'Industrial processing', 'Textile and dyeing auxiliaries'],
+                ],
+                [
+                    'name' => 'Vacuum Salt & Solar-Evaporated Salt',
+                    'formula' => 'NaCl',
+                    'summary' => 'High-purity vacuum evaporated salt or screened solar-harvested grades with uniform crystal structure.',
+                    'applications' => ['Food-processing grade applications', 'High-purity industrial synthesis', 'Detergent formulations'],
+                ],
+                [
+                    'name' => 'Coarse & Fine Industrial Salt',
+                    'formula' => 'NaCl',
+                    'summary' => 'Custom screened particle size distributions ranging from coarse granules to fine powders for specific mechanical feeding systems.',
+                    'applications' => ['Animal feed mineral mix', 'Industrial blending', 'Surface treatments'],
+                ],
+                [
+                    'name' => 'Water-Softener Salt Tablets & Pellets',
+                    'formula' => 'NaCl',
+                    'summary' => 'Compacted high-purity sodium chloride briquettes and round pellets formulated for clean ion-exchange resin regeneration without sludge.',
+                    'applications' => ['Commercial water softening', 'Boiler feed pre-treatment', 'Industrial water utilities'],
+                ],
+                [
+                    'name' => 'Potassium Chloride',
+                    'formula' => 'KCl',
+                    'summary' => 'Specialty inorganic potassium salt used across drilling fluid formulations, agriculture, and industrial chemical synthesis.',
+                    'applications' => ['Oilfield drilling fluids', 'Fertilizer production (MOP)', 'Chemical processing'],
+                ],
+                [
+                    'name' => 'Calcium Chloride',
+                    'formula' => 'CaCl₂',
+                    'summary' => 'Versatile hygroscopic inorganic salt supplied in flake, pellet, or powder forms for drilling brines, concrete acceleration, and dust suppression.',
+                    'applications' => ['Drilling & completion brines', 'Moisture absorption', 'Refrigeration brines', 'Concrete curing'],
+                ],
+                [
+                    'name' => 'Magnesium Chloride',
+                    'formula' => 'MgCl₂',
+                    'summary' => 'Inorganic magnesium salt supplied in flake or anhydrous form for specialized industrial processing and mineral recovery.',
+                    'applications' => ['Oxychloride cement', 'Dust control', 'Industrial chemical synthesis'],
+                ],
+                [
+                    'name' => 'Sodium Sulphate',
+                    'formula' => 'Na₂SO₄',
+                    'summary' => 'Anhydrous neutral sodium sulphate salt widely utilized in synthetic detergent manufacturing, glass making, and textile processing.',
+                    'applications' => ['Detergent powder manufacturing', 'Glass fining', 'Textile dyeing'],
+                ],
+            ],
+            'faqs' => [
+                ['q' => 'What parameters are required to quote bulk industrial salt?', 'a' => 'Please provide the chemical purity (NaCl %), moisture content, mesh/particle size requirements, preferred packaging (25kg bags, 1000kg jumbo bags, or bulk), delivery port, and total required tonnage.'],
+                ['q' => 'Can water-softener salt pellets be used in RO plants?', 'a' => 'Water-softener salt is intended strictly for regenerating cation exchange softening resins. It does not replace reverse osmosis antiscalants, bisulfites, or membrane cleaners.'],
+                ['q' => 'What packaging configurations are available for industrial salts?', 'a' => 'We source salt in standard 25 kg woven polypropylene bags with inner liners, 1,000 kg / 1,200 kg FIBC jumbo bags with discharge spouts, or loose bulk container liners depending on project logistics.'],
+            ],
+        ],
+
+        // Oilfield Chemicals Page
+        'oilfield_chemicals' => [
+            'heading' => 'Drilling Materials and Completion-Brine Chemical Sourcing',
+            'intro' => 'Better Supply Corporation is developing product-specific sourcing solutions for oil and gas contractors, drilling-fluid service companies, project procurement teams and industrial chemical distributors. We welcome inquiries requiring defined chemical grades, technical documentation and project delivery conditions.',
+            'compliance_note' => 'Compliance Notice: Better Supply Corporation operates as an independent sourcing and trading business. We do not claim approval from Saudi Aramco or SLB, and we do not represent proprietary third-party formulations. Material acceptance and vendor qualification remain subject to the relevant buyer’s procurement procedures.',
+            'drilling_salts_title' => 'Drilling-Fluid Salts',
+            'completion_brines_title' => 'Completion & Clear-Brine Materials — Specialist Inquiries',
+            'drilling_minerals_title' => 'Selected Drilling Minerals & Treatment Materials',
+            'products' => [
+                [
+                    'name' => 'Sodium Chloride (Drilling Grade)',
+                    'formula' => 'NaCl',
+                    'summary' => 'High-purity sodium chloride for saturated brine systems, shale stabilization, and fluid density adjustment.',
+                    'applications' => ['Drilling fluids', 'Workover operations', 'Hydrate suppression'],
+                ],
+                [
+                    'name' => 'Potassium Chloride (Drilling Grade)',
+                    'formula' => 'KCl',
+                    'summary' => 'Potassium ion source for clay and shale inhibition in water-based drilling mud systems.',
+                    'applications' => ['Water-based mud systems', 'Shale stabilization', 'Wellbore stability'],
+                ],
+                [
+                    'name' => 'Calcium Chloride (Oilfield Grade)',
+                    'formula' => 'CaCl₂',
+                    'summary' => 'High-solubility salt used to formulate dense workover brines (up to 11.6 ppg) and invert-emulsion mud water phases.',
+                    'applications' => ['Workover brines', 'Invert-emulsion drilling fluids', 'Well kill operations'],
+                ],
+                [
+                    'name' => 'Calcium Bromide',
+                    'formula' => 'CaBr₂',
+                    'summary' => 'High-density clear brine fluid material utilized for clear-brine workover, completion, and packer fluid applications.',
+                    'applications' => ['Deep-well completion brines', 'Packer fluids', 'High-density clear solutions'],
+                ],
+                [
+                    'name' => 'Sodium Bromide',
+                    'formula' => 'NaBr',
+                    'summary' => 'Single-salt clear completion brine material providing medium-to-high densities without formation-damaging solids.',
+                    'applications' => ['Clear-brine completion', 'Workover operations', 'Well killing'],
+                ],
+                [
+                    'name' => 'Sodium Formate & Potassium Formate',
+                    'formula' => 'HCOONa / HCOOK',
+                    'summary' => 'Monovalent organic brines offering solids-free density, thermal stability, and non-damaging reservoir characteristics.',
+                    'applications' => ['HPHT drilling fluids', 'Reservoir drilling fluids', 'Environmentally sensitive zones'],
+                ],
+                [
+                    'name' => 'Barite (Barium Sulphate)',
+                    'formula' => 'BaSO₄',
+                    'summary' => 'Dense natural weighting mineral sourced according to technical drilling fluid specifications (specific gravity 4.10 / 4.20).',
+                    'applications' => ['Mud weighting agent', 'Hydrostatic pressure control', 'Well control fluids'],
+                ],
+                [
+                    'name' => 'Bentonite & Calcium Carbonate',
+                    'formula' => 'Montmorillonite / CaCO₃',
+                    'summary' => 'Viscosifiers, filtration control clays, and acid-soluble bridging agents for rheology control.',
+                    'applications' => ['Viscosity building', 'Filter cake creation', 'Lost circulation prevention'],
+                ],
+                [
+                    'name' => 'Soda Ash & Alkalinity Regulators',
+                    'formula' => 'Na₂CO₃',
+                    'summary' => 'Alkalinity control materials utilized to precipitate calcium ions and maintain optimal drilling mud pH.',
+                    'applications' => ['Calcium hardness removal', 'pH maintenance', 'Polymer activation'],
+                ],
+            ],
+            'faqs' => [
+                ['q' => 'Does Better Supply hold direct vendor approval with Saudi Aramco or SLB?', 'a' => 'No. Better Supply operates strictly as an independent commercial sourcing entity. All inquiries are served through manufacturer-backed documentation for contractor or service-company qualification according to project-specific tender specifications.'],
+                ['q' => 'Can you supply technical data sheets (TDS) and safety data sheets (SDS)?', 'a' => 'Yes. Upon receiving an inquiry specifying required grade, application, and volume, we coordinate genuine manufacturer TDS, SDS, and certificate of analysis (COA) for technical review.'],
+                ['q' => 'What clear brine densities can be accommodated?', 'a' => 'Clear brine salt inquiries (CaCl₂, CaBr₂, NaBr, and formates) are coordinated according to target fluid densities specified by your mud engineering team.'],
+            ],
+        ],
+
+        // Water Treatment Page
+        'water_treatment' => [
+            'heading' => 'Water-Treatment and Desalination Chemical Supply',
+            'intro' => 'We source chemicals and materials used in industrial water treatment, reverse-osmosis systems, desalination-related processes, clarification, water softening and wastewater treatment. Product selection depends on the treatment process and project-specific specifications.',
+            'distinction_warning' => 'Process Role Notice: Chemicals must be selected strictly for their verified functional role. Industrial sodium chloride softens resin but cannot replace RO antiscalants, chemical coagulants, or biocidal disinfectants.',
+            'ro_systems_title' => 'Reverse Osmosis and Membrane Systems',
+            'clarification_title' => 'Clarification and Coagulation',
+            'disinfection_title' => 'Disinfection, pH Control and Filtration Media',
+            'products' => [
+                [
+                    'name' => 'RO Antiscalants',
+                    'formula' => 'Polymeric formulations',
+                    'summary' => 'High-performance threshold inhibitor formulations designed to prevent calcium carbonate, sulphate, and silica scale on RO membranes.',
+                    'applications' => ['Seawater desalination (SWRO)', 'Brackish water RO', 'Industrial utility water plants'],
+                ],
+                [
+                    'name' => 'Sodium Metabisulfite (SMBS)',
+                    'formula' => 'Na₂S₂O₅',
+                    'summary' => 'Dechlorinating and antioxidant agent used to neutralize residual free chlorine and protect polyamide RO membranes from oxidation.',
+                    'applications' => ['Membrane protection', 'Dechlorination in RO feed water', 'Oxygen scavenging'],
+                ],
+                [
+                    'name' => 'Polyaluminium Chloride (PAC)',
+                    'formula' => '[Al₂(OH)ₙCl₆₋ₙ]ₘ',
+                    'summary' => 'Highly efficient inorganic coagulant providing rapid flocculation, low sludge production, and effective turbidity reduction in raw water.',
+                    'applications' => ['Municipal water treatment', 'Industrial wastewater clarification', 'Pre-filtration coagulation'],
+                ],
+                [
+                    'name' => 'Aluminium Sulphate (Alum)',
+                    'formula' => 'Al₂(SO₄)₃',
+                    'summary' => 'Traditional inorganic coagulant widely used for suspended solid settlement, clarification, and phosphorus removal.',
+                    'applications' => ['Potable water clarification', 'Industrial effluent treatment', 'Paper sizing'],
+                ],
+                [
+                    'name' => 'Ferric Chloride',
+                    'formula' => 'FeCl₃',
+                    'summary' => 'Heavy iron coagulant suitable for broad pH ranges, effective in hydrogen sulfide odor control and heavy metal precipitation.',
+                    'applications' => ['Wastewater treatment', 'Sludge conditioning', 'Industrial effluent processing'],
+                ],
+                [
+                    'name' => 'Caustic Soda (Sodium Hydroxide)',
+                    'formula' => 'NaOH',
+                    'summary' => 'Strong alkali supplied in flakes, pearls, or liquid form for neutralization, alkalinity adjustment, and chemical regeneration.',
+                    'applications' => ['pH elevation', 'Anion resin regeneration', 'Industrial CIP cleaning systems'],
+                ],
+                [
+                    'name' => 'Activated Carbon & Filtration Media',
+                    'formula' => 'C / Anthracite / Garnet',
+                    'summary' => 'Granular activated carbon (GAC) and graded filter media for removal of organics, chlorine, odors, and particulate matter.',
+                    'applications' => ['Multi-media filtration', 'Taste and odor control', 'Organic compound adsorption'],
+                ],
+                [
+                    'name' => 'Water Softener Resin Regeneration Salt',
+                    'formula' => 'NaCl (High-Purity Compacted)',
+                    'summary' => 'Clean-dissolving compacted sodium chloride tablets ensuring consistent brine formation without caking or resin fouling.',
+                    'applications' => ['Cation resin regeneration', 'Boiler feedwater softening', 'Commercial laundry and cooling towers'],
+                ],
+            ],
+            'faqs' => [
+                ['q' => 'Do you provide antiscalants compatible with specific membrane brands?', 'a' => 'Yes. Sourcing inquiries for RO antiscalants should include your feed water analysis (TDS, silica, hardness, pH) and membrane model so we can identify chemically compatible formulations.'],
+                ['q' => 'How is Sodium Metabisulfite (SMBS) packaged?', 'a' => 'SMBS is typically sourced in 25kg moisture-proof polypropylene bags with polyethylene liners, or in palletized export wraps to prevent moisture absorption and caking.'],
+                ['q' => 'What is the minimum order quantity for water treatment coagulants?', 'a' => 'Commercial supply inquiries generally start at pallet-load quantities or full container loads (FCL) to ensure economic freight and logistics handling.'],
+            ],
+        ],
+
+        // Fertilizers Page
+        'fertilizers' => [
+            'heading' => 'Agricultural Fertilizer and Crop-Nutrition Sourcing',
+            'intro' => 'Better Supply Corporation is building commercial sourcing opportunities for agricultural fertilizers, plant-nutrition materials and related authorized agricultural inputs. We welcome inquiries from fertilizer wholesalers, agricultural distributors, commercial growers and greenhouse operators.',
+            'compliance_disclaimer' => 'Commercial Sourcing Notice: Sourcing inquiries welcome. Product marketing and import/export activities are subject to applicable agricultural approvals and country-specific regulatory requirements. Better Supply does not supply restricted crop-protection pesticides without specific statutory licensing.',
+            'categories_title' => 'Fertilizer Categories',
+            'related_inputs_title' => 'Related Agricultural Inputs',
+            'products' => [
+                [
+                    'name' => 'Urea Fertilizer (Granular & Prilled)',
+                    'formula' => 'CO(NH₂)₂ • 46% N',
+                    'summary' => 'High-nitrogen solid agricultural fertilizer for open-field broadcast, soil blending, and commercial grain production.',
+                    'applications' => ['Broadacre agriculture', 'Nitrogen replenishment', 'Bulk crop blending'],
+                ],
+                [
+                    'name' => 'NPK Compound Fertilizers',
+                    'formula' => 'Tailored N-P-K Formulations',
+                    'summary' => 'Granular and soluble compound formulations providing balanced primary nutrients tailored to specific crop stages.',
+                    'applications' => ['Horticultural crops', 'Orchards and date palms', 'Greenhouse fertigation'],
+                ],
+                [
+                    'name' => 'Diammonium Phosphate (DAP) & MAP',
+                    'formula' => '(NH₄)₂HPO₄ / NH₄H₂PO₄',
+                    'summary' => 'Concentrated sources of plant-available phosphorus and nitrogen to stimulate vigorous early root establishment.',
+                    'applications' => ['Pre-plant broadcast', 'Starter fertilization', 'Foliar & soluble formulations'],
+                ],
+                [
+                    'name' => 'Potassium Sulphate (SOP)',
+                    'formula' => 'K₂SO₄',
+                    'summary' => 'Chloride-free potassium and sulphur source ideal for salinity-sensitive crops, high-value vegetables, and arid soils.',
+                    'applications' => ['Saline-sensitive crops', 'Greenhouse cultivation', 'Date palm and fruit nutrition'],
+                ],
+                [
+                    'name' => 'Water-Soluble & Micronutrient Blends',
+                    'formula' => 'Chelated Fe, Zn, Mn, Cu, B',
+                    'summary' => 'Readily soluble plant nutrition inputs engineered for modern drip irrigation and foliar application systems.',
+                    'applications' => ['Precision fertigation', 'Hydroponic nutrient reservoirs', 'Deficiency correction'],
+                ],
+                [
+                    'name' => 'Humic & Fulvic Acid Soil Conditioners',
+                    'formula' => 'Organic Carbon Soil Amenders',
+                    'summary' => 'Natural organic humates designed to enhance sandy soil structure, improve moisture retention, and boost cation exchange capacity.',
+                    'applications' => ['Arid soil rejuvenation', 'Root zone conditioning', 'Nutrient uptake stimulation'],
+                ],
+            ],
+            'faqs' => [
+                ['q' => 'Can you formulate custom NPK nutrient ratios?', 'a' => 'Custom NPK ratios depend on manufacturer production batch sizes. For containerized commercial quantities, custom formulations can be evaluated with our manufacturing partners.'],
+                ['q' => 'What documentation is supplied with fertilizer shipments?', 'a' => 'Shipments are accompanied by manufacturer Certificates of Analysis (COA), phytosanitary certificates where required, commercial invoices, and bill of lading documents.'],
+                ['q' => 'Do you supply crop protection pesticides?', 'a' => 'No. We focus exclusively on primary fertilizers, soluble nutrients, soil conditioners, and growing media. We do not handle restricted agricultural chemicals.'],
+            ],
+        ],
+
+        // Coco Peat Page
+        'coco_peat' => [
+            'heading' => 'India-Origin Coco Peat and Coconut Growing Media',
+            'intro' => 'Better Supply Corporation is developing sourcing relationships for coco peat (coir pith) and coconut-based growing media manufactured or processed in India. The initiative is aimed at buyers in Saudi Arabia and the GCC, with selected opportunities being explored in Europe and the United States.',
+            'compliance_note' => 'Market Scope Notice: Europe and the United States represent developing target markets currently under commercial exploration, not an assertion of established supply networks. Specific attributes such as low-EC or washed status require formal batch testing and laboratory certification.',
+            'products_title' => 'Proposed Product Categories',
+            'applications_title' => 'Potential Commercial Applications',
+            'products' => [
+                [
+                    'name' => 'Compressed Coco Peat 5 kg Blocks',
+                    'formula' => '100% Natural Coconut Coir Pith',
+                    'summary' => 'High-compression 5 kg blocks that yield approximately 65–75 liters of expanded growing substrate upon hydration.',
+                    'applications' => ['Commercial nurseries', 'Soil conditioning', 'Potting soil blends'],
+                ],
+                [
+                    'name' => 'Coco Peat Briquettes & Discs (650g)',
+                    'formula' => 'Compact Coir Discs',
+                    'summary' => 'Convenient small-format briquettes and seedling discs ideal for retail agricultural distribution and automated propagation.',
+                    'applications' => ['Seed propagation', 'Retail garden centers', 'Greenhouse trays'],
+                ],
+                [
+                    'name' => 'Coco Peat Grow Bags & Slabs',
+                    'formula' => 'UV-Treated Polyethylene Sleeves with Coir Slab',
+                    'summary' => 'Ready-to-use plant slabs packed in UV-stabilized bags with customized plant holes and drainage slits for commercial greenhouse production.',
+                    'applications' => ['Greenhouse tomato & bell pepper cultivation', 'Strawberry farming', 'Hydroponic troughs'],
+                ],
+                [
+                    'name' => 'Coconut Husk Chips & Blended Substrates',
+                    'formula' => 'Coir Pith & Cut Husk Blend',
+                    'summary' => 'Textured coconut husk chip blends designed to optimize air-filled porosity and ensure long-term drainage.',
+                    'applications' => ['Orchid culture', 'Mulching', 'Multi-year hydroponic substrates'],
+                ],
+            ],
+            'faqs' => [
+                ['q' => 'What is the electrical conductivity (EC) level of the coco peat?', 'a' => 'We can coordinate inquiries for both unwashed (high EC, for industrial and landscaping purposes) and washed/buffered low-EC grades (<0.5 mS/cm) suitable for sensitive hydroponics, subject to supplier batch testing.'],
+                ['q' => 'What are the packaging and palletization options?', 'a' => 'Standard packaging includes palletized 5 kg blocks wrapped in stretch film (typically ~24 MT per 40ft HC container) or loose stuffed container loads for maximum payload efficiency.'],
+                ['q' => 'Are phytosanitary certificates provided for GCC imports?', 'a' => 'Yes. All agricultural coir shipments from India are accompanied by official phytosanitary certificates issued by the competent plant quarantine authorities.'],
+            ],
+        ],
+
+        // Packaging & Disposables Page
+        'packaging_disposables' => [
+            'heading' => 'Bulk Packaging Materials and Commercial Consumables',
+            'intro' => 'Better Supply Corporation welcomes sourcing inquiries for packaging and disposable product categories used by manufacturers, distributors, logistics companies, foodservice businesses and commercial establishments.',
+            'compliance_note' => 'Specifications Notice: All quotations are based on requested material composition, board grade, flute dimensions, print specifications, and delivery destination. Food-contact items require compliant material certification.',
+            'cartons_title' => 'Carton Boxes and Packaging Materials',
+            'disposables_title' => 'Disposable and Commercial Consumables',
+            'products' => [
+                [
+                    'name' => 'Corrugated Carton Boxes (Single & Double Wall)',
+                    'formula' => 'Fluted Kraft Linerboard',
+                    'summary' => 'Durable 3-ply and 5-ply corrugated carton boxes engineered for domestic logistics, warehouse stacking, and export protection.',
+                    'applications' => ['Industrial product packaging', 'E-commerce logistics', 'FMCG distribution'],
+                ],
+                [
+                    'name' => 'Heavy-Duty Shipping & Export Cartons',
+                    'formula' => 'High-ECT Corrugated Fiberboard',
+                    'summary' => 'Reinforced master cartons designed to endure maritime shipping conditions, high humidity, and multi-tier pallet stacking.',
+                    'applications' => ['Chemical packaging', 'Export freight', 'Cold chain storage'],
+                ],
+                [
+                    'name' => 'Custom-Printed Cartons & Master Cases',
+                    'formula' => 'Flexo-Printed Kraft / White Liner',
+                    'summary' => 'Tailored dimensions, structural styles (RSC, die-cut), and corporate branding prints subject to minimum production runs.',
+                    'applications' => ['Branded retail distribution', 'Automated packaging lines', 'Produce packing'],
+                ],
+                [
+                    'name' => 'Kraft Paper Sacks & Protective Packaging',
+                    'formula' => 'Multi-Wall Kraft Paper & Stretch Film',
+                    'summary' => 'Multi-wall valve bags for powdered materials, pallet stretch wrap film, adhesive carton sealing tapes, and edge protectors.',
+                    'applications' => ['Mineral and cement bagging', 'Pallet stabilization', 'Transit protection'],
+                ],
+                [
+                    'name' => 'Commercial Paper Foodservice Packaging',
+                    'formula' => 'Virgin Food-Grade Paperboard',
+                    'summary' => 'Disposable paper cups, soup bowls, kraft takeaway meal boxes, and compostable packaging for commercial hospitality.',
+                    'applications' => ['Cafes and quick-service restaurants', 'Institutional catering', 'Corporate facilities'],
+                ],
+                [
+                    'name' => 'Disposable Hygiene & Protective Consumables',
+                    'formula' => 'Latex / Nitrile / Non-Woven Polypropylene',
+                    'summary' => 'Single-use protective gloves, aprons, shoe covers, and commercial paper rolls for industrial cleaning and hygiene compliance.',
+                    'applications' => ['Food processing plants', 'Commercial kitchens', 'Cleanroom maintenance'],
+                ],
+            ],
+            'faqs' => [
+                ['q' => 'What information is needed to quote custom corrugated boxes?', 'a' => 'Please provide internal box dimensions (Length x Width x Height), board specification (single-wall 3-ply or double-wall 5-ply, paper grammage), print artwork requirements (1-4 color flexo), and required order quantity.'],
+                ['q' => 'Are food packaging items certified for direct food contact?', 'a' => 'Yes. Food packaging inquiries are sourced exclusively from manufacturers holding verified food-grade compliance documentation (FDA/SABER conformity).'],
+                ['q' => 'What is the lead time for custom printed packaging?', 'a' => 'Custom carton manufacturing lead times depend on tooling, plate preparation, and batch size, typically evaluated between 3 to 5 weeks from artwork approval.'],
+            ],
+        ],
+
+        // Other Trading (Vehicles & Office Machinery)
+        'other_trading' => [
+            'heading' => 'Specialized Vehicles and Office Machinery Trading',
+            'intro' => 'In addition to industrial and agricultural sourcing, Better Supply Corporation’s wider trading portfolio includes selected specialized passenger vehicles and office machinery aligned with our registered commercial activities.',
+            'compliance_note' => 'Statutory Alignment Notice: All activities are conducted in accordance with registered Saudi Commercial Registration classifications. Better Supply operates as a commercial trading intermediary and does not represent vehicle manufacturers or hold official automotive dealerships.',
+            'vehicles_title' => 'Specialized Passenger Vehicles (CR 451011 & 451012)',
+            'office_machinery_title' => 'Wholesale Office Machinery & Equipment (CR 465910)',
+            'products' => [
+                [
+                    'name' => 'Specialized Ambulances & Emergency Transport',
+                    'formula' => 'Type I, II & III Configurations',
+                    'summary' => 'Commercial sourcing of specialized medical transport passenger vehicles configured to technical healthcare transport requirements.',
+                    'applications' => ['Industrial site medical clinics', 'Private healthcare operators', 'Remote project camps'],
+                ],
+                [
+                    'name' => 'Passenger Minibuses & Crew Vans',
+                    'formula' => '12 to 30 Passenger Capacities',
+                    'summary' => 'New and used commercial passenger minibuses for workforce transportation, contractor site mobility, and institution logistics.',
+                    'applications' => ['Workforce transport', 'School and university transport', 'Airport crew shuttles'],
+                ],
+                [
+                    'name' => 'Specialized 4x4 Passenger Jeeps & Utility Vehicles',
+                    'formula' => 'All-Terrain Utility Platforms',
+                    'summary' => 'Heavy-duty four-wheel-drive passenger utility vehicles adapted for desert terrain, pipeline inspection, and remote field work.',
+                    'applications' => ['Remote desert operations', 'Field engineering teams', 'Inspection surveys'],
+                ],
+                [
+                    'name' => 'Wholesale Office Printing & Duplicating Machinery',
+                    'formula' => 'High-Speed Multi-Function Systems',
+                    'summary' => 'Heavy-duty office multifunction copiers, production printing machinery, and document scanners (excluding personal computers and peripherals).',
+                    'applications' => ['Corporate headquarters', 'Commercial print shops', 'Institutional administrative hubs'],
+                ],
+                [
+                    'name' => 'Document Finishing & Mailroom Equipment',
+                    'formula' => 'Heavy Commercial Finishing Systems',
+                    'summary' => 'Commercial binding machines, heavy-duty paper shredders, folder-inserters, and laminators for secure document management.',
+                    'applications' => ['Financial institutions', 'Government administrative offices', 'Legal and auditing firms'],
+                ],
+            ],
+            'faqs' => [
+                ['q' => 'Are vehicles sold as new or used?', 'a' => 'Our registered commercial activities cover both new and used specialized passenger vehicles based on client specifications, availability, and regulatory import guidelines.'],
+                ['q' => 'Does Better Supply provide vehicle modifications directly?', 'a' => 'No. We source completed, certified specialized vehicles from authorized manufacturers and converters according to project tender requirements.'],
+                ['q' => 'What office machinery categories are covered?', 'a' => 'We handle wholesale commercial office machines (copiers, wide-format document scanners, binding systems, shredders). In strict compliance with our CR, we do not wholesale personal computers or PC peripherals.'],
+            ],
+        ],
+
+        // Industries Page
+        'industries' => [
+            'heading' => 'Sourcing Solutions for Industrial and Commercial Buyers',
+            'intro' => 'Our trading categories are organized around procurement needs rather than a single industry. We work to connect suitable suppliers and buyers across the following key sectors:',
+            'process_summary' => 'Our commercial process starts with the customer’s technical and purchasing requirements. This helps identify suitable supply arrangements before a quotation is issued.',
+            'sectors' => [
+                [
+                    'name' => 'Oil & Gas and Energy-Sector Contractors',
+                    'desc' => 'Supplying oilfield drilling salts, completion-brine materials, barite, bentonite, and industrial chemical sourcing inquiries for drilling and maintenance operations.',
+                ],
+                [
+                    'name' => 'Petrochemicals & Industrial Manufacturing',
+                    'desc' => 'Procurement coordination for industrial-grade sodium chloride, potassium chloride, calcium chloride, industrial raw materials, and process chemicals.',
+                ],
+                [
+                    'name' => 'Water Treatment & Desalination Facilities',
+                    'desc' => 'Specialized sourcing of RO antiscalants, membrane protection bisulfites, PAC coagulants, caustic soda, and high-purity water softener salt.',
+                ],
+                [
+                    'name' => 'Commercial Agriculture & Horticulture',
+                    'desc' => 'Wholesale supply coordination for urea, NPK blends, water-soluble fertilizers, and sustainable India-origin coco peat growing media.',
+                ],
+                [
+                    'name' => 'Packaging, Logistics & Wholesale Trade',
+                    'desc' => 'Corrugated packaging boxes, export shipping cartons, protective wrapping materials, and commercial paper consumables.',
+                ],
+                [
+                    'name' => 'Commercial Establishments & Specialized Transport',
+                    'desc' => 'Commercial sourcing of authorized specialized passenger vehicles (ambulances, minibuses) and wholesale office machinery.',
+                ],
+            ],
+        ],
+
+        // International Trading Page
+        'international_trading' => [
+            'heading' => 'Global Product Sourcing and GCC Trading',
+            'intro' => 'Better Supply Corporation develops trading and sourcing connections between international manufacturers and commercial buyers. India and other South Asian markets form part of our sourcing focus, while Saudi Arabia and other GCC countries remain our principal target trading markets.',
+            'gcc_title' => 'Saudi Arabia and GCC Markets',
+            'gcc_text' => 'Our commercial coverage focuses on buyers and distribution opportunities in Saudi Arabia, the United Arab Emirates, Qatar, Kuwait, Bahrain and Oman. Product-specific export and delivery options are confirmed against the destination and applicable trade requirements.',
+            'south_asia_title' => 'India and South Asia Sourcing Corridors',
+            'south_asia_text' => 'We develop sourcing relationships for industrial materials, agricultural products and other commercial goods, including the proposed India-origin coco peat range and bulk inorganic chemical salts.',
+            'western_markets_title' => 'Europe and the United States (Exploratory Scope)',
+            'western_markets_text' => 'We are exploring selected overseas opportunities, particularly for suitable agricultural and commercial products. Export arrangements are assessed against destination-specific specifications, certifications, import controls and shipping feasibility.',
+            'coordination_title' => 'Trading Coordination Capabilities',
+            'coordination_points' => [
+                'Manufacturer sourcing & vetting',
+                'Technical requirement & spec matching',
+                'Competitive commercial quotations',
+                'Bulk procurement & container consolidation',
+                'Packaging, labeling & freight terms (FOB, CFR, CIF, DDP)',
+                'Applicable shipping & customs clearance document coordination',
+            ],
+        ],
+
+        // Partnerships Page
+        'partners' => [
+            'heading' => 'Manufacturers, Distributors and International Supply Partners',
+            'intro' => 'Better Supply Corporation welcomes commercial introductions from chemical manufacturers, industrial salt producers, oilfield materials suppliers, agricultural product processors, packaging manufacturers and international wholesale distributors.',
+            'objective' => 'We aim to develop sourcing relationships that connect technically suitable products with commercial buyers in Saudi Arabia, the GCC and selected global markets. Discussions may include product range, origin, documentation, production capabilities, market coverage and order terms.',
+            'criteria_title' => 'What We Look for in Supply Partners',
+            'criteria' => [
+                ['title' => 'Consistent Quality Control', 'desc' => 'Demonstrated manufacturing compliance with verified batch COAs, TDS, and international testing standards.'],
+                ['title' => 'Export Documentation Readiness', 'desc' => 'Capability to issue compliant shipping, origin, and phytosanitary certificates for Middle Eastern customs clearance.'],
+                ['title' => 'Reliable Production Capacity', 'desc' => 'Capacity to handle recurring bulk, containerized, or recurring scheduled project shipments.'],
+                ['title' => 'Transparent Commercial Terms', 'desc' => 'Commitment to collaborative pricing, clear delivery milestones, and professional B2B dispute resolution.'],
+            ],
+        ],
+
+        // Contact Page
+        'contact' => [
+            'heading' => 'Tell Us What You Need to Source',
+            'intro' => 'Submit an industrial or commercial product inquiry to Better Supply Corporation. Our team will review the requirement and advise on appropriate sourcing and quotation next steps.',
+            'checklist_title' => 'For faster quotation review, please include:',
+            'checklist' => [
+                'Product name and intended application',
+                'Grade / chemical formula / technical specification (if relevant)',
+                'Quantity and preferred packaging',
+                'Delivery city, country and requested schedule',
+                'Any required technical or commercial documentation',
+            ],
+            'corporate_office_title' => 'Corporate Sourcing Desk',
+            'dammam_hub' => 'Commercial Trading Hub • Dammam, KSA',
+            'placeholder_disclaimer' => 'Note: Contact channels and operational details will be updated upon final commercial registry publication.',
+        ],
+
+        // Privacy Policy (Draft)
+        'privacy' => [
+            'heading' => 'Privacy Policy',
+            'subheading' => 'Data Processing & Procurement Inquiry Handling',
+            'disclaimer' => 'DRAFT - LEGAL REVIEW REQUIRED',
+            'content' => 'Better Supply Corporation ("Better Supply", "we", "our") respects the confidentiality of commercial inquiries and business information submitted through bettersupplytrading.com. This policy outlines how information provided via our Request for Quotation (RFQ) portal and commercial contact forms is processed.\n\n1. Information We Collect: We collect business contact details including your full name, company name, corporate email address, telephone/WhatsApp number, delivery destinations, and commercial material specifications.\n\n2. How We Use Information: Data submitted is used exclusively to evaluate sourcing viability, correspond with verified manufacturers, prepare commercial proposals, and coordinate freight logistics.\n\n3. Data Storage & Security: All submitted specifications and attachments are securely stored on restricted internal databases. We do not sell, rent, or distribute commercial inquiry details to unrelated third parties.\n\n4. Regulatory Compliance: Our data practices are designed to comply with applicable data protection regulations in the Kingdom of Saudi Arabia.\n\nFor questions regarding data handling, please contact our administrative desk at [ENTER VERIFIED CORPORATE EMAIL].',
+        ],
+
+        // Terms of Service (Draft)
+        'terms' => [
+            'heading' => 'Terms & Conditions of Commercial Inquiries',
+            'subheading' => 'Website Usage and Supply Quotation Terms',
+            'disclaimer' => 'DRAFT - LEGAL REVIEW REQUIRED',
+            'content' => '1. Scope of Operations: Better Supply Corporation operates as an independent commercial trading and procurement intermediary based in Dammam, Saudi Arabia. Better Supply is not a chemical manufacturer, and website listings do not constitute an offer to sell or a guarantee of current warehouse stock.\n\n2. Sourcing on Inquiry: All product descriptions represent commercial sourcing capabilities subject to specification matching, supplier verification, and written agreement. Material properties, availability, and lead times are confirmed on a per-order basis.\n\n3. Compliance & Approvals: Better Supply makes no claims of endorsement or authorization by any third-party energy operators (including Saudi Aramco or SLB) unless explicitly evidenced by valid formal documentation. Buyers remain solely responsible for confirming technical suitability for their specific applications.\n\n4. Intellectual Property: Website content, structural layouts, and trademarks are protected by commercial copyright laws. Unauthorized reproduction is prohibited.\n\n5. Governing Law: These terms shall be governed and interpreted in accordance with the commercial regulations of the Kingdom of Saudi Arabia.',
+        ],
+    ],
+];
