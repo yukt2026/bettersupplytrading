@@ -1,97 +1,145 @@
 <?php
 /**
- * Better Supply Trading Establishment - Asset Generation Script (Updated)
- * Creates clean geometric monogram logos (EN/AR, dark/light) without placeholder badges,
- * tight viewBoxes to prevent mobile header overflow.
+ * Better Supply Trading Establishment - Brand Asset Generator
+ * Generates verified brand SVGs, favicons, and aliases from the official Brand Identity Kit.
  */
 
-$img_dir = __DIR__ . '/public/images';
-if (!is_dir($img_dir)) {
-    mkdir($img_dir, 0755, true);
+$kit_dir = __DIR__ . '/public/images';
+$icon_trans_path = $kit_dir . '/Better_Supply_BS_Icon_Transparent.png';
+$icon_white_path = $kit_dir . '/Better_Supply_BS_Icon_White.png';
+$icon_emerald_path = $kit_dir . '/Better_Supply_BS_Icon_Emerald.png';
+$logo_horizontal_path = $kit_dir . '/Better_Supply_Horizontal_Transparent.png';
+$logo_stacked_path = $kit_dir . '/Better_Supply_Primary_Stacked_Transparent.png';
+
+if (!file_exists($icon_trans_path)) {
+    die("Error: Better_Supply_BS_Icon_Transparent.png not found in {$kit_dir}\n");
 }
 
-// 1. Monogram Black (SVG)
+$icon_trans_base64 = base64_encode(file_get_contents($icon_trans_path));
+$icon_white_base64 = base64_encode(file_get_contents($icon_white_path));
+$icon_emerald_base64 = base64_encode(file_get_contents($icon_emerald_path));
+
+// 1. Generate Favicons (32x32, 16x16, 180x180, ICO)
+$src_img = imagecreatefrompng($icon_trans_path);
+imagealphablending($src_img, true);
+imagesavealpha($src_img, true);
+$orig_w = imagesx($src_img);
+$orig_h = imagesy($src_img);
+
+// Function to resize PNG with transparency
+function create_resized_png($src, $w, $h, $dest_path) {
+    global $orig_w, $orig_h;
+    $dst = imagecreatetruecolor($w, $h);
+    imagealphablending($dst, false);
+    imagesavealpha($dst, true);
+    $transparent = imagecolorallocatealpha($dst, 255, 255, 255, 127);
+    imagefilledrectangle($dst, 0, 0, $w, $h, $transparent);
+    imagecopyresampled($dst, $src, 0, 0, 0, 0, $w, $h, $orig_w, $orig_h);
+    imagepng($dst, $dest_path, 9);
+    imagedestroy($dst);
+}
+
+// 32x32 PNG
+create_resized_png($src_img, 32, 32, $kit_dir . '/favicon-32x32.png');
+// 16x16 PNG
+create_resized_png($src_img, 16, 16, $kit_dir . '/favicon-16x16.png');
+// 180x180 Apple Touch Icon (on clean ivory/emerald background for high contrast)
+$apple_touch = imagecreatetruecolor(180, 180);
+$bg_col = imagecolorallocate($apple_touch, 0, 91, 63); // #005B3F Deep Emerald
+imagefill($apple_touch, 0, 0, $bg_col);
+// Add transparent monogram centered with 20px padding (140x140)
+imagecopyresampled($apple_touch, $src_img, 20, 20, 0, 0, 140, 140, $orig_w, $orig_h);
+imagepng($apple_touch, $kit_dir . '/apple-touch-icon.png', 9);
+imagedestroy($apple_touch);
+
+// Copy 32x32 favicon to root favicon.ico
+copy($kit_dir . '/favicon-32x32.png', __DIR__ . '/favicon.ico');
+copy($kit_dir . '/favicon-32x32.png', $kit_dir . '/favicon.ico');
+
+imagedestroy($src_img);
+echo "Favicons generated (16x16, 32x32, 180x180, favicon.ico).\n";
+
+// 2. Favicon SVG
+$favicon_svg = <<<SVG
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+    <image href="data:image/png;base64,{$icon_trans_base64}" x="0" y="0" width="100" height="100"/>
+</svg>
+SVG;
+file_put_contents($kit_dir . '/favicon.svg', $favicon_svg);
+
+// 3. Monogram Black & White SVGs
 $monogram_black_svg = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
-    <rect width="120" height="120" rx="16" fill="transparent"/>
-    <path d="M28 24 H76 C87 24 94 31 94 42 C94 50 88 56 80 58 C90 61 96 68 96 80 C96 92 87 99 74 99 H28 V24 Z M44 38 V54 H72 C77 54 80 51 80 46 C80 41 77 38 72 38 H44 Z M44 68 V85 H74 C79 85 82 82 82 76.5 C82 71 79 68 74 68 H44 Z" fill="#0F172A"/>
-    <path d="M54 48 L76 70 M76 48 L54 70" stroke="#047857" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+    <image href="data:image/png;base64,{$icon_trans_base64}" x="0" y="0" width="100" height="100"/>
 </svg>
 SVG;
-file_put_contents($img_dir . '/logo-monogram-black.svg', $monogram_black_svg);
+file_put_contents($kit_dir . '/logo-monogram-black.svg', $monogram_black_svg);
 
-// 2. Monogram White (SVG)
 $monogram_white_svg = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
-    <rect width="120" height="120" rx="16" fill="transparent"/>
-    <path d="M28 24 H76 C87 24 94 31 94 42 C94 50 88 56 80 58 C90 61 96 68 96 80 C96 92 87 99 74 99 H28 V24 Z M44 38 V54 H72 C77 54 80 51 80 46 C80 41 77 38 72 38 H44 Z M44 68 V85 H74 C79 85 82 82 82 76.5 C82 71 79 68 74 68 H44 Z" fill="#FFFFFF"/>
-    <path d="M54 48 L76 70 M76 48 L54 70" stroke="#34D399" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+    <image href="data:image/png;base64,{$icon_white_base64}" x="0" y="0" width="100" height="100"/>
 </svg>
 SVG;
-file_put_contents($img_dir . '/logo-monogram-white.svg', $monogram_white_svg);
+file_put_contents($kit_dir . '/logo-monogram-white.svg', $monogram_white_svg);
 
-// 3. Horizontal English Lockup (SVG) - Tight ViewBox (265x70)
+// 4. Horizontal English Full-Color Lockup (Light Background)
 $logo_horizontal_en = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265 70" width="265" height="70" fill="none">
-    <!-- Monogram Mark -->
-    <g transform="translate(4, 6) scale(0.48)">
-        <rect width="120" height="120" rx="18" fill="#0F172A"/>
-        <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#FFFFFF"/>
-        <circle cx="98" cy="24" r="8" fill="#047857"/>
-    </g>
-    <!-- Corporate Typography -->
-    <text x="70" y="34" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="18.5" font-weight="800" letter-spacing="0.8" fill="#0F172A">BETTER SUPPLY</text>
-    <text x="70" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="8.8" font-weight="700" letter-spacing="1.2" fill="#64748B">TRADING ESTABLISHMENT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="380" height="90" fill="none">
+    <image href="data:image/png;base64,{$icon_trans_base64}" x="4" y="6" width="78" height="78"/>
+    <text x="96" y="44" font-family="'Lato', Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="-0.5">
+        <tspan fill="#005B3F">BETTER </tspan><tspan fill="#242629">SUPPLY</tspan>
+    </text>
+    <text x="96" y="63" font-family="'Lato', Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="3.2" fill="#C49A5A">TRADING ESTABLISHMENT</text>
+    <text x="96" y="79" font-family="'Lato', Arial, sans-serif" font-size="9" font-weight="400" letter-spacing="0.5" fill="#6D7472">Connecting Markets. Supplying Industries.</text>
 </svg>
 SVG;
-file_put_contents($img_dir . '/logo-horizontal-en.svg', $logo_horizontal_en);
-file_put_contents($img_dir . '/logo.svg', $logo_horizontal_en);
+file_put_contents($kit_dir . '/logo-horizontal-en.svg', $logo_horizontal_en);
+file_put_contents($kit_dir . '/logo.svg', $logo_horizontal_en);
 
-// 4. Horizontal English White Lockup (for dark background)
+// 5. Horizontal English White Lockup (Dark Background / Footer)
 $logo_horizontal_en_white = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265 70" width="265" height="70" fill="none">
-    <!-- Monogram Mark -->
-    <g transform="translate(4, 6) scale(0.48)">
-        <rect width="120" height="120" rx="18" fill="#FFFFFF"/>
-        <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#0F172A"/>
-        <circle cx="98" cy="24" r="8" fill="#10B981"/>
-    </g>
-    <!-- Corporate Typography -->
-    <text x="70" y="34" font-family="'Montserrat', 'Inter', -apple-system, sans-serif" font-size="18.5" font-weight="800" letter-spacing="0.8" fill="#FFFFFF">BETTER SUPPLY</text>
-    <text x="70" y="52" font-family="'Inter', -apple-system, sans-serif" font-size="8.8" font-weight="700" letter-spacing="1.2" fill="#94A3B8">TRADING ESTABLISHMENT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="380" height="90" fill="none">
+    <image href="data:image/png;base64,{$icon_trans_base64}" x="4" y="6" width="78" height="78"/>
+    <text x="96" y="44" font-family="'Lato', Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="-0.5" fill="#FFFFFF">
+        <tspan fill="#FFFFFF">BETTER </tspan><tspan fill="#FFFFFF">SUPPLY</tspan>
+    </text>
+    <text x="96" y="63" font-family="'Lato', Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="3.2" fill="#C49A5A">TRADING ESTABLISHMENT</text>
+    <text x="96" y="79" font-family="'Lato', Arial, sans-serif" font-size="9" font-weight="400" letter-spacing="0.5" fill="#DAD2C5">Connecting Markets. Supplying Industries.</text>
 </svg>
 SVG;
-file_put_contents($img_dir . '/logo-horizontal-en-white.svg', $logo_horizontal_en_white);
-file_put_contents($img_dir . '/logo-white.svg', $logo_horizontal_en_white);
+file_put_contents($kit_dir . '/logo-horizontal-en-white.svg', $logo_horizontal_en_white);
+file_put_contents($kit_dir . '/logo-white.svg', $logo_horizontal_en_white);
 
-// 5. Horizontal Arabic Lockup (SVG) - RTL optimized (320x70)
+// 6. Horizontal Arabic Full-Color Lockup (Light Background - RTL Optimized)
 $logo_horizontal_ar = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70" fill="none">
-    <!-- Corporate Typography in Arabic -->
-    <text x="246" y="34" text-anchor="end" font-family="'Cairo', 'IBM Plex Sans Arabic', sans-serif" font-size="18" font-weight="800" fill="#0F172A">مؤسسة أفضل توريد التجارية</text>
-    <text x="246" y="52" text-anchor="end" font-family="'Inter', 'Cairo', sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.2" fill="#64748B">BETTER SUPPLY TRADING ESTABLISHMENT</text>
-    <!-- Monogram Mark on the right for RTL balance -->
-    <g transform="translate(256, 6) scale(0.48)">
-        <rect width="120" height="120" rx="18" fill="#0F172A"/>
-        <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#FFFFFF"/>
-        <circle cx="98" cy="24" r="8" fill="#047857"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="420" height="90" fill="none">
+    <image href="data:image/png;base64,{$icon_trans_base64}" x="338" y="6" width="78" height="78"/>
+    <text x="324" y="43" text-anchor="end" font-family="'Cairo', Arial, sans-serif" font-size="24" font-weight="800">
+        <tspan fill="#005B3F">مؤسسة أفضل توريد </tspan><tspan fill="#242629">التجارية</tspan>
+    </text>
+    <text x="324" y="63" text-anchor="end" font-family="'Lato', Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="2" fill="#C49A5A">BETTER SUPPLY TRADING ESTABLISHMENT</text>
+    <text x="324" y="79" text-anchor="end" font-family="'Cairo', Arial, sans-serif" font-size="10" font-weight="600" fill="#6D7472">ربط الأسواق. توريد الصناعات.</text>
 </svg>
 SVG;
-file_put_contents($img_dir . '/logo-horizontal-ar.svg', $logo_horizontal_ar);
+file_put_contents($kit_dir . '/logo-horizontal-ar.svg', $logo_horizontal_ar);
 
-// 6. Horizontal Arabic White Lockup
+// 7. Horizontal Arabic White Lockup (Dark Background / Footer)
 $logo_horizontal_ar_white = <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70" fill="none">
-    <text x="246" y="34" text-anchor="end" font-family="'Cairo', 'IBM Plex Sans Arabic', sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">مؤسسة أفضل توريد التجارية</text>
-    <text x="246" y="52" text-anchor="end" font-family="'Inter', 'Cairo', sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.2" fill="#94A3B8">BETTER SUPPLY TRADING ESTABLISHMENT</text>
-    <g transform="translate(256, 6) scale(0.48)">
-        <rect width="120" height="120" rx="18" fill="#FFFFFF"/>
-        <path d="M32 28 H72 C81 28 87 34 87 43 C87 50 82 55 75 57 C84 59 89 65 89 75 C89 85 81 92 70 92 H32 V28 Z M46 40 V52 H70 C74 52 76 50 76 46 C76 42 74 40 70 40 H46 Z M46 64 V80 H70 C74 80 77 77 77 72 C77 67 74 64 70 64 H46 Z" fill="#0F172A"/>
-        <circle cx="98" cy="24" r="8" fill="#10B981"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 90" width="420" height="90" fill="none">
+    <image href="data:image/png;base64,{$icon_trans_base64}" x="338" y="6" width="78" height="78"/>
+    <text x="324" y="43" text-anchor="end" font-family="'Cairo', Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">
+        مؤسسة أفضل توريد التجارية
+    </text>
+    <text x="324" y="63" text-anchor="end" font-family="'Lato', Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="2" fill="#C49A5A">BETTER SUPPLY TRADING ESTABLISHMENT</text>
+    <text x="324" y="79" text-anchor="end" font-family="'Cairo', Arial, sans-serif" font-size="10" font-weight="600" fill="#DAD2C5">ربط الأسواق. توريد الصناعات.</text>
 </svg>
 SVG;
-file_put_contents($img_dir . '/logo-horizontal-ar-white.svg', $logo_horizontal_ar_white);
+file_put_contents($kit_dir . '/logo-horizontal-ar-white.svg', $logo_horizontal_ar_white);
 
-echo "Logos regenerated with tight viewBoxes.\n";
+// 8. Copy high-res PNGs to standard alias paths
+copy($logo_horizontal_path, $kit_dir . '/logo.png');
+copy($logo_horizontal_path, __DIR__ . '/assets/img/logo/logo.png');
+copy($logo_stacked_path, $kit_dir . '/logo-stacked.png');
+copy($icon_trans_path, $kit_dir . '/logo-monogram.png');
+
+echo "All official brand logos (EN, AR, Dark, Light, SVGs and PNGs) generated successfully!\n";

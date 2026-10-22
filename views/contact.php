@@ -17,7 +17,7 @@ $team = $site_config['contacts']['team'] ?? [];
 <!-- Header Banner -->
 <section class="relative bg-slate-950 text-white py-12 sm:py-16 border-b border-slate-800 overflow-hidden">
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block"><?= t('nav.contact') ?></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block"><?= t('nav.contact') ?></span>
         <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight <?= $headingFont ?>">
             <?= t('pages.contact.heading') ?>
         </h1>
@@ -25,8 +25,8 @@ $team = $site_config['contacts']['team'] ?? [];
             <?= t('pages.contact.intro') ?>
         </p>
         <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a href="#contact-team" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/30 text-xs font-semibold transition-all">
-                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <a href="#contact-team" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-bsemerald/20 hover:bg-bsemerald/30 text-bsgold border border-bsgold/30 text-xs font-semibold transition-all">
+                <svg class="w-4 h-4 text-bsgold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 <span><?= t('pages.contact.team_section_title') ?></span>
                 <span>&darr;</span>
             </a>
@@ -44,7 +44,7 @@ $team = $site_config['contacts']['team'] ?? [];
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-            <span class="text-xs font-mono font-bold uppercase tracking-widest text-emerald-400 mb-2 inline-block">
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-bsgold mb-2 inline-block">
                 <?= ($lang === 'ar') ? 'التواصل المباشر مع المسؤولين' : 'Direct Commercial Contacts' ?>
             </span>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight <?= $headingFont ?>">
@@ -80,10 +80,10 @@ $team = $site_config['contacts']['team'] ?? [];
                         <!-- Mobile / WhatsApp -->
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 py-1">
                             <span class="text-slate-400 flex items-center gap-2">
-                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 <span><?= t('pages.contact.mobile_whatsapp') ?></span>
                             </span>
-                            <a href="tel:+966599510213" class="font-mono text-white hover:text-emerald-400 font-semibold dir-ltr transition-colors">
+                            <a href="tel:+966599510213" class="font-mono text-white hover:text-bsgold font-semibold dir-ltr transition-colors">
                                 +966 59 951 0213
                             </a>
                         </div>
@@ -91,10 +91,10 @@ $team = $site_config['contacts']['team'] ?? [];
                         <!-- Email -->
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 py-1">
                             <span class="text-slate-400 flex items-center gap-2">
-                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 <span><?= t('pages.contact.email_label') ?></span>
                             </span>
-                            <a href="mailto:sales@bettersupplytrading.com" class="font-mono text-emerald-400 sm:text-slate-300 hover:text-emerald-400 transition-colors break-all">
+                            <a href="mailto:sales@bettersupplytrading.com" class="font-mono text-emerald-400 sm:text-slate-300 hover:text-bsgold transition-colors break-all">
                                 sales@bettersupplytrading.com
                             </a>
                         </div>
@@ -103,7 +103,7 @@ $team = $site_config['contacts']['team'] ?? [];
 
                 <!-- Direct Action Buttons -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mt-6 pt-4 border-t border-slate-800/80">
-                    <a href="https://wa.me/966599510213?text=<?= urlencode(($lang === 'ar') ? 'مرحباً، أود الاستفسار عن عروض الأسعار والتوريد التجاري مع مؤسسة أفضل توريد التجارية.' : 'Hello Meharsha, I would like to inquire about industrial sourcing and quotations from Better Supply Trading Establishment.') ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-lg shadow-emerald-950/40 transition-all hover:scale-[1.02] focus:ring-2 focus:ring-emerald-400">
+                    <a href="https://wa.me/966599510213?text=<?= urlencode(($lang === 'ar') ? 'مرحباً، أود الاستفسار عن عروض الأسعار والتوريد التجاري مع مؤسسة أفضل توريد التجارية.' : 'Hello Meharsha, I would like to inquire about industrial sourcing and quotations from Better Supply Trading Establishment.') ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-bsemerald hover:bg-bsforest text-white text-xs font-semibold shadow-lg shadow-emerald-950/40 transition-all hover:scale-[1.02] focus:ring-2 focus:ring-bsemerald">
                         <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                         <span><?= t('pages.contact.chat_whatsapp') ?></span>
                     </a>
@@ -137,10 +137,10 @@ $team = $site_config['contacts']['team'] ?? [];
                         <!-- Mobile / WhatsApp -->
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 py-1">
                             <span class="text-slate-400 flex items-center gap-2">
-                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                                 <span><?= t('pages.contact.mobile_whatsapp') ?></span>
                             </span>
-                            <a href="tel:0502851077" class="font-mono text-white hover:text-emerald-400 font-semibold dir-ltr transition-colors">
+                            <a href="tel:0502851077" class="font-mono text-white hover:text-bsgold font-semibold dir-ltr transition-colors">
                                 0502851077 <span class="text-slate-500 font-normal text-xs">(+966 50 285 1077)</span>
                             </a>
                         </div>
@@ -148,10 +148,10 @@ $team = $site_config['contacts']['team'] ?? [];
                         <!-- Email -->
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-2 py-1">
                             <span class="text-slate-400 flex items-center gap-2">
-                                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                 <span><?= t('pages.contact.email_label') ?></span>
                             </span>
-                            <a href="mailto:operations@bettersupplytrading.com" class="font-mono text-emerald-400 sm:text-slate-300 hover:text-emerald-400 transition-colors break-all">
+                            <a href="mailto:operations@bettersupplytrading.com" class="font-mono text-emerald-400 sm:text-slate-300 hover:text-bsgold transition-colors break-all">
                                 operations@bettersupplytrading.com
                             </a>
                         </div>
@@ -160,7 +160,7 @@ $team = $site_config['contacts']['team'] ?? [];
 
                 <!-- Direct Action Buttons -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 mt-6 pt-4 border-t border-slate-800/80">
-                    <a href="https://wa.me/966502851077?text=<?= urlencode(($lang === 'ar') ? 'مرحباً أستاذ سيد علوي، أود الاستفسار بخصوص العمليات واللوجستيات مع مؤسسة أفضل توريد التجارية.' : 'Hello Sayed Alavi, I would like to inquire regarding operations and supply logistics from Better Supply Trading Establishment.') ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-lg shadow-emerald-950/40 transition-all hover:scale-[1.02] focus:ring-2 focus:ring-emerald-400">
+                    <a href="https://wa.me/966502851077?text=<?= urlencode(($lang === 'ar') ? 'مرحباً أستاذ سيد علوي، أود الاستفسار بخصوص العمليات واللوجستيات مع مؤسسة أفضل توريد التجارية.' : 'Hello Sayed Alavi, I would like to inquire regarding operations and supply logistics from Better Supply Trading Establishment.') ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-bsemerald hover:bg-bsforest text-white text-xs font-semibold shadow-lg shadow-emerald-950/40 transition-all hover:scale-[1.02] focus:ring-2 focus:ring-bsemerald">
                         <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                         <span><?= t('pages.contact.chat_whatsapp') ?></span>
                     </a>

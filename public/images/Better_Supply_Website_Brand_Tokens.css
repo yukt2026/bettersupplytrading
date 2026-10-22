@@ -1,0 +1,20 @@
+/* BETTER SUPPLY TRADING ESTABLISHMENT — DIRECTIONAL BRAND TOKENS */
+:root {
+  --bs-emerald: #005B3F;
+  --bs-forest: #0B6B4D;
+  --bs-gold: #C49A5A;
+  --bs-charcoal: #242629;
+  --bs-ivory: #F6F3ED;
+  --bs-white: #FFFFFF;
+  --bs-stone: #DAD2C5;
+  --bs-muted: #6D7472;
+  --bs-font: 'Lato', Arial, sans-serif;
+  --bs-radius: 8px;
+}
+body { font-family: var(--bs-font); color: var(--bs-charcoal); background: var(--bs-white); }
+h1, h2, h3 { font-weight: 900; letter-spacing: -0.02em; }
+.bs-primary-button { background: var(--bs-emerald); color: var(--bs-white); border: none; padding: 14px 24px; border-radius: var(--bs-radius); }
+.bs-primary-button:hover { background: var(--bs-forest); }
+.bs-eyebrow { color: var(--bs-gold); letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
+.bs-hero { background: var(--bs-ivory); color: var(--bs-charcoal); }
+/* Accessibility: use charcoal / white for small body copy; gold is an accent, not a small-text foreground on white. */

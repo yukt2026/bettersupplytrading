@@ -674,5 +674,161 @@
             "original_name": "Technical_Spec_Sheet.pdf",
             "stored_path": "storage\/uploads\/rfq_20261021_164148_a7dee908.pdf"
         }
+    },
+    {
+        "id": "RFQ-20261021-07B4BD",
+        "timestamp": "2026-10-21T16:51:54+02:00",
+        "ip_address": "::1",
+        "user_agent": "UNKNOWN",
+        "source_page": "industrial-salts",
+        "contact": {
+            "name": "Faisal Al-Otaibi",
+            "company": "Eastern Drilling Contracting Co.",
+            "email": "procurement@easterndrilling.test",
+            "phone": "+966 50 123 4567"
+        },
+        "rfq_details": {
+            "category": "industrial_salts",
+            "specification": "High purity Sodium Chloride NaCl 99.5% for water utility softening",
+            "quantity": 250,
+            "unit": "mt",
+            "packaging": "1000 kg FIBC bags with discharge spout",
+            "destination": "King Abdulaziz Port, Dammam, Saudi Arabia",
+            "delivery_date": "December 2026"
+        },
+        "attachment": {
+            "original_name": null,
+            "stored_path": null
+        }
+    },
+    {
+        "id": "RFQ-20261021-6E9D4B",
+        "timestamp": "2026-10-21T16:51:56+02:00",
+        "ip_address": "::1",
+        "user_agent": "UNKNOWN",
+        "source_page": "industrial-salts",
+        "contact": {
+            "name": "Faisal Al-Otaibi",
+            "company": "Eastern Drilling Contracting Co.",
+            "email": "procurement@easterndrilling.test",
+            "phone": "+966 50 123 4567"
+        },
+        "rfq_details": {
+            "category": "industrial_salts",
+            "specification": "High purity Sodium Chloride NaCl 99.5% for water utility softening",
+            "quantity": 250,
+            "unit": "mt",
+            "packaging": "1000 kg FIBC bags with discharge spout",
+            "destination": "King Abdulaziz Port, Dammam, Saudi Arabia",
+            "delivery_date": "December 2026"
+        },
+        "attachment": {
+            "original_name": "Technical_Spec_Sheet.pdf",
+            "stored_path": "storage\/uploads\/rfq_20261021_165156_7096abb3.pdf"
+        }
+    },
+    {
+        "id": "RFQ-20261022-00E1EB",
+        "timestamp": "2026-10-22T06:39:17+02:00",
+        "ip_address": "::1",
+        "user_agent": "UNKNOWN",
+        "source_page": "industrial-salts",
+        "contact": {
+            "name": "Faisal Al-Otaibi",
+            "company": "Eastern Drilling Contracting Co.",
+            "email": "procurement@easterndrilling.test",
+            "phone": "+966 50 123 4567"
+        },
+        "rfq_details": {
+            "category": "industrial_salts",
+            "specification": "High purity Sodium Chloride NaCl 99.5% for water utility softening",
+            "quantity": 250,
+            "unit": "mt",
+            "packaging": "1000 kg FIBC bags with discharge spout",
+            "destination": "King Abdulaziz Port, Dammam, Saudi Arabia",
+            "delivery_date": "December 2026"
+        },
+        "attachment": {
+            "original_name": null,
+            "stored_path": null
+        }
+    },
+    {
+        "id": "RFQ-20261022-5DEF9D",
+        "timestamp": "2026-10-22T06:39:19+02:00",
+        "ip_address": "::1",
+        "user_agent": "UNKNOWN",
+        "source_page": "industrial-salts",
+        "contact": {
+            "name": "Faisal Al-Otaibi",
+            "company": "Eastern Drilling Contracting Co.",
+            "email": "procurement@easterndrilling.test",
+            "phone": "+966 50 123 4567"
+        },
+        "rfq_details": {
+            "category": "industrial_salts",
+            "specification": "High purity Sodium Chloride NaCl 99.5% for water utility softening",
+            "quantity": 250,
+            "unit": "mt",
+            "packaging": "1000 kg FIBC bags with discharge spout",
+            "destination": "King Abdulaziz Port, Dammam, Saudi Arabia",
+            "delivery_date": "December 2026"
+        },
+        "attachment": {
+            "original_name": "Technical_Spec_Sheet.pdf",
+            "stored_path": "storage\/uploads\/rfq_20261022_063919_ab480d95.pdf"
+        }
+    },
+    {
+        "id": "RFQ-20261022-F3AE1F",
+        "timestamp": "2026-10-22T06:53:28+02:00",
+        "ip_address": "::1",
+        "user_agent": "UNKNOWN",
+        "source_page": "industrial-salts",
+        "contact": {
+            "name": "Faisal Al-Otaibi",
+            "company": "Eastern Drilling Contracting Co.",
+            "email": "procurement@easterndrilling.test",
+            "phone": "+966 50 123 4567"
+        },
+        "rfq_details": {
+            "category": "industrial_salts",
+            "specification": "High purity Sodium Chloride NaCl 99.5% for water utility softening",
+            "quantity": 250,
+            "unit": "mt",
+            "packaging": "1000 kg FIBC bags with discharge spout",
+            "destination": "King Abdulaziz Port, Dammam, Saudi Arabia",
+            "delivery_date": "December 2026"
+        },
+        "attachment": {
+            "original_name": null,
+            "stored_path": null
+        }
+    },
+    {
+        "id": "RFQ-20261022-4F7877",
+        "timestamp": "2026-10-22T06:53:30+02:00",
+        "ip_address": "::1",
+        "user_agent": "UNKNOWN",
+        "source_page": "industrial-salts",
+        "contact": {
+            "name": "Faisal Al-Otaibi",
+            "company": "Eastern Drilling Contracting Co.",
+            "email": "procurement@easterndrilling.test",
+            "phone": "+966 50 123 4567"
+        },
+        "rfq_details": {
+            "category": "industrial_salts",
+            "specification": "High purity Sodium Chloride NaCl 99.5% for water utility softening",
+            "quantity": 250,
+            "unit": "mt",
+            "packaging": "1000 kg FIBC bags with discharge spout",
+            "destination": "King Abdulaziz Port, Dammam, Saudi Arabia",
+            "delivery_date": "December 2026"
+        },
+        "attachment": {
+            "original_name": "Technical_Spec_Sheet.pdf",
+            "stored_path": "storage\/uploads\/rfq_20261022_065330_9e9ca19d.pdf"
+        }
     }
 ]

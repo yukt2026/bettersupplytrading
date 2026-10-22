@@ -19,7 +19,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
         <div class="absolute inset-0 bg-slate-950/80"></div>
     </div>
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block"><?= t('nav.about') ?></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block"><?= t('nav.about') ?></span>
         <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
             <?= t('pages.about.heading') ?>
         </h1>
@@ -39,11 +39,11 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-800">
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
-                    <h3 class="text-lg font-bold text-emerald-400 mb-2"><?= t('pages.about.mission_title') ?></h3>
+                    <h3 class="text-lg font-bold text-bsgold mb-2"><?= t('pages.about.mission_title') ?></h3>
                     <p class="text-xs sm:text-sm text-slate-300 leading-relaxed"><?= t('pages.about.mission_desc') ?></p>
                 </div>
                 <div class="p-6 rounded-xl bg-slate-900 border border-slate-800">
-                    <h3 class="text-lg font-bold text-emerald-400 mb-2"><?= t('pages.about.vision_title') ?></h3>
+                    <h3 class="text-lg font-bold text-bsgold mb-2"><?= t('pages.about.vision_title') ?></h3>
                     <p class="text-xs sm:text-sm text-slate-300 leading-relaxed"><?= t('pages.about.vision_desc') ?></p>
                 </div>
             </div>
@@ -55,7 +55,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
 <section class="py-20 bg-slate-950 text-white border-b border-slate-800">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-16">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block"><?= ($lang === 'ar') ? 'إجراءات العمل' : 'Execution Discipline' ?></span>
+            <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block"><?= ($lang === 'ar') ? 'إجراءات العمل' : 'Execution Discipline' ?></span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
                 <?= t('pages.about.workflow_title') ?>
             </h2>
@@ -65,7 +65,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
             <?php foreach (t('pages.about.steps') as $step): ?>
             <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
                 <div>
-                    <span class="text-2xl font-extrabold text-emerald-400 font-mono mb-4 block"><?= $step['num'] ?></span>
+                    <span class="text-2xl font-extrabold text-bsgold font-mono mb-4 block"><?= $step['num'] ?></span>
                     <h3 class="text-base font-bold text-white mb-2"><?= $step['title'] ?></h3>
                     <p class="text-xs text-slate-400 leading-relaxed"><?= $step['desc'] ?></p>
                 </div>
@@ -78,7 +78,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
 <!-- Vision 2030 and Industrial Development -->
 <section class="py-16 bg-slate-900 text-white border-b border-slate-800">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-500/30 uppercase tracking-widest">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-bscharcoal text-bsgold border border-bsgold/40 uppercase tracking-widest">
             <?= ($lang === 'ar') ? 'التنمية الاقتصادية' : 'Economic Development' ?>
         </span>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -88,7 +88,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
             <?= t('pages.about.vision_section_text') ?>
         </p>
         <div class="pt-6">
-            <a href="<?= route_url('partners') ?>" class="inline-flex items-center gap-2 px-8 py-3.5 bg-brandgreen hover:bg-emerald-600 text-white font-bold text-sm rounded-lg transition-all">
+            <a href="<?= route_url('partners') ?>" class="inline-flex items-center gap-2 px-8 py-3.5 bg-bsemerald hover:bg-bsforest text-white font-bold text-sm rounded-lg transition-all">
                 <span><?= t('buttons.discuss_partnership') ?></span>
                 <span class="rtl:rotate-180">&rarr;</span>
             </a>

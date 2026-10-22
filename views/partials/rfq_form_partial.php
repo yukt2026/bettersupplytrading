@@ -12,7 +12,7 @@ $current_page_name = $page ?? 'general';
     <div class="absolute right-0 top-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-3xl mb-8 relative z-10">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 uppercase tracking-wider mb-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-bscharcoal/90 text-bsgold border border-bsgold/40 uppercase tracking-wider mb-3">
             <?= ($lang === 'ar') ? 'بوابة المشتريات والتسعير الصناعي' : 'B2B Sourcing & Procurement Portal' ?>
         </span>
         <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-2">
@@ -156,7 +156,7 @@ $current_page_name = $page ?? 'general';
 
         <!-- Submit Button -->
         <div class="pt-4">
-            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-brandgreen hover:bg-emerald-600 text-white font-bold text-sm rounded-lg shadow-lg hover:shadow-emerald-900/30 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 flex items-center justify-center gap-2">
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-bsemerald hover:bg-bsforest text-white font-bold text-sm rounded-lg shadow-lg hover:shadow-emerald-900/30 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bsemerald flex items-center justify-center gap-2">
                 <span><?= t('rfq_form.submit') ?></span>
                 <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </button>

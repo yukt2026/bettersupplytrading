@@ -42,8 +42,8 @@ $trust_strip = t('pages.home.trust_strip');
         <div class="hero-fade-in max-w-[640px] text-center nav:text-left rtl:nav:text-right flex flex-col items-center nav:items-start rtl:nav:items-end" data-aos="fade-up" data-aos-duration="800">
             
             <!-- Eyebrow Pill -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-slate-900/90 border border-slate-700/80 text-emerald-400 uppercase tracking-wider mb-5 shadow-sm max-w-full text-wrap text-center" data-aos="fade-down" data-aos-delay="100">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-bscharcoal/90 border border-bsgold/50 text-bsgold uppercase tracking-wider mb-5 shadow-sm max-w-full text-wrap text-center" data-aos="fade-down" data-aos-delay="100">
+                <span class="w-2 h-2 rounded-full bg-bsgold animate-ping"></span>
                 <span><?= t('pages.home.hero_badge') ?></span>
             </div>
 
@@ -59,10 +59,10 @@ $trust_strip = t('pages.home.trust_strip');
 
             <!-- Two High-Contrast CTAs -->
             <div class="flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto" data-aos="fade-up" data-aos-delay="250">
-                <a href="<?= route_url('contact') ?>#rfq-form" class="w-full sm:w-auto h-[46px] px-7 inline-flex items-center justify-center bg-brandgreen hover:bg-emerald-600 text-white font-bold text-sm rounded-lg shadow-lg hover:shadow-emerald-950/50 transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brandgreen whitespace-nowrap">
+                <a href="<?= route_url('contact') ?>#rfq-form" class="w-full sm:w-auto h-[46px] px-7 inline-flex items-center justify-center bg-bsemerald hover:bg-bsforest text-white font-bold text-sm rounded-lg shadow-lg hover:shadow-emerald-950/50 transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bsemerald whitespace-nowrap">
                     <?= t('buttons.request_quote') ?>
                 </a>
-                <a href="<?= route_url('products') ?>" class="w-full sm:w-auto h-[46px] px-7 inline-flex items-center justify-center bg-slate-950/40 hover:bg-white/10 border border-white/80 text-white font-semibold text-sm rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white whitespace-nowrap">
+                <a href="<?= route_url('products') ?>" class="w-full sm:w-auto h-[46px] px-7 inline-flex items-center justify-center bg-bscharcoal/50 hover:bg-white/10 border border-bsgold/80 text-white font-semibold text-sm rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bsgold whitespace-nowrap">
                     <?= t('buttons.explore_products') ?>
                 </a>
             </div>
@@ -72,23 +72,23 @@ $trust_strip = t('pages.home.trust_strip');
     </div>
 
     <!-- Slim Trust Strip Docked along Bottom of Hero (4 Factual Items) -->
-    <div class="relative z-10 border-t border-slate-800/80 bg-slate-950/70 backdrop-blur-md py-3.5" data-aos="fade-up" data-aos-delay="300">
+    <div class="relative z-10 border-t border-stone-800/80 bg-bscharcoal/85 backdrop-blur-md py-3.5" data-aos="fade-up" data-aos-delay="300">
         <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-medium text-slate-300">
                 <div class="flex items-center justify-center nav:justify-start gap-2">
-                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                    <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
                     <span><?= $trust_strip['dammam'] ?></span>
                 </div>
                 <div class="flex items-center justify-center nav:justify-start gap-2">
-                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                     <span><?= $trust_strip['sourcing'] ?></span>
                 </div>
                 <div class="flex items-center justify-center nav:justify-start gap-2">
-                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <span><?= $trust_strip['gcc'] ?></span>
                 </div>
                 <div class="flex items-center justify-center nav:justify-start gap-2">
-                    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     <span><?= $trust_strip['rfq'] ?></span>
                 </div>
             </div>
@@ -103,7 +103,7 @@ $trust_strip = t('pages.home.trust_strip');
 <section class="py-20 bg-slate-900 text-white border-b border-slate-800">
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">
+            <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block">
                 <?= ($lang === 'ar') ? 'التوريد المتخصص' : 'Core Divisions' ?>
             </span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
@@ -219,7 +219,7 @@ $trust_strip = t('pages.home.trust_strip');
 <section class="py-20 bg-slate-950 text-white border-b border-slate-800">
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-14" data-aos="fade-up">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">
+            <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block">
                 <?= ($lang === 'ar') ? 'تغطية القطاعات' : 'Target Sectors' ?>
             </span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
@@ -257,7 +257,7 @@ $trust_strip = t('pages.home.trust_strip');
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div class="lg:col-span-6 space-y-6" data-aos="fade-up">
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 block">
+                <span class="text-xs font-bold uppercase tracking-widest text-bsgold block">
                     <?= ($lang === 'ar') ? 'المنهجية والموقع الجغرافي' : 'Commercial Methodology' ?>
                 </span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
@@ -338,7 +338,7 @@ $trust_strip = t('pages.home.trust_strip');
 <section class="py-20 bg-slate-900 text-white border-b border-slate-800">
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-14" data-aos="fade-up">
-            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block">
+            <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block">
                 <?= ($lang === 'ar') ? 'قطاعات التوريد الموسعة' : 'Commercial Portfolio' ?>
             </span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">

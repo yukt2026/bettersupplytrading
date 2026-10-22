@@ -11,34 +11,34 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
     </main>
 
     <!-- Global Corporate Footer -->
-    <footer class="bg-branddark text-slate-400 pt-16 pb-24 border-t border-slate-800 relative z-20 overflow-hidden">
+    <footer class="bg-bscharcoal text-slate-400 pt-16 pb-24 border-t border-stone-800 relative z-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-slate-800">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-stone-800">
                 
                 <!-- Col 1: Corporate Identity & Positioning (4 cols) -->
                 <div class="lg:col-span-4 space-y-4">
                     <a href="<?= route_url('') ?>" class="inline-block">
                         <?php if ($lang === 'ar'): ?>
-                            <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto object-contain">
+                            <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 sm:h-11 w-auto object-contain">
                         <?php else: ?>
-                            <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto object-contain">
+                            <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 sm:h-11 w-auto object-contain">
                         <?php endif; ?>
                     </a>
                     
-                    <p class="text-xs leading-relaxed text-slate-400 max-w-sm">
+                    <p class="text-xs leading-relaxed text-slate-300 max-w-sm">
                         <?= ($lang === 'ar') 
                             ? 'مؤسسة سعودية متخصصة في التوريد التجاري وتجارة الجملة للمواد الكيميائية والأملاح الصناعية، مواد حقول النفط، معالجة المياه، والمدخلات الزراعية وخدمات الاستيراد والتصدير، مقرها مدينة الدمام.' 
                             : 'A Saudi-based commercial trading and procurement intermediary in Dammam, connecting global manufacturers with industrial, agricultural, and commercial buyers across Saudi Arabia and the GCC.' ?>
                     </p>
                     
-                    <div class="text-xs text-slate-500 space-y-1 pt-2">
+                    <div class="text-xs text-slate-400 space-y-1 pt-2">
                         <div>
-                            <span class="font-semibold text-slate-400"><?= ($lang === 'ar') ? 'السجل التجاري:' : 'CR Activities:' ?></span> 
+                            <span class="font-semibold text-bsgold"><?= ($lang === 'ar') ? 'السجل التجاري:' : 'CR Activities:' ?></span> 
                             <span>451011, 451012, 465910, 466910</span>
                         </div>
                         <div>
-                            <span class="font-semibold text-slate-400"><?= ($lang === 'ar') ? 'رقم السجل:' : 'CR Number:' ?></span>
+                            <span class="font-semibold text-bsgold"><?= ($lang === 'ar') ? 'رقم السجل:' : 'CR Number:' ?></span>
                             <span><?= htmlspecialchars($site_config['contacts']['cr_number']) ?></span>
                         </div>
                     </div>
@@ -46,62 +46,62 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
 
                 <!-- Col 2: Core Sourcing Divisions (3 cols) -->
                 <div class="lg:col-span-3">
-                    <h3 class="text-white <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.product_divisions') ?></h3>
+                    <h3 class="text-bsgold <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.product_divisions') ?></h3>
                     <ul class="space-y-2 text-xs">
                         <?php if (is_category_active('industrial_salts')): ?>
-                        <li><a href="<?= route_url('industrial-salts') ?>" class="hover:text-emerald-400 transition-colors"><?= t('nav.industrial_salts') ?></a></li>
+                        <li><a href="<?= route_url('industrial-salts') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.industrial_salts') ?></a></li>
                         <?php endif; ?>
                         <?php if (is_category_active('oilfield_chemicals')): ?>
-                        <li><a href="<?= route_url('oilfield-chemicals') ?>" class="hover:text-emerald-400 transition-colors"><?= t('nav.oilfield_chemicals') ?></a></li>
+                        <li><a href="<?= route_url('oilfield-chemicals') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.oilfield_chemicals') ?></a></li>
                         <?php endif; ?>
                         <?php if (is_category_active('water_treatment')): ?>
-                        <li><a href="<?= route_url('water-treatment') ?>" class="hover:text-emerald-400 transition-colors"><?= t('nav.water_treatment') ?></a></li>
+                        <li><a href="<?= route_url('water-treatment') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.water_treatment') ?></a></li>
                         <?php endif; ?>
                         <?php if (is_category_active('fertilizers')): ?>
-                        <li><a href="<?= route_url('fertilizers') ?>" class="hover:text-emerald-400 transition-colors"><?= t('nav.fertilizers') ?></a></li>
+                        <li><a href="<?= route_url('fertilizers') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.fertilizers') ?></a></li>
                         <?php endif; ?>
                         <?php if (is_category_active('coco_peat')): ?>
-                        <li><a href="<?= route_url('coco-peat') ?>" class="hover:text-emerald-400 transition-colors"><?= t('nav.coco_peat') ?></a></li>
+                        <li><a href="<?= route_url('coco-peat') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.coco_peat') ?></a></li>
                         <?php endif; ?>
                         <?php if (is_category_active('packaging_disposables')): ?>
-                        <li><a href="<?= route_url('packaging-disposables') ?>" class="hover:text-emerald-400 transition-colors"><?= t('nav.packaging_disposables') ?></a></li>
+                        <li><a href="<?= route_url('packaging-disposables') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.packaging_disposables') ?></a></li>
                         <?php endif; ?>
                         <?php if (is_category_active('other_trading')): ?>
-                        <li><a href="<?= route_url('other-trading') ?>" class="hover:text-emerald-400 transition-colors"><?= t('nav.other_trading') ?></a></li>
+                        <li><a href="<?= route_url('other-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.other_trading') ?></a></li>
                         <?php endif; ?>
                     </ul>
                 </div>
 
                 <!-- Col 3: Navigation & Governance (2 cols) -->
                 <div class="lg:col-span-2">
-                    <h3 class="text-white <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.quick_links') ?></h3>
+                    <h3 class="text-bsgold <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.quick_links') ?></h3>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="<?= route_url('about') ?>" class="hover:text-white transition-colors"><?= t('nav.about') ?></a></li>
-                        <li><a href="<?= route_url('industries') ?>" class="hover:text-white transition-colors"><?= t('nav.industries') ?></a></li>
-                        <li><a href="<?= route_url('international-trading') ?>" class="hover:text-white transition-colors"><?= t('nav.international_trading') ?></a></li>
-                        <li><a href="<?= route_url('partners') ?>" class="hover:text-white transition-colors"><?= t('nav.partners') ?></a></li>
-                        <li><a href="<?= route_url('contact') ?>" class="hover:text-white transition-colors"><?= t('nav.contact') ?></a></li>
-                        <li><a href="<?= route_url('privacy') ?>" class="hover:text-white transition-colors text-slate-500 hover:text-slate-300"><?= t('seo.privacy.title') ?></a></li>
-                        <li><a href="<?= route_url('terms') ?>" class="hover:text-white transition-colors text-slate-500 hover:text-slate-300"><?= t('seo.terms.title') ?></a></li>
+                        <li><a href="<?= route_url('about') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.about') ?></a></li>
+                        <li><a href="<?= route_url('industries') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.industries') ?></a></li>
+                        <li><a href="<?= route_url('international-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.international_trading') ?></a></li>
+                        <li><a href="<?= route_url('partners') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.partners') ?></a></li>
+                        <li><a href="<?= route_url('contact') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.contact') ?></a></li>
+                        <li><a href="<?= route_url('privacy') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.privacy.title') ?></a></li>
+                        <li><a href="<?= route_url('terms') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.terms.title') ?></a></li>
                     </ul>
                 </div>
 
                 <!-- Col 4: Corporate Sourcing Desk (3 cols) -->
                 <div class="lg:col-span-3 space-y-3">
-                    <h3 class="text-white <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.contact_us') ?></h3>
+                    <h3 class="text-bsgold <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.contact_us') ?></h3>
                     <ul class="space-y-3 text-xs text-slate-400">
                         <li class="flex items-start gap-2.5">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                            <svg class="w-4 h-4 text-bsgold shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
                             <span><?= ($lang === 'ar') ? $site_config['contacts']['address_ar'] : $site_config['contacts']['address_en'] ?></span>
                         </li>
                         <li class="flex items-center gap-2.5">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             <a href="mailto:<?= htmlspecialchars($site_config['contacts']['email']) ?>" class="hover:text-white transition-colors">
                                 <?= htmlspecialchars($site_config['contacts']['email']) ?>
                             </a>
                         </li>
                         <li class="flex items-center gap-2.5">
-                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                             <a href="tel:<?= htmlspecialchars($site_config['contacts']['phone']) ?>" class="hover:text-white transition-colors">
                                 <?= htmlspecialchars($site_config['contacts']['phone']) ?>
                             </a>
@@ -109,7 +109,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                     </ul>
                     
                     <div class="pt-2">
-                        <a href="<?= route_url('contact') ?>#rfq-form" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded transition-colors">
+                        <a href="<?= route_url('contact') ?>#rfq-form" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-bsemerald hover:bg-bsforest rounded-lg shadow-sm transition-colors">
                             <span><?= t('buttons.request_quote') ?></span>
                             <span class="rtl:rotate-180">&rarr;</span>
                         </a>
@@ -143,17 +143,17 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
     <div id="floating-actions-stack" class="fixed bottom-5 sm:bottom-6 <?= ($lang === 'ar') ? 'left-4 sm:left-6' : 'right-4 sm:right-6' ?> z-40 flex flex-col items-end rtl:items-start gap-2.5 sm:gap-3 pointer-events-none">
         
         <!-- 1. Floating "Request RFQ" Pill Button -->
-        <a href="<?= route_url('contact') ?>#rfq-form" class="pointer-events-auto inline-flex items-center gap-2 bg-brandgreen hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-emerald-400/50 border border-emerald-400/30" aria-label="<?= t('nav.request_rfq') ?>">
+        <a href="<?= route_url('contact') ?>#rfq-form" class="pointer-events-auto inline-flex items-center gap-2 bg-bsemerald hover:bg-bsforest text-white font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 sm:py-3 rounded-full shadow-2xl transition-all transform hover:-translate-y-0.5 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-emerald-400/50 border border-bsgold/40" aria-label="<?= t('nav.request_rfq') ?>">
             <svg class="w-4 h-4 sm:w-5 sm:h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
             <span class="whitespace-nowrap"><?= t('nav.request_rfq') ?></span>
         </a>
 
         <!-- 2. Floating WhatsApp / Commercial Desk Button -->
         <div class="pointer-events-auto flex items-center gap-2.5 group">
-            <span class="hidden md:inline-block bg-slate-900/95 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-emerald-500/30 backdrop-blur-sm">
+            <span class="hidden md:inline-block bg-bscharcoal/95 text-bsgold text-xs font-semibold px-3 py-1.5 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-bsgold/30 backdrop-blur-sm">
                 <?= ($lang === 'ar') ? 'تواصل مع مكتب المشتريات' : 'Direct Commercial Desk' ?>
             </span>
-            <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $site_config['contacts']['phone']) ?>?text=<?= urlencode(($lang === 'ar') ? 'مرحباً مؤسسة أفضل توريد التجارية، أود الاستفسار عن عروض الأسعار.' : 'Hello Better Supply Trading Establishment, I would like to inquire about industrial sourcing and quotations.') ?>" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Procurement Desk" class="relative bg-emerald-600 hover:bg-emerald-500 text-white w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border border-white/20">
+            <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', $site_config['contacts']['phone']) ?>?text=<?= urlencode(($lang === 'ar') ? 'مرحباً مؤسسة أفضل توريد التجارية، أود الاستفسار عن عروض الأسعار.' : 'Hello Better Supply Trading Establishment, I would like to inquire about industrial sourcing and quotations.') ?>" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Procurement Desk" class="relative bg-bsforest hover:bg-bsemerald text-white w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 border border-white/20">
                 <span class="absolute -inset-1 rounded-full bg-emerald-500 opacity-25 animate-ping pointer-events-none"></span>
                 <svg class="w-5 h-5 sm:w-6 sm:h-6 relative z-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.053-.99-.071-.341-.119-.844-.288-1.464-.567-1.428-.642-2.355-2.096-2.427-2.19-.071-.096-.576-.767-.576-1.463 0-.696.365-1.037.495-1.18.13-.143.284-.179.379-.179.096 0 .191.002.274.006.09.004.21.032.327.283.12.257.411 1.002.447 1.074.036.072.06.156.012.251-.048.096-.072.156-.144.239-.072.084-.15.187-.215.251-.072.072-.148.15-.064.294.084.144.373.616.801.998.552.492 1.017.644 1.161.716.144.072.228.06.312-.036.084-.096.361-.42.457-.564.096-.144.192-.12.324-.072.132.048.837.395.981.467.144.072.24.108.276.168.036.06.036.348-.108.753z"/></svg>
             </a>
