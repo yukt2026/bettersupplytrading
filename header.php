@@ -424,12 +424,6 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
 
                 <!-- Actions: Language Switcher Pill + Request Quotation Button (>=1200px) -->
                 <div class="hidden nav:flex items-center gap-2 xl:gap-3 shrink-0 ms-2 xl:ms-4">
-                    <!-- Download Company Profile Button -->
-                    <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-emerald-300 bg-white hover:bg-emerald-50 text-bsemerald transition-all shadow-xs" title="<?= t('nav.download_profile') ?>">
-                        <svg class="w-3.5 h-3.5 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                        <span><?= t('nav.download_profile') ?></span>
-                    </a>
-
                     <!-- Language Switcher Pill -->
                     <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border border-stone-300 bg-stone-100 hover:bg-stone-200 text-bsemerald hover:text-bsforest transition-all shadow-xs" aria-label="Switch Language">
                         <?= ($lang === 'ar') ? 'EN' : 'العربية' ?>
@@ -565,15 +559,6 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                 <a href="<?= route_url('contact') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-200 bg-white hover:border-bsemerald transition-all <?= ($page === 'contact') ? 'border-bsemerald text-bsemerald font-bold bg-emerald-50/50' : 'text-slate-800' ?>">
                     <span class="font-semibold"><?= t('nav.contact') ?></span>
                     <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
-                </a>
-
-                <!-- Download Company Profile Link -->
-                <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl border border-emerald-300 bg-emerald-50/30 text-bsemerald hover:bg-emerald-50 transition-all font-semibold">
-                    <div class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                        <span><?= t('nav.download_profile') ?> (PDF)</span>
-                    </div>
-                    <span class="text-xs text-bsemerald rtl:rotate-180">&rarr;</span>
                 </a>
             </div>
 

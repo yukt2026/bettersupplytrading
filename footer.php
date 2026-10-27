@@ -77,8 +77,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                         <li><a href="<?= route_url('international-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.global_sourcing') ?></a></li>
                         <li><a href="<?= route_url('partners') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.partners') ?></a></li>
                         <li><a href="<?= route_url('contact') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.contact') ?></a></li>
-                        <li class="pt-2"><a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="inline-flex items-center gap-1.5 text-bsgold hover:text-white font-semibold transition-colors"><svg class="w-3.5 h-3.5 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg><span><?= t('nav.download_profile') ?> (PDF)</span></a></li>
-                        <li class="pt-1"><a href="<?= route_url('privacy') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.privacy.title') ?></a></li>
+                        <li class="pt-2"><a href="<?= route_url('privacy') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.privacy.title') ?></a></li>
                         <li><a href="<?= route_url('terms') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.terms.title') ?></a></li>
                     </ul>
                 </div>
@@ -312,7 +311,5 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
             });
         });
     </script>
-</body>
-</html>
 </body>
 </html>

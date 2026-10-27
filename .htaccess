@@ -21,6 +21,10 @@
 
     # Handle subpages /en/page-name/ and /ar/page-name/
     RewriteRule ^(en|ar)/([a-zA-Z0-9_-]+)/?$ router.php?lang=$1&page=$2 [QSA,L]
+
+    # Fallback for URLs requested without language prefix: route to en
+    RewriteCond %{REQUEST_URI} !^/(en|ar|public|assets|storage) [NC]
+    RewriteRule ^([a-zA-Z0-9_-]+)/?$ router.php?lang=en&page=$1 [QSA,L]
 </IfModule>
 
 # Security Headers
@@ -29,6 +33,16 @@
     Header set X-Frame-Options "SAMEORIGIN"
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Cache control for dynamic pages and corporate profile PDF to ensure visitors see latest versions
+    <FilesMatch "\.(php|html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+    <FilesMatch "\.(pdf)$">
+        Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+    </FilesMatch>
 </IfModule>
 
 # Caching for static assets

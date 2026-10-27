@@ -7,7 +7,13 @@
 $pages = [
     'about',
     'products',
+    'agrochemicals',
+    'industrial-chemicals',
     'industrial-salts',
+    'building-materials',
+    'machinery',
+    'machinery-equipment',
+    'spare-parts',
     'oilfield-chemicals',
     'water-treatment',
     'fertilizers',

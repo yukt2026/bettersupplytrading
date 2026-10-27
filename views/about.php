@@ -126,10 +126,6 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                 <span><?= t('buttons.discuss_partnership') ?></span>
                 <span class="rtl:rotate-180">&rarr;</span>
             </a>
-            <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="inline-flex items-center gap-2 px-8 py-3.5 bg-white hover:bg-emerald-50 text-bsemerald border border-emerald-300 font-bold text-sm rounded-lg shadow-xs transition-all">
-                <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                <span><?= t('nav.download_profile') ?> (PDF)</span>
-            </a>
             <a href="<?= route_url('products') ?>" class="inline-flex items-center gap-2 px-8 py-3.5 bg-white hover:bg-stone-100 text-bscharcoal border border-stone-300 font-bold text-sm rounded-lg shadow-xs transition-all">
                 <span><?= t('buttons.explore_products') ?></span>
             </a>

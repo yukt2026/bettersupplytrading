@@ -140,11 +140,6 @@ $trust_strip = t('pages.home.trust_strip');
                         <span><?= t('buttons.learn_more') ?></span>
                         <span class="rtl:rotate-180">&rarr;</span>
                     </a>
-                    <span class="text-stone-300">|</span>
-                    <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-bold text-bsgold hover:text-bsemerald transition-colors">
-                        <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                        <span><?= t('nav.download_profile') ?> (PDF)</span>
-                    </a>
                 </div>
             </div>
 
