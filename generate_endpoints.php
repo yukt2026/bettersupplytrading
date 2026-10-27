@@ -16,6 +16,7 @@ $pages = [
     'other-trading',
     'industries',
     'international-trading',
+    'global-sourcing',
     'partners',
     'contact',
     'privacy',

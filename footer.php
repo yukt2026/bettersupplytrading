@@ -32,43 +32,30 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                             : 'A Saudi-based commercial trading and procurement intermediary in Dammam, connecting global manufacturers with industrial, agricultural, and commercial buyers across Saudi Arabia and the GCC.' ?>
                     </p>
                     
-                    <div class="text-xs text-slate-400 space-y-1 pt-2">
-                        <div>
-                            <span class="font-semibold text-bsgold"><?= ($lang === 'ar') ? 'السجل التجاري:' : 'CR Activities:' ?></span> 
-                            <span>451011, 451012, 465910, 466910</span>
-                        </div>
-                        <div>
-                            <span class="font-semibold text-bsgold"><?= ($lang === 'ar') ? 'رقم السجل:' : 'CR Number:' ?></span>
-                            <span><?= htmlspecialchars($site_config['contacts']['cr_number']) ?></span>
-                        </div>
+                    <?php 
+                    $cr_num = trim($site_config['contacts']['cr_number'] ?? '');
+                    if (!empty($cr_num) && strpos($cr_num, '[ENTER') === false): 
+                    ?>
+                    <div class="text-xs text-slate-400 pt-2">
+                        <span class="font-semibold text-bsgold"><?= ($lang === 'ar') ? 'السجل التجاري:' : 'C.R.:' ?></span>
+                        <span><?= htmlspecialchars($cr_num) ?></span>
                     </div>
+                    <?php endif; ?>
                 </div>
 
-                <!-- Col 2: Core Sourcing Divisions (3 cols) -->
+                <!-- Col 2: Core Sourcing Divisions (Sequence A - I) (3 cols) -->
                 <div class="lg:col-span-3">
                     <h3 class="text-bsgold <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.product_divisions') ?></h3>
                     <ul class="space-y-2 text-xs">
-                        <?php if (is_category_active('industrial_salts')): ?>
-                        <li><a href="<?= route_url('industrial-salts') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.industrial_salts') ?></a></li>
-                        <?php endif; ?>
-                        <?php if (is_category_active('oilfield_chemicals')): ?>
-                        <li><a href="<?= route_url('oilfield-chemicals') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.oilfield_chemicals') ?></a></li>
-                        <?php endif; ?>
-                        <?php if (is_category_active('water_treatment')): ?>
-                        <li><a href="<?= route_url('water-treatment') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.water_treatment') ?></a></li>
-                        <?php endif; ?>
-                        <?php if (is_category_active('fertilizers')): ?>
-                        <li><a href="<?= route_url('fertilizers') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.fertilizers') ?></a></li>
-                        <?php endif; ?>
-                        <?php if (is_category_active('coco_peat')): ?>
-                        <li><a href="<?= route_url('coco-peat') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.coco_peat') ?></a></li>
-                        <?php endif; ?>
-                        <?php if (is_category_active('packaging_disposables')): ?>
-                        <li><a href="<?= route_url('packaging-disposables') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.packaging_disposables') ?></a></li>
-                        <?php endif; ?>
-                        <?php if (is_category_active('other_trading')): ?>
-                        <li><a href="<?= route_url('other-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.other_trading') ?></a></li>
-                        <?php endif; ?>
+                        <li><a href="<?= route_url('products') ?>#cat-a" class="hover:text-bsgold transition-colors"><?= t('nav.cat_a') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>#cat-b" class="hover:text-bsgold transition-colors"><?= t('nav.cat_b') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>#cat-c" class="hover:text-bsgold transition-colors"><?= t('nav.cat_c') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>#cat-d" class="hover:text-bsgold transition-colors"><?= t('nav.cat_d') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>#cat-e" class="hover:text-bsgold transition-colors"><?= t('nav.cat_e') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>#cat-f" class="hover:text-bsgold transition-colors"><?= t('nav.cat_f') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>#cat-g" class="hover:text-bsgold transition-colors"><?= t('nav.cat_g') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>#cat-h" class="hover:text-bsgold transition-colors"><?= t('nav.cat_h') ?></a></li>
+                        <li><a href="<?= route_url('international-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_i') ?></a></li>
                     </ul>
                 </div>
 
@@ -76,12 +63,15 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                 <div class="lg:col-span-2">
                     <h3 class="text-bsgold <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.quick_links') ?></h3>
                     <ul class="space-y-2 text-xs">
+                        <li><a href="<?= route_url('') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.home') ?></a></li>
                         <li><a href="<?= route_url('about') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.about') ?></a></li>
+                        <li><a href="<?= route_url('products') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.products') ?></a></li>
                         <li><a href="<?= route_url('industries') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.industries') ?></a></li>
-                        <li><a href="<?= route_url('international-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.international_trading') ?></a></li>
+                        <li><a href="<?= route_url('international-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.global_sourcing') ?></a></li>
                         <li><a href="<?= route_url('partners') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.partners') ?></a></li>
                         <li><a href="<?= route_url('contact') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.contact') ?></a></li>
-                        <li><a href="<?= route_url('privacy') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.privacy.title') ?></a></li>
+                        <li class="pt-2"><a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="inline-flex items-center gap-1.5 text-bsgold hover:text-white font-semibold transition-colors"><svg class="w-3.5 h-3.5 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg><span><?= t('nav.download_profile') ?> (PDF)</span></a></li>
+                        <li class="pt-1"><a href="<?= route_url('privacy') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.privacy.title') ?></a></li>
                         <li><a href="<?= route_url('terms') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.terms.title') ?></a></li>
                     </ul>
                 </div>
@@ -257,11 +247,11 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                         if (statusBox) {
                             statusBox.classList.remove('hidden');
                             if (result.success) {
-                                statusBox.className = 'p-5 rounded-xl border border-emerald-500/40 bg-emerald-950/40 text-emerald-200 text-sm mb-6';
+                                statusBox.className = 'p-5 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-900 text-sm mb-6 shadow-xs';
                                 statusBox.innerHTML = `
-                                    <div class="font-bold text-base mb-1 text-emerald-300">${result.title || 'Success'}</div>
+                                    <div class="font-bold text-base mb-1 text-emerald-800">${result.title || 'Success'}</div>
                                     <div>${result.message}</div>
-                                    ${result.lead_id ? `<div class="mt-2 text-xs text-emerald-400 font-mono">Reference ID: ${result.lead_id}</div>` : ''}
+                                    ${result.lead_id ? `<div class="mt-2 text-xs text-emerald-700 font-mono font-semibold">Reference ID: ${result.lead_id}</div>` : ''}
                                 `;
                                 rfqForm.reset();
 
@@ -274,7 +264,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                                     });
                                 }
                             } else {
-                                statusBox.className = 'p-5 rounded-xl border border-rose-500/40 bg-rose-950/40 text-rose-200 text-sm mb-6';
+                                statusBox.className = 'p-5 rounded-xl border border-rose-300 bg-rose-50 text-rose-900 text-sm mb-6 shadow-xs';
                                 let errorList = '';
                                 if (result.errors) {
                                     errorList = '<ul class="list-disc ps-5 mt-2 space-y-1">';
@@ -284,7 +274,7 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                                     errorList += '</ul>';
                                 }
                                 statusBox.innerHTML = `
-                                    <div class="font-bold text-base mb-1 text-rose-300">${result.message || 'Validation Error'}</div>
+                                    <div class="font-bold text-base mb-1 text-rose-800">${result.message || 'Validation Error'}</div>
                                     ${errorList}
                                 `;
                             }
@@ -292,8 +282,8 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                     } catch (err) {
                         if (statusBox) {
                             statusBox.classList.remove('hidden');
-                            statusBox.className = 'p-5 rounded-xl border border-rose-500/40 bg-rose-950/40 text-rose-200 text-sm mb-6';
-                            statusBox.innerHTML = '<div class="font-bold text-base">Network Error</div><div>Unable to send inquiry. Please try again or email us directly.</div>';
+                            statusBox.className = 'p-5 rounded-xl border border-rose-300 bg-rose-50 text-rose-900 text-sm mb-6 shadow-xs';
+                            statusBox.innerHTML = '<div class="font-bold text-base text-rose-800">Network Error</div><div>Unable to send inquiry. Please try again or email us directly at info@bettersupplytrading.com</div>';
                         }
                     } finally {
                         submitBtn.disabled = false;

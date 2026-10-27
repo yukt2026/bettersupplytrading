@@ -39,6 +39,7 @@ $unit = trim(strip_tags($_POST['unit'] ?? ''));
 $packaging = trim(strip_tags($_POST['packaging'] ?? ''));
 $destination = trim(strip_tags($_POST['destination'] ?? ''));
 $delivery_date = trim(strip_tags($_POST['delivery_date'] ?? ''));
+$remarks = trim(strip_tags($_POST['remarks'] ?? ''));
 $source_page = trim(strip_tags($_POST['source_page'] ?? 'general'));
 $privacy_consent = !empty($_POST['privacy_consent']);
 
@@ -141,6 +142,7 @@ $lead = [
         'packaging' => $packaging,
         'destination' => $destination,
         'delivery_date' => $delivery_date,
+        'remarks' => $remarks,
     ],
     'attachment' => [
         'original_name' => $attachment_original_name,
@@ -167,7 +169,7 @@ $to_email = $site_config['contacts']['email'];
 if (strpos($to_email, '[ENTER') === false && filter_var($to_email, FILTER_VALIDATE_EMAIL)) {
     $subject = "New RFQ: [{$category}] - {$company} ({$lead['id']})";
     
-    $body = "BETTER SUPPLY CORPORATION - RFQ NOTIFICATION\n";
+    $body = "BETTER SUPPLY TRADING ESTABLISHMENT - RFQ NOTIFICATION\n";
     $body .= "=================================================\n\n";
     $body .= "Reference ID: {$lead['id']}\n";
     $body .= "Date / Time: {$lead['timestamp']}\n";
@@ -183,7 +185,8 @@ if (strpos($to_email, '[ENTER') === false && filter_var($to_email, FILTER_VALIDA
     $body .= "Quantity: {$quantity} {$unit}\n";
     $body .= "Packaging: " . ($packaging ?: 'Standard / Bulk') . "\n";
     $body .= "Delivery Destination: {$destination}\n";
-    $body .= "Required Delivery Schedule: " . ($delivery_date ?: 'Standard') . "\n\n";
+    $body .= "Required Delivery Schedule: " . ($delivery_date ?: 'Standard') . "\n";
+    $body .= "Additional Remarks: " . ($remarks ?: 'None') . "\n\n";
     if ($saved_attachment_path) {
         $body .= "Attachment: {$site_config['base_url']}/{$saved_attachment_path} ({$attachment_original_name})\n";
     }

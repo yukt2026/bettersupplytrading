@@ -32,6 +32,7 @@ $valid_routes = [
     'other-trading' => 'other-trading.php',
     'industries' => 'industries.php',
     'international-trading' => 'international-trading.php',
+    'global-sourcing' => 'international-trading.php',
     'partners' => 'partners.php',
     'contact' => 'contact.php',
     'privacy' => 'privacy.php',

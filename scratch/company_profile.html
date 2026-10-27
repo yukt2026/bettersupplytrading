@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Better Supply Trading Establishment - Corporate Profile</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            color: #242629;
+            background: #FFFFFF;
+            font-size: 11pt;
+            line-height: 1.5;
+        }
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm 18mm;
+            page-break-after: always;
+            position: relative;
+            background: #FFFFFF;
+        }
+        .header-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #005B3F;
+            padding-bottom: 12px;
+            margin-bottom: 24px;
+        }
+        .logo-img {
+            height: 48px;
+            width: auto;
+        }
+        .header-tagline {
+            text-align: right;
+            font-size: 9pt;
+            color: #6D7472;
+            font-weight: 600;
+        }
+        .header-tagline span {
+            color: #005B3F;
+            font-weight: 700;
+            display: block;
+            font-size: 11pt;
+        }
+        .hero-box {
+            background: linear-gradient(135deg, #005B3F 0%, #0B6B4D 100%);
+            color: white;
+            padding: 24px 28px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(0, 91, 63, 0.15);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(196, 154, 90, 0.25);
+            border: 1px solid #C49A5A;
+            color: #F6F3ED;
+            font-size: 8pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        .hero-title {
+            font-size: 20pt;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 0 0 10px 0;
+            color: #FFFFFF;
+        }
+        .hero-subtitle {
+            font-size: 10.5pt;
+            color: #E2E8F0;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .section-title {
+            font-size: 13pt;
+            font-weight: 800;
+            color: #005B3F;
+            border-left: 4px solid #C49A5A;
+            padding-left: 10px;
+            margin-top: 22px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .text-lead {
+            font-size: 10pt;
+            color: #4A5568;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+        }
+        .card {
+            background: #F6F3ED;
+            border: 1px solid #DAD2C5;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+        .card-title {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #242629;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .card-num {
+            background: #005B3F;
+            color: white;
+            font-weight: 700;
+            font-size: 8pt;
+            padding: 2px 7px;
+            border-radius: 4px;
+        }
+        .card-body {
+            font-size: 8.5pt;
+            color: #4A5568;
+            line-height: 1.4;
+        }
+        .cat-card {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+        .cat-card-priority {
+            border: 1.5px solid #005B3F;
+            background: #F9FDFB;
+        }
+        .cat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+        .cat-title {
+            font-size: 10pt;
+            font-weight: 800;
+            color: #242629;
+        }
+        .cat-badge {
+            font-size: 7.5pt;
+            font-weight: 700;
+            color: #005B3F;
+            background: #E6F3EE;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+        .cat-desc {
+            font-size: 8.5pt;
+            color: #4A5568;
+            margin-bottom: 6px;
+        }
+        .cat-items {
+            font-size: 8pt;
+            color: #2D3748;
+            padding-left: 14px;
+            margin: 0;
+            column-count: 2;
+            column-gap: 14px;
+        }
+        .cat-items li {
+            margin-bottom: 2px;
+        }
+        .footer-bar {
+            position: absolute;
+            bottom: 12mm;
+            left: 18mm;
+            right: 18mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #E2E8F0;
+            padding-top: 10px;
+            font-size: 8pt;
+            color: #718096;
+        }
+        .contact-box {
+            background: #F6F3ED;
+            border: 1.5px solid #DAD2C5;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 16px;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .contact-person {
+            background: white;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+        }
+        .person-name {
+            font-weight: 800;
+            font-size: 10pt;
+            color: #005B3F;
+            margin-bottom: 2px;
+        }
+        .person-title {
+            font-size: 8pt;
+            color: #718096;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .person-detail {
+            font-size: 8.5pt;
+            color: #2D3748;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page">
+    <div class="header-bar">
+        <img src="C:/xampp/htdocs/bettersupplytrading/public/images/logo-horizontal-en.svg" alt="Better Supply Trading Establishment" class="logo-img">
+        <div class="header-tagline">
+            <span>Better Supply Trading Establishment</span>
+            Connecting Markets. Supplying Industries.
+        </div>
+    </div>
+
+    <div class="hero-box">
+        <span class="hero-badge">Saudi B2B Trading & Procurement Hub</span>
+        <h1 class="hero-title">Industrial, Chemical & Agricultural Trading Solutions</h1>
+        <p class="hero-subtitle">
+            Better Supply Trading Establishment is a Saudi-based B2B trading and sourcing company connecting businesses with reliable manufacturers, industrial products, chemical materials, agricultural inputs, machinery, and international procurement solutions across Saudi Arabia, the GCC, and global markets.
+        </p>
+    </div>
+
+    <div class="section-title">About Better Supply Trading</div>
+    <p class="text-lead">
+        Headquartered strategically in Dammam, Eastern Province, Better Supply serves as an agile commercial intermediary and supply partner. Leveraging our proximity to major port infrastructure and industrial cities (Jubail, Dammam, Ras Al Khair, Riyadh), we coordinate high-volume procurement, technical specification matching, quality verification, and reliable logistics execution for industrial plants, agricultural operators, and EPC contractors.
+    </p>
+
+    <div class="grid-2" style="margin-bottom: 20px;">
+        <div class="card">
+            <div class="card-title"><span class="card-num">01</span> Our Strategic Mission</div>
+            <div class="card-body">To connect manufacturers, distributors, and commercial buyers through efficient sourcing, transparent communication, and dependable procurement coordination.</div>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="card-num">02</span> Our Vision & Alignment</div>
+            <div class="card-body">To develop a recognized international trading house supporting Saudi Vision 2030 through industrial diversification, agricultural resilience, and reliable global trade corridors.</div>
+        </div>
+    </div>
+
+    <div class="section-title">The 4-Step Procurement Discipline</div>
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title"><span class="card-num">Step 1</span> Inquiry & Specification Review</div>
+            <div class="card-body">We analyze exact material requirements, purity thresholds, standard certifications, quantities, and target delivery timelines.</div>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="card-num">Step 2</span> Verified Source Qualification</div>
+            <div class="card-body">We evaluate verified global manufacturers, request Certificates of Analysis (COA/TDS), and verify export readiness.</div>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="card-num">Step 3</span> Transparent Commercial Proposal</div>
+            <div class="card-body">We deliver comprehensive proposals with transparent Incoterms (CIF, FOB, DDP), pricing, and production lead times.</div>
+        </div>
+        <div class="card">
+            <div class="card-title"><span class="card-num">Step 4</span> Logistics & Shipment Execution</div>
+            <div class="card-body">We handle order execution, customs documentation, sea/land freight coordination, and verified on-schedule delivery.</div>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <span>Better Supply Trading Establishment • Dammam, KSA</span>
+        <span>www.bettersupplytrading.com • info@bettersupplytrading.com</span>
+        <span>Page 1 of 2</span>
+    </div>
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page">
+    <div class="header-bar">
+        <img src="C:/xampp/htdocs/bettersupplytrading/public/images/logo-horizontal-en.svg" alt="Better Supply Trading Establishment" class="logo-img">
+        <div class="header-tagline">
+            <span>Corporate Product Portfolio</span>
+            Divisions A Through I
+        </div>
+    </div>
+
+    <div class="section-title" style="margin-top: 0;">Core Products & Sourcing Divisions</div>
+
+    <!-- Category A -->
+    <div class="cat-card cat-card-priority">
+        <div class="cat-header">
+            <span class="cat-title">A. Agrochemicals, Pesticides & Agricultural Products</span>
+            <span class="cat-badge">Primary Focus • Agriculture</span>
+        </div>
+        <div class="cat-desc">Commercial crop nutrition, fertilizers (Urea, NPK, DAP, SOP), soil conditioners, organic coco peat media, and crop protection inputs.</div>
+        <ul class="cat-items">
+            <li>Agricultural Chemicals & Agrochemicals</li>
+            <li>Pesticides & Crop Protection Products</li>
+            <li>Fertilizers & Plant Nutrients</li>
+            <li>Soil Conditioners & Additives</li>
+            <li>Agricultural Raw Materials</li>
+            <li>Coco Peat & Coir Growing Media</li>
+        </ul>
+    </div>
+
+    <!-- Category B -->
+    <div class="cat-card cat-card-priority">
+        <div class="cat-header">
+            <span class="cat-title">B. Industrial, Specialty & Water Treatment Chemicals</span>
+            <span class="cat-badge">Primary Focus • Chemicals</span>
+        </div>
+        <div class="cat-desc">Bulk industrial process chemicals, RO membrane antiscalants, coagulants (PAC), SMBS, biocides, caustic soda, and industrial cleaning solvents.</div>
+        <ul class="cat-items">
+            <li>Industrial Base Chemicals</li>
+            <li>Specialty Chemical Formulations</li>
+            <li>RO Desalination & Water Treatment</li>
+            <li>Industrial Cleaning Agents</li>
+            <li>Chemical Processing Materials</li>
+            <li>Consumable Chemical Inputs</li>
+        </ul>
+    </div>
+
+    <!-- Category C -->
+    <div class="cat-card cat-card-priority">
+        <div class="cat-header">
+            <span class="cat-title">C. Industrial Salt & Bulk Chemical Raw Materials</span>
+            <span class="cat-badge">Bulk Minerals</span>
+        </div>
+        <div class="cat-desc">High-purity sodium chloride (NaCl 99%+), vacuum salt, coarse and granular industrial salts, water softening salts, and bulk inorganic raw materials.</div>
+        <ul class="cat-items">
+            <li>Industrial Grade Sodium Chloride (NaCl)</li>
+            <li>Coarse & Granular Solar Salt</li>
+            <li>Refined Vacuum Evaporated Salt</li>
+            <li>Water Softener Regeneration Salt</li>
+            <li>Industrial Process Raw Materials</li>
+            <li>Specification-Based Bulk Procurement</li>
+        </ul>
+    </div>
+
+    <!-- Category D - I Summary Cards -->
+    <div class="grid-2" style="margin-top: 8px;">
+        <div class="cat-card">
+            <div class="cat-title" style="font-size: 9pt;">D. Building & Construction Materials</div>
+            <div class="cat-desc" style="font-size: 7.5pt; margin-bottom: 0;">Structural steel, pipes & fittings, HVAC, electrical installation, waterproofing & EPC supplies.</div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-title" style="font-size: 9pt;">E. Industrial Machinery & Equipment</div>
+            <div class="cat-desc" style="font-size: 7.5pt; margin-bottom: 0;">Manufacturing machinery, workshop tools, pumps, compressors, and material handling systems.</div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-title" style="font-size: 9pt;">F. Industrial Spare Parts & Components</div>
+            <div class="cat-desc" style="font-size: 7.5pt; margin-bottom: 0;">Bearings, mechanical seals, gaskets, hydraulic & pneumatic valves, and OEM replacement parts.</div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-title" style="font-size: 9pt;">G. Mechanical, Electrical & MRO Supplies</div>
+            <div class="cat-desc" style="font-size: 7.5pt; margin-bottom: 0;">Industrial hand & power tools, safety PPE gear, industrial cables, and engineering supplies.</div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-title" style="font-size: 9pt;">H. Other Trading & Specialized Equipment</div>
+            <div class="cat-desc" style="font-size: 7.5pt; margin-bottom: 0;">Corrugated cartons, packaging bags, office machinery, and specialized commercial utility vehicles.</div>
+        </div>
+        <div class="cat-card">
+            <div class="cat-title" style="font-size: 9pt;">I. International Sourcing, Import & Export</div>
+            <div class="cat-desc" style="font-size: 7.5pt; margin-bottom: 0;">Cross-border manufacturer sourcing, South Asia corridors, bulk commodities & supply chain management.</div>
+        </div>
+    </div>
+
+    <!-- Contact & Commercial Desk Box -->
+    <div class="contact-box">
+        <div style="font-size: 9pt; font-weight: 800; color: #005B3F; margin-bottom: 8px; text-transform: uppercase;">
+            Commercial Contacts & Dammam Headquarters
+        </div>
+        <div class="contact-grid">
+            <div class="contact-person">
+                <div class="person-name">Meharsha O.N</div>
+                <div class="person-title">Sales Executive • Commercial Enquiries</div>
+                <div class="person-detail"><strong>Phone / WhatsApp:</strong> +966 59 951 0213</div>
+                <div class="person-detail"><strong>Email:</strong> sales@bettersupplytrading.com</div>
+            </div>
+            <div class="contact-person">
+                <div class="person-name">Sayed Alavi</div>
+                <div class="person-title">Operations Director • Supply Logistics</div>
+                <div class="person-detail"><strong>Phone / WhatsApp:</strong> +966 50 285 1077 (0502851077)</div>
+                <div class="person-detail"><strong>Email:</strong> operations@bettersupplytrading.com</div>
+            </div>
+        </div>
+        <div style="margin-top: 10px; font-size: 8pt; color: #4A5568; border-top: 1px solid #DAD2C5; padding-top: 6px; display: flex; justify-content: space-between;">
+            <span><strong>Address:</strong> King Abdulaziz Road, Al Badi Dist. P.O. Box 5513, Dammam 32415, KSA</span>
+            <span><strong>General RFQ:</strong> info@bettersupplytrading.com</span>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <span>Better Supply Trading Establishment • Dammam, KSA</span>
+        <span>www.bettersupplytrading.com • info@bettersupplytrading.com</span>
+        <span>Page 2 of 2</span>
+    </div>
+</div>
+
+</body>
+</html>

@@ -331,62 +331,61 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                     <?php endif; ?>
                 </a>
 
-                <!-- Desktop Navigation Links (>=1200px: Single-Row, responsive gaps & text, vertical center) -->
-                <nav class="hidden nav:flex items-center gap-2.5 xl:gap-5 2xl:gap-7 text-[13.5px] xl:text-[14.5px] 2xl:text-[15px] font-semibold text-bscharcoal">
+                <!-- Desktop Navigation Links (Recommended Main Navigation: Home | About Us | Products & Services | Industries | Global Sourcing | Partnerships | Contact Us) -->
+                <nav class="hidden nav:flex items-center gap-2 xl:gap-4 2xl:gap-6 text-[13.5px] xl:text-[14px] 2xl:text-[14.5px] font-semibold text-bscharcoal">
                     
+                    <!-- Home -->
+                    <a href="<?= route_url('') ?>" class="nav-item-link hover:text-bsemerald transition-colors <?= ($page === 'home') ? 'is-active text-bsemerald font-bold' : '' ?>">
+                        <?= t('nav.home') ?>
+                    </a>
+
                     <!-- About Us -->
                     <a href="<?= route_url('about') ?>" class="nav-item-link hover:text-bsemerald transition-colors <?= ($page === 'about') ? 'is-active text-bsemerald font-bold' : '' ?>">
                         <?= t('nav.about') ?>
                     </a>
 
-                    <!-- Products & Services Dropdown (Chevron sitting right next with 4-6px gap) -->
+                    <!-- Products & Services Dropdown (Organized Multi-Category Menu A - I) -->
                     <div class="relative dropdown py-2">
                         <button type="button" class="nav-item-link hover:text-bsemerald inline-flex items-center transition-colors focus:outline-none <?= in_array($page, ['products', 'industrial-salts', 'oilfield-chemicals', 'water-treatment', 'fertilizers', 'coco-peat', 'packaging-disposables', 'other-trading']) ? 'is-active text-bsemerald font-bold' : '' ?>" aria-haspopup="true">
                             <span><?= t('nav.products') ?></span>
-                            <!-- Chevron with precise 5px gap -->
-                            <svg class="w-4 h-4 text-bsmuted ms-1.5 group-hover:text-bsemerald transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-4 h-4 text-bsmuted ms-1 group-hover:text-bsemerald transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         
-                        <!-- Dropdown Menu -->
-                        <div class="dropdown-menu hidden absolute <?= ($lang === 'ar') ? 'right-0' : 'left-0' ?> top-full w-80 bg-white border border-stone-200 rounded-xl shadow-2xl py-2 z-50">
-                            <a href="<?= route_url('products') ?>" class="block px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-bsemerald border-b border-stone-100 hover:bg-stone-50 transition-colors">
-                                <?= t('nav.products_overview') ?> &rarr;
+                        <!-- Dropdown Menu (Organized A - I Display Sequence) -->
+                        <div class="dropdown-menu hidden absolute <?= ($lang === 'ar') ? 'right-0' : 'left-0' ?> top-full w-96 bg-white border border-stone-200 rounded-xl shadow-2xl py-2 z-50">
+                            <a href="<?= route_url('products') ?>" class="flex items-center justify-between px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-bsemerald border-b border-stone-100 hover:bg-stone-50 transition-colors">
+                                <span><?= t('nav.products_overview') ?></span>
+                                <span class="rtl:rotate-180">&rarr;</span>
                             </a>
-                            <?php if (is_category_active('industrial_salts')): ?>
-                            <a href="<?= route_url('industrial-salts') ?>" class="block px-4 py-2.5 text-sm hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors <?= ($page === 'industrial-salts') ? 'bg-stone-100 text-bsemerald font-bold' : '' ?>">
-                                <?= t('nav.industrial_salts') ?>
-                            </a>
-                            <?php endif; ?>
-                            <?php if (is_category_active('oilfield_chemicals')): ?>
-                            <a href="<?= route_url('oilfield-chemicals') ?>" class="block px-4 py-2.5 text-sm hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors <?= ($page === 'oilfield-chemicals') ? 'bg-stone-100 text-bsemerald font-bold' : '' ?>">
-                                <?= t('nav.oilfield_chemicals') ?>
-                            </a>
-                            <?php endif; ?>
-                            <?php if (is_category_active('water_treatment')): ?>
-                            <a href="<?= route_url('water-treatment') ?>" class="block px-4 py-2.5 text-sm hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors <?= ($page === 'water-treatment') ? 'bg-stone-100 text-bsemerald font-bold' : '' ?>">
-                                <?= t('nav.water_treatment') ?>
-                            </a>
-                            <?php endif; ?>
-                            <?php if (is_category_active('fertilizers')): ?>
-                            <a href="<?= route_url('fertilizers') ?>" class="block px-4 py-2.5 text-sm hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors <?= ($page === 'fertilizers') ? 'bg-stone-100 text-bsemerald font-bold' : '' ?>">
-                                <?= t('nav.fertilizers') ?>
-                            </a>
-                            <?php endif; ?>
-                            <?php if (is_category_active('coco_peat')): ?>
-                            <a href="<?= route_url('coco-peat') ?>" class="block px-4 py-2.5 text-sm hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors <?= ($page === 'coco-peat') ? 'bg-stone-100 text-bsemerald font-bold' : '' ?>">
-                                <?= t('nav.coco_peat') ?>
-                            </a>
-                            <?php endif; ?>
-                            <?php if (is_category_active('packaging_disposables')): ?>
-                            <a href="<?= route_url('packaging-disposables') ?>" class="block px-4 py-2.5 text-sm hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors <?= ($page === 'packaging-disposables') ? 'bg-stone-100 text-bsemerald font-bold' : '' ?>">
-                                <?= t('nav.packaging_disposables') ?>
-                            </a>
-                            <?php endif; ?>
-                            <?php if (is_category_active('other_trading')): ?>
-                            <a href="<?= route_url('other-trading') ?>" class="block px-4 py-2.5 text-sm hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors border-t border-stone-100 <?= ($page === 'other-trading') ? 'bg-stone-100 text-bsemerald font-bold' : '' ?>">
-                                <?= t('nav.other_trading') ?>
-                            </a>
-                            <?php endif; ?>
+                            <div class="max-h-[70vh] overflow-y-auto divide-y divide-stone-100 text-xs">
+                                <a href="<?= route_url('products') ?>#cat-a" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-bsgold block">A. <?= t('nav.cat_a') ?></span>
+                                </a>
+                                <a href="<?= route_url('products') ?>#cat-b" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-bsgold block">B. <?= t('nav.cat_b') ?></span>
+                                </a>
+                                <a href="<?= route_url('products') ?>#cat-c" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-bsgold block">C. <?= t('nav.cat_c') ?></span>
+                                </a>
+                                <a href="<?= route_url('products') ?>#cat-d" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-600 block">D. <?= t('nav.cat_d') ?></span>
+                                </a>
+                                <a href="<?= route_url('products') ?>#cat-e" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-600 block">E. <?= t('nav.cat_e') ?></span>
+                                </a>
+                                <a href="<?= route_url('products') ?>#cat-f" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-600 block">F. <?= t('nav.cat_f') ?></span>
+                                </a>
+                                <a href="<?= route_url('products') ?>#cat-g" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-600 block">G. <?= t('nav.cat_g') ?></span>
+                                </a>
+                                <a href="<?= route_url('products') ?>#cat-h" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-600 block">H. <?= t('nav.cat_h') ?></span>
+                                </a>
+                                <a href="<?= route_url('international-trading') ?>" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-bsemerald block">I. <?= t('nav.cat_i') ?></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -395,9 +394,9 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                         <?= t('nav.industries') ?>
                     </a>
                     
-                    <!-- International Trading -->
+                    <!-- Global Sourcing -->
                     <a href="<?= route_url('international-trading') ?>" class="nav-item-link hover:text-bsemerald transition-colors <?= ($page === 'international-trading') ? 'is-active text-bsemerald font-bold' : '' ?>">
-                        <?= t('nav.international_trading') ?>
+                        <?= t('nav.global_sourcing') ?>
                     </a>
                     
                     <!-- Partnerships -->
@@ -405,21 +404,27 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                         <?= t('nav.partners') ?>
                     </a>
 
-                    <!-- Contact / RFQ -->
+                    <!-- Contact Us -->
                     <a href="<?= route_url('contact') ?>" class="nav-item-link hover:text-bsemerald transition-colors <?= ($page === 'contact') ? 'is-active text-bsemerald font-bold' : '' ?>">
                         <?= t('nav.contact') ?>
                     </a>
                 </nav>
 
-                <!-- Actions: Language Switcher Pill + Request RFQ Button (>=1200px) -->
-                <div class="hidden nav:flex items-center gap-2.5 xl:gap-4 shrink-0 ms-2 xl:ms-5">
-                    <!-- Single Language Switcher Pill inside Main Nav -->
+                <!-- Actions: Language Switcher Pill + Request Quotation Button (>=1200px) -->
+                <div class="hidden nav:flex items-center gap-2 xl:gap-3 shrink-0 ms-2 xl:ms-4">
+                    <!-- Download Company Profile Button -->
+                    <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="hidden xl:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-emerald-300 bg-white hover:bg-emerald-50 text-bsemerald transition-all shadow-xs" title="<?= t('nav.download_profile') ?>">
+                        <svg class="w-3.5 h-3.5 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        <span><?= t('nav.download_profile') ?></span>
+                    </a>
+
+                    <!-- Language Switcher Pill -->
                     <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border border-stone-300 bg-stone-100 hover:bg-stone-200 text-bsemerald hover:text-bsforest transition-all shadow-xs" aria-label="Switch Language">
                         <?= ($lang === 'ar') ? 'EN' : 'العربية' ?>
                     </a>
 
-                    <!-- Single-line Fixed Height RFQ Button (padding 0 16-20px, nowrap) -->
-                    <a href="<?= route_url('contact') ?>#rfq-form" class="h-[40px] xl:h-[44px] px-3.5 xl:px-5 whitespace-nowrap inline-flex items-center justify-center font-bold text-xs xl:text-sm rounded-lg text-white bg-bsemerald hover:bg-bsforest shadow-md transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bsemerald">
+                    <!-- Prominent Request Quotation Button -->
+                    <a href="<?= route_url('contact') ?>#rfq-form" class="h-[42px] px-4 xl:px-5 whitespace-nowrap inline-flex items-center justify-center font-bold text-xs xl:text-sm rounded-lg text-white bg-bsemerald hover:bg-bsforest shadow-md transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bsemerald">
                         <?= t('nav.request_rfq') ?>
                     </a>
                 </div>
@@ -439,152 +444,132 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
     </header>
 
     <!-- =========================================================================
-         MOBILE FULL-SCREEN SLIDE-IN DRAWER (<1200px) - Desert Iron Architecture
+         MOBILE SLIDE-IN DRAWER (<1200px) - Modern Clean Better Supply Interface
          ========================================================================= -->
-    <div id="mobile-drawer" class="fixed inset-0 z-[100] text-white hidden flex-col w-full h-[100dvh] transition-all duration-300 overflow-hidden" style="background-color: #242629 !important;" aria-hidden="true">
+    <div id="mobile-drawer" class="fixed inset-0 z-[100] text-bscharcoal hidden flex-col w-full h-[100dvh] transition-all duration-300 overflow-hidden bg-white" aria-hidden="true">
             
             <!-- Drawer Top Header -->
-            <div class="flex items-center justify-between px-5 h-[68px] border-b border-stone-800 shrink-0" style="background-color: #1A1C1E !important;">
+            <div class="flex items-center justify-between px-5 h-[68px] border-b border-stone-200 shrink-0 bg-stone-50">
                 <a href="<?= route_url('') ?>" class="flex items-center gap-2">
                     <?php if ($lang === 'ar'): ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-ar-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto max-w-[200px] object-contain drop-shadow-md">
+                        <img src="<?= asset_url('public/images/logo-horizontal-ar.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto max-w-[200px] object-contain">
                     <?php else: ?>
-                        <img src="<?= asset_url('public/images/logo-horizontal-en-white.svg') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto max-w-[200px] object-contain drop-shadow-md">
+                        <img src="<?= asset_url('public/images/Better_Supply_Horizontal_Transparent.png') ?>" alt="<?= t('company_name') ?>" class="h-10 w-auto max-w-[200px] object-contain">
                     <?php endif; ?>
                 </a>
                 <div class="flex items-center gap-2">
-                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="text-xs font-bold text-bsgold bg-stone-900 border border-stone-700 px-3 py-1.5 rounded-md">
+                    <a href="<?= route_url($page, t('switch_lang_code')) ?>" class="text-xs font-bold text-bsemerald bg-white border border-stone-300 px-3 py-1.5 rounded-md shadow-xs">
                         <?= ($lang === 'ar') ? 'EN' : 'العربية' ?>
                     </a>
-                    <button type="button" id="mobile-close-btn" class="w-10 h-10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-stone-800 focus:outline-none rounded-full border border-stone-700 transition-colors" aria-label="Close Navigation Menu">
+                    <button type="button" id="mobile-close-btn" class="w-10 h-10 flex items-center justify-center text-slate-700 hover:text-bsemerald hover:bg-stone-200 focus:outline-none rounded-full border border-stone-300 transition-colors" aria-label="Close Navigation Menu">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
                 </div>
             </div>
 
-            <!-- Scrollable Drawer Body with Rich Menu Cards -->
-            <div class="flex-1 overflow-y-auto px-5 py-5 space-y-2.5 text-sm font-medium" style="background-color: #242629 !important;">
+            <!-- Scrollable Drawer Body with Clean Better Supply Cards -->
+            <div class="flex-1 overflow-y-auto px-5 py-5 space-y-2 text-sm font-medium bg-stone-50/60">
                 
-                <!-- 01 Home -->
-                <a href="<?= route_url('') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-700/80 hover:border-bsgold transition-all <?= ($page === 'home') ? 'border-bsgold text-bsgold' : 'text-slate-200' ?>" style="background-color: #2F3236 !important;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950 border border-bsemerald text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">01</div>
-                        <span class="font-semibold"><?= t('nav.home') ?></span>
-                    </div>
+                <!-- Home -->
+                <a href="<?= route_url('') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-200 bg-white hover:border-bsemerald transition-all <?= ($page === 'home') ? 'border-bsemerald text-bsemerald font-bold bg-emerald-50/50' : 'text-slate-800' ?>">
+                    <span class="font-semibold"><?= t('nav.home') ?></span>
                     <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
-                <!-- 02 About -->
-                <a href="<?= route_url('about') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-700/80 hover:border-bsgold transition-all <?= ($page === 'about') ? 'border-bsgold text-bsgold' : 'text-slate-200' ?>" style="background-color: #2F3236 !important;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950 border border-bsemerald text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">02</div>
-                        <span class="font-semibold"><?= t('nav.about') ?></span>
-                    </div>
+                <!-- About Us -->
+                <a href="<?= route_url('about') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-200 bg-white hover:border-bsemerald transition-all <?= ($page === 'about') ? 'border-bsemerald text-bsemerald font-bold bg-emerald-50/50' : 'text-slate-800' ?>">
+                    <span class="font-semibold"><?= t('nav.about') ?></span>
                     <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
 
-                <!-- 03 Products & Services Accordion -->
-                <div class="rounded-xl border border-stone-700/80 p-3.5" style="background-color: #2F3236 !important;">
-                    <button type="button" id="mobile-products-accordion-btn" class="w-full flex items-center justify-between text-start font-medium hover:text-emerald-400 focus:outline-none min-h-[36px]">
-                        <div class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded bg-emerald-950 border border-bsemerald text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">03</div>
-                            <span class="font-bold text-white"><?= t('nav.products') ?> (7)</span>
-                        </div>
-                        <svg id="accordion-arrow" class="w-4 h-4 text-bsgold transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                <!-- Products & Services Accordion -->
+                <div class="rounded-xl border border-stone-200 bg-white p-3.5 shadow-xs">
+                    <button type="button" id="mobile-products-accordion-btn" class="w-full flex items-center justify-between text-start font-medium hover:text-bsemerald focus:outline-none min-h-[36px]">
+                        <span class="font-bold text-bscharcoal"><?= t('nav.products') ?> (9)</span>
+                        <svg id="accordion-arrow" class="w-4 h-4 text-bsemerald transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     
-                    <div id="mobile-products-accordion-body" class="hidden border-s-2 border-bsgold ms-3 ps-3 pt-3 pb-1 space-y-2 text-xs mt-2" style="background-color: #1A1C1E !important; border-radius: 8px; padding: 12px;">
-                        <a href="<?= route_url('products') ?>" class="block py-1.5 font-bold uppercase tracking-wider text-bsgold hover:text-yellow-300">
+                    <div id="mobile-products-accordion-body" class="hidden border-s-2 border-bsemerald ms-2 ps-3 pt-3 pb-1 space-y-2 text-xs mt-2 bg-stone-50 rounded-lg p-3">
+                        <a href="<?= route_url('products') ?>" class="block py-1.5 font-bold uppercase tracking-wider text-bsemerald border-b border-stone-200">
                             <?= t('nav.products_overview') ?> &rarr;
                         </a>
-                        <?php if (is_category_active('industrial_salts')): ?>
-                        <a href="<?= route_url('industrial-salts') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'industrial-salts') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
-                            <?= t('nav.industrial_salts') ?>
+                        <a href="<?= route_url('products') ?>#cat-a" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
+                            A. <?= t('nav.cat_a') ?>
                         </a>
-                        <?php endif; ?>
-                        <?php if (is_category_active('oilfield_chemicals')): ?>
-                        <a href="<?= route_url('oilfield-chemicals') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'oilfield-chemicals') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
-                            <?= t('nav.oilfield_chemicals') ?>
+                        <a href="<?= route_url('products') ?>#cat-b" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
+                            B. <?= t('nav.cat_b') ?>
                         </a>
-                        <?php endif; ?>
-                        <?php if (is_category_active('water_treatment')): ?>
-                        <a href="<?= route_url('water-treatment') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'water-treatment') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
-                            <?= t('nav.water_treatment') ?>
+                        <a href="<?= route_url('products') ?>#cat-c" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
+                            C. <?= t('nav.cat_c') ?>
                         </a>
-                        <?php endif; ?>
-                        <?php if (is_category_active('fertilizers')): ?>
-                        <a href="<?= route_url('fertilizers') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'fertilizers') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
-                            <?= t('nav.fertilizers') ?>
+                        <a href="<?= route_url('products') ?>#cat-d" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            D. <?= t('nav.cat_d') ?>
                         </a>
-                        <?php endif; ?>
-                        <?php if (is_category_active('coco_peat')): ?>
-                        <a href="<?= route_url('coco-peat') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'coco-peat') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
-                            <?= t('nav.coco_peat') ?>
+                        <a href="<?= route_url('products') ?>#cat-e" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            E. <?= t('nav.cat_e') ?>
                         </a>
-                        <?php endif; ?>
-                        <?php if (is_category_active('packaging_disposables')): ?>
-                        <a href="<?= route_url('packaging-disposables') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'packaging-disposables') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
-                            <?= t('nav.packaging_disposables') ?>
+                        <a href="<?= route_url('products') ?>#cat-f" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            F. <?= t('nav.cat_f') ?>
                         </a>
-                        <?php endif; ?>
-                        <?php if (is_category_active('other_trading')): ?>
-                        <a href="<?= route_url('other-trading') ?>" class="block py-1.5 hover:text-emerald-400 <?= ($page === 'other-trading') ? 'text-emerald-400 font-bold' : 'text-slate-300' ?>">
-                            <?= t('nav.other_trading') ?>
+                        <a href="<?= route_url('products') ?>#cat-g" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            G. <?= t('nav.cat_g') ?>
                         </a>
-                        <?php endif; ?>
+                        <a href="<?= route_url('products') ?>#cat-h" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            H. <?= t('nav.cat_h') ?>
+                        </a>
+                        <a href="<?= route_url('international-trading') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald font-bold text-bsemerald">
+                            I. <?= t('nav.cat_i') ?>
+                        </a>
                     </div>
                 </div>
 
-                <!-- 04 Industries -->
-                <a href="<?= route_url('industries') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-700/80 hover:border-bsgold transition-all <?= ($page === 'industries') ? 'border-bsgold text-bsgold' : 'text-slate-200' ?>" style="background-color: #2F3236 !important;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950 border border-bsemerald text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">04</div>
-                        <span class="font-semibold"><?= t('nav.industries') ?></span>
-                    </div>
+                <!-- Industries -->
+                <a href="<?= route_url('industries') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-200 bg-white hover:border-bsemerald transition-all <?= ($page === 'industries') ? 'border-bsemerald text-bsemerald font-bold bg-emerald-50/50' : 'text-slate-800' ?>">
+                    <span class="font-semibold"><?= t('nav.industries') ?></span>
                     <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
-                <!-- 05 International Trading -->
-                <a href="<?= route_url('international-trading') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-700/80 hover:border-bsgold transition-all <?= ($page === 'international-trading') ? 'border-bsgold text-bsgold' : 'text-slate-200' ?>" style="background-color: #2F3236 !important;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950 border border-bsemerald text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">05</div>
-                        <span class="font-semibold"><?= t('nav.international_trading') ?></span>
-                    </div>
+                <!-- Global Sourcing -->
+                <a href="<?= route_url('international-trading') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-200 bg-white hover:border-bsemerald transition-all <?= ($page === 'international-trading') ? 'border-bsemerald text-bsemerald font-bold bg-emerald-50/50' : 'text-slate-800' ?>">
+                    <span class="font-semibold"><?= t('nav.global_sourcing') ?></span>
                     <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
-                <!-- 06 Partnerships -->
-                <a href="<?= route_url('partners') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-700/80 hover:border-bsgold transition-all <?= ($page === 'partners') ? 'border-bsgold text-bsgold' : 'text-slate-200' ?>" style="background-color: #2F3236 !important;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950 border border-bsemerald text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">06</div>
-                        <span class="font-semibold"><?= t('nav.partners') ?></span>
-                    </div>
+                <!-- Partnerships -->
+                <a href="<?= route_url('partners') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-200 bg-white hover:border-bsemerald transition-all <?= ($page === 'partners') ? 'border-bsemerald text-bsemerald font-bold bg-emerald-50/50' : 'text-slate-800' ?>">
+                    <span class="font-semibold"><?= t('nav.partners') ?></span>
                     <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
                 </a>
                 
-                <!-- 07 Contact / RFQ -->
-                <a href="<?= route_url('contact') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-700/80 hover:border-bsgold transition-all <?= ($page === 'contact') ? 'border-bsgold text-bsgold' : 'text-slate-200' ?>" style="background-color: #2F3236 !important;">
-                    <div class="flex items-center gap-3">
-                        <div class="w-7 h-7 rounded bg-emerald-950 border border-bsemerald text-emerald-400 flex items-center justify-center text-xs font-mono font-bold">07</div>
-                        <span class="font-semibold"><?= t('nav.contact') ?></span>
-                    </div>
+                <!-- Contact Us -->
+                <a href="<?= route_url('contact') ?>" class="flex items-center justify-between p-3.5 rounded-xl border border-stone-200 bg-white hover:border-bsemerald transition-all <?= ($page === 'contact') ? 'border-bsemerald text-bsemerald font-bold bg-emerald-50/50' : 'text-slate-800' ?>">
+                    <span class="font-semibold"><?= t('nav.contact') ?></span>
                     <span class="text-xs text-slate-400 rtl:rotate-180">&rarr;</span>
+                </a>
+
+                <!-- Download Company Profile Link -->
+                <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl border border-emerald-300 bg-emerald-50/30 text-bsemerald hover:bg-emerald-50 transition-all font-semibold">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        <span><?= t('nav.download_profile') ?> (PDF)</span>
+                    </div>
+                    <span class="text-xs text-bsemerald rtl:rotate-180">&rarr;</span>
                 </a>
             </div>
 
             <!-- Drawer Bottom Action Dock -->
-            <div class="p-5 border-t border-stone-800 shrink-0 space-y-3" style="background-color: #1A1C1E !important;">
+            <div class="p-5 border-t border-stone-200 shrink-0 space-y-3 bg-white">
                 <div class="grid grid-cols-2 gap-2 text-xs">
-                    <a href="tel:<?= htmlspecialchars($site_config['contacts']['phone']) ?>" class="bg-stone-800 hover:bg-stone-700 text-slate-200 text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 border border-stone-700">
-                        <svg class="w-3.5 h-3.5 text-bsgold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <span><?= ($lang === 'ar') ? 'اتصال' : 'Call Desk' ?></span>
+                    <a href="tel:<?= htmlspecialchars($site_config['contacts']['phone']) ?>" class="bg-stone-100 hover:bg-stone-200 text-slate-800 text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 border border-stone-300">
+                        <svg class="w-3.5 h-3.5 text-bsemerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span><?= ($lang === 'ar') ? 'اتصال مباشر' : 'Call Desk' ?></span>
                     </a>
-                    <a href="mailto:<?= htmlspecialchars($site_config['contacts']['email']) ?>" class="bg-stone-800 hover:bg-stone-700 text-slate-200 text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 border border-stone-700">
-                        <svg class="w-3.5 h-3.5 text-bsgold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <a href="mailto:<?= htmlspecialchars($site_config['contacts']['email']) ?>" class="bg-stone-100 hover:bg-stone-200 text-slate-800 text-center py-2.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 border border-stone-300">
+                        <svg class="w-3.5 h-3.5 text-bsemerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         <span><?= ($lang === 'ar') ? 'البريد' : 'Email' ?></span>
                     </a>
                 </div>
-                <a href="<?= route_url('contact') ?>#rfq-form" onclick="closeDrawer()" class="w-full h-[44px] flex items-center justify-center font-bold text-xs uppercase tracking-wider text-white bg-bsemerald hover:bg-bsforest rounded-lg shadow-lg transition-all">
+                <a href="<?= route_url('contact') ?>#rfq-form" onclick="closeDrawer()" class="w-full h-[44px] flex items-center justify-center font-bold text-xs uppercase tracking-wider text-white bg-bsemerald hover:bg-bsforest rounded-lg shadow-md transition-all">
                     <?= t('nav.request_rfq') ?>
                 </a>
             </div>

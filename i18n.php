@@ -142,21 +142,45 @@ function render_organization_schema() {
     
     $schema = [
         '@context' => 'https://schema.org',
-        '@type' => 'Corporation',
+        '@type' => 'Organization',
         'name' => $site_config['app_name_en'],
         'alternateName' => $site_config['app_name_ar'],
         'url' => $site_config['base_url'] . '/',
         'logo' => $site_config['base_url'] . '/public/images/logo.svg',
-        'description' => 'B2B sourcing and wholesale trading of industrial salts, oilfield drilling materials, water treatment chemicals, fertilizers and commercial packaging.',
+        'description' => 'Better Supply Trading Establishment is a Saudi-based B2B trading and sourcing company connecting businesses with reliable manufacturers, industrial products, chemical materials, agricultural inputs, machinery, and international procurement solutions.',
         'address' => [
             '@type' => 'PostalAddress',
+            'streetAddress' => 'King Abdulaziz Road, Al Badi Dist. P.O. Box 5513',
             'addressLocality' => 'Dammam',
             'addressRegion' => 'Eastern Province',
+            'postalCode' => '32415',
             'addressCountry' => 'SA',
+        ],
+        'contactPoint' => [
+            [
+                '@type' => 'ContactPoint',
+                'telephone' => '+966-59-951-0213',
+                'contactType' => 'sales',
+                'email' => 'sales@bettersupplytrading.com',
+                'areaServed' => ['SA', 'GCC'],
+                'availableLanguage' => ['English', 'Arabic']
+            ],
+            [
+                '@type' => 'ContactPoint',
+                'telephone' => '+966-50-285-1077',
+                'contactType' => 'operations',
+                'email' => 'operations@bettersupplytrading.com',
+                'areaServed' => ['SA', 'GCC'],
+                'availableLanguage' => ['English', 'Arabic']
+            ]
         ],
         'areaServed' => [
             ['@type' => 'Country', 'name' => 'Saudi Arabia'],
-            ['@type' => 'GeoCircle', 'name' => 'GCC']
+            ['@type' => 'Country', 'name' => 'United Arab Emirates'],
+            ['@type' => 'Country', 'name' => 'Bahrain'],
+            ['@type' => 'Country', 'name' => 'Qatar'],
+            ['@type' => 'Country', 'name' => 'Kuwait'],
+            ['@type' => 'Country', 'name' => 'Oman']
         ]
     ];
     

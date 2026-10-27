@@ -1,229 +1,201 @@
 <?php
 /**
  * Better Supply Trading Establishment - Products & Services Overview View (views/products.php)
- * Implements PDF Page 03 / Section 02.
+ * Implements Final Requirements Document Section 03: Products & Services (Sequence A - I)
+ * Light, modern B2B trading platform interface with primary visibility to Chemical & Agricultural lines.
  */
 
 $page = 'products';
 require_once __DIR__ . '/../header.php';
 $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-bold';
+$catalog = t('catalog');
 ?>
 
-<!-- Header Banner -->
-<section class="relative bg-slate-950 text-white py-20 border-b border-slate-800 overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-20">
+<!-- =========================================================================
+     HERO BANNER (Dignified Corporate Aesthetic)
+     ========================================================================= -->
+<section class="relative bg-gradient-to-r from-bscharcoal via-[#1a382c] to-bscharcoal text-white py-16 sm:py-24 border-b border-stone-200 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-25">
         <picture>
             <source srcset="<?= img_url('banner_international_trade.webp') ?>" type="image/webp">
-            <img src="<?= img_url('banner_international_trade.jpg') ?>" alt="Cargo containers" class="w-full h-full object-cover">
+            <img src="<?= img_url('banner_international_trade.jpg') ?>" alt="Better Supply International Trading" class="w-full h-full object-cover">
         </picture>
-        <div class="absolute inset-0 bg-slate-950/80"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-bscharcoal via-bscharcoal/80 to-transparent"></div>
     </div>
-    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2 block"><?= t('nav.products') ?></span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bsemerald/30 border border-bsgold/40 text-bsgold text-xs font-bold uppercase tracking-wider mb-4 shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-bsgold animate-pulse"></span>
+            <span><?= ($lang === 'ar') ? 'محفظة التوريد والتجارة الدولية' : 'Products & Sourcing Divisions' ?></span>
+        </div>
+        
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 <?= $headingFont ?>">
             <?= t('pages.products_overview.heading') ?>
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+        
+        <p class="text-base sm:text-xl text-stone-200 max-w-3xl mx-auto font-light leading-relaxed mb-8">
             <?= t('pages.products_overview.subheading') ?>
         </p>
+
+        <!-- Quick Jump Navigation to Categories A through I -->
+        <div class="pt-2 flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto text-xs">
+            <?php foreach ($catalog as $cat_id => $cat): ?>
+            <a href="#cat-<?= $cat_id ?>" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-bsemerald text-white hover:text-white border border-white/15 hover:border-bsemerald transition-all shadow-xs backdrop-blur-xs font-semibold">
+                <span class="text-bsgold font-bold"><?= $cat['letter'] ?>.</span> <?= explode(',', $cat['title'])[0] ?>
+            </a>
+            <?php endforeach; ?>
+        </div>
     </div>
 </section>
 
-<!-- Category Directory Grid -->
-<section class="py-20 bg-slate-900 text-white">
+<!-- =========================================================================
+     TRADING MODEL & SOURCING PRINCIPLES NOTICE
+     ========================================================================= -->
+<section class="py-8 bg-stone-50 border-b border-stone-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Notice box -->
-        <div class="mb-12 p-4 rounded-xl bg-slate-950 border border-slate-800 text-xs sm:text-sm text-slate-400 flex items-center gap-3">
-            <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <span><?= t('pages.products_overview.notice') ?></span>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- 1. Industrial Salts -->
-            <?php if (is_category_active('industrial_salts')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden">
-                        <img src="<?= img_url('banner_industrial_salts.jpg') ?>" alt="Industrial salts" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 mb-1 block">Inorganic Chemical Salts</span>
-                        <h3 class="text-xl font-bold text-white mb-2"><?= t('nav.industrial_salts') ?></h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <?= ($lang === 'ar') ? 'كلوريد الصوديوم الصناعي، ملح الفاكيوم، كلوريد البوتاسيوم، كلوريد الكالسيوم وكبريتات الصوديوم.' : 'Industrial-grade NaCl, vacuum salt, potassium chloride (KCl), calcium chloride (CaCl₂), and sodium sulphate.' ?>
-                        </p>
-                    </div>
+        <div class="p-5 sm:p-6 rounded-2xl bg-white border border-stone-200 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 text-bsemerald flex items-center justify-center shrink-0 mt-0.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                 </div>
-                <div class="p-6 pt-0">
-                    <a href="<?= route_url('industrial-salts') ?>" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-                        <span><?= t('buttons.view_details') ?></span>
-                        <span class="rtl:rotate-180">&rarr;</span>
-                    </a>
+                <div>
+                    <h3 class="text-sm font-bold text-bscharcoal mb-1">
+                        <?= ($lang === 'ar') ? 'التوريد التجاري المعتمد والمطابقة الفنية' : 'Verified Specification Sourcing & Commercial Procurement' ?>
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
+                        <?= t('pages.products_overview.notice') ?>
+                    </p>
                 </div>
             </div>
-            <?php endif; ?>
-
-            <!-- 2. Oilfield Chemicals -->
-            <?php if (is_category_active('oilfield_chemicals')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden">
-                        <img src="<?= img_url('banner_oilfield.jpg') ?>" alt="Oilfield drilling chemicals" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 mb-1 block">Drilling & Completion Brines</span>
-                        <h3 class="text-xl font-bold text-white mb-2"><?= t('nav.oilfield_chemicals') ?></h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <?= ($lang === 'ar') ? 'أملاح سوائل الحفر، بروميد الكالسيوم والصوديوم، الفورمات، البارايت والبنتونايت.' : 'Drilling-fluid salts, clear-brine fluids (CaBr₂, NaBr, Formates), barite, bentonite, and loss circulation materials.' ?>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="<?= route_url('oilfield-chemicals') ?>" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-                        <span><?= t('buttons.view_details') ?></span>
-                        <span class="rtl:rotate-180">&rarr;</span>
-                    </a>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <!-- 3. Water Treatment -->
-            <?php if (is_category_active('water_treatment')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden">
-                        <img src="<?= img_url('banner_water_treatment.jpg') ?>" alt="Water treatment chemicals" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 mb-1 block">Desalination & Utilities</span>
-                        <h3 class="text-xl font-bold text-white mb-2"><?= t('nav.water_treatment') ?></h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <?= ($lang === 'ar') ? 'مانعات تكلس أغشية الـ RO، ميتابيسلفيت الصوديوم، مخثرات PAC، الصودا الكاوية، وملح تجديد الفلاتر.' : 'RO antiscalants, SMBS, polyaluminium chloride (PAC), alum, caustic soda, and high-purity softener salt.' ?>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="<?= route_url('water-treatment') ?>" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-                        <span><?= t('buttons.view_details') ?></span>
-                        <span class="rtl:rotate-180">&rarr;</span>
-                    </a>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <!-- 4. Fertilizers -->
-            <?php if (is_category_active('fertilizers')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden">
-                        <img src="<?= img_url('banner_fertilizers.jpg') ?>" alt="Agricultural fertilizers" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 mb-1 block">Commercial Crop Nutrition</span>
-                        <h3 class="text-xl font-bold text-white mb-2"><?= t('nav.fertilizers') ?></h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <?= ($lang === 'ar') ? 'اليوريا، مركبات NPK الحبيبية والذائبة، الداب (DAP)، سلفات البوتاسيوم ومحسنات التربة.' : 'Urea fertilizer, compound NPKs, DAP/MAP, potassium sulphate (SOP), and soluble humic conditioners.' ?>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="<?= route_url('fertilizers') ?>" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-                        <span><?= t('buttons.view_details') ?></span>
-                        <span class="rtl:rotate-180">&rarr;</span>
-                    </a>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <!-- 5. Coco Peat -->
-            <?php if (is_category_active('coco_peat')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden">
-                        <img src="<?= img_url('banner_coco_peat.jpg') ?>" alt="Coco peat media" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 mb-1 block">India-Origin Natural Media</span>
-                        <h3 class="text-xl font-bold text-white mb-2"><?= t('nav.coco_peat') ?></h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <?= ($lang === 'ar') ? 'قوالب الكوكوبيت المضغوطة 5 كجم، أقراص التشتيل وألواح الزراعة المائية Grow Bags.' : 'Compressed 5 kg blocks, briquettes, coir discs, and UV-stabilized grow bags.' ?>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="<?= route_url('coco-peat') ?>" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-                        <span><?= t('buttons.view_details') ?></span>
-                        <span class="rtl:rotate-180">&rarr;</span>
-                    </a>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <!-- 6. Packaging & Disposables -->
-            <?php if (is_category_active('packaging_disposables')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden">
-                        <img src="<?= img_url('banner_packaging.jpg') ?>" alt="Corrugated packaging" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 mb-1 block">Packaging & Consumables</span>
-                        <h3 class="text-xl font-bold text-white mb-2"><?= t('nav.packaging_disposables') ?></h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <?= ($lang === 'ar') ? 'صناديق الكرتون المضلع، أكياس الكرافت، المستهلكات الورقية الغذائية ومستلزمات الحماية.' : 'Corrugated cartons, shipping boxes, kraft valve sacks, paper foodservice packaging, and hygiene disposables.' ?>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="<?= route_url('packaging-disposables') ?>" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-                        <span><?= t('buttons.view_details') ?></span>
-                        <span class="rtl:rotate-180">&rarr;</span>
-                    </a>
-                </div>
-            </div>
-            <?php endif; ?>
-
-            <!-- 7. Other Trading (Vehicles & Office Machinery) -->
-            <?php if (is_category_active('other_trading')): ?>
-            <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="h-48 overflow-hidden">
-                        <img src="<?= img_url('banner_vehicles.jpg') ?>" alt="Specialized vehicles" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-[10px] font-mono uppercase tracking-wider text-emerald-400 mb-1 block">CR Activities 451011 & 465910</span>
-                        <h3 class="text-xl font-bold text-white mb-2"><?= t('nav.other_trading') ?></h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            <?= ($lang === 'ar') ? 'مركبات الركاب المتخصصة (إسعاف، حافلات صغيرة، جيب) والآلات والمعدات المكتبية بالجملة.' : 'Wholesale specialized passenger vehicles (ambulances, minibuses, jeeps) and office machinery.' ?>
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 pt-0">
-                    <a href="<?= route_url('other-trading') ?>" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300">
-                        <span><?= t('buttons.view_details') ?></span>
-                        <span class="rtl:rotate-180">&rarr;</span>
-                    </a>
-                </div>
-            </div>
-            <?php endif; ?>
-
-        </div>
-    </div>
-</section>
-
-<!-- Bottom CTA -->
-<section class="py-16 bg-slate-950 text-white border-t border-slate-800 text-center">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white"><?= t('pages.home.closing_cta_title') ?></h2>
-        <p class="text-slate-400 text-sm max-w-xl mx-auto"><?= t('pages.home.closing_cta_text') ?></p>
-        <div class="pt-4">
-            <a href="<?= route_url('contact') ?>#rfq-form" class="inline-flex items-center gap-2 px-8 py-3.5 bg-brandgreen hover:bg-emerald-600 text-white font-bold text-sm rounded-lg transition-all">
+            <a href="#rfq-section" class="shrink-0 px-5 py-2.5 rounded-lg bg-bsemerald hover:bg-bsforest text-white text-xs font-bold shadow-xs transition-all flex items-center gap-2">
                 <span><?= t('buttons.request_quote') ?></span>
                 <span class="rtl:rotate-180">&rarr;</span>
             </a>
         </div>
+    </div>
+</section>
+
+<!-- =========================================================================
+     PRODUCTS & SERVICES MASTER DIRECTORY (Strict A - I Sequence)
+     Primary Visibility to Chemical & Agricultural Products (A, B, C)
+     Followed by Industrial & Construction Products (D, E, F, G, H, I)
+     ========================================================================= -->
+<section class="py-16 sm:py-24 bg-white text-bscharcoal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+        <?php foreach ($catalog as $cat_id => $cat): 
+            $is_priority = ($cat['priority'] === 'high');
+        ?>
+        <div id="cat-<?= $cat_id ?>" class="scroll-mt-24 rounded-3xl border <?= $is_priority ? 'border-emerald-300 ring-1 ring-emerald-200/60 bg-stone-50/40' : 'border-stone-200 bg-white' ?> shadow-sm overflow-hidden transition-all hover:shadow-md" data-aos="fade-up">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                
+                <!-- Category Image Column (4 cols) -->
+                <div class="lg:col-span-4 relative min-h-[260px] lg:min-h-full overflow-hidden bg-stone-100">
+                    <img src="<?= img_url($cat['image']) ?>" alt="<?= htmlspecialchars($cat['title']) ?>" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-bscharcoal/80 via-bscharcoal/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-bscharcoal/40"></div>
+                    
+                    <!-- Letter & Badge Overlay -->
+                    <div class="absolute top-4 <?= ($lang === 'ar') ? 'right-4' : 'left-4' ?> flex items-center gap-2">
+                        <span class="w-9 h-9 rounded-xl font-bold flex items-center justify-center text-sm shadow-md <?= $is_priority ? 'bg-bsemerald text-white' : 'bg-bscharcoal text-white' ?>">
+                            <?= $cat['letter'] ?>
+                        </span>
+                        <span class="px-3 py-1 rounded-lg text-xs font-bold text-white shadow-sm backdrop-blur-xs <?= $is_priority ? 'bg-bsgold/95 text-bscharcoal' : 'bg-bscharcoal/90 text-white' ?>">
+                            <?= $cat['badge'] ?>
+                        </span>
+                    </div>
+
+                    <?php if ($is_priority): ?>
+                    <div class="absolute bottom-4 <?= ($lang === 'ar') ? 'right-4' : 'left-4' ?> px-3 py-1 rounded-md text-[11px] font-bold bg-emerald-600/90 text-white shadow-xs">
+                        <?= ($lang === 'ar') ? 'أولوية التوريد والظهور' : 'Primary Sourcing Focus' ?>
+                    </div>
+                    <?php endif; ?>
+                </div>
+
+                <!-- Category Content Column (8 cols) -->
+                <div class="lg:col-span-8 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+                    <div>
+                        <!-- Category Header -->
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                            <span class="text-xs font-mono font-bold uppercase tracking-widest text-bsgold">
+                                <?= ($lang === 'ar') ? 'القسم التجاري' : 'Division' ?> <?= $cat['letter'] ?>
+                            </span>
+                            <span class="text-xs px-2.5 py-1 rounded-full bg-stone-100 text-slate-600 font-semibold border border-stone-200">
+                                <?= count($cat['items']) ?> <?= ($lang === 'ar') ? 'مواد معتمدة' : 'Verified Material Lines' ?>
+                            </span>
+                        </div>
+
+                        <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-bscharcoal tracking-tight mb-3 <?= $headingFont ?>">
+                            <?= $cat['letter'] ?>. <?= $cat['title'] ?>
+                        </h2>
+
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                            <?= $cat['short_desc'] ?>
+                        </p>
+
+                        <!-- Representative Product & Materials List (Section 3 Requirement) -->
+                        <div class="bg-stone-50/80 rounded-2xl p-5 border border-stone-200 mb-6">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-bsemerald mb-3 flex items-center gap-2">
+                                <svg class="w-4 h-4 text-bsgold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                                <span><?= ($lang === 'ar') ? 'أبرز المواد والمنتجات الممثلة للقسم:' : 'Representative Products & Materials Portfolio:' ?></span>
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-700">
+                                <?php foreach ($cat['items'] as $item): ?>
+                                <div class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-bsgold mt-2 shrink-0"></span>
+                                    <span class="leading-relaxed"><?= htmlspecialchars($item) ?></span>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Bar -->
+                    <div class="pt-4 border-t border-stone-200 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center gap-3 text-xs text-slate-500">
+                            <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span><?= ($lang === 'ar') ? 'توريد تجاري بالجملة والمشاريع عبر ميناء الدمام والشحن الإقليمي' : 'Wholesale & project supply via Dammam Port and regional freight' ?></span>
+                        </div>
+                        <a href="<?= route_url('contact') ?>?category=<?= urlencode($cat['key']) ?>#rfq-form" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bsemerald hover:bg-bsforest text-white text-xs font-bold shadow-xs transition-all transform hover:-translate-y-0.5">
+                            <span><?= ($lang === 'ar') ? 'طلب تسعير للقسم (' . $cat['letter'] . ')' : 'Request RFQ for Division (' . $cat['letter'] . ')' ?></span>
+                            <span class="rtl:rotate-180">&rarr;</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <?php endforeach; ?>
+
+    </div>
+</section>
+
+<!-- =========================================================================
+     REQUEST FOR QUOTATION (RFQ) EMBEDDED FORM SECTION
+     Section 08 Requirement
+     ========================================================================= -->
+<section id="rfq-section" class="py-16 sm:py-24 bg-stone-50 border-t border-stone-200 scroll-mt-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+            <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block">
+                <?= ($lang === 'ar') ? 'نموذج طلب عروض الأسعار الفوري' : 'Direct Sourcing RFQ' ?>
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-bscharcoal tracking-tight mb-4 <?= $headingFont ?>">
+                <?= t('pages.home.sec8_title') ?>
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                <?= t('pages.home.sec8_subtitle') ?>
+            </p>
+        </div>
+
+        <!-- Embedded RFQ Form Partial -->
+        <div class="shadow-lg rounded-3xl overflow-hidden border border-stone-200" data-aos="fade-up" data-aos-delay="100">
+            <?php require __DIR__ . '/partials/rfq_form_partial.php'; ?>
+        </div>
+
     </div>
 </section>
 
