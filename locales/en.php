@@ -124,8 +124,8 @@ return [
             'meta_desc' => 'Commercial procurement of industrial machinery spare parts, bearings, mechanical seals, hydraulic valves, and OEM-compatible replacement components.',
         ],
         'industrial_salts' => [
-            'title' => 'Bulk Industrial Salt & Chemical Salts | Better Supply',
-            'meta_desc' => 'Enquire about bulk industrial sodium chloride, vacuum salt, potassium chloride and calcium chloride sourcing for industrial applications across Saudi Arabia and the GCC.',
+            'title' => 'Industrial Salt, Refined, Solar & Vacuum Salt Sourcing | Better Supply',
+            'meta_desc' => 'Procure industrial salts across multiple grades and forms: vacuum refined, solar sea salt, rock salt, granular salt (including 4–6 mm & NaCl 99%+ options), water-softener salt, and specialty salts for water treatment, oil & gas, petrochemicals, and manufacturing.',
         ],
         'oilfield_chemicals' => [
             'title' => 'Oilfield & Drilling Materials Supplier | Saudi Arabia',
@@ -194,7 +194,7 @@ return [
         'categories' => [
             'agrochemicals' => 'Agrochemicals, Pesticides & Agricultural Products',
             'industrial_chemicals' => 'Industrial, Specialty & Water Treatment Chemicals',
-            'industrial_salts' => 'Industrial Salt & Bulk Chemical Raw Materials (NaCl 99%+)',
+            'industrial_salts' => 'Industrial Salt & Bulk Chemical Raw Materials (Refined, Solar, Rock & Granular)',
             'building_materials' => 'Building & Construction Materials',
             'machinery_equipment' => 'Industrial Machinery & Equipment',
             'spare_parts' => 'Industrial Spare Parts & Components',
@@ -285,18 +285,20 @@ return [
         'c' => [
             'key' => 'industrial_salts',
             'title' => 'Industrial Salt & Bulk Chemical Raw Materials',
-            'short_desc' => 'High-purity sodium chloride (NaCl 99%+), vacuum salt, coarse and granular industrial salts (including 4–6 mm), water softener regeneration salts, process salts, and bulk raw material shipments.',
+            'short_desc' => 'Comprehensive supply of industrial salt across diverse grades and physical forms: refined vacuum evaporated salt, solar sea salt, rock salt, coarse and granular grades (including 4–6 mm and high-purity NaCl 99%+ options available upon specification), water-softener salt, and specialty salts for water treatment, oil & gas, petrochemicals, and manufacturing.',
             'image' => 'banner_industrial_salts.jpg',
-            'badge' => 'Industrial Salts & Bulk Minerals (99%+ NaCl)',
+            'badge' => 'Industrial, Refined & Solar Salts',
             'priority' => 'high',
             'items' => [
-                'Industrial Sodium Chloride (NaCl 99%+ Purity)',
-                'Granular Industrial Salt (4–6 mm & Screened Sizes)',
-                'High-Purity Vacuum Evaporated Salt',
-                'Water Softener Resin Regeneration Salt',
-                'Industrial Process & De-icing Salt',
-                'Bulk Raw Chemical Materials & Minerals',
-                'Specification-Based Bulk Procurement (MT / Container / Vessel)',
+                'Refined Vacuum Evaporated Salt (PDV)',
+                'Solar Sea Salt & Natural Coarse Salt',
+                'Rock Salt & Mined Mineral Salts',
+                'Granular Industrial Salt (including 4–6 mm & Custom Screened Sizes)',
+                'High-Purity Industrial Salt (NaCl 99%+ Available on Specification)',
+                'Water-Softener Salt Tablets, Pellets & Briquettes',
+                'Oilfield Drilling Brines & Petrochemical Feedstock Salt',
+                'Specialty Inorganic Salts (KCl, CaCl₂, MgCl₂, Na₂SO₄)',
+                'Bulk Raw Chemical Materials & Industrial Minerals',
             ],
         ],
         'd' => [
@@ -473,71 +475,84 @@ return [
 
         // Industrial Salts Page
         'industrial_salts' => [
-            'heading' => 'Bulk Industrial Salts and Specialty Salt Sourcing',
-            'intro' => 'Better Supply Trading Establishment welcomes procurement inquiries for industrial salts used in manufacturing, chemical processing, industrial water softening and selected petroleum-sector applications. Each product is sourced to the required grade, purity, physical form and intended use.',
-            'salt_distinction_notice' => 'Technical Suitability Notice: Different salts serve distinct industrial functions. Industrial salt cannot replace specialized RO water treatment chemicals or high-density completion fluids. Technical compatibility must be confirmed for each project process.',
-            'sodium_chloride_title' => 'Industrial Sodium Chloride Products',
-            'specialty_salts_title' => 'Selected Specialty Inorganic Salts',
+            'heading' => 'Industrial Salt, Refined, Solar & Specialty Salt Sourcing',
+            'intro' => 'Better Supply Trading Establishment supplies a complete range of industrial salts across diverse physical forms, processing methods, and purity grades. We serve essential industrial applications across water treatment and desalination, oil & gas drilling brines, petrochemical manufacturing, food and chemical processing, detergent compounding, and municipal utilities across Saudi Arabia and the GCC. High-purity specifications (including NaCl 99%+ purity) and screened granular sizes (including 4–6 mm) are available options upon customer specification, alongside standard commercial, solar, vacuum-refined, and rock salt grades.',
+            'salt_distinction_notice' => 'Technical Suitability Notice: Industrial salts serve distinct technical functions across different processing environments. Industrial salt cannot replace specialized RO membrane antiscalants or high-density completion fluids. Technical compatibility and grade matching are confirmed through our specification review process.',
+            'sodium_chloride_title' => 'Industrial Sodium Chloride Products & Forms',
+            'specialty_salts_title' => 'Specialty Inorganic Chemical Salts',
             'products' => [
                 [
-                    'name' => 'Industrial Sodium Chloride (NaCl 99%+ Purity)',
+                    'name' => 'Refined Vacuum Evaporated Salt (PDV)',
                     'formula' => 'NaCl',
-                    'summary' => 'High-purity sodium chloride meeting 99%+ NaCl specification. Available in granular (including 4–6 mm), coarse, fine, and vacuum-evaporated grades for chlor-alkali production, chemical synthesis, and industrial manufacturing.',
-                    'applications' => ['Chemical manufacturing', 'Chlor-alkali feedstock', 'Industrial utility & process salt'],
+                    'summary' => 'High-purity vacuum evaporated crystallized salt offering uniform particle size, fast dissolution, and minimal insoluble residues. Extensively utilized in chemical synthesis, food processing, pharmaceuticals, and detergent manufacturing.',
+                    'applications' => ['Chemical synthesis', 'Food & beverage processing', 'Detergent formulations', 'Pharmaceutical feedstock'],
                 ],
                 [
-                    'name' => 'Chemical-Grade Sodium Chloride',
+                    'name' => 'Solar Sea Salt & Natural Coarse Salt',
                     'formula' => 'NaCl',
-                    'summary' => 'Refined sodium chloride meeting defined chemical thresholds for specialized industrial synthesis.',
-                    'applications' => ['Chemical synthesis', 'Industrial processing', 'Textile and dyeing auxiliaries'],
+                    'summary' => 'Naturally crystallized solar sea salt harvested through controlled evaporation. Available in unwashed, washed, and coarse crystal grades for bulk industrial brine preparation, chlor-alkali electrolysis, de-icing, and leather processing.',
+                    'applications' => ['Chlor-alkali feedstock', 'Industrial brine preparation', 'De-icing & surface treatment', 'Leather tanning'],
                 ],
                 [
-                    'name' => 'Vacuum Salt & Solar-Evaporated Salt',
+                    'name' => 'Rock Salt & Mined Mineral Salt',
                     'formula' => 'NaCl',
-                    'summary' => 'High-purity vacuum evaporated salt or screened solar-harvested grades with uniform crystal structure.',
-                    'applications' => ['Food-processing grade applications', 'High-purity industrial synthesis', 'Detergent formulations'],
+                    'summary' => 'Mined mineral rock salt supplied in various crushed and screened gradations. Provides robust bulk chemical and metallurgical performance across heavy industrial processes, road safety, and metal refining.',
+                    'applications' => ['Heavy industrial utilities', 'Metallurgical fluxing', 'Chemical processing', 'Snow & ice management'],
                 ],
                 [
-                    'name' => 'Coarse & Granular Industrial Salt (4–6 mm)',
-                    'formula' => 'NaCl (99%+)',
-                    'summary' => 'Screened particle size distributions including 4–6 mm coarse granules with 99%+ purity, optimized for industrial mechanical feeding and continuous processes.',
-                    'applications' => ['Industrial process plants', 'Water treatment softening', 'De-icing & surface treatments'],
+                    'name' => 'Granular Industrial Salt (Screened Fractions)',
+                    'formula' => 'NaCl (Graded)',
+                    'summary' => 'Mechanically screened granular salt offering consistent particle distribution for continuous flow systems and automated feeders. Particle sizes including 4–6 mm and tailored mesh fractions are available upon specification.',
+                    'applications' => ['Continuous dissolving systems', 'Manufacturing plants', 'Water treatment pre-treatment', 'Textile dyeing'],
                 ],
                 [
-                    'name' => 'Water-Softener Salt Tablets & Pellets',
-                    'formula' => 'NaCl',
-                    'summary' => 'Compacted high-purity sodium chloride briquettes and round pellets formulated for clean ion-exchange resin regeneration without sludge.',
-                    'applications' => ['Commercial water softening', 'Boiler feed pre-treatment', 'Industrial water utilities'],
+                    'name' => 'High-Purity Industrial Salt (NaCl 99%+ Option)',
+                    'formula' => 'NaCl (99%+ Optional)',
+                    'summary' => 'Specification-matched high-purity sodium chloride meeting 99%+ NaCl thresholds. Available as an optional specification for high-precision chlor-alkali electrolyzers, chemical manufacturing, and strict analytical standards.',
+                    'applications' => ['Chlor-alkali production', 'High-purity chemical manufacturing', 'Electrochemical processes'],
+                ],
+                [
+                    'name' => 'Water-Softener Salt Tablets, Pellets & Briquettes',
+                    'formula' => 'NaCl (Compacted)',
+                    'summary' => 'Compacted high-purity sodium chloride tablets, round pellets, and pillow briquettes engineered for clean, sludge-free ion-exchange resin regeneration across commercial and industrial water softening systems.',
+                    'applications' => ['Boiler feed water softening', 'Cooling tower pre-treatment', 'Commercial water utilities', 'Desalination plant utilities'],
+                ],
+                [
+                    'name' => 'Oilfield & Drilling-Fluid Salt',
+                    'formula' => 'NaCl (Drilling Grade)',
+                    'summary' => 'Technical-grade sodium chloride formulated for clear-brine drilling fluids, workover operations, shale stabilization, and gas hydrate suppression in petroleum operations.',
+                    'applications' => ['Oil & gas drilling fluids', 'Workover & completion brines', 'Hydrate inhibition'],
                 ],
                 [
                     'name' => 'Potassium Chloride',
                     'formula' => 'KCl',
-                    'summary' => 'Specialty inorganic potassium salt used across drilling fluid formulations, agriculture, and industrial chemical synthesis.',
+                    'summary' => 'Specialty inorganic potassium salt used across clay-inhibiting drilling fluids, agricultural fertilizer production (MOP), and industrial chemical synthesis.',
                     'applications' => ['Oilfield drilling fluids', 'Fertilizer production (MOP)', 'Chemical processing'],
                 ],
                 [
                     'name' => 'Calcium Chloride',
                     'formula' => 'CaCl₂',
-                    'summary' => 'Versatile hygroscopic inorganic salt supplied in flake, pellet, or powder forms for drilling brines, concrete acceleration, and dust suppression.',
+                    'summary' => 'Versatile hygroscopic inorganic salt supplied in flake, pellet, or powder forms for high-density drilling brines, concrete acceleration, refrigeration brines, and dust control.',
                     'applications' => ['Drilling & completion brines', 'Moisture absorption', 'Refrigeration brines', 'Concrete curing'],
                 ],
                 [
                     'name' => 'Magnesium Chloride',
                     'formula' => 'MgCl₂',
-                    'summary' => 'Inorganic magnesium salt supplied in flake or anhydrous form for specialized industrial processing and mineral recovery.',
+                    'summary' => 'Inorganic magnesium salt supplied in flake or anhydrous form for specialized industrial processing, oxychloride cement, and mineral recovery.',
                     'applications' => ['Oxychloride cement', 'Dust control', 'Industrial chemical synthesis'],
                 ],
                 [
                     'name' => 'Sodium Sulphate',
                     'formula' => 'Na₂SO₄',
-                    'summary' => 'Anhydrous neutral sodium sulphate salt widely utilized in synthetic detergent manufacturing, glass making, and textile processing.',
+                    'summary' => 'Anhydrous neutral sodium sulphate salt widely utilized in synthetic detergent manufacturing, glass fining, and textile dyeing processing.',
                     'applications' => ['Detergent powder manufacturing', 'Glass fining', 'Textile dyeing'],
                 ],
             ],
             'faqs' => [
-                ['q' => 'What parameters are required to quote bulk industrial salt?', 'a' => 'Please provide the required chemical purity (such as NaCl 99%+), requested granular size (including 4–6 mm or specific mesh size), volume in MT, packaging format (25kg PP bags, 1000kg jumbo bags, or loose bulk), transport method, and destination port or facility.'],
-                ['q' => 'Can water-softener salt pellets be used in RO plants?', 'a' => 'Water-softener salt is intended strictly for regenerating cation exchange softening resins. It does not replace reverse osmosis antiscalants, bisulfites, or membrane cleaners.'],
-                ['q' => 'What packaging configurations are available for industrial salts?', 'a' => 'We source salt in standard 25 kg woven polypropylene bags with inner liners, 1,000 kg / 1,200 kg FIBC jumbo bags with discharge spouts, or loose bulk container liners depending on project logistics.'],
+                ['q' => 'What grades and forms of industrial salt are available?', 'a' => 'We supply a comprehensive spectrum of salts including refined vacuum evaporated salt (PDV), solar sea salt, rock salt, coarse and granular grades (with options including 4–6 mm), high-purity grades (such as NaCl 99%+ on specification), water-softener tablets/pellets, and specialty chemical salts (KCl, CaCl₂, MgCl₂, Na₂SO₄).'],
+                ['q' => 'Are NaCl 99%+ purity and 4–6 mm grain size standard or optional?', 'a' => 'NaCl 99%+ purity and specific grain sizing such as 4–6 mm are available options upon request. We match the exact grade, purity threshold, and physical form required by your facility or project process rather than restricting buyers to a single specification.'],
+                ['q' => 'Which industries use your industrial salt supplies?', 'a' => 'Our salt supplies serve water treatment and desalination utilities, oil & gas drilling operations, petrochemical and chlor-alkali plants, textile dyeing, detergent manufacturing, food processing, glass making, and de-icing applications.'],
+                ['q' => 'What packaging configurations are available for bulk salt orders?', 'a' => 'We source salt in standard 25 kg / 50 kg woven polypropylene bags with PE inner liners, 1,000 kg / 1,200 kg FIBC jumbo bags with bottom discharge spouts, bulk container liners, and loose bulk vessel shipments depending on client logistics.'],
             ],
         ],
 
@@ -977,18 +992,102 @@ return [
 
         // Privacy Policy (Finalized)
         'privacy' => [
-            'heading' => 'Privacy Policy',
-            'subheading' => 'Commercial Data Protection & RFQ Handling',
+            'heading' => 'Privacy Policy & Commercial Data Governance',
+            'subheading' => 'Compliance with Saudi Personal Data Protection Law (PDPL) & B2B Inquiry Protocols',
             'disclaimer' => '',
-            'content' => 'Better Supply Trading Establishment ("Better Supply", "we", "our") respects the confidentiality of commercial inquiries and business information submitted through bettersupplytrading.com. This policy outlines how information provided via our Request for Quotation (RFQ) portal and commercial contact forms is processed.\n\n1. Information We Collect: We collect business contact details including your full name, company name, corporate email address, telephone/WhatsApp number, delivery destinations, and commercial material specifications.\n\n2. How We Use Information: Data submitted is used exclusively to evaluate sourcing viability, correspond with verified manufacturers, prepare commercial proposals, and coordinate freight logistics.\n\n3. Data Storage & Security: All submitted specifications and attachments are securely stored on restricted internal databases. We do not sell, rent, or distribute commercial inquiry details to unrelated third parties.\n\n4. Regulatory Compliance: Our data practices are designed to comply with applicable data protection regulations in the Kingdom of Saudi Arabia.\n\nFor questions regarding data handling or privacy, please contact our administrative procurement desk at info@bettersupplytrading.com.',
+            'content' => 'Better Supply Trading Establishment ("Better Supply", "we", "our", or "the Establishment"), registered in Dammam, Eastern Province, Kingdom of Saudi Arabia, is committed to safeguarding the privacy, confidentiality, and integrity of commercial and personal data entrusted to us. This Privacy Policy details our operational protocols for collecting, processing, storing, and protecting data collected via our website (bettersupplytrading.com), Request for Quotation (RFQ) portal, email communications, and direct commercial correspondence, in strict accordance with the Saudi Personal Data Protection Law (PDPL, enacted by Royal Decree No. M/19 and its Implementing Regulations).
+
+1. Data Controller Identification
+Better Supply Trading Establishment acts as the Data Controller responsible for the processing of business and personal data collected through our digital interfaces and corporate desks.
+• Commercial Address: King Abdulaziz Road, Al Badi District, P.O. Box 5513, Dammam 32415, Kingdom of Saudi Arabia
+• Privacy & Compliance Desk: info@bettersupplytrading.com | Phone: +966 59 951 0213 / +966 50 285 1077
+
+2. Categories of Information Collected
+As a business-to-business (B2B) trading and industrial sourcing intermediary, we collect data necessary to evaluate, negotiate, and execute commercial procurement transactions:
+• Business Contact Data: Full name, job title, company name, registered business address, corporate email address, telephone/WhatsApp mobile numbers.
+• Procurement & Technical Specifications: Product names, required grades, chemical formulations, purity specifications, requested quantities, packaging formats, port of destination, Incoterms, and uploaded technical datasheets or tender documents.
+• Digital Usage & Technical Data: Standard IP address, browser type, device identifiers, and timestamp logs for website security, anti-spam validation, and operational reliability.
+
+3. Legal Basis and Purposes of Processing
+We process your information in accordance with PDPL principles based on contractual necessity, legitimate business interests, and legal compliance:
+• RFQ Evaluation & Commercial Quotations: Assessing material requirements, matching specifications with accredited global manufacturers, calculating freight costs, and issuing formal commercial proposals.
+• Supply Chain & Order Fulfillment: Coordinating technical vetting, sample approvals, export documentation, customs clearance with ZATCA, and logistics delivery.
+• Communication & Relationship Management: Responding to product inquiries, providing project updates, and maintaining verified vendor/client commercial records.
+• Statutory & Regulatory Compliance: Retaining mandatory transaction records required under Saudi commercial, tax (ZATCA), and accounting regulations.
+
+4. Data Sharing and International Cross-Border Transfers
+Better Supply does not sell, lease, trade, or monetize commercial contact details or proprietary client specifications. Information is shared strictly on a need-to-know basis:
+• Verified Manufacturers & Sourcing Partners: Technical specifications and delivery requirements are shared with vetted producers in Saudi Arabia, South Asia, and international supply hubs solely to secure accurate pricing and production feasibility.
+• Logistics & Freight Forwarders: Consignment destination and contact details are shared with certified freight forwarders and shipping lines to coordinate cargo transit.
+• Regulatory & Public Authorities: Data is disclosed only when mandated by official decree, judicial subpoena, or statutory regulations administered by Saudi authorities (e.g., ZATCA, SFDA, MEWA, Ministry of Commerce).
+• Cross-Border Safeguards: When international transfers occur for procurement execution, Better Supply implements contractual confidentiality safeguards in compliance with Saudi PDPL cross-border transfer rules.
+
+5. Data Security and Confidentiality Measures
+We implement comprehensive administrative, physical, and technical controls to protect commercial data against unauthorized access, alteration, loss, or disclosure. All digital transmissions through our RFQ portals utilize TLS/SSL encryption, and internal databases are restricted to authorized procurement personnel under strict non-disclosure obligations.
+
+6. Data Retention Period
+We retain commercial inquiries and personal data only for the period necessary to fulfill the commercial purposes outlined herein, or as required to comply with statutory audit, tax, and legal recordkeeping requirements under the laws of the Kingdom of Saudi Arabia (typically up to five years for commercial transaction records). Inquiries that do not materialize into orders are routinely archived or securely expunged.
+
+7. Your Rights Under the Saudi PDPL
+Subject to the provisions and exemptions of the Saudi Personal Data Protection Law, data subjects possess enforceable rights regarding their personal data:
+• Right to be Informed: Understanding how your data is collected and processed (as set forth in this policy).
+• Right of Access: Requesting a copy of your personal data maintained by our Establishment.
+• Right to Rectification: Requesting correction, completion, or updating of inaccurate or outdated information.
+• Right to Destruction / Erasure: Requesting the deletion of personal data when the original processing purpose has ceased, subject to statutory record retention requirements.
+• Right to Withdraw Consent: Withdrawing consent at any time where processing was based solely on consent.
+To exercise any of these rights, please submit a written request to our Compliance Desk at info@bettersupplytrading.com. Requests are reviewed and addressed within thirty (30) business days.
+
+8. Updates to this Policy
+Better Supply reserves the right to amend this Privacy Policy periodically to reflect operational refinements or statutory updates under Saudi law. The prevailing version will always be published on this page with the date of latest revision.',
         ],
 
         // Terms of Service (Finalized)
         'terms' => [
-            'heading' => 'Terms & Conditions of Commercial Sourcing',
-            'subheading' => 'Website Usage and Supply Quotation Terms',
+            'heading' => 'Terms & Conditions of Commercial Sourcing & Trading',
+            'subheading' => 'B2B Sourcing Framework, Quotation Validity, and Commercial Governance',
             'disclaimer' => '',
-            'content' => '1. Scope of Operations: Better Supply Trading Establishment operates as an independent commercial trading and procurement intermediary based in Dammam, Saudi Arabia. Better Supply is a B2B trading establishment, and website listings do not constitute a direct offer to sell or a guarantee of current local warehouse inventory.\n\n2. Sourcing on Inquiry: All product descriptions represent commercial sourcing capabilities subject to specification matching, supplier verification, and written agreement. Material properties, availability, delivery terms, and lead times are confirmed on a per-order basis.\n\n3. Compliance & Approvals: Better Supply makes no claims of unauthorized representation or endorsement by third-party energy operators unless explicitly evidenced by valid formal documentation. Regulated chemicals, pesticides, and specialized agricultural inputs are supplied strictly subject to applicable regulatory approvals and import permits. Buyers remain responsible for confirming technical suitability for their specific applications.\n\n4. Intellectual Property: Website content, structural layouts, and trademarks are protected by commercial copyright laws. Unauthorized reproduction is prohibited.\n\n5. Governing Law: These terms shall be governed and interpreted in accordance with the commercial regulations and laws of the Kingdom of Saudi Arabia.',
+            'content' => '1. Nature of Business & Scope of Operations
+Better Supply Trading Establishment ("Better Supply", "the Establishment", "we", or "us") is an independent commercial establishment legally registered in Dammam, Eastern Province, Kingdom of Saudi Arabia. Better Supply operates exclusively as a business-to-business (B2B) trading, import/export intermediary, and industrial procurement facilitator. The publication of products, materials, and categories on bettersupplytrading.com constitutes a representation of our commercial sourcing capabilities and network reach; it does not constitute a binding unilateral offer to sell, spot-inventory availability, or immediate local stock guarantee.
+
+2. Request for Quotation (RFQ) & Commercial Offers
+• Inquiries and RFQ submissions through this website are preliminary requests for information and do not create a binding sales contract.
+• Formal commercial offers are issued solely through written, signed Proforma Invoices (PI), formal Quotations, or Supply Contracts detailing exact product specifications, manufacturer provenance, packaging, pricing, delivery schedule, and Incoterms.
+• Quotations are valid only for the duration explicitly stated on the written quotation document and remain subject to international raw material market adjustments, currency fluctuations, and shipping freight market conditions until formal order confirmation.
+
+3. Sourcing on Inquiry, Technical Specifications & Quality Assurance
+• All products are sourced on an order-specific basis according to client-defined technical parameters.
+• Better Supply provides Certificates of Analysis (COA), Technical Data Sheets (TDS), and Material Safety Data Sheets (MSDS) issued by the manufacturing plants.
+• The buyer is independently responsible for verifying and validating the suitability, grade, compatibility, and safety of the specified material for its intended manufacturing, chemical, or agricultural process. Better Supply makes no implied warranties of merchantability or fitness for a particular bespoke purpose beyond the written manufacturer COA specifications agreed upon.
+• Where agreed, representative pre-shipment samples may be submitted for client laboratory approval prior to bulk manufacturing or dispatch.
+
+4. Regulatory Compliance, Controlled Substances & Transparency
+• Better Supply conducts all commercial operations in rigorous compliance with the laws, executive regulations, and trade controls of the Kingdom of Saudi Arabia.
+• Sourcing and supply of regulated chemicals, water treatment compounds, agricultural inputs, pesticides, fertilizers, and minerals are conducted strictly subject to obtaining mandatory permits, registrations, and clearances from relevant Saudi authorities, including the Saudi Food & Drug Authority (SFDA), the Ministry of Environment, Water and Agriculture (MEWA), the High Commission for Industrial Security (HCIS), and the Zakat, Tax and Customs Authority (ZATCA).
+• Independent Operator Notice: Better Supply operates as an independent trading entity and makes no claims of unauthorized representation, exclusive distributorship, or proprietary endorsement by third-party energy operators, petrochemical producers, or multinational technology licensors unless supported by explicit, formally executed bilateral agency agreements.
+
+5. Pricing, Delivery Terms & Incoterms®
+• Unless expressly stated otherwise in written contracts, all commercial trade terms are interpreted in accordance with the International Chamber of Commerce rules (Incoterms® 2020), including CIF, CFR, FOB, DDP, or Ex-Works.
+• Better Supply coordinates logistics via reputable international shipping lines, overland transport fleets, and bonded port facilities. Delivery schedules and lead times are communicated in good faith based on current shipping conditions and manufacturing cycles but may be influenced by port customs clearance, maritime routing, or statutory inspections.
+
+6. Inspection, Acceptance, and Claims
+• The buyer shall inspect consignments upon arrival at the designated delivery point. Any visible defects, packaging damage, or quantity discrepancies must be recorded on the delivery documentation and notified to Better Supply in writing within five (5) business days of delivery.
+• In the event of latent technical non-conformity against the agreed COA, notification must be submitted within fourteen (14) days accompanied by accredited third-party laboratory test reports. Better Supply\'s liability in all cases is strictly limited, at our discretion, to replacement of the non-conforming goods or refund of the purchase price received for that specific batch.
+
+7. Force Majeure & Limitation of Liability
+• Neither party shall be held liable for failure or delay in performing contractual obligations when such failure arises from events beyond reasonable control ("Force Majeure"), including but not limited to acts of God, maritime blockades, vessel strandings, war, regional conflicts, government embargoes, changes in customs tariffs or import quotas, port strikes, epidemics, or widespread industrial feedstock shortages.
+• To the maximum extent permitted under Saudi law, Better Supply shall not be liable for indirect, incidental, special, punitive, or consequential damages, including loss of production, loss of profits, downtime costs, or third-party claims.
+
+8. Intellectual Property Rights
+All trademarks, logos, texts, images, technical product summaries, website layouts, and digital assets published on bettersupplytrading.com are the exclusive intellectual property of Better Supply Trading Establishment or used with permission. Any unauthorized reproduction, scraping, mirroring, or exploitation of content without prior written consent is strictly prohibited.
+
+9. Governing Law & Dispute Resolution
+These Terms & Conditions, and any commercial transactions arising hereunder, shall be governed by, construed, and enforced in accordance with the laws, royal decrees, and commercial regulations of the Kingdom of Saudi Arabia. Any dispute, controversy, or claim arising out of or in connection with these terms or commercial dealings that cannot be resolved amicably through good-faith negotiation shall be submitted to the exclusive jurisdiction of the competent Commercial Courts in Dammam, Eastern Province, Kingdom of Saudi Arabia.
+
+10. Contact & Official Notices
+All official commercial notices, legal correspondence, and compliance inquiries should be directed to:
+Better Supply Trading Establishment
+Management Office: King Abdulaziz Road, Al Badi Dist., P.O. Box 5513, Dammam 32415, Kingdom of Saudi Arabia
+Corporate Email: info@bettersupplytrading.com | Commercial Inquiries: sales@bettersupplytrading.com',
         ],
     ],
 ];

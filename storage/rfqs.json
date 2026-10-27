@@ -830,5 +830,32 @@
             "original_name": "Technical_Spec_Sheet.pdf",
             "stored_path": "storage\/uploads\/rfq_20261022_065330_9e9ca19d.pdf"
         }
+    },
+    {
+        "id": "RFQ-20261027-A09DC9",
+        "timestamp": "2026-10-27T14:41:38+01:00",
+        "ip_address": "UNKNOWN",
+        "user_agent": "UNKNOWN",
+        "source_page": "industrial-salts",
+        "contact": {
+            "name": "Saudi Petrochem Procurement",
+            "company": "Eastern Industrial Corp",
+            "email": "procurement@easternind.sa",
+            "phone": "+966 50 123 4567"
+        },
+        "rfq_details": {
+            "category": "Industrial Salt & Bulk Chemical Raw Materials (Refined, Solar, Rock & Granular)",
+            "specification": "Refined Vacuum PDV Salt 99.8% NaCl purity, 4-6mm grain size optional, for chlor-alkali brine preparation.",
+            "quantity": 250,
+            "unit": "Metric Tons",
+            "packaging": "1 Ton Jumbo Bags",
+            "destination": "Jubail Industrial City, Saudi Arabia",
+            "delivery_date": "2026-12-01",
+            "remarks": "COA and MSDS required with quotation."
+        },
+        "attachment": {
+            "original_name": null,
+            "stored_path": null
+        }
     }
 ]

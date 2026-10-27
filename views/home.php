@@ -394,7 +394,8 @@ $trust_strip = t('pages.home.trust_strip');
             </div>
 
             <div class="p-6 bg-white border border-stone-200 rounded-xl shadow-xs space-y-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-10 h-10 rounded-lg bg-emerald-50 text-bsemerald flex items-center justify-center font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'حضور تجاري سعودي بالدمام' : 'Saudi Commercial Presence' ?></h3>
+                <div class="w-10 h-10 rounded-lg bg-emerald-50 text-bsemerald flex items-center justify-center font-bold text-lg border border-emerald-200">03</div>
+                <h3 class="text-base font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'حضور تجاري سعودي بالدمام' : 'Saudi Commercial Presence' ?></h3>
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     <?= ($lang === 'ar') ? 'مقر إداري وتجاري رسمي بالدمام لمتابعة التخليص الجمركي وترتيبات الشحن والتواصل التجاري المباشر مع العملاء.' : 'Strategically based in Dammam, Eastern Province to coordinate port clearance, road freight, and active local communication.' ?>
                 </p>
