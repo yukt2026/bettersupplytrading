@@ -52,6 +52,86 @@
         <priority>0.9</priority>
     </url>
 
+    <!-- Agrochemicals -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/agrochemicals/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/agrochemicals/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/agrochemicals/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/agrochemicals/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/agrochemicals/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/agrochemicals/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Industrial Chemicals -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/industrial-chemicals/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/industrial-chemicals/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/industrial-chemicals/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/industrial-chemicals/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/industrial-chemicals/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/industrial-chemicals/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Building Materials -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/building-materials/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/building-materials/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/building-materials/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/building-materials/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/building-materials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/building-materials/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Machinery & Equipment -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/machinery/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/machinery/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/machinery/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/machinery/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/machinery/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/machinery/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Spare Parts & Components -->
+    <url>
+        <loc>https://bettersupplytrading.com/en/spare-parts/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/spare-parts/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/spare-parts/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bettersupplytrading.com/ar/spare-parts/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://bettersupplytrading.com/ar/spare-parts/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://bettersupplytrading.com/en/spare-parts/"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- Industrial Salts -->
     <url>
         <loc>https://bettersupplytrading.com/en/industrial-salts/</loc>

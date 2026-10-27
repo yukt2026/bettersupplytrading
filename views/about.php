@@ -56,6 +56,10 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                 <?= t('pages.about.scope') ?>
             </p>
 
+            <div class="p-5 rounded-2xl bg-emerald-50/80 border border-emerald-200 text-xs sm:text-sm font-semibold text-bsemerald leading-relaxed">
+                <?= t('pages.about.trust_statement') ?>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-stone-200">
                 <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 space-y-3">
                     <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 text-bsemerald flex items-center justify-center">

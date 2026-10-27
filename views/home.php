@@ -121,6 +121,9 @@ $trust_strip = t('pages.home.trust_strip');
                 <p class="text-slate-700 text-sm sm:text-base leading-relaxed">
                     <?= t('pages.home.sec2_text') ?>
                 </p>
+                <div class="p-4 rounded-xl bg-emerald-50/80 border border-emerald-200 text-xs sm:text-sm text-bsemerald font-semibold leading-relaxed">
+                    <?= t('pages.home.trust_statement') ?>
+                </div>
                 <div class="p-5 rounded-xl bg-white border border-stone-200 shadow-sm space-y-2">
                     <div class="flex items-center gap-2 text-bsemerald font-bold text-sm">
                         <svg class="w-5 h-5 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
@@ -179,7 +182,7 @@ $trust_strip = t('pages.home.trust_strip');
         
         <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
             <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block">
-                <?= ($lang === 'ar') ? 'محفظة المنتجات والتوريد' : 'Products & Sourcing Divisions' ?>
+                <?= ($lang === 'ar') ? 'محفظة المنتجات والتوريد' : 'Products & Sourcing Categories' ?>
             </span>
             <h2 class="text-2xl sm:text-4xl font-extrabold text-bscharcoal tracking-tight mb-4 <?= $headingFont ?>">
                 <?= t('pages.home.sec3_title') ?>
@@ -202,14 +205,14 @@ $trust_strip = t('pages.home.trust_strip');
                         <img src="<?= img_url($cat['image']) ?>" alt="<?= htmlspecialchars($cat['title']) ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95">
                         <div class="absolute inset-0 bg-gradient-to-t from-bscharcoal/80 via-bscharcoal/20 to-transparent"></div>
                         <span class="absolute top-3 <?= ($lang === 'ar') ? 'right-3' : 'left-3' ?> px-2.5 py-1 rounded-md text-[11px] font-bold text-white shadow-xs <?= $is_priority ? 'bg-bsemerald' : 'bg-bscharcoal/90' ?>">
-                            <?= $cat['letter'] ?>. <?= $cat['badge'] ?>
+                            <?= $cat['badge'] ?>
                         </span>
                     </div>
 
                     <!-- Category Body -->
                     <div class="p-6">
                         <h3 class="text-lg sm:text-xl font-bold text-bscharcoal mb-2 group-hover:text-bsemerald transition-colors leading-snug">
-                            <?= $cat['letter'] ?>. <?= $cat['title'] ?>
+                            <?= $cat['title'] ?>
                         </h3>
                         <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
                             <?= $cat['short_desc'] ?>
@@ -381,25 +384,24 @@ $trust_strip = t('pages.home.trust_strip');
             
             <div class="p-6 bg-white border border-stone-200 rounded-xl shadow-xs space-y-3" data-aos="fade-up" data-aos-delay="100">
                 <div class="w-10 h-10 rounded-lg bg-emerald-50 text-bsemerald flex items-center justify-center font-bold text-lg border border-emerald-200">01</div>
-                <h3 class="text-base font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'علاقات مباشرة مع كبار المصنعين' : 'Direct Manufacturer Access' ?></h3>
+                <h3 class="text-base font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'قنوات توريد موثوقة' : 'Trusted Sourcing Channels' ?></h3>
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    <?= ($lang === 'ar') ? 'نربط عملاءنا بالمصنعين الأصليين لتجاوز سلاسل الوسطاء غير المجدية وتأمين أسعار تنافسية تلائم المشاريع الكبرى.' : 'Direct relationships with established producers eliminate unnecessary intermediaries and secure competitive volume pricing.' ?>
+                    <?= ($lang === 'ar') ? 'علاقات تجارية راسخة مع مصنعين وموردين معتمدين تتيح تقديم عروض أسعار منافسة وتأمين كميات الإمداد المطلوبة.' : 'Established commercial relationships with verified producers support competitive quotation and dependable volume supply.' ?>
                 </p>
             </div>
 
             <div class="p-6 bg-white border border-stone-200 rounded-xl shadow-xs space-y-3" data-aos="fade-up" data-aos-delay="200">
                 <div class="w-10 h-10 rounded-lg bg-emerald-50 text-bsemerald flex items-center justify-center font-bold text-lg border border-emerald-200">02</div>
-                <h3 class="text-base font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'مطابقة دقيقة للمواصفات الفنية' : 'Strict Technical Compliance' ?></h3>
+                <h3 class="text-base font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'شراء قائم على مطابقة المواصفات' : 'Specification-Based Procurement' ?></h3>
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    <?= ($lang === 'ar') ? 'فحص كامل لشهادات التحليل (COA) وبطاقات السلامة (MSDS) لضمان تطابق الشحنات مع كراسات الشروط والمواصفات الهندسية.' : 'Rigorous verification of technical datasheets, Certificates of Analysis (COA), and project specification criteria.' ?>
+                    <?= ($lang === 'ar') ? 'مراجعة دقيقة لشهادات التحليل (COA) وبطاقات السلامة (SDS) والمواصفات الفنية للعميل قبل تقديم العرض التجاري.' : 'Careful review of technical datasheets, Certificates of Analysis (COA), and buyer project specifications prior to quotation.' ?>
                 </p>
             </div>
 
             <div class="p-6 bg-white border border-stone-200 rounded-xl shadow-xs space-y-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-10 h-10 rounded-lg bg-emerald-50 text-bsemerald flex items-center justify-center font-bold text-lg border border-emerald-200">03</div>
-                <h3 class="text-base font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'حضور سعودي ميداني بالدمام' : 'Saudi Commercial Presence' ?></h3>
+                <div class="w-10 h-10 rounded-lg bg-emerald-50 text-bsemerald flex items-center justify-center font-bold text-bscharcoal"><?= ($lang === 'ar') ? 'حضور تجاري سعودي بالدمام' : 'Saudi Commercial Presence' ?></h3>
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    <?= ($lang === 'ar') ? 'مقر إداري وتجاري رسمي بالدمام لمتابعة التخليص الجمركي، ترتيبات الشحن، والتواصل المباشر والمستمر مع العملاء.' : 'Strategically based in Dammam, Eastern Province to coordinate port clearance, road freight, and active local communication.' ?>
+                    <?= ($lang === 'ar') ? 'مقر إداري وتجاري رسمي بالدمام لمتابعة التخليص الجمركي وترتيبات الشحن والتواصل التجاري المباشر مع العملاء.' : 'Strategically based in Dammam, Eastern Province to coordinate port clearance, road freight, and active local communication.' ?>
                 </p>
             </div>
 

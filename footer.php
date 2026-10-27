@@ -47,15 +47,22 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                 <div class="lg:col-span-3">
                     <h3 class="text-bsgold <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.product_divisions') ?></h3>
                     <ul class="space-y-2 text-xs">
-                        <li><a href="<?= route_url('products') ?>#cat-a" class="hover:text-bsgold transition-colors"><?= t('nav.cat_a') ?></a></li>
-                        <li><a href="<?= route_url('products') ?>#cat-b" class="hover:text-bsgold transition-colors"><?= t('nav.cat_b') ?></a></li>
-                        <li><a href="<?= route_url('products') ?>#cat-c" class="hover:text-bsgold transition-colors"><?= t('nav.cat_c') ?></a></li>
-                        <li><a href="<?= route_url('products') ?>#cat-d" class="hover:text-bsgold transition-colors"><?= t('nav.cat_d') ?></a></li>
-                        <li><a href="<?= route_url('products') ?>#cat-e" class="hover:text-bsgold transition-colors"><?= t('nav.cat_e') ?></a></li>
-                        <li><a href="<?= route_url('products') ?>#cat-f" class="hover:text-bsgold transition-colors"><?= t('nav.cat_f') ?></a></li>
+                        <li><a href="<?= route_url('agrochemicals') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_a') ?></a></li>
+                        <li><a href="<?= route_url('industrial-chemicals') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_b') ?></a></li>
+                        <li><a href="<?= route_url('industrial-salts') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_c') ?></a></li>
+                        <li><a href="<?= route_url('building-materials') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_d') ?></a></li>
+                        <li><a href="<?= route_url('machinery') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_e') ?></a></li>
+                        <li><a href="<?= route_url('spare-parts') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_f') ?></a></li>
                         <li><a href="<?= route_url('products') ?>#cat-g" class="hover:text-bsgold transition-colors"><?= t('nav.cat_g') ?></a></li>
-                        <li><a href="<?= route_url('products') ?>#cat-h" class="hover:text-bsgold transition-colors"><?= t('nav.cat_h') ?></a></li>
+                        <li><a href="<?= route_url('other-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_h') ?></a></li>
                         <li><a href="<?= route_url('international-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.cat_i') ?></a></li>
+                        <li class="pt-2 border-t border-stone-800 text-[11px] text-stone-400 flex flex-wrap gap-x-2.5 gap-y-1">
+                            <a href="<?= route_url('water-treatment') ?>" class="hover:text-bsgold transition-colors"><?= ($lang === 'ar') ? 'كيماويات المياه' : 'Water Treatment' ?></a>
+                            <span>•</span>
+                            <a href="<?= route_url('coco-peat') ?>" class="hover:text-bsgold transition-colors"><?= ($lang === 'ar') ? 'كوكوبيت' : 'Coco Peat' ?></a>
+                            <span>•</span>
+                            <a href="<?= route_url('fertilizers') ?>" class="hover:text-bsgold transition-colors"><?= ($lang === 'ar') ? 'أسمدة' : 'Fertilizers' ?></a>
+                        </li>
                     </ul>
                 </div>
 

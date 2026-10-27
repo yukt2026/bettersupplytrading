@@ -7,6 +7,10 @@
     # Prevent directory listing
     Options -Indexes
 
+    # Canonical domain redirect: force non-www on live production (Section 01 Requirement)
+    RewriteCond %{HTTP_HOST} ^www\.bettersupplytrading\.com$ [NC]
+    RewriteRule ^(.*)$ https://bettersupplytrading.com/$1 [R=301,L]
+
     # Pass through existing files or directories
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d

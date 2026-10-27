@@ -358,32 +358,44 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                                 <span class="rtl:rotate-180">&rarr;</span>
                             </a>
                             <div class="max-h-[70vh] overflow-y-auto divide-y divide-stone-100 text-xs">
-                                <a href="<?= route_url('products') ?>#cat-a" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-bsgold block">A. <?= t('nav.cat_a') ?></span>
+                                <div class="p-4 hover:bg-stone-50 transition-colors">
+                                    <a href="<?= route_url('agrochemicals') ?>" class="font-bold text-bscharcoal hover:text-bsemerald block">
+                                        <?= t('nav.cat_a') ?>
+                                    </a>
+                                    <div class="flex items-center gap-3 mt-1 text-[11px] text-slate-500 font-normal">
+                                        <a href="<?= route_url('fertilizers') ?>" class="hover:text-bsemerald hover:underline">↳ <?= ($lang === 'ar') ? 'الأسمدة والمغذيات' : 'Fertilizers' ?></a>
+                                        <a href="<?= route_url('coco-peat') ?>" class="hover:text-bsemerald hover:underline">↳ <?= ($lang === 'ar') ? 'بيتموس كوكوبيت' : 'Coco Peat' ?></a>
+                                    </div>
+                                </div>
+                                <div class="p-4 hover:bg-stone-50 transition-colors">
+                                    <a href="<?= route_url('industrial-chemicals') ?>" class="font-bold text-bscharcoal hover:text-bsemerald block">
+                                        <?= t('nav.cat_b') ?>
+                                    </a>
+                                    <div class="flex items-center gap-3 mt-1 text-[11px] text-slate-500 font-normal">
+                                        <a href="<?= route_url('water-treatment') ?>" class="hover:text-bsemerald hover:underline">↳ <?= ($lang === 'ar') ? 'معالجة المياه' : 'Water Treatment' ?></a>
+                                        <a href="<?= route_url('oilfield-chemicals') ?>" class="hover:text-bsemerald hover:underline">↳ <?= ($lang === 'ar') ? 'كيماويات النفط' : 'Oilfield Chemicals' ?></a>
+                                    </div>
+                                </div>
+                                <a href="<?= route_url('industrial-salts') ?>" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-bscharcoal hover:text-bsemerald block"><?= t('nav.cat_c') ?></span>
                                 </a>
-                                <a href="<?= route_url('products') ?>#cat-b" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-bsgold block">B. <?= t('nav.cat_b') ?></span>
+                                <a href="<?= route_url('building-materials') ?>" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-700 hover:text-bsemerald block"><?= t('nav.cat_d') ?></span>
                                 </a>
-                                <a href="<?= route_url('products') ?>#cat-c" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-bsgold block">C. <?= t('nav.cat_c') ?></span>
+                                <a href="<?= route_url('machinery') ?>" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-700 hover:text-bsemerald block"><?= t('nav.cat_e') ?></span>
                                 </a>
-                                <a href="<?= route_url('products') ?>#cat-d" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-slate-600 block">D. <?= t('nav.cat_d') ?></span>
-                                </a>
-                                <a href="<?= route_url('products') ?>#cat-e" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-slate-600 block">E. <?= t('nav.cat_e') ?></span>
-                                </a>
-                                <a href="<?= route_url('products') ?>#cat-f" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-slate-600 block">F. <?= t('nav.cat_f') ?></span>
+                                <a href="<?= route_url('spare-parts') ?>" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-700 hover:text-bsemerald block"><?= t('nav.cat_f') ?></span>
                                 </a>
                                 <a href="<?= route_url('products') ?>#cat-g" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-slate-600 block">G. <?= t('nav.cat_g') ?></span>
+                                    <span class="font-bold text-slate-700 hover:text-bsemerald block"><?= t('nav.cat_g') ?></span>
                                 </a>
-                                <a href="<?= route_url('products') ?>#cat-h" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-slate-600 block">H. <?= t('nav.cat_h') ?></span>
+                                <a href="<?= route_url('other-trading') ?>" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
+                                    <span class="font-bold text-slate-700 hover:text-bsemerald block"><?= t('nav.cat_h') ?></span>
                                 </a>
                                 <a href="<?= route_url('international-trading') ?>" class="block px-4 py-2.5 hover:bg-stone-50 text-slate-700 hover:text-bsemerald transition-colors">
-                                    <span class="font-bold text-bsemerald block">I. <?= t('nav.cat_i') ?></span>
+                                    <span class="font-bold text-bsemerald block"><?= t('nav.cat_i') ?></span>
                                 </a>
                             </div>
                         </div>
@@ -493,32 +505,40 @@ $bodyFont = ($lang === 'ar') ? 'font-arabic' : 'font-sans';
                         <a href="<?= route_url('products') ?>" class="block py-1.5 font-bold uppercase tracking-wider text-bsemerald border-b border-stone-200">
                             <?= t('nav.products_overview') ?> &rarr;
                         </a>
-                        <a href="<?= route_url('products') ?>#cat-a" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
-                            A. <?= t('nav.cat_a') ?>
+                        <a href="<?= route_url('agrochemicals') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
+                            <?= t('nav.cat_a') ?>
                         </a>
-                        <a href="<?= route_url('products') ?>#cat-b" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
-                            B. <?= t('nav.cat_b') ?>
+                        <div class="ps-3 flex gap-3 text-[11px] text-slate-500 pb-1">
+                            <a href="<?= route_url('fertilizers') ?>" class="hover:text-bsemerald">↳ <?= ($lang === 'ar') ? 'الأسمدة' : 'Fertilizers' ?></a>
+                            <a href="<?= route_url('coco-peat') ?>" class="hover:text-bsemerald">↳ <?= ($lang === 'ar') ? 'كوكوبيت' : 'Coco Peat' ?></a>
+                        </div>
+                        <a href="<?= route_url('industrial-chemicals') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
+                            <?= t('nav.cat_b') ?>
                         </a>
-                        <a href="<?= route_url('products') ?>#cat-c" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
-                            C. <?= t('nav.cat_c') ?>
+                        <div class="ps-3 flex gap-3 text-[11px] text-slate-500 pb-1">
+                            <a href="<?= route_url('water-treatment') ?>" class="hover:text-bsemerald">↳ <?= ($lang === 'ar') ? 'معالجة المياه' : 'Water Treatment' ?></a>
+                            <a href="<?= route_url('oilfield-chemicals') ?>" class="hover:text-bsemerald">↳ <?= ($lang === 'ar') ? 'كيماويات النفط' : 'Oilfield Chemicals' ?></a>
+                        </div>
+                        <a href="<?= route_url('industrial-salts') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald font-semibold">
+                            <?= t('nav.cat_c') ?>
                         </a>
-                        <a href="<?= route_url('products') ?>#cat-d" class="block py-1.5 text-slate-700 hover:text-bsemerald">
-                            D. <?= t('nav.cat_d') ?>
+                        <a href="<?= route_url('building-materials') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            <?= t('nav.cat_d') ?>
                         </a>
-                        <a href="<?= route_url('products') ?>#cat-e" class="block py-1.5 text-slate-700 hover:text-bsemerald">
-                            E. <?= t('nav.cat_e') ?>
+                        <a href="<?= route_url('machinery') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            <?= t('nav.cat_e') ?>
                         </a>
-                        <a href="<?= route_url('products') ?>#cat-f" class="block py-1.5 text-slate-700 hover:text-bsemerald">
-                            F. <?= t('nav.cat_f') ?>
+                        <a href="<?= route_url('spare-parts') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            <?= t('nav.cat_f') ?>
                         </a>
                         <a href="<?= route_url('products') ?>#cat-g" class="block py-1.5 text-slate-700 hover:text-bsemerald">
-                            G. <?= t('nav.cat_g') ?>
+                            <?= t('nav.cat_g') ?>
                         </a>
-                        <a href="<?= route_url('products') ?>#cat-h" class="block py-1.5 text-slate-700 hover:text-bsemerald">
-                            H. <?= t('nav.cat_h') ?>
+                        <a href="<?= route_url('other-trading') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald">
+                            <?= t('nav.cat_h') ?>
                         </a>
                         <a href="<?= route_url('international-trading') ?>" class="block py-1.5 text-slate-700 hover:text-bsemerald font-bold text-bsemerald">
-                            I. <?= t('nav.cat_i') ?>
+                            <?= t('nav.cat_i') ?>
                         </a>
                     </div>
                 </div>
