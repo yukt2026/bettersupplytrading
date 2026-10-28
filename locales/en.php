@@ -86,7 +86,6 @@ return [
         'contact_us' => 'Contact & Procurement Desk',
         'working_hours' => 'Sunday – Thursday: 8:00 AM – 5:00 PM (AST)',
         'all_rights_reserved' => 'All Rights Reserved.',
-        'legal_draft_notice' => '',
     ],
 
     // SEO Titles and Meta Descriptions (Exact from Handover Section 03)
@@ -450,7 +449,7 @@ return [
             'heading' => 'International Sourcing. Industrial Supply. Commercial Partnerships.',
             'lead' => 'Better Supply Trading Establishment supports industrial and commercial buyers through product sourcing, specification-based procurement and coordinated supply solutions. We help customers identify suitable materials, obtain competitive quotations and manage purchasing requirements across Saudi Arabia, the GCC and international markets.',
             'trust_statement' => 'Our approach is built on understanding customer requirements, clear commercial communication, careful product matching and dependable coordination from inquiry to delivery.',
-            'scope' => 'Our business activities cover chemical materials, industrial salts (NaCl 99%+), water-treatment chemicals, agricultural products, fertilizers, coco peat growing media, building materials, industrial machinery, and spare parts. We focus on accurate specification matching, professional communication and commercially dependable supply arrangements.',
+            'scope' => 'Our comprehensive commercial sourcing operations encompass nine core business activities: agrochemicals, crop protection inputs, fertilizers, and coco peat growing media; industrial base chemicals, specialty chemical products, and RO water treatment compounds; a complete portfolio of industrial salts (including vacuum-refined PDV salt, solar sea salt, rock salt, granular salt, water-softener salt, and specialty chemical salts for water treatment, oil & gas drilling brines, petrochemicals, and manufacturing, with 99%+ NaCl and 4–6 mm grain size available as project options); building and construction materials; industrial machinery and workshop equipment; precision industrial spare parts and components; mechanical, electrical, safety PPE gear, and engineering supplies; other commercial trading products and specialized utility equipment; and international sourcing, import/export facilitation, and cross-border supply chain management across Saudi Arabia, the GCC, and international trade corridors.',
             'mission_title' => 'Our Mission',
             'mission_desc' => 'To connect manufacturers, distributors and commercial buyers through efficient sourcing, transparent communication and dependable procurement coordination.',
             'vision_title' => 'Our Vision',
@@ -976,7 +975,7 @@ return [
             ],
             'corporate_office_title' => 'Corporate Sourcing Desk',
             'dammam_hub' => 'Commercial Trading Hub • Dammam, KSA',
-            'placeholder_disclaimer' => 'Official Commercial Address: King Abdulaziz Road, Al Badi Dist. P.O. Box 5513, Dammam 32415, Kingdom of Saudi Arabia.',
+            'office_address_notice' => 'Official Commercial Address: King Abdulaziz Road, Al Badi Dist. P.O. Box 5513, Dammam 32415, Kingdom of Saudi Arabia.',
             'team_section_title' => 'Contact Our Team',
             'team_section_subtitle' => 'Connect directly with our dedicated commercial sales and operations executives for immediate quotation assistance and logistics coordination.',
             'sales_title' => 'Sales & Commercial Enquiries',

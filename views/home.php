@@ -5,8 +5,8 @@
  * 1. Distinctive International B2B Trading Interface (Separated from Desert Iron contracting style)
  * 2. Exact Recommended Main Heading, Supporting Description & Corporate Tagline
  * 3. All 9 Recommended Homepage Sections strictly implemented in sequence
- * 4. Products & Services Master Sequence A through I with Primary Visibility to Chemical & Agricultural
- * 5. Complete Removal of all CR activity codes and unfinished placeholders
+ * 4. Products & Services Master Sequence 1 through 9 with Primary Visibility to Chemical & Agricultural
+ * 5. Complete Compliance with Saudi B2B Commercial Standards
  */
 
 $page = 'home';
@@ -69,6 +69,10 @@ $trust_strip = t('pages.home.trust_strip');
                 </a>
                 <a href="#products-section" class="w-full sm:w-auto h-[48px] px-7 inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-stone-400 text-white font-semibold text-sm rounded-lg backdrop-blur-xs transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-bsgold whitespace-nowrap">
                     <?= t('buttons.explore_products') ?>
+                </a>
+                <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" download="Better_Supply_Company_Profile.pdf" class="w-full sm:w-auto h-[48px] px-5 inline-flex items-center justify-center gap-2 bg-stone-900/60 hover:bg-stone-900/90 border border-bsgold/60 text-bsgold hover:text-white font-semibold text-xs sm:text-sm rounded-lg backdrop-blur-xs transition-all shadow-sm whitespace-nowrap">
+                    <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <span><?= ($lang === 'ar') ? 'الملف التعريفي (PDF)' : 'Company Profile (PDF)' ?></span>
                 </a>
             </div>
 
@@ -139,6 +143,11 @@ $trust_strip = t('pages.home.trust_strip');
                     <a href="<?= route_url('about') ?>" class="inline-flex items-center gap-2 font-bold text-sm text-bsemerald hover:text-bsforest transition-colors">
                         <span><?= t('buttons.learn_more') ?></span>
                         <span class="rtl:rotate-180">&rarr;</span>
+                    </a>
+                    <span class="text-stone-300">•</span>
+                    <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" download="Better_Supply_Company_Profile.pdf" class="inline-flex items-center gap-2 font-bold text-sm text-bscharcoal hover:text-bsemerald transition-colors">
+                        <svg class="w-4 h-4 text-bsgold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span><?= ($lang === 'ar') ? 'تحميل الملف التعريفي للشركة (PDF)' : 'Download Company Profile (PDF)' ?></span>
                     </a>
                 </div>
             </div>
@@ -519,7 +528,7 @@ $trust_strip = t('pages.home.trust_strip');
                 <div class="space-y-2 text-xs pt-2 border-t border-stone-200">
                     <div class="flex items-center justify-between">
                         <span class="text-slate-500"><?= t('pages.contact.mobile_whatsapp') ?></span>
-                        <a href="tel:0502851077" class="font-mono font-bold text-bscharcoal hover:text-bsemerald">0502851077 <span class="text-slate-500 font-normal">(+966 50 285 1077)</span></a>
+                        <a href="tel:+966502851077" class="font-mono font-bold text-bscharcoal hover:text-bsemerald">0502851077 <span class="text-slate-500 font-normal">(+966 50 285 1077)</span></a>
                     </div>
                     <div class="flex items-center justify-between">
                         <span class="text-slate-500"><?= t('pages.contact.email_label') ?></span>

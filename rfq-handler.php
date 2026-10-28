@@ -165,8 +165,7 @@ file_put_contents($storage_file, json_encode($existing_rfqs, JSON_PRETTY_PRINT |
 
 // 7. Dispatch Email Notification
 $to_email = $site_config['contacts']['email'];
-// If placeholder is still set, log without crashing
-if (strpos($to_email, '[ENTER') === false && filter_var($to_email, FILTER_VALIDATE_EMAIL)) {
+if (!empty($to_email) && filter_var($to_email, FILTER_VALIDATE_EMAIL)) {
     $subject = "New RFQ: [{$category}] - {$company} ({$lead['id']})";
     
     $body = "BETTER SUPPLY TRADING ESTABLISHMENT - RFQ NOTIFICATION\n";

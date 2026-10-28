@@ -857,5 +857,32 @@
             "original_name": null,
             "stored_path": null
         }
+    },
+    {
+        "id": "RFQ-20261028-505022",
+        "timestamp": "2026-10-28T08:12:39+01:00",
+        "ip_address": "UNKNOWN",
+        "user_agent": "UNKNOWN",
+        "source_page": "general",
+        "contact": {
+            "name": "Saudi Testing User",
+            "company": "Dammam Industrial Hub",
+            "email": "test@bettersupplytrading.com",
+            "phone": "+966599510213"
+        },
+        "rfq_details": {
+            "category": "Industrial Salt & Bulk Chemical Raw Materials (Refined, Solar, Rock & Granular)",
+            "specification": "Vacuum Refined PDV Salt 99%+ with 4-6 mm size option",
+            "quantity": 100,
+            "unit": "Metric Tons",
+            "packaging": "",
+            "destination": "Dammam Port, KSA",
+            "delivery_date": "",
+            "remarks": ""
+        },
+        "attachment": {
+            "original_name": null,
+            "stored_path": null
+        }
     }
 ]

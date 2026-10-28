@@ -168,25 +168,8 @@ $catalog = t('catalog');
      Section 08 Requirement
      ========================================================================= -->
 <section id="rfq-section" class="py-16 sm:py-24 bg-stone-50 border-t border-stone-200 scroll-mt-20">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
-            <span class="text-xs font-bold uppercase tracking-widest text-bsgold mb-2 block">
-                <?= ($lang === 'ar') ? 'نموذج طلب عروض الأسعار الفوري' : 'Direct Sourcing RFQ' ?>
-            </span>
-            <h2 class="text-2xl sm:text-4xl font-extrabold text-bscharcoal tracking-tight mb-4 <?= $headingFont ?>">
-                <?= t('pages.home.sec8_title') ?>
-            </h2>
-            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                <?= t('pages.home.sec8_subtitle') ?>
-            </p>
-        </div>
-
-        <!-- Embedded RFQ Form Partial -->
-        <div class="shadow-lg rounded-3xl overflow-hidden border border-stone-200" data-aos="fade-up" data-aos-delay="100">
-            <?php require __DIR__ . '/partials/rfq_form_partial.php'; ?>
-        </div>
-
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+        <?php require __DIR__ . '/partials/rfq_form_partial.php'; ?>
     </div>
 </section>
 

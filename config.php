@@ -77,7 +77,7 @@ $site_config = [
 
     // Product Category Feature Flags (set to false to gracefully hide without code removal)
     'categories' => [
-        // Final Display Sequence (A - I)
+        // Final Display Sequence (1 - 9)
         'agrochemicals' => (bool)env('CATEGORY_AGROCHEMICALS_ENABLED', true),
         'industrial_chemicals' => (bool)env('CATEGORY_CHEMICALS_ENABLED', true),
         'industrial_salts' => (bool)env('CATEGORY_SALTS_ENABLED', true),

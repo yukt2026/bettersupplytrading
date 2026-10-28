@@ -45,6 +45,13 @@ $valid_routes = [
     'terms' => 'terms.php',
 ];
 
+// Direct redirect for company profile download
+if ($page === 'company-profile' || $page === 'company-profile.pdf') {
+    require_once __DIR__ . '/i18n.php';
+    header('Location: ' . asset_url('public/docs/Better_Supply_Company_Profile.pdf'));
+    exit;
+}
+
 if (!array_key_exists($page, $valid_routes)) {
     http_response_code(404);
     $view_file = __DIR__ . '/views/404.php';

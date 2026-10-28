@@ -34,16 +34,23 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                     
                     <?php 
                     $cr_num = trim($site_config['contacts']['cr_number'] ?? '');
-                    if (!empty($cr_num) && strpos($cr_num, '[ENTER') === false): 
+                    if (!empty($cr_num)): 
                     ?>
                     <div class="text-xs text-slate-400 pt-2">
                         <span class="font-semibold text-bsgold"><?= ($lang === 'ar') ? 'السجل التجاري:' : 'C.R.:' ?></span>
                         <span><?= htmlspecialchars($cr_num) ?></span>
                     </div>
                     <?php endif; ?>
+
+                    <div class="pt-3">
+                        <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" download="Better_Supply_Company_Profile.pdf" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-stone-800 hover:bg-stone-700 text-bsgold hover:text-white text-xs font-semibold border border-stone-700 transition-all">
+                            <svg class="w-4 h-4 text-bsgold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span><?= ($lang === 'ar') ? 'تحميل الملف التعريفي للشركة (PDF)' : 'Download Company Profile (PDF)' ?></span>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Col 2: Core Sourcing Divisions (Sequence A - I) (3 cols) -->
+                <!-- Col 2: Core Sourcing Divisions (Sequence 1 - 9) (3 cols) -->
                 <div class="lg:col-span-3">
                     <h3 class="text-bsgold <?= $headingFont ?> text-xs uppercase tracking-wider mb-4"><?= t('labels.product_divisions') ?></h3>
                     <ul class="space-y-2 text-xs">
@@ -77,6 +84,12 @@ $headingFont = ($lang === 'ar') ? 'font-arabic font-bold' : 'font-heading font-b
                         <li><a href="<?= route_url('international-trading') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.global_sourcing') ?></a></li>
                         <li><a href="<?= route_url('partners') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.partners') ?></a></li>
                         <li><a href="<?= route_url('contact') ?>" class="hover:text-bsgold transition-colors"><?= t('nav.contact') ?></a></li>
+                        <li class="pt-1">
+                            <a href="<?= asset_url('public/docs/Better_Supply_Company_Profile.pdf') ?>" target="_blank" download="Better_Supply_Company_Profile.pdf" class="hover:text-bsgold transition-colors text-bsgold font-medium inline-flex items-center gap-1.5">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span><?= ($lang === 'ar') ? 'الملف التعريفي (PDF)' : 'Company Profile (PDF)' ?></span>
+                            </a>
+                        </li>
                         <li class="pt-2"><a href="<?= route_url('privacy') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.privacy.title') ?></a></li>
                         <li><a href="<?= route_url('terms') ?>" class="hover:text-slate-300 transition-colors text-slate-500"><?= t('seo.terms.title') ?></a></li>
                     </ul>
